@@ -1,0 +1,350 @@
+{
+ "assumptions": {
+  "prompt_overhead": 1000,
+  "output_tokens": 500,
+  "contexts": [
+   4000,
+   8000,
+   16000
+  ],
+  "tokens_per_char": 0.25,
+  "tau": 0.9,
+  "min_size": 2,
+  "prices": {
+   "mid-tier ($2/$12 per 1M)": [
+    2.0,
+    12.0
+   ],
+   "low-cost ($0.20/$1.20 per 1M)": [
+    0.2,
+    1.2
+   ]
+  },
+  "dataset": "ogbn-arxiv",
+  "order": 0
+ },
+ "results": {
+  "recompute_leiden": {
+   "min2": {
+    "summaries_per_update": 207.33333333333334,
+    "input_tokens": 810708.0333333333,
+    "output_tokens": 103666.66666666667,
+    "coverage": 0.9736979837390599,
+    "communities": 675.1333333333333,
+    "usd": {
+     "mid-tier ($2/$12 per 1M)": 2.8654160666666666,
+     "low-cost ($0.20/$1.20 per 1M)": 0.28654160666666667
+    }
+   },
+   "min5": {
+    "summaries_per_update": 106.86666666666666,
+    "input_tokens": 635386.4666666667,
+    "output_tokens": 53433.333333333336,
+    "coverage": 0.959714817140546,
+    "communities": 204.86666666666667,
+    "usd": {
+     "mid-tier ($2/$12 per 1M)": 1.9119729333333333,
+     "low-cost ($0.20/$1.20 per 1M)": 0.19119729333333335
+    }
+   },
+   "min10": {
+    "summaries_per_update": 69.33333333333333,
+    "input_tokens": 529679.7333333333,
+    "output_tokens": 34666.666666666664,
+    "coverage": 0.9530009976940542,
+    "communities": 112.4,
+    "usd": {
+     "mid-tier ($2/$12 per 1M)": 1.4753594666666665,
+     "low-cost ($0.20/$1.20 per 1M)": 0.14753594666666667
+    }
+   },
+   "min20": {
+    "summaries_per_update": 49.93333333333333,
+    "input_tokens": 440048.73333333334,
+    "output_tokens": 24966.666666666668,
+    "coverage": 0.9465834309680546,
+    "communities": 62.6,
+    "usd": {
+     "mid-tier ($2/$12 per 1M)": 1.1796974666666666,
+     "low-cost ($0.20/$1.20 per 1M)": 0.11796974666666667
+    }
+   }
+  },
+  "warmstart_leiden": {
+   "min2": {
+    "summaries_per_update": 201.93333333333334,
+    "input_tokens": 655019.9166666666,
+    "output_tokens": 100966.66666666667,
+    "coverage": 0.9736979837390599,
+    "communities": 799.4666666666667,
+    "usd": {
+     "mid-tier ($2/$12 per 1M)": 2.5216398333333334,
+     "low-cost ($0.20/$1.20 per 1M)": 0.25216398333333334
+    }
+   },
+   "min5": {
+    "summaries_per_update": 80.6,
+    "input_tokens": 443677.4666666667,
+    "output_tokens": 40300.0,
+    "coverage": 0.9575794869492081,
+    "communities": 227.8,
+    "usd": {
+     "mid-tier ($2/$12 per 1M)": 1.3709549333333335,
+     "low-cost ($0.20/$1.20 per 1M)": 0.13709549333333335
+    }
+   },
+   "min10": {
+    "summaries_per_update": 44.46666666666667,
+    "input_tokens": 343588.93333333335,
+    "output_tokens": 22233.333333333332,
+    "coverage": 0.9500298213676397,
+    "communities": 116.2,
+    "usd": {
+     "mid-tier ($2/$12 per 1M)": 0.9539778666666667,
+     "low-cost ($0.20/$1.20 per 1M)": 0.09539778666666666
+    }
+   },
+   "min20": {
+    "summaries_per_update": 32.666666666666664,
+    "input_tokens": 288031.65,
+    "output_tokens": 16333.333333333334,
+    "coverage": 0.9435661729491042,
+    "communities": 66.8,
+    "usd": {
+     "mid-tier ($2/$12 per 1M)": 0.7720633000000001,
+     "low-cost ($0.20/$1.20 per 1M)": 0.07720633000000002
+    }
+   }
+  },
+  "frontier_leiden": {
+   "min2": {
+    "summaries_per_update": 237.46666666666667,
+    "input_tokens": 808555.0333333333,
+    "output_tokens": 118733.33333333333,
+    "coverage": 0.9736793771092788,
+    "communities": 1051.0,
+    "usd": {
+     "mid-tier ($2/$12 per 1M)": 3.0419100666666665,
+     "low-cost ($0.20/$1.20 per 1M)": 0.30419100666666665
+    }
+   },
+   "min5": {
+    "summaries_per_update": 113.66666666666667,
+    "input_tokens": 592064.2166666667,
+    "output_tokens": 56833.333333333336,
+    "coverage": 0.9560492597259983,
+    "communities": 413.26666666666665,
+    "usd": {
+     "mid-tier ($2/$12 per 1M)": 1.8661284333333332,
+     "low-cost ($0.20/$1.20 per 1M)": 0.18661284333333333
+    }
+   },
+   "min10": {
+    "summaries_per_update": 60.733333333333334,
+    "input_tokens": 441431.1,
+    "output_tokens": 30366.666666666668,
+    "coverage": 0.9445075348420856,
+    "communities": 232.06666666666666,
+    "usd": {
+     "mid-tier ($2/$12 per 1M)": 1.2472622,
+     "low-cost ($0.20/$1.20 per 1M)": 0.12472622
+    }
+   },
+   "min20": {
+    "summaries_per_update": 38.6,
+    "input_tokens": 334650.15,
+    "output_tokens": 19300.0,
+    "coverage": 0.9324205947244387,
+    "communities": 130.46666666666667,
+    "usd": {
+     "mid-tier ($2/$12 per 1M)": 0.9009003000000001,
+     "low-cost ($0.20/$1.20 per 1M)": 0.09009003000000002
+    }
+   }
+  },
+  "local_repair": {
+   "min2": {
+    "summaries_per_update": 670.4666666666667,
+    "input_tokens": 1619151.95,
+    "output_tokens": 335233.3333333333,
+    "coverage": 0.969738419302238,
+    "communities": 3258.2,
+    "usd": {
+     "mid-tier ($2/$12 per 1M)": 7.2611039,
+     "low-cost ($0.20/$1.20 per 1M)": 0.72611039
+    }
+   },
+   "min5": {
+    "summaries_per_update": 228.26666666666668,
+    "input_tokens": 829922.3333333334,
+    "output_tokens": 114133.33333333333,
+    "coverage": 0.9156401226896619,
+    "communities": 837.4666666666667,
+    "usd": {
+     "mid-tier ($2/$12 per 1M)": 3.0294446666666666,
+     "low-cost ($0.20/$1.20 per 1M)": 0.30294446666666663
+    }
+   },
+   "min10": {
+    "summaries_per_update": 54.666666666666664,
+    "input_tokens": 330070.45,
+    "output_tokens": 27333.333333333332,
+    "coverage": 0.8876583984320761,
+    "communities": 299.1333333333333,
+    "usd": {
+     "mid-tier ($2/$12 per 1M)": 0.9881409,
+     "low-cost ($0.20/$1.20 per 1M)": 0.09881409000000001
+    }
+   },
+   "min20": {
+    "summaries_per_update": 17.266666666666666,
+    "input_tokens": 146919.93333333332,
+    "output_tokens": 8633.333333333334,
+    "coverage": 0.8693657736684334,
+    "communities": 121.0,
+    "usd": {
+     "mid-tier ($2/$12 per 1M)": 0.39743986666666664,
+     "low-cost ($0.20/$1.20 per 1M)": 0.03974398666666666
+    }
+   }
+  },
+  "hybrid": {
+   "min2": {
+    "summaries_per_update": 407.6666666666667,
+    "input_tokens": 912114.4,
+    "output_tokens": 203833.33333333334,
+    "coverage": 0.972293314655259,
+    "communities": 1445.8666666666666,
+    "usd": {
+     "mid-tier ($2/$12 per 1M)": 4.2702288,
+     "low-cost ($0.20/$1.20 per 1M)": 0.42702288
+    }
+   },
+   "min5": {
+    "summaries_per_update": 100.2,
+    "input_tokens": 374962.01666666666,
+    "output_tokens": 50100.0,
+    "coverage": 0.9420675820203801,
+    "communities": 325.8666666666667,
+    "usd": {
+     "mid-tier ($2/$12 per 1M)": 1.3511240333333334,
+     "low-cost ($0.20/$1.20 per 1M)": 0.13511240333333333
+    }
+   },
+   "min10": {
+    "summaries_per_update": 26.0,
+    "input_tokens": 169160.7,
+    "output_tokens": 13000.0,
+    "coverage": 0.9292428061417286,
+    "communities": 134.86666666666667,
+    "usd": {
+     "mid-tier ($2/$12 per 1M)": 0.4943214,
+     "low-cost ($0.20/$1.20 per 1M)": 0.04943214
+    }
+   },
+   "min20": {
+    "summaries_per_update": 11.533333333333333,
+    "input_tokens": 99995.7,
+    "output_tokens": 5766.666666666667,
+    "coverage": 0.9209611635785429,
+    "communities": 72.93333333333334,
+    "usd": {
+     "mid-tier ($2/$12 per 1M)": 0.26919139999999997,
+     "low-cost ($0.20/$1.20 per 1M)": 0.02691914
+    }
+   }
+  },
+  "lazy": {
+   "min2": {
+    "summaries_per_update": 446.46666666666664,
+    "input_tokens": 1012833.4833333333,
+    "output_tokens": 223233.33333333334,
+    "coverage": 0.9474160134451275,
+    "communities": 2722.2,
+    "usd": {
+     "mid-tier ($2/$12 per 1M)": 4.704466966666667,
+     "low-cost ($0.20/$1.20 per 1M)": 0.47044669666666666
+    }
+   },
+   "min5": {
+    "summaries_per_update": 134.46666666666667,
+    "input_tokens": 461864.3333333333,
+    "output_tokens": 67233.33333333333,
+    "coverage": 0.9012529701423431,
+    "communities": 630.3333333333334,
+    "usd": {
+     "mid-tier ($2/$12 per 1M)": 1.7305286666666666,
+     "low-cost ($0.20/$1.20 per 1M)": 0.17305286666666664
+    }
+   },
+   "min10": {
+    "summaries_per_update": 26.2,
+    "input_tokens": 152924.16666666666,
+    "output_tokens": 13100.0,
+    "coverage": 0.8800504810724645,
+    "communities": 232.26666666666668,
+    "usd": {
+     "mid-tier ($2/$12 per 1M)": 0.46304833333333334,
+     "low-cost ($0.20/$1.20 per 1M)": 0.04630483333333334
+    }
+   },
+   "min20": {
+    "summaries_per_update": 6.6,
+    "input_tokens": 56525.63333333333,
+    "output_tokens": 3300.0,
+    "coverage": 0.8663925363807162,
+    "communities": 102.73333333333333,
+    "usd": {
+     "mid-tier ($2/$12 per 1M)": 0.15265126666666667,
+     "low-cost ($0.20/$1.20 per 1M)": 0.015265126666666667
+    }
+   }
+  },
+  "place_drift": {
+   "min2": {
+    "summaries_per_update": 421.1333333333333,
+    "input_tokens": 910660.2833333333,
+    "output_tokens": 210566.66666666666,
+    "coverage": 0.9660035632876127,
+    "communities": 1476.4,
+    "usd": {
+     "mid-tier ($2/$12 per 1M)": 4.348120566666666,
+     "low-cost ($0.20/$1.20 per 1M)": 0.43481205666666667
+    }
+   },
+   "min5": {
+    "summaries_per_update": 92.33333333333333,
+    "input_tokens": 341613.43333333335,
+    "output_tokens": 46166.666666666664,
+    "coverage": 0.9350747204433102,
+    "communities": 310.8,
+    "usd": {
+     "mid-tier ($2/$12 per 1M)": 1.2372268666666666,
+     "low-cost ($0.20/$1.20 per 1M)": 0.12372268666666666
+    }
+   },
+   "min10": {
+    "summaries_per_update": 22.266666666666666,
+    "input_tokens": 147086.68333333332,
+    "output_tokens": 11133.333333333334,
+    "coverage": 0.9228826332200424,
+    "communities": 130.33333333333334,
+    "usd": {
+     "mid-tier ($2/$12 per 1M)": 0.42777336666666665,
+     "low-cost ($0.20/$1.20 per 1M)": 0.042777336666666665
+    }
+   },
+   "min20": {
+    "summaries_per_update": 10.4,
+    "input_tokens": 90337.2,
+    "output_tokens": 5200.0,
+    "coverage": 0.9150115951813635,
+    "communities": 70.4,
+    "usd": {
+     "mid-tier ($2/$12 per 1M)": 0.24307439999999997,
+     "low-cost ($0.20/$1.20 per 1M)": 0.02430744
+    }
+   }
+  }
+ }
+}

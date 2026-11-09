@@ -1,0 +1,430 @@
+{
+ "qa": [
+  {
+   "store": "FRESH|titles<=300",
+   "vs": "FRESH|recompute all",
+   "recall": 0.3125,
+   "other": 0.34375,
+   "diff": -0.03125,
+   "p": 0.47900760797490916
+  },
+  {
+   "store": "hybrid|tau=0.9|titles<=300",
+   "vs": "hybrid|tau=0.9",
+   "recall": 0.33125,
+   "other": 0.4375,
+   "diff": -0.10625,
+   "p": 0.11348442043523074
+  },
+  {
+   "store": "hybrid|tau=0.9|titles<=300",
+   "vs": "FRESH|recompute all",
+   "recall": 0.33125,
+   "other": 0.34375,
+   "diff": -0.0125,
+   "p": 0.7058209635387673
+  }
+ ],
+ "rows": [
+  {
+   "store": "FRESH|titles<=300",
+   "q": "What are the main approaches and trends in detecting automated, fake, and harmful accounts on social media?",
+   "recall": 0.75
+  },
+  {
+   "store": "FRESH|titles<=300",
+   "q": "What are the main approaches and trends in representation learning and link analysis for signed social networks?",
+   "recall": 0.0
+  },
+  {
+   "store": "FRESH|titles<=300",
+   "q": "What are the main approaches and challenges in learning user preferences for collaborative recommender systems?",
+   "recall": 0.25
+  },
+  {
+   "store": "FRESH|titles<=300",
+   "q": "What are the main machine-learning approaches and trends for personalized email search, recommendation, and assistance?",
+   "recall": 0.25
+  },
+  {
+   "store": "FRESH|titles<=300",
+   "q": "What are the main approaches, evaluation practices, and limitations in approximate nearest-neighbor search for high-dimensional and large-scale data?",
+   "recall": 0.0
+  },
+  {
+   "store": "FRESH|titles<=300",
+   "q": "What are the main approaches and challenges in improving mobile app discovery, recommendation, and marketplace visibility?",
+   "recall": 0.25
+  },
+  {
+   "store": "FRESH|titles<=300",
+   "q": "What are the main approaches and trends in using content, user behavior, and social signals to rank, recommend, and evaluate online news?",
+   "recall": 0.75
+  },
+  {
+   "store": "FRESH|titles<=300",
+   "q": "What are the main approaches and trends in building efficient, relevant, and timely web crawlers for specialized content collection?",
+   "recall": 0.25
+  },
+  {
+   "store": "FRESH|titles<=300",
+   "q": "What are the main approaches and trends in building efficient systems for storing, indexing, and querying large-scale visual data?",
+   "recall": 0.25
+  },
+  {
+   "store": "FRESH|titles<=300",
+   "q": "What are the main approaches and trends in detecting fake news on social media using content, user, and propagation signals?",
+   "recall": 0.75
+  },
+  {
+   "store": "FRESH|titles<=300",
+   "q": "What are the main modeling, inference, and theoretical analysis approaches for attributed and latent-feature network structures and dynamics?",
+   "recall": 0.0
+  },
+  {
+   "store": "FRESH|titles<=300",
+   "q": "What are the main approaches and emerging trends in autoencoder-based collaborative filtering for personalized recommendation?",
+   "recall": 0.25
+  },
+  {
+   "store": "FRESH|titles<=300",
+   "q": "What are the main approaches to understanding, enriching, and completing tabular data from heterogeneous sources?",
+   "recall": 0.0
+  },
+  {
+   "store": "FRESH|titles<=300",
+   "q": "What are the main approaches and trends in searching large graphs for relevant, cohesive, and influential communities using keyword-based queries?",
+   "recall": 0.25
+  },
+  {
+   "store": "FRESH|titles<=300",
+   "q": "How can digital media, public attention, and policy mentions be analyzed to understand information dissemination, societal impact, and misinformation?",
+   "recall": 0.75
+  },
+  {
+   "store": "FRESH|titles<=300",
+   "q": "What are the main approaches and trends in assessing and mitigating misinformation and source trustworthiness on social media?",
+   "recall": 0.25
+  },
+  {
+   "store": "FRESH|titles<=300",
+   "q": "What are the main approaches and trends in graph- and context-aware representation learning for recommender systems?",
+   "recall": 0.25
+  },
+  {
+   "store": "FRESH|titles<=300",
+   "q": "What are the main network-analytic and social-media approaches for understanding cryptocurrency activity, risk, and market dynamics?",
+   "recall": 0.0
+  },
+  {
+   "store": "FRESH|titles<=300",
+   "q": "What are the main approaches and emerging trends in dense subgraph discovery for complex, large-scale, and application-specific networks?",
+   "recall": 0.0
+  },
+  {
+   "store": "FRESH|titles<=300",
+   "q": "What are the main network-based approaches for mapping technological knowledge, forecasting innovation, and understanding patent impact?",
+   "recall": 0.0
+  },
+  {
+   "store": "FRESH|titles<=300",
+   "q": "What are the main approaches for improving personalized ranking and preference modeling in recommender systems?",
+   "recall": 0.0
+  },
+  {
+   "store": "FRESH|titles<=300",
+   "q": "What are the main approaches for modeling evolving user preferences in recommendation and product search from implicit interaction data?",
+   "recall": 0.75
+  },
+  {
+   "store": "FRESH|titles<=300",
+   "q": "What are the main patterns, drivers, and methods for understanding conference publishing and scholarly communication in computer science?",
+   "recall": 0.25
+  },
+  {
+   "store": "FRESH|titles<=300",
+   "q": "What are the main bibliometric approaches and trends for assessing research performance, collaboration, and the geographic organization of science across countries and institutions?",
+   "recall": 0.25
+  },
+  {
+   "store": "FRESH|titles<=300",
+   "q": "What are the main approaches and challenges in measuring, characterizing, and predicting the scientific impact of publications?",
+   "recall": 0.0
+  },
+  {
+   "store": "FRESH|titles<=300",
+   "q": "What are the main approaches and trends in personalized recommendation from implicit user feedback?",
+   "recall": 0.5
+  },
+  {
+   "store": "FRESH|titles<=300",
+   "q": "What are the main design trends and analytical capabilities of research software for network and social-media analysis?",
+   "recall": 0.0
+  },
+  {
+   "store": "FRESH|titles<=300",
+   "q": "What are the main approaches for improving latent-factor recommender systems with auxiliary information, particularly under sparse or cold-start conditions?",
+   "recall": 0.75
+  },
+  {
+   "store": "FRESH|titles<=300",
+   "q": "What are the main approaches and trends in scalable, efficient trajectory data management and analytics?",
+   "recall": 0.25
+  },
+  {
+   "store": "FRESH|titles<=300",
+   "q": "What are the main approaches and trends for modeling evolving user preferences in sequential recommendation?",
+   "recall": 0.75
+  },
+  {
+   "store": "FRESH|titles<=300",
+   "q": "What are the main approaches, evaluation criteria, and trade-offs in improving fairness in recommender systems?",
+   "recall": 0.5
+  },
+  {
+   "store": "FRESH|titles<=300",
+   "q": "What are the main approaches and trends in latent-structure learning for link prediction, recommendation, and community discovery in networks?",
+   "recall": 0.25
+  },
+  {
+   "store": "FRESH|titles<=300",
+   "q": "What are the main approaches and trends for integrating, representing, and retrieving entities across heterogeneous online knowledge and social networks?",
+   "recall": 0.5
+  },
+  {
+   "store": "FRESH|titles<=300",
+   "q": "What are the main approaches and trends in modeling, analyzing, and predicting relationships and behaviors in online social networks?",
+   "recall": 0.5
+  },
+  {
+   "store": "FRESH|titles<=300",
+   "q": "What are the main approaches and trends in building accurate and efficient recommender systems from sparse implicit and explicit user feedback?",
+   "recall": 0.25
+  },
+  {
+   "store": "FRESH|titles<=300",
+   "q": "What analytical approaches are used to understand cryptocurrency ecosystems, from transaction-network structure and evolution to suspicious activity and market behavior?",
+   "recall": 0.25
+  },
+  {
+   "store": "FRESH|titles<=300",
+   "q": "What are the main approaches and evaluation perspectives for understanding and mitigating popularity bias in recommender systems?",
+   "recall": 0.25
+  },
+  {
+   "store": "FRESH|titles<=300",
+   "q": "What are the main approaches and challenges in using citation data to assess scientific creativity, influence, and the dissemination of research ideas?",
+   "recall": 0.5
+  },
+  {
+   "store": "FRESH|titles<=300",
+   "q": "What are the main approaches and trends in random-walk-based graph representation learning and analysis?",
+   "recall": 0.25
+  },
+  {
+   "store": "FRESH|titles<=300",
+   "q": "What are the main approaches and trends in detecting anomalies and structural changes in evolving, attributed networks?",
+   "recall": 0.5
+  },
+  {
+   "store": "hybrid|tau=0.9|titles<=300",
+   "q": "What are the main approaches and trends in detecting automated, fake, and harmful accounts on social media?",
+   "recall": 1.0
+  },
+  {
+   "store": "hybrid|tau=0.9|titles<=300",
+   "q": "What are the main approaches and trends in representation learning and link analysis for signed social networks?",
+   "recall": 0.25
+  },
+  {
+   "store": "hybrid|tau=0.9|titles<=300",
+   "q": "What are the main approaches and challenges in learning user preferences for collaborative recommender systems?",
+   "recall": 0.5
+  },
+  {
+   "store": "hybrid|tau=0.9|titles<=300",
+   "q": "What are the main machine-learning approaches and trends for personalized email search, recommendation, and assistance?",
+   "recall": 0.0
+  },
+  {
+   "store": "hybrid|tau=0.9|titles<=300",
+   "q": "What are the main approaches, evaluation practices, and limitations in approximate nearest-neighbor search for high-dimensional and large-scale data?",
+   "recall": 0.25
+  },
+  {
+   "store": "hybrid|tau=0.9|titles<=300",
+   "q": "What are the main approaches and challenges in improving mobile app discovery, recommendation, and marketplace visibility?",
+   "recall": 0.25
+  },
+  {
+   "store": "hybrid|tau=0.9|titles<=300",
+   "q": "What are the main approaches and trends in using content, user behavior, and social signals to rank, recommend, and evaluate online news?",
+   "recall": 0.75
+  },
+  {
+   "store": "hybrid|tau=0.9|titles<=300",
+   "q": "What are the main approaches and trends in building efficient, relevant, and timely web crawlers for specialized content collection?",
+   "recall": 0.0
+  },
+  {
+   "store": "hybrid|tau=0.9|titles<=300",
+   "q": "What are the main approaches and trends in building efficient systems for storing, indexing, and querying large-scale visual data?",
+   "recall": 0.25
+  },
+  {
+   "store": "hybrid|tau=0.9|titles<=300",
+   "q": "What are the main approaches and trends in detecting fake news on social media using content, user, and propagation signals?",
+   "recall": 1.0
+  },
+  {
+   "store": "hybrid|tau=0.9|titles<=300",
+   "q": "What are the main modeling, inference, and theoretical analysis approaches for attributed and latent-feature network structures and dynamics?",
+   "recall": 0.0
+  },
+  {
+   "store": "hybrid|tau=0.9|titles<=300",
+   "q": "What are the main approaches and emerging trends in autoencoder-based collaborative filtering for personalized recommendation?",
+   "recall": 0.25
+  },
+  {
+   "store": "hybrid|tau=0.9|titles<=300",
+   "q": "What are the main approaches to understanding, enriching, and completing tabular data from heterogeneous sources?",
+   "recall": 0.0
+  },
+  {
+   "store": "hybrid|tau=0.9|titles<=300",
+   "q": "What are the main approaches and trends in searching large graphs for relevant, cohesive, and influential communities using keyword-based queries?",
+   "recall": 0.0
+  },
+  {
+   "store": "hybrid|tau=0.9|titles<=300",
+   "q": "How can digital media, public attention, and policy mentions be analyzed to understand information dissemination, societal impact, and misinformation?",
+   "recall": 0.5
+  },
+  {
+   "store": "hybrid|tau=0.9|titles<=300",
+   "q": "What are the main approaches and trends in assessing and mitigating misinformation and source trustworthiness on social media?",
+   "recall": 0.5
+  },
+  {
+   "store": "hybrid|tau=0.9|titles<=300",
+   "q": "What are the main approaches and trends in graph- and context-aware representation learning for recommender systems?",
+   "recall": 0.25
+  },
+  {
+   "store": "hybrid|tau=0.9|titles<=300",
+   "q": "What are the main network-analytic and social-media approaches for understanding cryptocurrency activity, risk, and market dynamics?",
+   "recall": 0.25
+  },
+  {
+   "store": "hybrid|tau=0.9|titles<=300",
+   "q": "What are the main approaches and emerging trends in dense subgraph discovery for complex, large-scale, and application-specific networks?",
+   "recall": 0.0
+  },
+  {
+   "store": "hybrid|tau=0.9|titles<=300",
+   "q": "What are the main network-based approaches for mapping technological knowledge, forecasting innovation, and understanding patent impact?",
+   "recall": 0.0
+  },
+  {
+   "store": "hybrid|tau=0.9|titles<=300",
+   "q": "What are the main approaches for improving personalized ranking and preference modeling in recommender systems?",
+   "recall": 0.0
+  },
+  {
+   "store": "hybrid|tau=0.9|titles<=300",
+   "q": "What are the main approaches for modeling evolving user preferences in recommendation and product search from implicit interaction data?",
+   "recall": 1.0
+  },
+  {
+   "store": "hybrid|tau=0.9|titles<=300",
+   "q": "What are the main patterns, drivers, and methods for understanding conference publishing and scholarly communication in computer science?",
+   "recall": 0.25
+  },
+  {
+   "store": "hybrid|tau=0.9|titles<=300",
+   "q": "What are the main bibliometric approaches and trends for assessing research performance, collaboration, and the geographic organization of science across countries and institutions?",
+   "recall": 0.0
+  },
+  {
+   "store": "hybrid|tau=0.9|titles<=300",
+   "q": "What are the main approaches and challenges in measuring, characterizing, and predicting the scientific impact of publications?",
+   "recall": 0.5
+  },
+  {
+   "store": "hybrid|tau=0.9|titles<=300",
+   "q": "What are the main approaches and trends in personalized recommendation from implicit user feedback?",
+   "recall": 0.5
+  },
+  {
+   "store": "hybrid|tau=0.9|titles<=300",
+   "q": "What are the main design trends and analytical capabilities of research software for network and social-media analysis?",
+   "recall": 0.25
+  },
+  {
+   "store": "hybrid|tau=0.9|titles<=300",
+   "q": "What are the main approaches for improving latent-factor recommender systems with auxiliary information, particularly under sparse or cold-start conditions?",
+   "recall": 0.75
+  },
+  {
+   "store": "hybrid|tau=0.9|titles<=300",
+   "q": "What are the main approaches and trends in scalable, efficient trajectory data management and analytics?",
+   "recall": 0.0
+  },
+  {
+   "store": "hybrid|tau=0.9|titles<=300",
+   "q": "What are the main approaches and trends for modeling evolving user preferences in sequential recommendation?",
+   "recall": 0.75
+  },
+  {
+   "store": "hybrid|tau=0.9|titles<=300",
+   "q": "What are the main approaches, evaluation criteria, and trade-offs in improving fairness in recommender systems?",
+   "recall": 0.25
+  },
+  {
+   "store": "hybrid|tau=0.9|titles<=300",
+   "q": "What are the main approaches and trends in latent-structure learning for link prediction, recommendation, and community discovery in networks?",
+   "recall": 0.0
+  },
+  {
+   "store": "hybrid|tau=0.9|titles<=300",
+   "q": "What are the main approaches and trends for integrating, representing, and retrieving entities across heterogeneous online knowledge and social networks?",
+   "recall": 0.5
+  },
+  {
+   "store": "hybrid|tau=0.9|titles<=300",
+   "q": "What are the main approaches and trends in modeling, analyzing, and predicting relationships and behaviors in online social networks?",
+   "recall": 0.0
+  },
+  {
+   "store": "hybrid|tau=0.9|titles<=300",
+   "q": "What are the main approaches and trends in building accurate and efficient recommender systems from sparse implicit and explicit user feedback?",
+   "recall": 0.5
+  },
+  {
+   "store": "hybrid|tau=0.9|titles<=300",
+   "q": "What analytical approaches are used to understand cryptocurrency ecosystems, from transaction-network structure and evolution to suspicious activity and market behavior?",
+   "recall": 0.5
+  },
+  {
+   "store": "hybrid|tau=0.9|titles<=300",
+   "q": "What are the main approaches and evaluation perspectives for understanding and mitigating popularity bias in recommender systems?",
+   "recall": 0.0
+  },
+  {
+   "store": "hybrid|tau=0.9|titles<=300",
+   "q": "What are the main approaches and challenges in using citation data to assess scientific creativity, influence, and the dissemination of research ideas?",
+   "recall": 0.5
+  },
+  {
+   "store": "hybrid|tau=0.9|titles<=300",
+   "q": "What are the main approaches and trends in random-walk-based graph representation learning and analysis?",
+   "recall": 0.5
+  },
+  {
+   "store": "hybrid|tau=0.9|titles<=300",
+   "q": "What are the main approaches and trends in detecting anomalies and structural changes in evolving, attributed networks?",
+   "recall": 0.5
+  }
+ ]
+}

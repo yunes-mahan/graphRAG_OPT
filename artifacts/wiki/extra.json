@@ -1,0 +1,109 @@
+{
+ "deletions": [
+  {
+   "year": "2018",
+   "links_removed": 93,
+   "links_added": 460,
+   "pages_removed": 4,
+   "pages_added": 79
+  },
+  {
+   "year": "2019",
+   "links_removed": 98,
+   "links_added": 488,
+   "pages_removed": 2,
+   "pages_added": 62
+  },
+  {
+   "year": "2020",
+   "links_removed": 100,
+   "links_added": 457,
+   "pages_removed": 1,
+   "pages_added": 64
+  },
+  {
+   "year": "2021",
+   "links_removed": 146,
+   "links_added": 496,
+   "pages_removed": 2,
+   "pages_added": 64
+  },
+  {
+   "year": "2022",
+   "links_removed": 89,
+   "links_added": 483,
+   "pages_removed": 0,
+   "pages_added": 72
+  },
+  {
+   "year": "2023",
+   "links_removed": 69,
+   "links_added": 477,
+   "pages_removed": 0,
+   "pages_added": 53
+  },
+  {
+   "year": "2024",
+   "links_removed": 192,
+   "links_added": 728,
+   "pages_removed": 1,
+   "pages_added": 88
+  },
+  {
+   "year": "2025",
+   "links_removed": 162,
+   "links_added": 754,
+   "pages_removed": 1,
+   "pages_added": 80
+  }
+ ],
+ "splits": [
+  {
+   "year": "2018",
+   "communities": 19,
+   "split": 1
+  },
+  {
+   "year": "2019",
+   "communities": 19,
+   "split": 1
+  },
+  {
+   "year": "2020",
+   "communities": 18,
+   "split": 1
+  },
+  {
+   "year": "2021",
+   "communities": 18,
+   "split": 1
+  },
+  {
+   "year": "2022",
+   "communities": 16,
+   "split": 0
+  },
+  {
+   "year": "2023",
+   "communities": 20,
+   "split": 0
+  },
+  {
+   "year": "2024",
+   "communities": 18,
+   "split": 0
+  },
+  {
+   "year": "2025",
+   "communities": 17,
+   "split": 1
+  }
+ ],
+ "cold_start": {
+  "n_new": 71,
+  "n_communities": 17,
+  "top1": 0.5352112676056338,
+  "top3": 0.7464788732394366,
+  "majority": 0.38028169014084506
+ }
+}

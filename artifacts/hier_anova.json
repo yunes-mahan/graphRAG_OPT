@@ -1,0 +1,42 @@
+{
+ "all": {
+  "tau": 0.1892335077444473,
+  "maintainer": 0.6110017720420067,
+  "min_size": 0.037568067157314936,
+  "seed": 3.14896041949026e-05,
+  "residual(interactions)": 0.16216516345203613
+ },
+ "identifier_maintainers": {
+  "tau": 0.8286312945728183,
+  "maintainer": 0.00017209657429741656,
+  "min_size": 0.12424729595702605,
+  "seed": 0.00012433428804712812,
+  "residual(interactions)": 0.046824978607811096
+ },
+ "means": {
+  "0.0": {
+   "graphrag_update": 0.048,
+   "reindex+match": 0.155,
+   "warm": 0.159,
+   "zep_attach": 0.017
+  },
+  "0.5": {
+   "graphrag_update": 0.048,
+   "reindex+match": 0.355,
+   "warm": 0.36,
+   "zep_attach": 0.028
+  },
+  "0.7": {
+   "graphrag_update": 0.048,
+   "reindex+match": 0.522,
+   "warm": 0.525,
+   "zep_attach": 0.053
+  },
+  "0.9": {
+   "graphrag_update": 0.048,
+   "reindex+match": 0.649,
+   "warm": 0.659,
+   "zep_attach": 0.131
+  }
+ }
+}

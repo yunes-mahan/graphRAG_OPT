@@ -1,0 +1,479 @@
+{
+ "blondel2008louvain": {
+  "title": "Fast unfolding of communities in large networks",
+  "authors": [
+   "Vincent D Blondel",
+   "Jean-Loup Guillaume",
+   "Renaud Lambiotte",
+   "Etienne Lefebvre"
+  ],
+  "year": 2008,
+  "venue": "Journal of Statistical Mechanics: Theory and Experiment",
+  "volume": "2008",
+  "pages": "P10008",
+  "doi": "10.1088/1742-5468/2008/10/P10008",
+  "type": "journal-article"
+ },
+ "traag2019leiden": {
+  "title": "From Louvain to Leiden: guaranteeing well-connected communities",
+  "authors": [
+   "V. A. Traag",
+   "L. Waltman",
+   "N. J. van Eck"
+  ],
+  "year": 2019,
+  "venue": "Scientific Reports",
+  "volume": "9",
+  "pages": "5233",
+  "doi": "10.1038/s41598-019-41695-z",
+  "type": "journal-article",
+  "issue": "1"
+ },
+ "newman2004modularity": {
+  "title": "Finding and evaluating community structure in networks",
+  "authors": [
+   "M. E. J. Newman",
+   "M. Girvan"
+  ],
+  "year": 2004,
+  "venue": "Physical Review E",
+  "volume": "69",
+  "pages": "026113",
+  "doi": "10.1103/PhysRevE.69.026113",
+  "type": "journal-article",
+  "issue": "2"
+ },
+ "fortunato2010community": {
+  "title": "Community detection in graphs",
+  "authors": [
+   "Santo Fortunato"
+  ],
+  "year": 2010,
+  "venue": "Physics Reports",
+  "volume": "486",
+  "pages": "75-174",
+  "doi": "10.1016/j.physrep.2009.11.002",
+  "type": "journal-article"
+ },
+ "rossetti2018dynamic": {
+  "title": "Community Discovery in Dynamic Networks",
+  "authors": [
+   "Giulio Rossetti",
+   "R\u00e9my Cazabet"
+  ],
+  "year": 2018,
+  "venue": "ACM Computing Surveys",
+  "volume": "51",
+  "pages": "1-37",
+  "doi": "10.1145/3172867",
+  "type": "journal-article"
+ },
+ "chakrabarti2006evolutionary": {
+  "title": "Evolutionary clustering",
+  "authors": [
+   "Deepayan Chakrabarti",
+   "Ravi Kumar",
+   "Andrew Tomkins"
+  ],
+  "year": 2006,
+  "venue": "Proceedings of the 12th ACM SIGKDD international conference on Knowledge discovery and data mining",
+  "volume": null,
+  "pages": "554-560",
+  "doi": "10.1145/1150402.1150467",
+  "type": "proceedings-article",
+  "publisher": "ACM"
+ },
+ "greene2010tracking": {
+  "title": "Tracking the Evolution of Communities in Dynamic Social Networks",
+  "authors": [
+   "Derek Greene",
+   "D\u00f3nal Doyle",
+   "P\u00e1draig Cunningham"
+  ],
+  "year": 2010,
+  "venue": "2010 International Conference on Advances in Social Networks Analysis and Mining",
+  "volume": null,
+  "pages": "176-183",
+  "doi": "10.1109/ASONAM.2010.17",
+  "type": "proceedings-article",
+  "publisher": "IEEE"
+ },
+ "zhuang2019dynamo": {
+  "title": "DynaMo: Dynamic Community Detection by Incrementally Maximizing Modularity",
+  "authors": [
+   "Di Zhuang",
+   "Morris J. Chang",
+   "Mingchen Li"
+  ],
+  "year": 2019,
+  "venue": "IEEE Transactions on Knowledge and Data Engineering",
+  "volume": null,
+  "pages": "1-1",
+  "doi": "10.1109/TKDE.2019.2951419",
+  "type": "journal-article"
+ },
+ "hogan2021kg": {
+  "title": "Knowledge Graphs",
+  "authors": [
+   "Aidan Hogan",
+   "Eva Blomqvist",
+   "Michael Cochez",
+   "Claudia D\u2019amato",
+   "Gerard De Melo",
+   "Claudio Gutierrez",
+   "Sabrina Kirrane",
+   "Jos\u00e9 Emilio Labra Gayo",
+   "Roberto Navigli",
+   "Sebastian Neumaier",
+   "Axel-Cyrille Ngonga Ngomo",
+   "Axel Polleres",
+   "Sabbir M. Rashid",
+   "Anisa Rula",
+   "Lukas Schmelzeisen",
+   "Juan Sequeda",
+   "Steffen Staab",
+   "Antoine Zimmermann"
+  ],
+  "year": 2021,
+  "venue": "ACM Computing Surveys",
+  "volume": "54",
+  "pages": "1-37",
+  "doi": "10.1145/3447772",
+  "type": "journal-article"
+ },
+ "lewis2020rag": {
+  "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+  "authors": [
+   "Patrick Lewis",
+   "Ethan Perez",
+   "Aleksandra Piktus",
+   "Fabio Petroni",
+   "Vladimir Karpukhin",
+   "Naman Goyal",
+   "Heinrich K\u00fcttler",
+   "Mike Lewis",
+   "Wen-tau Yih",
+   "Tim Rockt\u00e4schel",
+   "Sebastian Riedel",
+   "Douwe Kiela"
+  ],
+  "year": 2020,
+  "venue": "Advances in Neural Information Processing Systems 33 (NeurIPS 2020)",
+  "type": "conference",
+  "url": "https://arxiv.org/abs/2005.11401",
+  "arxiv": "2005.11401"
+ },
+ "edge2024graphrag": {
+  "title": "From Local to Global: A Graph RAG Approach to Query-Focused Summarization",
+  "authors": [
+   "Darren Edge",
+   "Ha Trinh",
+   "Newman Cheng",
+   "Joshua Bradley",
+   "Alex Chao",
+   "Apurva Mody",
+   "Steven Truitt",
+   "Dasha Metropolitansky",
+   "Robert Osazuwa Ness",
+   "Jonathan Larson"
+  ],
+  "year": 2024,
+  "venue": "arXiv",
+  "arxiv": "2404.16130"
+ },
+ "guo2024lightrag": {
+  "title": "LightRAG: Simple and Fast Retrieval-Augmented Generation",
+  "authors": [
+   "Zirui Guo",
+   "Lianghao Xia",
+   "Yanhua Yu",
+   "Tu Ao",
+   "Chao Huang"
+  ],
+  "year": 2024,
+  "venue": "arXiv",
+  "arxiv": "2410.05779"
+ },
+ "peng2024graphragsurvey": {
+  "title": "Graph Retrieval-Augmented Generation: A Survey",
+  "authors": [
+   "Boci Peng",
+   "Yun Zhu",
+   "Yongchao Liu",
+   "Xiaohe Bo",
+   "Haizhou Shi",
+   "Chuntao Hong",
+   "Yan Zhang",
+   "Siliang Tang"
+  ],
+  "year": 2024,
+  "venue": "arXiv",
+  "arxiv": "2408.08921"
+ },
+ "wang2025archrag": {
+  "title": "ArchRAG: Attributed Community-based Hierarchical Retrieval-Augmented Generation",
+  "authors": [
+   "Shu Wang",
+   "Yixiang Fang",
+   "Yingli Zhou",
+   "Xilin Liu",
+   "Yuchi Ma"
+  ],
+  "year": 2025,
+  "venue": "arXiv",
+  "arxiv": "2502.09891"
+ },
+ "hu2020ogb": {
+  "title": "Open Graph Benchmark: Datasets for Machine Learning on Graphs",
+  "authors": [
+   "Weihua Hu",
+   "Matthias Fey",
+   "Marinka Zitnik",
+   "Yuxiao Dong",
+   "Hongyu Ren",
+   "Bowen Liu",
+   "Michele Catasta",
+   "Jure Leskovec"
+  ],
+  "year": 2020,
+  "venue": "Advances in Neural Information Processing Systems 33 (NeurIPS 2020)",
+  "type": "conference",
+  "url": "https://arxiv.org/abs/2005.00687",
+  "arxiv": "2005.00687"
+ },
+ "sahu2024dfleiden": {
+  "title": "A Starting Point for Dynamic Community Detection with Leiden Algorithm",
+  "authors": [
+   "Subhajit Sahu"
+  ],
+  "year": 2024,
+  "venue": "arXiv",
+  "arxiv": "2405.11658"
+ },
+ "hygrag2026": {
+  "title": "A Unified Framework for Context-Aware and Relation-Aware Graph Retrieval-Augmented Generation",
+  "authors": [
+   "Haoyang Zhong",
+   "Yifei Sun",
+   "Antong Zhang",
+   "Chunping Wang",
+   "Lei Chen",
+   "Yang Yang"
+  ],
+  "year": 2026,
+  "venue": "Proceedings of the ACM Web Conference 2026",
+  "volume": null,
+  "pages": "2477-2488",
+  "doi": "10.1145/3774904.3792720",
+  "type": "proceedings-article",
+  "publisher": "ACM"
+ },
+ "eraRAG2025": {
+  "title": "EraRAG: Efficient and Incremental Retrieval Augmented Generation for Growing Corpora",
+  "authors": [
+   "Fangyuan Zhang",
+   "Zhengjun Huang",
+   "Yingli Zhou",
+   "Qintian Guo",
+   "Zhixun Li",
+   "Wensheng Luo",
+   "Di Jiang",
+   "Yixiang Fang",
+   "Xiaofang Zhou"
+  ],
+  "year": 2025,
+  "venue": "arXiv",
+  "arxiv": "2506.20963"
+ },
+ "tgrag2025": {
+  "title": "T-GRAG: A Dynamic GraphRAG Framework for Resolving Temporal Conflicts and Redundancy in Knowledge Retrieval",
+  "authors": [
+   "Dong Li",
+   "Yichen Niu",
+   "Ying Ai",
+   "Xiang Zou",
+   "Biqing Qi",
+   "Jianxing Liu"
+  ],
+  "year": 2025,
+  "venue": "arXiv",
+  "arxiv": "2508.01680"
+ },
+ "temporalrag2025": {
+  "title": "RAG Meets Temporal Graphs: Time-Sensitive Modeling and Retrieval for Evolving Knowledge",
+  "authors": [
+   "Jiale Han",
+   "Austin Cheung",
+   "Yubai Wei",
+   "Zheng Yu",
+   "Xusheng Wang",
+   "Bing Zhu",
+   "Yi Yang"
+  ],
+  "year": 2025,
+  "venue": "arXiv",
+  "arxiv": "2510.13590"
+ },
+ "sahu2024heuristic": {
+  "title": "Heuristic-based Dynamic Leiden Algorithm for Efficient Tracking of Communities on Evolving Graphs",
+  "authors": [
+   "Subhajit Sahu"
+  ],
+  "year": 2024,
+  "venue": "arXiv",
+  "arxiv": "2410.15451"
+ },
+ "zhou2025unified": {
+  "title": "In-Depth Analysis of Graph-Based RAG in a Unified Framework",
+  "authors": [
+   "Yingli Zhou",
+   "Yaodong Su",
+   "Youran Sun",
+   "Shu Wang",
+   "Taotao Wang",
+   "Runyuan He",
+   "Yongwei Zhang",
+   "Sicong Liang",
+   "Xilin Liu",
+   "Yuchi Ma",
+   "Yixiang Fang"
+  ],
+  "year": 2025,
+  "venue": "Proceedings of the VLDB Endowment",
+  "volume": "18",
+  "issue": "13",
+  "pages": "5623-5637",
+  "publisher": "Association for Computing Machinery (ACM)",
+  "type": "journal-article",
+  "doi": "10.14778/3773731.3773738"
+ },
+ "lin2026hitleiden": {
+  "title": "Maintaining Leiden Communities in Large Dynamic Graphs",
+  "authors": [
+   "Chunxu Lin",
+   "Yumao Xie",
+   "Yixiang Fang",
+   "Yongmin Hu",
+   "Yingqian Hu",
+   "Cheng Chen"
+  ],
+  "year": 2026,
+  "venue": "arXiv",
+  "arxiv": "2601.08554"
+ },
+ "caron2020swav": {
+  "title": "Unsupervised Learning of Visual Features by Contrasting Cluster Assignments",
+  "authors": [
+   "Mathilde Caron",
+   "Ishan Misra",
+   "Julien Mairal",
+   "Priya Goyal",
+   "Piotr Bojanowski",
+   "Armand Joulin"
+  ],
+  "year": 2020,
+  "venue": "Advances in Neural Information Processing Systems 33 (NeurIPS 2020)",
+  "type": "conference",
+  "url": "https://arxiv.org/abs/2006.09882",
+  "arxiv": "2006.09882"
+ },
+ "zep2025": {
+  "title": "Zep: A Temporal Knowledge Graph Architecture for Agent Memory",
+  "authors": [
+   "Preston Rasmussen",
+   "Pavlo Paliychuk",
+   "Travis Beauvais",
+   "Jack Ryan",
+   "Daniel Chalef"
+  ],
+  "year": 2025,
+  "venue": "arXiv",
+  "arxiv": "2501.13956"
+ },
+ "msgraphrag": {
+  "title": "GraphRAG",
+  "authors": [
+   "{Microsoft}"
+  ],
+  "year": 2026,
+  "venue": "software",
+  "url": "https://github.com/microsoft/graphrag",
+  "note": "Version 3.2; incremental update in index/update/communities.py, accessed 8 November 2026"
+ },
+ "aynaud2013evolving": {
+  "title": "Communities in Evolving Networks: Definitions, Detection, and Analysis Techniques",
+  "authors": [
+   "Thomas Aynaud",
+   "Eric Fleury",
+   "Jean-Loup Guillaume",
+   "Qinna Wang"
+  ],
+  "year": 2013,
+  "venue": "Dynamics On and Of Complex Networks, Volume 2",
+  "pages": "159-200",
+  "publisher": "Springer New York",
+  "type": "book-chapter",
+  "doi": "10.1007/978-1-4614-6729-8_9"
+ },
+ "cazabet2020evaluating": {
+  "title": "Evaluating community detection algorithms for progressively evolving graphs",
+  "authors": [
+   "Remy Cazabet",
+   "Sou\u00e2ad Boudebza",
+   "Giulio Rossetti"
+  ],
+  "year": 2020,
+  "venue": "Journal of Complex Networks",
+  "volume": "8",
+  "issue": "6",
+  "pages": "cnaa027",
+  "publisher": "Oxford University Press",
+  "type": "journal-article",
+  "doi": "10.1093/comnet/cnaa027"
+ },
+ "gorke2010dynamic": {
+  "title": "Modularity-Driven Clustering of Dynamic Graphs",
+  "authors": [
+   "Robert G\u00f6rke",
+   "Pascal Maillard",
+   "Christian Staudt",
+   "Dorothea Wagner"
+  ],
+  "year": 2010,
+  "venue": "Experimental Algorithms (SEA 2010)",
+  "pages": "436-448",
+  "publisher": "Springer Berlin Heidelberg",
+  "type": "book-chapter",
+  "doi": "10.1007/978-3-642-13193-6_37"
+ },
+ "colby1996deferred": {
+  "title": "Algorithms for deferred view maintenance",
+  "authors": [
+   "Latha S. Colby",
+   "Timothy Griffin",
+   "Leonid Libkin",
+   "Inderpal Singh Mumick",
+   "Howard Trickey"
+  ],
+  "year": 1996,
+  "venue": "Proceedings of the 1996 ACM SIGMOD International Conference on Management of Data",
+  "pages": "469-480",
+  "publisher": "ACM",
+  "type": "proceedings-article",
+  "doi": "10.1145/233269.233364"
+ },
+ "gupta1993views": {
+  "title": "Maintaining views incrementally",
+  "authors": [
+   "Ashish Gupta",
+   "Inderpal Singh Mumick",
+   "V. S. Subrahmanian"
+  ],
+  "year": 1993,
+  "venue": "Proceedings of the 1993 ACM SIGMOD International Conference on Management of Data",
+  "pages": "157-166",
+  "publisher": "ACM",
+  "type": "proceedings-article",
+  "doi": "10.1145/170035.170066"
+ }
+}

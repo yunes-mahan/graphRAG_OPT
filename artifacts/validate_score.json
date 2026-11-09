@@ -1,0 +1,548 @@
+{
+ "local": {
+  "stores": [
+   {
+    "store": "recompute_leiden|tau=0.9",
+    "Q": 0.8119678817516579,
+    "tokens": 1.0,
+    "score": 0.501967881751658,
+    "recall": 0.3458333333333333,
+    "diff": 0.029166666666666667,
+    "ci90": [
+     -0.006601785639494907,
+     0.06493511897282825
+    ],
+    "tost_p": 0.16811082597846663,
+    "equivalent": false
+   },
+   {
+    "store": "recompute_leiden|tau=0.7",
+    "Q": 0.8119678817516579,
+    "tokens": 0.7835541383627838,
+    "score": 0.5690660988591949,
+    "recall": 0.32916666666666666,
+    "diff": 0.0125,
+    "ci90": [
+     -0.029649033613501203,
+     0.05464903361350121
+    ],
+    "tost_p": 0.071438971956972,
+    "equivalent": false
+   },
+   {
+    "store": "recompute_leiden|tau=0.5",
+    "Q": 0.8119678817516579,
+    "tokens": 0.4950407965926406,
+    "score": 0.6585052348079393,
+    "recall": 0.32708333333333334,
+    "diff": 0.010416666666666666,
+    "ci90": [
+     -0.031026106172742915,
+     0.051859439506076244
+    ],
+    "tost_p": 0.05799453988341625,
+    "equivalent": false
+   },
+   {
+    "store": "recompute_leiden|tau=0.0",
+    "Q": 0.8119678817516579,
+    "tokens": 0.19930685466138223,
+    "score": 0.7501827568066294,
+    "recall": 0.3416666666666667,
+    "diff": 0.025,
+    "ci90": [
+     -0.019251151286146843,
+     0.06925115128614684
+    ],
+    "tost_p": 0.1754401555507209,
+    "equivalent": false
+   },
+   {
+    "store": "warmstart_leiden|tau=0.9",
+    "Q": 0.8137173432161289,
+    "tokens": 0.7208859457184087,
+    "score": 0.5902427000434222,
+    "recall": 0.28958333333333336,
+    "diff": -0.027083333333333334,
+    "ci90": [
+     -0.06921690661204596,
+     0.015050239945379303
+    ],
+    "tost_p": 0.1845284104522217,
+    "equivalent": false
+   },
+   {
+    "store": "warmstart_leiden|tau=0.7",
+    "Q": 0.8137173432161289,
+    "tokens": 0.35946054625877694,
+    "score": 0.702284573875908,
+    "recall": 0.3229166666666667,
+    "diff": 0.00625,
+    "ci90": [
+     -0.034627805856969084,
+     0.04712780585696908
+    ],
+    "tost_p": 0.039290548739444875,
+    "equivalent": true
+   },
+   {
+    "store": "warmstart_leiden|tau=0.5",
+    "Q": 0.8137173432161289,
+    "tokens": 0.1958922329796777,
+    "score": 0.7529907509924287,
+    "recall": 0.3229166666666667,
+    "diff": 0.00625,
+    "ci90": [
+     -0.03403502034878395,
+     0.04653502034878395
+    ],
+    "tost_p": 0.03716961607781352,
+    "equivalent": true
+   },
+   {
+    "store": "warmstart_leiden|tau=0.0",
+    "Q": 0.8137173432161289,
+    "tokens": 0.06778272838896832,
+    "score": 0.7927046974155487,
+    "recall": 0.31666666666666665,
+    "diff": 0.0,
+    "ci90": [
+     -0.04190576776532503,
+     0.04190576776532503
+    ],
+    "tost_p": 0.02512201859893716,
+    "equivalent": true
+   },
+   {
+    "store": "frontier_leiden|tau=0.9",
+    "Q": 0.8100251371063357,
+    "tokens": 0.6484755240617187,
+    "score": 0.6089977246472029,
+    "recall": 0.33125,
+    "diff": 0.014583333333333334,
+    "ci90": [
+     -0.02797629668874554,
+     0.057142963355412205
+    ],
+    "tost_p": 0.08515904309047101,
+    "equivalent": false
+   },
+   {
+    "store": "frontier_leiden|tau=0.7",
+    "Q": 0.8100251371063357,
+    "tokens": 0.23198447483548892,
+    "score": 0.7381099499073341,
+    "recall": 0.31875,
+    "diff": 0.0020833333333333333,
+    "ci90": [
+     -0.040814095446526054,
+     0.04498076211319272
+    ],
+    "tost_p": 0.033271944195773284,
+    "equivalent": true
+   },
+   {
+    "store": "frontier_leiden|tau=0.5",
+    "Q": 0.8100251371063357,
+    "tokens": 0.08282508502932487,
+    "score": 0.784349360747245,
+    "recall": 0.31875,
+    "diff": 0.0020833333333333333,
+    "ci90": [
+     -0.04137125840449373,
+     0.0455379250711604
+    ],
+    "tost_p": 0.03502847866371516,
+    "equivalent": true
+   },
+   {
+    "store": "frontier_leiden|tau=0.0",
+    "Q": 0.8100251371063357,
+    "tokens": 0.02894964408049308,
+    "score": 0.8010507474413828,
+    "recall": 0.3104166666666667,
+    "diff": -0.00625,
+    "ci90": [
+     -0.043751709323714826,
+     0.03125170932371483
+    ],
+    "tost_p": 0.027745962865005375,
+    "equivalent": true
+   },
+   {
+    "store": "hybrid|tau=0.9",
+    "Q": 0.7965027189626623,
+    "tokens": 0.5038416175005077,
+    "score": 0.6403118175375049,
+    "recall": 0.3770833333333333,
+    "diff": 0.06041666666666667,
+    "ci90": [
+     0.015465471489663249,
+     0.10536786184367009
+    ],
+    "tost_p": 0.6492262449940083,
+    "equivalent": false
+   },
+   {
+    "store": "hybrid|tau=0.7",
+    "Q": 0.7965027189626623,
+    "tokens": 0.15064412487375045,
+    "score": 0.7498030402517997,
+    "recall": 0.3458333333333333,
+    "diff": 0.029166666666666667,
+    "ci90": [
+     -0.010127085888387316,
+     0.06846041922172065
+    ],
+    "tost_p": 0.19060394295834562,
+    "equivalent": false
+   },
+   {
+    "store": "hybrid|tau=0.5",
+    "Q": 0.7965027189626623,
+    "tokens": 0.06844978327440567,
+    "score": 0.7752832861475966,
+    "recall": 0.31666666666666665,
+    "diff": 0.0,
+    "ci90": [
+     -0.04275817574182197,
+     0.04275817574182197
+    ],
+    "tost_p": 0.027463385749519193,
+    "equivalent": true
+   },
+   {
+    "store": "hybrid|tau=0.0",
+    "Q": 0.7965027189626623,
+    "tokens": 0.03592816787189319,
+    "score": 0.7853649869223754,
+    "recall": 0.35208333333333336,
+    "diff": 0.035416666666666666,
+    "ci90": [
+     -0.013457333310352489,
+     0.08429066664368581
+    ],
+    "tost_p": 0.31087864506060536,
+    "equivalent": false
+   }
+  ],
+  "spearman": {
+   "Q": {
+    "rho": -0.3952847075210474,
+    "p": 0.12967390079496663
+   },
+   "tokens": {
+    "rho": 0.28318707280518296,
+    "p": 0.2878661725071162
+   },
+   "score": {
+    "rho": -0.333334783614434,
+    "p": 0.20707639243855272
+   }
+  },
+  "n_equivalent": 7,
+  "n": 16,
+  "margin": 0.05,
+  "n_q": 120
+ },
+ "global_qa_stream": [
+  {
+   "store": "summaries|fresh titles-only",
+   "criterion": "comprehensiveness",
+   "mean": 0.5916666666666667,
+   "tost_p": 0.43261283042760784,
+   "equivalent": false,
+   "n_q": 30
+  },
+  {
+   "store": "summaries|fresh titles-only",
+   "criterion": "diversity",
+   "mean": 0.5583333333333333,
+   "tost_p": 0.16855342154006106,
+   "equivalent": false,
+   "n_q": 30
+  },
+  {
+   "store": "summaries|fresh titles-only",
+   "criterion": "empowerment",
+   "mean": 0.5166666666666667,
+   "tost_p": 0.03634622149157835,
+   "equivalent": true,
+   "n_q": 30
+  },
+  {
+   "store": "summaries|fresh titles-only",
+   "criterion": "directness",
+   "mean": 0.44166666666666665,
+   "tost_p": 0.2198403428852674,
+   "equivalent": false,
+   "n_q": 30
+  },
+  {
+   "store": "summaries|hybrid never",
+   "criterion": "comprehensiveness",
+   "mean": 0.525,
+   "tost_p": 0.11634839748513984,
+   "equivalent": false,
+   "n_q": 30
+  },
+  {
+   "store": "summaries|hybrid never",
+   "criterion": "diversity",
+   "mean": 0.5416666666666666,
+   "tost_p": 0.15447542850553886,
+   "equivalent": false,
+   "n_q": 30
+  },
+  {
+   "store": "summaries|hybrid never",
+   "criterion": "empowerment",
+   "mean": 0.575,
+   "tost_p": 0.2980763506313261,
+   "equivalent": false,
+   "n_q": 30
+  },
+  {
+   "store": "summaries|hybrid never",
+   "criterion": "directness",
+   "mean": 0.44166666666666665,
+   "tost_p": 0.24485498280630733,
+   "equivalent": false,
+   "n_q": 30
+  },
+  {
+   "store": "summaries|hybrid tau=0.9",
+   "criterion": "comprehensiveness",
+   "mean": 0.6,
+   "tost_p": 0.5,
+   "equivalent": false,
+   "n_q": 30
+  },
+  {
+   "store": "summaries|hybrid tau=0.9",
+   "criterion": "diversity",
+   "mean": 0.5583333333333333,
+   "tost_p": 0.20759824239758867,
+   "equivalent": false,
+   "n_q": 30
+  },
+  {
+   "store": "summaries|hybrid tau=0.9",
+   "criterion": "empowerment",
+   "mean": 0.5666666666666667,
+   "tost_p": 0.20360869523896286,
+   "equivalent": false,
+   "n_q": 30
+  },
+  {
+   "store": "summaries|hybrid tau=0.9",
+   "criterion": "directness",
+   "mean": 0.4083333333333333,
+   "tost_p": 0.430493346770848,
+   "equivalent": false,
+   "n_q": 30
+  },
+  {
+   "store": "summaries|recompute tau=0.9",
+   "criterion": "comprehensiveness",
+   "mean": 0.55,
+   "tost_p": 0.227710968281479,
+   "equivalent": false,
+   "n_q": 30
+  },
+  {
+   "store": "summaries|recompute tau=0.9",
+   "criterion": "diversity",
+   "mean": 0.5416666666666666,
+   "tost_p": 0.15447542850553886,
+   "equivalent": false,
+   "n_q": 30
+  },
+  {
+   "store": "summaries|recompute tau=0.9",
+   "criterion": "empowerment",
+   "mean": 0.475,
+   "tost_p": 0.03077108431508357,
+   "equivalent": true,
+   "n_q": 30
+  },
+  {
+   "store": "summaries|recompute tau=0.9",
+   "criterion": "directness",
+   "mean": 0.49166666666666664,
+   "tost_p": 0.034839671028936925,
+   "equivalent": true,
+   "n_q": 30
+  },
+  {
+   "store": "vector|12 papers",
+   "criterion": "comprehensiveness",
+   "mean": 0.15,
+   "tost_p": 0.9999908906897309,
+   "equivalent": false,
+   "n_q": 30
+  },
+  {
+   "store": "vector|12 papers",
+   "criterion": "diversity",
+   "mean": 0.13333333333333333,
+   "tost_p": 0.9999875992784325,
+   "equivalent": false,
+   "n_q": 30
+  },
+  {
+   "store": "vector|12 papers",
+   "criterion": "empowerment",
+   "mean": 0.2,
+   "tost_p": 0.9992870862910487,
+   "equivalent": false,
+   "n_q": 30
+  },
+  {
+   "store": "vector|12 papers",
+   "criterion": "directness",
+   "mean": 0.2916666666666667,
+   "tost_p": 0.9621125646011472,
+   "equivalent": false,
+   "n_q": 30
+  },
+  {
+   "store": "vector|132 papers (budget-matched)",
+   "criterion": "comprehensiveness",
+   "mean": 0.2833333333333333,
+   "tost_p": 0.9650786660035062,
+   "equivalent": false,
+   "n_q": 30
+  },
+  {
+   "store": "vector|132 papers (budget-matched)",
+   "criterion": "diversity",
+   "mean": 0.23333333333333334,
+   "tost_p": 0.9983216323732543,
+   "equivalent": false,
+   "n_q": 30
+  },
+  {
+   "store": "vector|132 papers (budget-matched)",
+   "criterion": "empowerment",
+   "mean": 0.4166666666666667,
+   "tost_p": 0.40427201519106726,
+   "equivalent": false,
+   "n_q": 30
+  },
+  {
+   "store": "vector|132 papers (budget-matched)",
+   "criterion": "directness",
+   "mean": 0.5416666666666666,
+   "tost_p": 0.17872257681658207,
+   "equivalent": false,
+   "n_q": 30
+  }
+ ],
+ "entity": {
+  "stores": [
+   {
+    "store": "frontier_leiden",
+    "score": 0.7380654243431874,
+    "comprehensiveness": 0.575,
+    "comprehensiveness_tost_p": 0.34594329996293977,
+    "diversity": 0.475,
+    "diversity_tost_p": 0.1472573400419296,
+    "empowerment": 0.5166666666666667,
+    "empowerment_tost_p": 0.050926460962677944,
+    "directness": 0.525,
+    "directness_tost_p": 0.10744346524993831
+   },
+   {
+    "store": "graphrag_delta",
+    "score": 0.5954160777112318,
+    "comprehensiveness": 0.6166666666666667,
+    "comprehensiveness_tost_p": 0.6050532496551158,
+    "diversity": 0.5833333333333334,
+    "diversity_tost_p": 0.39788498154796104,
+    "empowerment": 0.6666666666666666,
+    "empowerment_tost_p": 0.8808677318804256,
+    "directness": 0.675,
+    "directness_tost_p": 0.9079293288540143
+   },
+   {
+    "store": "lazy",
+    "score": 0.7575451423316202,
+    "comprehensiveness": 0.4666666666666667,
+    "comprehensiveness_tost_p": 0.1695158616405545,
+    "diversity": 0.45,
+    "diversity_tost_p": 0.18167131137312195,
+    "empowerment": 0.48333333333333334,
+    "empowerment_tost_p": 0.055727530423700926,
+    "directness": 0.44166666666666665,
+    "directness_tost_p": 0.24038041888019912
+   },
+   {
+    "store": "priced_frontier",
+    "score": 0.7535419561856378,
+    "comprehensiveness": 0.5333333333333333,
+    "comprehensiveness_tost_p": 0.13146897432520646,
+    "diversity": 0.5,
+    "diversity_tost_p": 0.039507443489996165,
+    "empowerment": 0.4166666666666667,
+    "empowerment_tost_p": 0.38000869196808407,
+    "directness": 0.5666666666666667,
+    "directness_tost_p": 0.2945947353732263
+   },
+   {
+    "store": "priced_warm",
+    "score": 0.7324931563532437,
+    "comprehensiveness": 0.5083333333333333,
+    "comprehensiveness_tost_p": 0.06269426847576899,
+    "diversity": 0.5333333333333333,
+    "diversity_tost_p": 0.1264594953359469,
+    "empowerment": 0.5666666666666667,
+    "empowerment_tost_p": 0.2638865618141882,
+    "directness": 0.6083333333333333,
+    "directness_tost_p": 0.5479756712029002
+   },
+   {
+    "store": "recompute_leiden",
+    "score": 0.6108459668413948,
+    "comprehensiveness": 0.4083333333333333,
+    "comprehensiveness_tost_p": 0.4379695781364996,
+    "diversity": 0.4083333333333333,
+    "diversity_tost_p": 0.43261283042760784,
+    "empowerment": 0.4583333333333333,
+    "empowerment_tost_p": 0.09445588698151916,
+    "directness": 0.55,
+    "directness_tost_p": 0.18731919671517896
+   },
+   {
+    "store": "warmstart_leiden",
+    "score": 0.6721607006992671,
+    "comprehensiveness": 0.6083333333333333,
+    "comprehensiveness_tost_p": 0.5530659380539733,
+    "diversity": 0.5916666666666667,
+    "diversity_tost_p": 0.4446166650001355,
+    "empowerment": 0.55,
+    "empowerment_tost_p": 0.18731919671517896,
+    "directness": 0.625,
+    "directness_tost_p": 0.6674241891320059
+   }
+  ],
+  "spearman": {
+   "comprehensiveness": {
+    "rho": -0.3571428571428572,
+    "p": 0.43161135203832796
+   },
+   "diversity": {
+    "rho": -0.3571428571428572,
+    "p": 0.43161135203832796
+   },
+   "empowerment": {
+    "rho": -0.5357142857142858,
+    "p": 0.21521745567801284
+   },
+   "directness": {
+    "rho": -0.7142857142857144,
+    "p": 0.07134356146753763
+   }
+  }
+ }
+}

@@ -1,0 +1,3351 @@
+{
+ "summary": [
+  {
+   "store": "summaries|hybrid tau=0.9",
+   "input_tokens": 22302.633333333335,
+   "comprehensiveness": 0.6,
+   "comprehensiveness_p": 0.05777957112359726,
+   "diversity": 0.5583333333333333,
+   "diversity_p": 0.2919147959664441,
+   "empowerment": 0.5666666666666667,
+   "empowerment_p": 0.10247043485974945,
+   "directness": 0.4083333333333333,
+   "directness_p": 0.061936109208201286
+  },
+  {
+   "store": "summaries|hybrid never",
+   "input_tokens": 22171.633333333335,
+   "comprehensiveness": 0.525,
+   "comprehensiveness_p": 0.755168569697506,
+   "diversity": 0.5416666666666666,
+   "diversity_p": 0.3894236957350262,
+   "empowerment": 0.575,
+   "empowerment_p": 0.14009141650550508,
+   "directness": 0.44166666666666665,
+   "directness_p": 0.3611026459512753
+  },
+  {
+   "store": "summaries|recompute tau=0.9",
+   "input_tokens": 14517.633333333333,
+   "comprehensiveness": 0.55,
+   "comprehensiveness_p": 0.43926357380100045,
+   "diversity": 0.5416666666666666,
+   "diversity_p": 0.3894236957350262,
+   "empowerment": 0.475,
+   "empowerment_p": 0.5785147215079439,
+   "directness": 0.49166666666666664,
+   "directness_p": 0.9090807435274522
+  },
+  {
+   "store": "summaries|fresh titles-only",
+   "input_tokens": 13856.633333333333,
+   "comprehensiveness": 0.5916666666666667,
+   "comprehensiveness_p": 0.08551052263941811,
+   "diversity": 0.5583333333333333,
+   "diversity_p": 0.2435897094939674,
+   "empowerment": 0.5166666666666667,
+   "empowerment_p": 0.7054569861112734,
+   "directness": 0.44166666666666665,
+   "directness_p": 0.2607705440720476
+  },
+  {
+   "store": "vector|12 papers",
+   "input_tokens": 1479.0333333333333,
+   "comprehensiveness": 0.15,
+   "comprehensiveness_p": 1.193331081541825e-05,
+   "diversity": 0.13333333333333333,
+   "diversity_p": 1.599247359324736e-05,
+   "empowerment": 0.2,
+   "empowerment_p": 0.00012423612343122087,
+   "directness": 0.2916666666666667,
+   "directness_p": 0.001761261162083509
+  },
+  {
+   "store": "vector|132 papers (budget-matched)",
+   "input_tokens": 15797.9,
+   "comprehensiveness": 0.2833333333333333,
+   "comprehensiveness_p": 0.002859938208464094,
+   "diversity": 0.23333333333333334,
+   "diversity_p": 0.00016244084518680078,
+   "empowerment": 0.4166666666666667,
+   "empowerment_p": 0.22525290636065332,
+   "directness": 0.5416666666666666,
+   "directness_p": 0.5179327761139305
+  }
+ ],
+ "rows": [
+  {
+   "store": "summaries|hybrid tau=0.9",
+   "q": 0,
+   "order": 0,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 0.0,
+   "directness": 0.5
+  },
+  {
+   "store": "summaries|hybrid tau=0.9",
+   "q": 0,
+   "order": 1,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 1.0,
+   "directness": 0.5
+  },
+  {
+   "store": "summaries|hybrid tau=0.9",
+   "q": 1,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 0.0
+  },
+  {
+   "store": "summaries|hybrid tau=0.9",
+   "q": 1,
+   "order": 1,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 1.0,
+   "directness": 1.0
+  },
+  {
+   "store": "summaries|hybrid tau=0.9",
+   "q": 2,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 0.0
+  },
+  {
+   "store": "summaries|hybrid tau=0.9",
+   "q": 2,
+   "order": 1,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 1.0,
+   "directness": 1.0
+  },
+  {
+   "store": "summaries|hybrid tau=0.9",
+   "q": 3,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 1.0
+  },
+  {
+   "store": "summaries|hybrid tau=0.9",
+   "q": 3,
+   "order": 1,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 1.0,
+   "directness": 0.0
+  },
+  {
+   "store": "summaries|hybrid tau=0.9",
+   "q": 4,
+   "order": 0,
+   "comprehensiveness": 1.0,
+   "diversity": 0.0,
+   "empowerment": 1.0,
+   "directness": 1.0
+  },
+  {
+   "store": "summaries|hybrid tau=0.9",
+   "q": 4,
+   "order": 1,
+   "comprehensiveness": 1.0,
+   "diversity": 0.0,
+   "empowerment": 1.0,
+   "directness": 1.0
+  },
+  {
+   "store": "summaries|hybrid tau=0.9",
+   "q": 5,
+   "order": 0,
+   "comprehensiveness": 1.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 1.0
+  },
+  {
+   "store": "summaries|hybrid tau=0.9",
+   "q": 5,
+   "order": 1,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 1.0,
+   "directness": 0.0
+  },
+  {
+   "store": "summaries|hybrid tau=0.9",
+   "q": 6,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 1.0,
+   "directness": 1.0
+  },
+  {
+   "store": "summaries|hybrid tau=0.9",
+   "q": 6,
+   "order": 1,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 1.0,
+   "directness": 0.0
+  },
+  {
+   "store": "summaries|hybrid tau=0.9",
+   "q": 7,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 0.0
+  },
+  {
+   "store": "summaries|hybrid tau=0.9",
+   "q": 7,
+   "order": 1,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 1.0,
+   "directness": 0.0
+  },
+  {
+   "store": "summaries|hybrid tau=0.9",
+   "q": 8,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 0.0
+  },
+  {
+   "store": "summaries|hybrid tau=0.9",
+   "q": 8,
+   "order": 1,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 1.0,
+   "directness": 0.0
+  },
+  {
+   "store": "summaries|hybrid tau=0.9",
+   "q": 9,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 1.0
+  },
+  {
+   "store": "summaries|hybrid tau=0.9",
+   "q": 9,
+   "order": 1,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 1.0,
+   "directness": 0.0
+  },
+  {
+   "store": "summaries|hybrid tau=0.9",
+   "q": 10,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 0.0
+  },
+  {
+   "store": "summaries|hybrid tau=0.9",
+   "q": 10,
+   "order": 1,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 1.0,
+   "directness": 0.0
+  },
+  {
+   "store": "summaries|hybrid tau=0.9",
+   "q": 11,
+   "order": 0,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 0.0,
+   "directness": 0.0
+  },
+  {
+   "store": "summaries|hybrid tau=0.9",
+   "q": 11,
+   "order": 1,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 1.0,
+   "directness": 0.5
+  },
+  {
+   "store": "summaries|hybrid tau=0.9",
+   "q": 12,
+   "order": 0,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 0.0,
+   "directness": 0.0
+  },
+  {
+   "store": "summaries|hybrid tau=0.9",
+   "q": 12,
+   "order": 1,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 1.0,
+   "directness": 0.0
+  },
+  {
+   "store": "summaries|hybrid tau=0.9",
+   "q": 13,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 0.0
+  },
+  {
+   "store": "summaries|hybrid tau=0.9",
+   "q": 13,
+   "order": 1,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 1.0,
+   "directness": 1.0
+  },
+  {
+   "store": "summaries|hybrid tau=0.9",
+   "q": 14,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.5,
+   "empowerment": 0.0,
+   "directness": 0.5
+  },
+  {
+   "store": "summaries|hybrid tau=0.9",
+   "q": 14,
+   "order": 1,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 1.0,
+   "directness": 0.0
+  },
+  {
+   "store": "summaries|hybrid tau=0.9",
+   "q": 15,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 0.0
+  },
+  {
+   "store": "summaries|hybrid tau=0.9",
+   "q": 15,
+   "order": 1,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 1.0,
+   "directness": 0.0
+  },
+  {
+   "store": "summaries|hybrid tau=0.9",
+   "q": 16,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 0.0
+  },
+  {
+   "store": "summaries|hybrid tau=0.9",
+   "q": 16,
+   "order": 1,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 0.0,
+   "directness": 0.5
+  },
+  {
+   "store": "summaries|hybrid tau=0.9",
+   "q": 17,
+   "order": 0,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 1.0,
+   "directness": 0.5
+  },
+  {
+   "store": "summaries|hybrid tau=0.9",
+   "q": 17,
+   "order": 1,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 1.0,
+   "directness": 1.0
+  },
+  {
+   "store": "summaries|hybrid tau=0.9",
+   "q": 18,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 0.5
+  },
+  {
+   "store": "summaries|hybrid tau=0.9",
+   "q": 18,
+   "order": 1,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 1.0,
+   "directness": 1.0
+  },
+  {
+   "store": "summaries|hybrid tau=0.9",
+   "q": 19,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 0.0
+  },
+  {
+   "store": "summaries|hybrid tau=0.9",
+   "q": 19,
+   "order": 1,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 1.0,
+   "directness": 0.5
+  },
+  {
+   "store": "summaries|hybrid tau=0.9",
+   "q": 20,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 0.0
+  },
+  {
+   "store": "summaries|hybrid tau=0.9",
+   "q": 20,
+   "order": 1,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 1.0,
+   "directness": 1.0
+  },
+  {
+   "store": "summaries|hybrid tau=0.9",
+   "q": 21,
+   "order": 0,
+   "comprehensiveness": 1.0,
+   "diversity": 0.0,
+   "empowerment": 1.0,
+   "directness": 1.0
+  },
+  {
+   "store": "summaries|hybrid tau=0.9",
+   "q": 21,
+   "order": 1,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 1.0,
+   "directness": 0.0
+  },
+  {
+   "store": "summaries|hybrid tau=0.9",
+   "q": 22,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 0.5
+  },
+  {
+   "store": "summaries|hybrid tau=0.9",
+   "q": 22,
+   "order": 1,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 1.0,
+   "directness": 1.0
+  },
+  {
+   "store": "summaries|hybrid tau=0.9",
+   "q": 23,
+   "order": 0,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 1.0,
+   "directness": 0.5
+  },
+  {
+   "store": "summaries|hybrid tau=0.9",
+   "q": 23,
+   "order": 1,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 1.0,
+   "directness": 1.0
+  },
+  {
+   "store": "summaries|hybrid tau=0.9",
+   "q": 24,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 0.0
+  },
+  {
+   "store": "summaries|hybrid tau=0.9",
+   "q": 24,
+   "order": 1,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 1.0,
+   "directness": 0.5
+  },
+  {
+   "store": "summaries|hybrid tau=0.9",
+   "q": 25,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 1.0
+  },
+  {
+   "store": "summaries|hybrid tau=0.9",
+   "q": 25,
+   "order": 1,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 1.0,
+   "directness": 0.0
+  },
+  {
+   "store": "summaries|hybrid tau=0.9",
+   "q": 26,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 0.5
+  },
+  {
+   "store": "summaries|hybrid tau=0.9",
+   "q": 26,
+   "order": 1,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 1.0,
+   "directness": 0.0
+  },
+  {
+   "store": "summaries|hybrid tau=0.9",
+   "q": 27,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 1.0,
+   "empowerment": 0.0,
+   "directness": 0.0
+  },
+  {
+   "store": "summaries|hybrid tau=0.9",
+   "q": 27,
+   "order": 1,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 1.0,
+   "directness": 1.0
+  },
+  {
+   "store": "summaries|hybrid tau=0.9",
+   "q": 28,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 0.5
+  },
+  {
+   "store": "summaries|hybrid tau=0.9",
+   "q": 28,
+   "order": 1,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 1.0,
+   "directness": 0.5
+  },
+  {
+   "store": "summaries|hybrid tau=0.9",
+   "q": 29,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 0.5
+  },
+  {
+   "store": "summaries|hybrid tau=0.9",
+   "q": 29,
+   "order": 1,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 1.0,
+   "directness": 0.0
+  },
+  {
+   "store": "summaries|hybrid never",
+   "q": 0,
+   "order": 0,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 1.0,
+   "directness": 1.0
+  },
+  {
+   "store": "summaries|hybrid never",
+   "q": 0,
+   "order": 1,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 1.0,
+   "directness": 0.5
+  },
+  {
+   "store": "summaries|hybrid never",
+   "q": 1,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 0.5
+  },
+  {
+   "store": "summaries|hybrid never",
+   "q": 1,
+   "order": 1,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 1.0,
+   "directness": 1.0
+  },
+  {
+   "store": "summaries|hybrid never",
+   "q": 2,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 0.0
+  },
+  {
+   "store": "summaries|hybrid never",
+   "q": 2,
+   "order": 1,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 1.0,
+   "directness": 0.5
+  },
+  {
+   "store": "summaries|hybrid never",
+   "q": 3,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 1.0
+  },
+  {
+   "store": "summaries|hybrid never",
+   "q": 3,
+   "order": 1,
+   "comprehensiveness": 0.0,
+   "diversity": 1.0,
+   "empowerment": 1.0,
+   "directness": 0.0
+  },
+  {
+   "store": "summaries|hybrid never",
+   "q": 4,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 0.0
+  },
+  {
+   "store": "summaries|hybrid never",
+   "q": 4,
+   "order": 1,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 1.0,
+   "directness": 1.0
+  },
+  {
+   "store": "summaries|hybrid never",
+   "q": 5,
+   "order": 0,
+   "comprehensiveness": 0.5,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 1.0
+  },
+  {
+   "store": "summaries|hybrid never",
+   "q": 5,
+   "order": 1,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 1.0,
+   "directness": 1.0
+  },
+  {
+   "store": "summaries|hybrid never",
+   "q": 6,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 0.5
+  },
+  {
+   "store": "summaries|hybrid never",
+   "q": 6,
+   "order": 1,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 1.0,
+   "directness": 1.0
+  },
+  {
+   "store": "summaries|hybrid never",
+   "q": 7,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 0.5
+  },
+  {
+   "store": "summaries|hybrid never",
+   "q": 7,
+   "order": 1,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 1.0,
+   "directness": 0.0
+  },
+  {
+   "store": "summaries|hybrid never",
+   "q": 8,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 0.0
+  },
+  {
+   "store": "summaries|hybrid never",
+   "q": 8,
+   "order": 1,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 1.0,
+   "directness": 0.0
+  },
+  {
+   "store": "summaries|hybrid never",
+   "q": 9,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 1.0
+  },
+  {
+   "store": "summaries|hybrid never",
+   "q": 9,
+   "order": 1,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 0.0,
+   "directness": 1.0
+  },
+  {
+   "store": "summaries|hybrid never",
+   "q": 10,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 1.0,
+   "empowerment": 0.0,
+   "directness": 0.0
+  },
+  {
+   "store": "summaries|hybrid never",
+   "q": 10,
+   "order": 1,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 1.0,
+   "directness": 0.0
+  },
+  {
+   "store": "summaries|hybrid never",
+   "q": 11,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 0.0
+  },
+  {
+   "store": "summaries|hybrid never",
+   "q": 11,
+   "order": 1,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 1.0,
+   "directness": 1.0
+  },
+  {
+   "store": "summaries|hybrid never",
+   "q": 12,
+   "order": 0,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 0.5,
+   "directness": 0.0
+  },
+  {
+   "store": "summaries|hybrid never",
+   "q": 12,
+   "order": 1,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 1.0,
+   "directness": 0.0
+  },
+  {
+   "store": "summaries|hybrid never",
+   "q": 13,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 1.0,
+   "directness": 1.0
+  },
+  {
+   "store": "summaries|hybrid never",
+   "q": 13,
+   "order": 1,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 1.0,
+   "directness": 1.0
+  },
+  {
+   "store": "summaries|hybrid never",
+   "q": 14,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 0.0
+  },
+  {
+   "store": "summaries|hybrid never",
+   "q": 14,
+   "order": 1,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 1.0,
+   "directness": 0.5
+  },
+  {
+   "store": "summaries|hybrid never",
+   "q": 15,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 1.0
+  },
+  {
+   "store": "summaries|hybrid never",
+   "q": 15,
+   "order": 1,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 1.0,
+   "directness": 0.5
+  },
+  {
+   "store": "summaries|hybrid never",
+   "q": 16,
+   "order": 0,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 1.0,
+   "directness": 0.5
+  },
+  {
+   "store": "summaries|hybrid never",
+   "q": 16,
+   "order": 1,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 1.0,
+   "directness": 0.5
+  },
+  {
+   "store": "summaries|hybrid never",
+   "q": 17,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 0.5
+  },
+  {
+   "store": "summaries|hybrid never",
+   "q": 17,
+   "order": 1,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 1.0,
+   "directness": 0.0
+  },
+  {
+   "store": "summaries|hybrid never",
+   "q": 18,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 0.0
+  },
+  {
+   "store": "summaries|hybrid never",
+   "q": 18,
+   "order": 1,
+   "comprehensiveness": 0.0,
+   "diversity": 1.0,
+   "empowerment": 1.0,
+   "directness": 0.0
+  },
+  {
+   "store": "summaries|hybrid never",
+   "q": 19,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 1.0,
+   "directness": 0.0
+  },
+  {
+   "store": "summaries|hybrid never",
+   "q": 19,
+   "order": 1,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 1.0,
+   "directness": 0.0
+  },
+  {
+   "store": "summaries|hybrid never",
+   "q": 20,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 0.0
+  },
+  {
+   "store": "summaries|hybrid never",
+   "q": 20,
+   "order": 1,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 1.0,
+   "directness": 0.0
+  },
+  {
+   "store": "summaries|hybrid never",
+   "q": 21,
+   "order": 0,
+   "comprehensiveness": 1.0,
+   "diversity": 0.0,
+   "empowerment": 1.0,
+   "directness": 1.0
+  },
+  {
+   "store": "summaries|hybrid never",
+   "q": 21,
+   "order": 1,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 1.0,
+   "directness": 1.0
+  },
+  {
+   "store": "summaries|hybrid never",
+   "q": 22,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 0.0
+  },
+  {
+   "store": "summaries|hybrid never",
+   "q": 22,
+   "order": 1,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 1.0,
+   "directness": 1.0
+  },
+  {
+   "store": "summaries|hybrid never",
+   "q": 23,
+   "order": 0,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 0.0,
+   "directness": 0.0
+  },
+  {
+   "store": "summaries|hybrid never",
+   "q": 23,
+   "order": 1,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 1.0,
+   "directness": 1.0
+  },
+  {
+   "store": "summaries|hybrid never",
+   "q": 24,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 0.5
+  },
+  {
+   "store": "summaries|hybrid never",
+   "q": 24,
+   "order": 1,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 1.0,
+   "directness": 0.0
+  },
+  {
+   "store": "summaries|hybrid never",
+   "q": 25,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 1.0
+  },
+  {
+   "store": "summaries|hybrid never",
+   "q": 25,
+   "order": 1,
+   "comprehensiveness": 1.0,
+   "diversity": 0.0,
+   "empowerment": 1.0,
+   "directness": 0.0
+  },
+  {
+   "store": "summaries|hybrid never",
+   "q": 26,
+   "order": 0,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 0.0,
+   "directness": 0.5
+  },
+  {
+   "store": "summaries|hybrid never",
+   "q": 26,
+   "order": 1,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 1.0,
+   "directness": 0.5
+  },
+  {
+   "store": "summaries|hybrid never",
+   "q": 27,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.5,
+   "empowerment": 0.0,
+   "directness": 0.0
+  },
+  {
+   "store": "summaries|hybrid never",
+   "q": 27,
+   "order": 1,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 1.0
+  },
+  {
+   "store": "summaries|hybrid never",
+   "q": 28,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 0.0
+  },
+  {
+   "store": "summaries|hybrid never",
+   "q": 28,
+   "order": 1,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 1.0,
+   "directness": 0.5
+  },
+  {
+   "store": "summaries|hybrid never",
+   "q": 29,
+   "order": 0,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 1.0,
+   "directness": 0.0
+  },
+  {
+   "store": "summaries|hybrid never",
+   "q": 29,
+   "order": 1,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 1.0,
+   "directness": 0.5
+  },
+  {
+   "store": "summaries|recompute tau=0.9",
+   "q": 0,
+   "order": 0,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 0.0,
+   "directness": 0.0
+  },
+  {
+   "store": "summaries|recompute tau=0.9",
+   "q": 0,
+   "order": 1,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 1.0,
+   "directness": 1.0
+  },
+  {
+   "store": "summaries|recompute tau=0.9",
+   "q": 1,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 0.0
+  },
+  {
+   "store": "summaries|recompute tau=0.9",
+   "q": 1,
+   "order": 1,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 1.0,
+   "directness": 1.0
+  },
+  {
+   "store": "summaries|recompute tau=0.9",
+   "q": 2,
+   "order": 0,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 0.0,
+   "directness": 1.0
+  },
+  {
+   "store": "summaries|recompute tau=0.9",
+   "q": 2,
+   "order": 1,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 1.0,
+   "directness": 1.0
+  },
+  {
+   "store": "summaries|recompute tau=0.9",
+   "q": 3,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 0.5
+  },
+  {
+   "store": "summaries|recompute tau=0.9",
+   "q": 3,
+   "order": 1,
+   "comprehensiveness": 0.0,
+   "diversity": 1.0,
+   "empowerment": 1.0,
+   "directness": 1.0
+  },
+  {
+   "store": "summaries|recompute tau=0.9",
+   "q": 4,
+   "order": 0,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 0.0,
+   "directness": 0.0
+  },
+  {
+   "store": "summaries|recompute tau=0.9",
+   "q": 4,
+   "order": 1,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 1.0,
+   "directness": 1.0
+  },
+  {
+   "store": "summaries|recompute tau=0.9",
+   "q": 5,
+   "order": 0,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 0.0,
+   "directness": 0.0
+  },
+  {
+   "store": "summaries|recompute tau=0.9",
+   "q": 5,
+   "order": 1,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 1.0,
+   "directness": 0.5
+  },
+  {
+   "store": "summaries|recompute tau=0.9",
+   "q": 6,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 1.0,
+   "directness": 0.5
+  },
+  {
+   "store": "summaries|recompute tau=0.9",
+   "q": 6,
+   "order": 1,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 1.0,
+   "directness": 1.0
+  },
+  {
+   "store": "summaries|recompute tau=0.9",
+   "q": 7,
+   "order": 0,
+   "comprehensiveness": 0.5,
+   "diversity": 0.5,
+   "empowerment": 1.0,
+   "directness": 0.5
+  },
+  {
+   "store": "summaries|recompute tau=0.9",
+   "q": 7,
+   "order": 1,
+   "comprehensiveness": 0.5,
+   "diversity": 0.5,
+   "empowerment": 0.0,
+   "directness": 0.5
+  },
+  {
+   "store": "summaries|recompute tau=0.9",
+   "q": 8,
+   "order": 0,
+   "comprehensiveness": 1.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 0.5
+  },
+  {
+   "store": "summaries|recompute tau=0.9",
+   "q": 8,
+   "order": 1,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 1.0,
+   "directness": 1.0
+  },
+  {
+   "store": "summaries|recompute tau=0.9",
+   "q": 9,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 0.0
+  },
+  {
+   "store": "summaries|recompute tau=0.9",
+   "q": 9,
+   "order": 1,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 1.0,
+   "directness": 1.0
+  },
+  {
+   "store": "summaries|recompute tau=0.9",
+   "q": 10,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 0.0
+  },
+  {
+   "store": "summaries|recompute tau=0.9",
+   "q": 10,
+   "order": 1,
+   "comprehensiveness": 0.0,
+   "diversity": 0.5,
+   "empowerment": 1.0,
+   "directness": 0.0
+  },
+  {
+   "store": "summaries|recompute tau=0.9",
+   "q": 11,
+   "order": 0,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 0.0,
+   "directness": 0.0
+  },
+  {
+   "store": "summaries|recompute tau=0.9",
+   "q": 11,
+   "order": 1,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 1.0,
+   "directness": 0.5
+  },
+  {
+   "store": "summaries|recompute tau=0.9",
+   "q": 12,
+   "order": 0,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 0.0,
+   "directness": 1.0
+  },
+  {
+   "store": "summaries|recompute tau=0.9",
+   "q": 12,
+   "order": 1,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 1.0,
+   "directness": 0.0
+  },
+  {
+   "store": "summaries|recompute tau=0.9",
+   "q": 13,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 0.5
+  },
+  {
+   "store": "summaries|recompute tau=0.9",
+   "q": 13,
+   "order": 1,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 1.0,
+   "directness": 1.0
+  },
+  {
+   "store": "summaries|recompute tau=0.9",
+   "q": 14,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 0.5
+  },
+  {
+   "store": "summaries|recompute tau=0.9",
+   "q": 14,
+   "order": 1,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 1.0,
+   "directness": 0.5
+  },
+  {
+   "store": "summaries|recompute tau=0.9",
+   "q": 15,
+   "order": 0,
+   "comprehensiveness": 0.5,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 0.0
+  },
+  {
+   "store": "summaries|recompute tau=0.9",
+   "q": 15,
+   "order": 1,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 1.0,
+   "directness": 0.5
+  },
+  {
+   "store": "summaries|recompute tau=0.9",
+   "q": 16,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 0.0
+  },
+  {
+   "store": "summaries|recompute tau=0.9",
+   "q": 16,
+   "order": 1,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 1.0,
+   "directness": 0.5
+  },
+  {
+   "store": "summaries|recompute tau=0.9",
+   "q": 17,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 0.5
+  },
+  {
+   "store": "summaries|recompute tau=0.9",
+   "q": 17,
+   "order": 1,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 1.0,
+   "directness": 1.0
+  },
+  {
+   "store": "summaries|recompute tau=0.9",
+   "q": 18,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 0.0
+  },
+  {
+   "store": "summaries|recompute tau=0.9",
+   "q": 18,
+   "order": 1,
+   "comprehensiveness": 0.0,
+   "diversity": 1.0,
+   "empowerment": 0.0,
+   "directness": 0.5
+  },
+  {
+   "store": "summaries|recompute tau=0.9",
+   "q": 19,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 0.0
+  },
+  {
+   "store": "summaries|recompute tau=0.9",
+   "q": 19,
+   "order": 1,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 1.0,
+   "directness": 0.5
+  },
+  {
+   "store": "summaries|recompute tau=0.9",
+   "q": 20,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 0.0
+  },
+  {
+   "store": "summaries|recompute tau=0.9",
+   "q": 20,
+   "order": 1,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 0.5
+  },
+  {
+   "store": "summaries|recompute tau=0.9",
+   "q": 21,
+   "order": 0,
+   "comprehensiveness": 1.0,
+   "diversity": 0.0,
+   "empowerment": 1.0,
+   "directness": 1.0
+  },
+  {
+   "store": "summaries|recompute tau=0.9",
+   "q": 21,
+   "order": 1,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 1.0,
+   "directness": 1.0
+  },
+  {
+   "store": "summaries|recompute tau=0.9",
+   "q": 22,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 0.0
+  },
+  {
+   "store": "summaries|recompute tau=0.9",
+   "q": 22,
+   "order": 1,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 1.0,
+   "directness": 1.0
+  },
+  {
+   "store": "summaries|recompute tau=0.9",
+   "q": 23,
+   "order": 0,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 0.0,
+   "directness": 0.0
+  },
+  {
+   "store": "summaries|recompute tau=0.9",
+   "q": 23,
+   "order": 1,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 1.0,
+   "directness": 1.0
+  },
+  {
+   "store": "summaries|recompute tau=0.9",
+   "q": 24,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 0.5
+  },
+  {
+   "store": "summaries|recompute tau=0.9",
+   "q": 24,
+   "order": 1,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 1.0,
+   "directness": 0.5
+  },
+  {
+   "store": "summaries|recompute tau=0.9",
+   "q": 25,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 0.0
+  },
+  {
+   "store": "summaries|recompute tau=0.9",
+   "q": 25,
+   "order": 1,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 0.0,
+   "directness": 0.0
+  },
+  {
+   "store": "summaries|recompute tau=0.9",
+   "q": 26,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 0.5
+  },
+  {
+   "store": "summaries|recompute tau=0.9",
+   "q": 26,
+   "order": 1,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 1.0,
+   "directness": 0.5
+  },
+  {
+   "store": "summaries|recompute tau=0.9",
+   "q": 27,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 1.0
+  },
+  {
+   "store": "summaries|recompute tau=0.9",
+   "q": 27,
+   "order": 1,
+   "comprehensiveness": 0.5,
+   "diversity": 0.0,
+   "empowerment": 0.5,
+   "directness": 1.0
+  },
+  {
+   "store": "summaries|recompute tau=0.9",
+   "q": 28,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 0.0
+  },
+  {
+   "store": "summaries|recompute tau=0.9",
+   "q": 28,
+   "order": 1,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 1.0,
+   "directness": 1.0
+  },
+  {
+   "store": "summaries|recompute tau=0.9",
+   "q": 29,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 0.0
+  },
+  {
+   "store": "summaries|recompute tau=0.9",
+   "q": 29,
+   "order": 1,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 1.0,
+   "directness": 0.5
+  },
+  {
+   "store": "summaries|fresh titles-only",
+   "q": 0,
+   "order": 0,
+   "comprehensiveness": 0.5,
+   "diversity": 0.5,
+   "empowerment": 0.0,
+   "directness": 0.0
+  },
+  {
+   "store": "summaries|fresh titles-only",
+   "q": 0,
+   "order": 1,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 1.0,
+   "directness": 1.0
+  },
+  {
+   "store": "summaries|fresh titles-only",
+   "q": 1,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 0.0
+  },
+  {
+   "store": "summaries|fresh titles-only",
+   "q": 1,
+   "order": 1,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 1.0,
+   "directness": 1.0
+  },
+  {
+   "store": "summaries|fresh titles-only",
+   "q": 2,
+   "order": 0,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 0.0,
+   "directness": 0.0
+  },
+  {
+   "store": "summaries|fresh titles-only",
+   "q": 2,
+   "order": 1,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 1.0,
+   "directness": 0.0
+  },
+  {
+   "store": "summaries|fresh titles-only",
+   "q": 3,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 1.0
+  },
+  {
+   "store": "summaries|fresh titles-only",
+   "q": 3,
+   "order": 1,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 1.0,
+   "directness": 0.5
+  },
+  {
+   "store": "summaries|fresh titles-only",
+   "q": 4,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 1.0
+  },
+  {
+   "store": "summaries|fresh titles-only",
+   "q": 4,
+   "order": 1,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 0.5
+  },
+  {
+   "store": "summaries|fresh titles-only",
+   "q": 5,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 0.0
+  },
+  {
+   "store": "summaries|fresh titles-only",
+   "q": 5,
+   "order": 1,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 1.0,
+   "directness": 1.0
+  },
+  {
+   "store": "summaries|fresh titles-only",
+   "q": 6,
+   "order": 0,
+   "comprehensiveness": 1.0,
+   "diversity": 0.0,
+   "empowerment": 1.0,
+   "directness": 0.0
+  },
+  {
+   "store": "summaries|fresh titles-only",
+   "q": 6,
+   "order": 1,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 1.0,
+   "directness": 0.0
+  },
+  {
+   "store": "summaries|fresh titles-only",
+   "q": 7,
+   "order": 0,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 1.0,
+   "directness": 0.5
+  },
+  {
+   "store": "summaries|fresh titles-only",
+   "q": 7,
+   "order": 1,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 1.0,
+   "directness": 0.0
+  },
+  {
+   "store": "summaries|fresh titles-only",
+   "q": 8,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 0.0
+  },
+  {
+   "store": "summaries|fresh titles-only",
+   "q": 8,
+   "order": 1,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 1.0,
+   "directness": 0.5
+  },
+  {
+   "store": "summaries|fresh titles-only",
+   "q": 9,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 0.5
+  },
+  {
+   "store": "summaries|fresh titles-only",
+   "q": 9,
+   "order": 1,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 1.0,
+   "directness": 0.0
+  },
+  {
+   "store": "summaries|fresh titles-only",
+   "q": 10,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 0.0
+  },
+  {
+   "store": "summaries|fresh titles-only",
+   "q": 10,
+   "order": 1,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 1.0,
+   "directness": 0.0
+  },
+  {
+   "store": "summaries|fresh titles-only",
+   "q": 11,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 1.0
+  },
+  {
+   "store": "summaries|fresh titles-only",
+   "q": 11,
+   "order": 1,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 1.0,
+   "directness": 1.0
+  },
+  {
+   "store": "summaries|fresh titles-only",
+   "q": 12,
+   "order": 0,
+   "comprehensiveness": 1.0,
+   "diversity": 0.5,
+   "empowerment": 1.0,
+   "directness": 0.5
+  },
+  {
+   "store": "summaries|fresh titles-only",
+   "q": 12,
+   "order": 1,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 1.0,
+   "directness": 1.0
+  },
+  {
+   "store": "summaries|fresh titles-only",
+   "q": 13,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 0.0
+  },
+  {
+   "store": "summaries|fresh titles-only",
+   "q": 13,
+   "order": 1,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 1.0,
+   "directness": 1.0
+  },
+  {
+   "store": "summaries|fresh titles-only",
+   "q": 14,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.5,
+   "empowerment": 0.0,
+   "directness": 0.0
+  },
+  {
+   "store": "summaries|fresh titles-only",
+   "q": 14,
+   "order": 1,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 1.0,
+   "directness": 0.0
+  },
+  {
+   "store": "summaries|fresh titles-only",
+   "q": 15,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 0.0
+  },
+  {
+   "store": "summaries|fresh titles-only",
+   "q": 15,
+   "order": 1,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 1.0,
+   "directness": 1.0
+  },
+  {
+   "store": "summaries|fresh titles-only",
+   "q": 16,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 0.0
+  },
+  {
+   "store": "summaries|fresh titles-only",
+   "q": 16,
+   "order": 1,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 1.0,
+   "directness": 0.5
+  },
+  {
+   "store": "summaries|fresh titles-only",
+   "q": 17,
+   "order": 0,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 0.0,
+   "directness": 0.0
+  },
+  {
+   "store": "summaries|fresh titles-only",
+   "q": 17,
+   "order": 1,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 1.0,
+   "directness": 0.5
+  },
+  {
+   "store": "summaries|fresh titles-only",
+   "q": 18,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 0.0
+  },
+  {
+   "store": "summaries|fresh titles-only",
+   "q": 18,
+   "order": 1,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 0.0,
+   "directness": 0.5
+  },
+  {
+   "store": "summaries|fresh titles-only",
+   "q": 19,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 0.0
+  },
+  {
+   "store": "summaries|fresh titles-only",
+   "q": 19,
+   "order": 1,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 1.0,
+   "directness": 0.5
+  },
+  {
+   "store": "summaries|fresh titles-only",
+   "q": 20,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 1.0
+  },
+  {
+   "store": "summaries|fresh titles-only",
+   "q": 20,
+   "order": 1,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 1.0,
+   "directness": 0.5
+  },
+  {
+   "store": "summaries|fresh titles-only",
+   "q": 21,
+   "order": 0,
+   "comprehensiveness": 1.0,
+   "diversity": 0.0,
+   "empowerment": 1.0,
+   "directness": 0.5
+  },
+  {
+   "store": "summaries|fresh titles-only",
+   "q": 21,
+   "order": 1,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 1.0,
+   "directness": 1.0
+  },
+  {
+   "store": "summaries|fresh titles-only",
+   "q": 22,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 1.0
+  },
+  {
+   "store": "summaries|fresh titles-only",
+   "q": 22,
+   "order": 1,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 1.0,
+   "directness": 1.0
+  },
+  {
+   "store": "summaries|fresh titles-only",
+   "q": 23,
+   "order": 0,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 0.0,
+   "directness": 0.0
+  },
+  {
+   "store": "summaries|fresh titles-only",
+   "q": 23,
+   "order": 1,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 1.0,
+   "directness": 1.0
+  },
+  {
+   "store": "summaries|fresh titles-only",
+   "q": 24,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 0.5
+  },
+  {
+   "store": "summaries|fresh titles-only",
+   "q": 24,
+   "order": 1,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 1.0,
+   "directness": 0.5
+  },
+  {
+   "store": "summaries|fresh titles-only",
+   "q": 25,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 0.5
+  },
+  {
+   "store": "summaries|fresh titles-only",
+   "q": 25,
+   "order": 1,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 1.0,
+   "directness": 0.5
+  },
+  {
+   "store": "summaries|fresh titles-only",
+   "q": 26,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 0.5
+  },
+  {
+   "store": "summaries|fresh titles-only",
+   "q": 26,
+   "order": 1,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 1.0,
+   "directness": 0.5
+  },
+  {
+   "store": "summaries|fresh titles-only",
+   "q": 27,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 0.5
+  },
+  {
+   "store": "summaries|fresh titles-only",
+   "q": 27,
+   "order": 1,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 1.0
+  },
+  {
+   "store": "summaries|fresh titles-only",
+   "q": 28,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 0.0
+  },
+  {
+   "store": "summaries|fresh titles-only",
+   "q": 28,
+   "order": 1,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 1.0,
+   "directness": 0.0
+  },
+  {
+   "store": "summaries|fresh titles-only",
+   "q": 29,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 0.5
+  },
+  {
+   "store": "summaries|fresh titles-only",
+   "q": 29,
+   "order": 1,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 1.0,
+   "directness": 0.5
+  },
+  {
+   "store": "vector|12 papers",
+   "q": 0,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 0.0
+  },
+  {
+   "store": "vector|12 papers",
+   "q": 0,
+   "order": 1,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 1.0,
+   "directness": 1.0
+  },
+  {
+   "store": "vector|12 papers",
+   "q": 1,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 0.0
+  },
+  {
+   "store": "vector|12 papers",
+   "q": 1,
+   "order": 1,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 1.0,
+   "directness": 1.0
+  },
+  {
+   "store": "vector|12 papers",
+   "q": 2,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 0.0
+  },
+  {
+   "store": "vector|12 papers",
+   "q": 2,
+   "order": 1,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 0.0
+  },
+  {
+   "store": "vector|12 papers",
+   "q": 3,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 0.0
+  },
+  {
+   "store": "vector|12 papers",
+   "q": 3,
+   "order": 1,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 0.0
+  },
+  {
+   "store": "vector|12 papers",
+   "q": 4,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 0.0
+  },
+  {
+   "store": "vector|12 papers",
+   "q": 4,
+   "order": 1,
+   "comprehensiveness": 1.0,
+   "diversity": 0.0,
+   "empowerment": 1.0,
+   "directness": 1.0
+  },
+  {
+   "store": "vector|12 papers",
+   "q": 5,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 0.0
+  },
+  {
+   "store": "vector|12 papers",
+   "q": 5,
+   "order": 1,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 1.0
+  },
+  {
+   "store": "vector|12 papers",
+   "q": 6,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 0.0
+  },
+  {
+   "store": "vector|12 papers",
+   "q": 6,
+   "order": 1,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 0.0
+  },
+  {
+   "store": "vector|12 papers",
+   "q": 7,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 0.0
+  },
+  {
+   "store": "vector|12 papers",
+   "q": 7,
+   "order": 1,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 1.0,
+   "directness": 1.0
+  },
+  {
+   "store": "vector|12 papers",
+   "q": 8,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 0.5
+  },
+  {
+   "store": "vector|12 papers",
+   "q": 8,
+   "order": 1,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 1.0
+  },
+  {
+   "store": "vector|12 papers",
+   "q": 9,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 0.0
+  },
+  {
+   "store": "vector|12 papers",
+   "q": 9,
+   "order": 1,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 0.0
+  },
+  {
+   "store": "vector|12 papers",
+   "q": 10,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 0.0
+  },
+  {
+   "store": "vector|12 papers",
+   "q": 10,
+   "order": 1,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 0.0
+  },
+  {
+   "store": "vector|12 papers",
+   "q": 11,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 0.0
+  },
+  {
+   "store": "vector|12 papers",
+   "q": 11,
+   "order": 1,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 0.0
+  },
+  {
+   "store": "vector|12 papers",
+   "q": 12,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 0.0
+  },
+  {
+   "store": "vector|12 papers",
+   "q": 12,
+   "order": 1,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 0.0
+  },
+  {
+   "store": "vector|12 papers",
+   "q": 13,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 0.0
+  },
+  {
+   "store": "vector|12 papers",
+   "q": 13,
+   "order": 1,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 1.0
+  },
+  {
+   "store": "vector|12 papers",
+   "q": 14,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 0.0
+  },
+  {
+   "store": "vector|12 papers",
+   "q": 14,
+   "order": 1,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 0.0
+  },
+  {
+   "store": "vector|12 papers",
+   "q": 15,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 0.0
+  },
+  {
+   "store": "vector|12 papers",
+   "q": 15,
+   "order": 1,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 1.0,
+   "directness": 1.0
+  },
+  {
+   "store": "vector|12 papers",
+   "q": 16,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 0.0
+  },
+  {
+   "store": "vector|12 papers",
+   "q": 16,
+   "order": 1,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 0.0
+  },
+  {
+   "store": "vector|12 papers",
+   "q": 17,
+   "order": 0,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 1.0,
+   "directness": 0.0
+  },
+  {
+   "store": "vector|12 papers",
+   "q": 17,
+   "order": 1,
+   "comprehensiveness": 0.0,
+   "diversity": 1.0,
+   "empowerment": 1.0,
+   "directness": 0.0
+  },
+  {
+   "store": "vector|12 papers",
+   "q": 18,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 0.0
+  },
+  {
+   "store": "vector|12 papers",
+   "q": 18,
+   "order": 1,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 1.0,
+   "directness": 1.0
+  },
+  {
+   "store": "vector|12 papers",
+   "q": 19,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 1.0
+  },
+  {
+   "store": "vector|12 papers",
+   "q": 19,
+   "order": 1,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 0.0
+  },
+  {
+   "store": "vector|12 papers",
+   "q": 20,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 0.0
+  },
+  {
+   "store": "vector|12 papers",
+   "q": 20,
+   "order": 1,
+   "comprehensiveness": 1.0,
+   "diversity": 0.0,
+   "empowerment": 1.0,
+   "directness": 1.0
+  },
+  {
+   "store": "vector|12 papers",
+   "q": 21,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 1.0
+  },
+  {
+   "store": "vector|12 papers",
+   "q": 21,
+   "order": 1,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 0.0
+  },
+  {
+   "store": "vector|12 papers",
+   "q": 22,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 0.0
+  },
+  {
+   "store": "vector|12 papers",
+   "q": 22,
+   "order": 1,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 0.0
+  },
+  {
+   "store": "vector|12 papers",
+   "q": 23,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 0.0
+  },
+  {
+   "store": "vector|12 papers",
+   "q": 23,
+   "order": 1,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 1.0,
+   "directness": 1.0
+  },
+  {
+   "store": "vector|12 papers",
+   "q": 24,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 0.0
+  },
+  {
+   "store": "vector|12 papers",
+   "q": 24,
+   "order": 1,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 0.0
+  },
+  {
+   "store": "vector|12 papers",
+   "q": 25,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 0.0
+  },
+  {
+   "store": "vector|12 papers",
+   "q": 25,
+   "order": 1,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 0.0
+  },
+  {
+   "store": "vector|12 papers",
+   "q": 26,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 0.0
+  },
+  {
+   "store": "vector|12 papers",
+   "q": 26,
+   "order": 1,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 0.0
+  },
+  {
+   "store": "vector|12 papers",
+   "q": 27,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 1.0
+  },
+  {
+   "store": "vector|12 papers",
+   "q": 27,
+   "order": 1,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 1.0
+  },
+  {
+   "store": "vector|12 papers",
+   "q": 28,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 0.0
+  },
+  {
+   "store": "vector|12 papers",
+   "q": 28,
+   "order": 1,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 0.0
+  },
+  {
+   "store": "vector|12 papers",
+   "q": 29,
+   "order": 0,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 1.0,
+   "directness": 1.0
+  },
+  {
+   "store": "vector|12 papers",
+   "q": 29,
+   "order": 1,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 1.0,
+   "directness": 1.0
+  },
+  {
+   "store": "vector|132 papers (budget-matched)",
+   "q": 0,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 0.5
+  },
+  {
+   "store": "vector|132 papers (budget-matched)",
+   "q": 0,
+   "order": 1,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 1.0,
+   "directness": 1.0
+  },
+  {
+   "store": "vector|132 papers (budget-matched)",
+   "q": 1,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 0.0
+  },
+  {
+   "store": "vector|132 papers (budget-matched)",
+   "q": 1,
+   "order": 1,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 1.0,
+   "directness": 1.0
+  },
+  {
+   "store": "vector|132 papers (budget-matched)",
+   "q": 2,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 1.0
+  },
+  {
+   "store": "vector|132 papers (budget-matched)",
+   "q": 2,
+   "order": 1,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 0.0
+  },
+  {
+   "store": "vector|132 papers (budget-matched)",
+   "q": 3,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 1.0
+  },
+  {
+   "store": "vector|132 papers (budget-matched)",
+   "q": 3,
+   "order": 1,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 0.0
+  },
+  {
+   "store": "vector|132 papers (budget-matched)",
+   "q": 4,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 0.0
+  },
+  {
+   "store": "vector|132 papers (budget-matched)",
+   "q": 4,
+   "order": 1,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 1.0,
+   "directness": 1.0
+  },
+  {
+   "store": "vector|132 papers (budget-matched)",
+   "q": 5,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 0.0
+  },
+  {
+   "store": "vector|132 papers (budget-matched)",
+   "q": 5,
+   "order": 1,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 1.0,
+   "directness": 0.5
+  },
+  {
+   "store": "vector|132 papers (budget-matched)",
+   "q": 6,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 1.0
+  },
+  {
+   "store": "vector|132 papers (budget-matched)",
+   "q": 6,
+   "order": 1,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 1.0,
+   "directness": 1.0
+  },
+  {
+   "store": "vector|132 papers (budget-matched)",
+   "q": 7,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 0.5
+  },
+  {
+   "store": "vector|132 papers (budget-matched)",
+   "q": 7,
+   "order": 1,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 1.0
+  },
+  {
+   "store": "vector|132 papers (budget-matched)",
+   "q": 8,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 0.0
+  },
+  {
+   "store": "vector|132 papers (budget-matched)",
+   "q": 8,
+   "order": 1,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 1.0,
+   "directness": 1.0
+  },
+  {
+   "store": "vector|132 papers (budget-matched)",
+   "q": 9,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 1.0
+  },
+  {
+   "store": "vector|132 papers (budget-matched)",
+   "q": 9,
+   "order": 1,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 1.0
+  },
+  {
+   "store": "vector|132 papers (budget-matched)",
+   "q": 10,
+   "order": 0,
+   "comprehensiveness": 1.0,
+   "diversity": 0.0,
+   "empowerment": 1.0,
+   "directness": 0.0
+  },
+  {
+   "store": "vector|132 papers (budget-matched)",
+   "q": 10,
+   "order": 1,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 1.0,
+   "directness": 0.0
+  },
+  {
+   "store": "vector|132 papers (budget-matched)",
+   "q": 11,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 1.0
+  },
+  {
+   "store": "vector|132 papers (budget-matched)",
+   "q": 11,
+   "order": 1,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 0.0
+  },
+  {
+   "store": "vector|132 papers (budget-matched)",
+   "q": 12,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 0.5
+  },
+  {
+   "store": "vector|132 papers (budget-matched)",
+   "q": 12,
+   "order": 1,
+   "comprehensiveness": 0.0,
+   "diversity": 1.0,
+   "empowerment": 0.0,
+   "directness": 1.0
+  },
+  {
+   "store": "vector|132 papers (budget-matched)",
+   "q": 13,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 0.0
+  },
+  {
+   "store": "vector|132 papers (budget-matched)",
+   "q": 13,
+   "order": 1,
+   "comprehensiveness": 1.0,
+   "diversity": 0.0,
+   "empowerment": 1.0,
+   "directness": 1.0
+  },
+  {
+   "store": "vector|132 papers (budget-matched)",
+   "q": 14,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 1.0
+  },
+  {
+   "store": "vector|132 papers (budget-matched)",
+   "q": 14,
+   "order": 1,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 1.0,
+   "directness": 0.0
+  },
+  {
+   "store": "vector|132 papers (budget-matched)",
+   "q": 15,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 0.0
+  },
+  {
+   "store": "vector|132 papers (budget-matched)",
+   "q": 15,
+   "order": 1,
+   "comprehensiveness": 1.0,
+   "diversity": 0.0,
+   "empowerment": 1.0,
+   "directness": 1.0
+  },
+  {
+   "store": "vector|132 papers (budget-matched)",
+   "q": 16,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 0.0
+  },
+  {
+   "store": "vector|132 papers (budget-matched)",
+   "q": 16,
+   "order": 1,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 1.0,
+   "directness": 0.5
+  },
+  {
+   "store": "vector|132 papers (budget-matched)",
+   "q": 17,
+   "order": 0,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 1.0,
+   "directness": 0.0
+  },
+  {
+   "store": "vector|132 papers (budget-matched)",
+   "q": 17,
+   "order": 1,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 1.0,
+   "directness": 0.0
+  },
+  {
+   "store": "vector|132 papers (budget-matched)",
+   "q": 18,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 1.0,
+   "directness": 1.0
+  },
+  {
+   "store": "vector|132 papers (budget-matched)",
+   "q": 18,
+   "order": 1,
+   "comprehensiveness": 0.0,
+   "diversity": 1.0,
+   "empowerment": 1.0,
+   "directness": 0.5
+  },
+  {
+   "store": "vector|132 papers (budget-matched)",
+   "q": 19,
+   "order": 0,
+   "comprehensiveness": 1.0,
+   "diversity": 0.0,
+   "empowerment": 1.0,
+   "directness": 1.0
+  },
+  {
+   "store": "vector|132 papers (budget-matched)",
+   "q": 19,
+   "order": 1,
+   "comprehensiveness": 0.0,
+   "diversity": 1.0,
+   "empowerment": 1.0,
+   "directness": 0.0
+  },
+  {
+   "store": "vector|132 papers (budget-matched)",
+   "q": 20,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 0.0
+  },
+  {
+   "store": "vector|132 papers (budget-matched)",
+   "q": 20,
+   "order": 1,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 1.0,
+   "directness": 1.0
+  },
+  {
+   "store": "vector|132 papers (budget-matched)",
+   "q": 21,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 1.0,
+   "directness": 1.0
+  },
+  {
+   "store": "vector|132 papers (budget-matched)",
+   "q": 21,
+   "order": 1,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 1.0,
+   "directness": 1.0
+  },
+  {
+   "store": "vector|132 papers (budget-matched)",
+   "q": 22,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 0.0
+  },
+  {
+   "store": "vector|132 papers (budget-matched)",
+   "q": 22,
+   "order": 1,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 0.0
+  },
+  {
+   "store": "vector|132 papers (budget-matched)",
+   "q": 23,
+   "order": 0,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 1.0,
+   "directness": 1.0
+  },
+  {
+   "store": "vector|132 papers (budget-matched)",
+   "q": 23,
+   "order": 1,
+   "comprehensiveness": 1.0,
+   "diversity": 0.0,
+   "empowerment": 1.0,
+   "directness": 1.0
+  },
+  {
+   "store": "vector|132 papers (budget-matched)",
+   "q": 24,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 0.0
+  },
+  {
+   "store": "vector|132 papers (budget-matched)",
+   "q": 24,
+   "order": 1,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 0.0
+  },
+  {
+   "store": "vector|132 papers (budget-matched)",
+   "q": 25,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 1.0
+  },
+  {
+   "store": "vector|132 papers (budget-matched)",
+   "q": 25,
+   "order": 1,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 1.0
+  },
+  {
+   "store": "vector|132 papers (budget-matched)",
+   "q": 26,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 0.0
+  },
+  {
+   "store": "vector|132 papers (budget-matched)",
+   "q": 26,
+   "order": 1,
+   "comprehensiveness": 1.0,
+   "diversity": 1.0,
+   "empowerment": 1.0,
+   "directness": 0.5
+  },
+  {
+   "store": "vector|132 papers (budget-matched)",
+   "q": 27,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 1.0
+  },
+  {
+   "store": "vector|132 papers (budget-matched)",
+   "q": 27,
+   "order": 1,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 1.0
+  },
+  {
+   "store": "vector|132 papers (budget-matched)",
+   "q": 28,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 0.0
+  },
+  {
+   "store": "vector|132 papers (budget-matched)",
+   "q": 28,
+   "order": 1,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 0.0
+  },
+  {
+   "store": "vector|132 papers (budget-matched)",
+   "q": 29,
+   "order": 0,
+   "comprehensiveness": 0.0,
+   "diversity": 0.0,
+   "empowerment": 0.0,
+   "directness": 1.0
+  },
+  {
+   "store": "vector|132 papers (budget-matched)",
+   "q": 29,
+   "order": 1,
+   "comprehensiveness": 1.0,
+   "diversity": 0.0,
+   "empowerment": 1.0,
+   "directness": 1.0
+  }
+ ],
+ "questions": [
+  "What are the main research themes represented in the collection, and how have their relative prominence changed from 2007 to 2020?",
+  "Which topics are most central to the corpus, based on patterns of terminology, methods, and connections among papers?",
+  "What emerging research areas grew most rapidly in the later years of the collection?",
+  "Which established topics declined, stabilized, or were replaced by newer approaches over time?",
+  "How is the corpus distributed across information retrieval, databases, social and information networks, and digital libraries, and where are the strongest overlaps?",
+  "What methodological trends characterize the collection, such as shifts from statistical modeling and optimization toward deep learning or reinforcement learning?",
+  "How has the use of machine learning evolved across the corpus, including supervised, unsupervised, weakly supervised, and representation-learning approaches?",
+  "Which application domains recur most often, such as social media, recommendation, web search, security, scholarly communication, or data management?",
+  "What are the most common research problems addressed in the collection, and which remain comparatively underexplored?",
+  "How has research on graphs and networks developed across the period, including community detection, influence, diffusion, embeddings, and privacy?",
+  "What role do privacy, anonymization, fairness, accountability, and responsible-data-use concerns play in the corpus, and when do they become more visible?",
+  "How prominent are systems-oriented contributions compared with algorithmic, theoretical, empirical, and user-centered research?",
+  "What kinds of datasets, platforms, and real-world environments are most frequently studied across the collection?",
+  "To what extent does the corpus rely on widely used benchmark datasets and platforms, and what risks of dataset concentration or reproducibility does this suggest?",
+  "Which research topics most often combine multiple fields, such as databases with machine learning or network analysis with information retrieval?",
+  "What are the major clusters of related work in the collection, and what bridges connect otherwise separate research communities?",
+  "Which concepts, methods, or application areas appear to be unusually isolated from the rest of the corpus?",
+  "How does the balance between foundational research and application-driven research vary over time?",
+  "What evidence is there of a transition from traditional structured-data and query-processing research toward unstructured, multimodal, and streaming-data problems?",
+  "How has scholarship about social platforms changed, particularly regarding misinformation, polarization, online behavior, marketing, and safety?",
+  "What proportion of the collection focuses on recommendation, ranking, personalization, and user modeling, and how have these areas evolved?",
+  "What are the dominant evaluation practices across the corpus, including offline benchmarks, simulations, case studies, user studies, and deployment-oriented evaluations?",
+  "Which areas appear to have the strongest potential for practical deployment, and what technical barriers recur across the corpus?",
+  "What research gaps should a new PhD student consider if they want to work on a growing but not yet saturated topic?",
+  "Which themes would be most suitable for a cross-disciplinary research program involving computer science, social science, and public policy?",
+  "What areas of the corpus appear most relevant to current industry needs in data infrastructure, search, recommender systems, trust and safety, and AI platforms?",
+  "Which topics seem to offer the greatest opportunities for funding aimed at societal impact, such as privacy, misinformation, digital inclusion, public-interest data, or scientific discovery?",
+  "How does the corpus address the relationship between scale, efficiency, and accuracy, and how has that trade-off changed as datasets and models have grown?",
+  "What terminology changes over time reveal shifts in the field's priorities, technical vocabulary, and preferred research paradigms?",
+  "What broad story does this collection tell about the evolution of data-centric computer science research between 2007 and 2020?"
+ ],
+ "n_match": 132
+}

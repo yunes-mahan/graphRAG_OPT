@@ -1,0 +1,33 @@
+{
+ "per_method": {
+  "recompute_leiden": {
+   "n": 155,
+   "median_cos": 0.9990521283583594,
+   "p10_cos": 0.9935312465616803,
+   "share_above_099": 0.9354838709677419,
+   "median_jaccard": 0.622093023255814
+  },
+  "warmstart_leiden": {
+   "n": 130,
+   "median_cos": 0.999640448633016,
+   "p10_cos": 0.9959560197851842,
+   "share_above_099": 0.9846153846153847,
+   "median_jaccard": 0.8035251265588345
+  },
+  "frontier_leiden": {
+   "n": 133,
+   "median_cos": 0.9997517237053419,
+   "p10_cos": 0.9966675740141722,
+   "share_above_099": 0.9624060150375939,
+   "median_jaccard": 0.8380281690140845
+  },
+  "hybrid": {
+   "n": 111,
+   "median_cos": 0.9998029907563233,
+   "p10_cos": 0.9969665827228682,
+   "share_above_099": 1.0,
+   "median_jaccard": 0.855973813420622
+  }
+ },
+ "random_pairs_median": 0.9873600548091304
+}

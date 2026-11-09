@@ -1,0 +1,1 @@
+{"nodes": 67946, "films": 11178, "edges": 188985, "relations": {"cast": 129828, "genre": 28526, "screenwriter": 13908, "company": 11953, "director": 12030}, "node_types": {"genre": 379, "person": 53955, "film": 11178, "company": 2434}}

@@ -1,0 +1,86 @@
+{
+ "copies": {
+  "articles": 17366,
+  "links": 56259,
+  "memberships": 17366,
+  "summaries": 161
+ },
+ "stored": {
+  "articles": 2224,
+  "links": 9036,
+  "memberships": 2964,
+  "summaries": 156
+ },
+ "timings": {
+  "load_s": 0.87965989112854,
+  "graph_as_of_ms": 157.39822387695312,
+  "most_moved_ms": 55.364131927490234,
+  "community_history_ms": 33.93912315368652,
+  "summaries_changed_ms": 34.32822227478027,
+  "summary_as_of_ms": 73.97770881652832
+ },
+ "as_of": [
+  {
+   "links": 6153,
+   "articles": 1574
+  }
+ ],
+ "as_of_check": {
+  "year": 2021,
+  "neo4j": 6153,
+  "stream": 6157
+ },
+ "history_example": [
+  {
+   "cid": 4,
+   "from": 2017,
+   "to": 2018
+  },
+  {
+   "cid": 6,
+   "from": 2018,
+   "to": 2019
+  },
+  {
+   "cid": 0,
+   "from": 2019,
+   "to": 2020
+  },
+  {
+   "cid": 6,
+   "from": 2020,
+   "to": 2021
+  },
+  {
+   "cid": 0,
+   "from": 2021,
+   "to": 2023
+  },
+  {
+   "cid": 4,
+   "from": 2023,
+   "to": 2025
+  },
+  {
+   "cid": 0,
+   "from": 2025,
+   "to": 9999
+  }
+ ],
+ "history_title": "Causal model",
+ "changed_summaries": 22,
+ "summary_as_of": [
+  {
+   "cid": 0,
+   "summary": "## AI Foundations, Agents, and Emerging Systems\n\nThis community spans artificial intelligence\u2019s history, foundations, applications, and social consequences. His"
+  }
+ ],
+ "gds_past": {
+  "year": 2021,
+  "nodes": 1672,
+  "rels": 12306,
+  "communities": 31,
+  "modularity": 0.6375187737346878,
+  "seconds": 0.5251898765563965
+ }
+}

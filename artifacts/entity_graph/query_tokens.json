@@ -1,0 +1,10 @@
+{
+ "recompute_leiden": 52262.5,
+ "warmstart_leiden": 48126.75,
+ "frontier_leiden": 66063.75,
+ "lazy": 51487.0,
+ "graphrag_delta": 231541.5,
+ "priced_warm": 70718.5,
+ "priced_frontier": 66868.75,
+ "fresh": 52240.25
+}

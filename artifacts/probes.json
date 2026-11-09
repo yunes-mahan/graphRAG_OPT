@@ -1,0 +1,2860 @@
+{
+ "summary": [
+  {
+   "probe": "coverage",
+   "maintainer": "graphrag_update",
+   "n": 50,
+   "maintained": 0.1,
+   "reference": 0.135,
+   "diff": -0.035,
+   "p": 0.07711187700482527
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "zep_attach",
+   "n": 50,
+   "maintained": 0.15,
+   "reference": 0.19,
+   "diff": -0.04,
+   "p": 0.14280053071716944
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "frontier_leiden",
+   "n": 25,
+   "maintained": 0.14,
+   "reference": 0.44,
+   "diff": -0.3,
+   "p": 8.269983434010196e-05
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "hybrid",
+   "n": 25,
+   "maintained": 0.26,
+   "reference": 0.42,
+   "diff": -0.16,
+   "p": 0.029780989652169434
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "recompute_leiden",
+   "n": 25,
+   "maintained": 0.21,
+   "reference": 0.33,
+   "diff": -0.12,
+   "p": 0.12730074273535186
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "warmstart_leiden",
+   "n": 25,
+   "maintained": 0.23,
+   "reference": 0.44,
+   "diff": -0.21,
+   "p": 0.001861479732944333
+  }
+ ],
+ "rows": [
+  {
+   "probe": "staleness",
+   "maintainer": "recompute_leiden",
+   "store": "stale",
+   "q": "What are the main approaches and trends in modeling, analyzing, and predicting information diffusion in evolving social networks?",
+   "recall": 0.25
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "recompute_leiden",
+   "store": "own_fresh",
+   "q": "What are the main approaches and trends in modeling, analyzing, and predicting information diffusion in evolving social networks?",
+   "recall": 0.0
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "recompute_leiden",
+   "store": "stale",
+   "q": "What are the main approaches for inferring patterns, relationships, identities, and diffusion dynamics in complex social and multilayer networks?",
+   "recall": 0.0
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "recompute_leiden",
+   "store": "own_fresh",
+   "q": "What are the main approaches for inferring patterns, relationships, identities, and diffusion dynamics in complex social and multilayer networks?",
+   "recall": 0.25
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "recompute_leiden",
+   "store": "stale",
+   "q": "What are the main methods and trends for improving the quality, trustworthiness, and usability of data and knowledge in modern data management systems?",
+   "recall": 0.0
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "recompute_leiden",
+   "store": "own_fresh",
+   "q": "What are the main methods and trends for improving the quality, trustworthiness, and usability of data and knowledge in modern data management systems?",
+   "recall": 0.25
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "recompute_leiden",
+   "store": "stale",
+   "q": "What are the main approaches for efficient discovery, ranking, and classification in large-scale semi-structured and streaming text data?",
+   "recall": 0.0
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "recompute_leiden",
+   "store": "own_fresh",
+   "q": "What are the main approaches for efficient discovery, ranking, and classification in large-scale semi-structured and streaming text data?",
+   "recall": 0.0
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "recompute_leiden",
+   "store": "stale",
+   "q": "What are the main approaches and challenges in using social-media data to understand political behavior, information dynamics, and platform bias?",
+   "recall": 0.25
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "recompute_leiden",
+   "store": "own_fresh",
+   "q": "What are the main approaches and challenges in using social-media data to understand political behavior, information dynamics, and platform bias?",
+   "recall": 0.0
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "recompute_leiden",
+   "store": "stale",
+   "q": "What are the main approaches to efficient semantic search, similarity computation, and query processing over large heterogeneous and distributed data collections?",
+   "recall": 0.0
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "recompute_leiden",
+   "store": "own_fresh",
+   "q": "What are the main approaches to efficient semantic search, similarity computation, and query processing over large heterogeneous and distributed data collections?",
+   "recall": 0.75
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "recompute_leiden",
+   "store": "stale",
+   "q": "What methods and applications characterize the analysis and modeling of complex social, information, and narrative networks?",
+   "recall": 0.25
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "recompute_leiden",
+   "store": "own_fresh",
+   "q": "What methods and applications characterize the analysis and modeling of complex social, information, and narrative networks?",
+   "recall": 0.25
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "recompute_leiden",
+   "store": "stale",
+   "q": "What computational approaches are used to extract actionable insights from social media, text, and networked data when information is incomplete, multimodal, sensitive, or risk-bearing?",
+   "recall": 0.0
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "recompute_leiden",
+   "store": "own_fresh",
+   "q": "What computational approaches are used to extract actionable insights from social media, text, and networked data when information is incomplete, multimodal, sensitive, or risk-bearing?",
+   "recall": 1.0
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "recompute_leiden",
+   "store": "stale",
+   "q": "What are the main approaches and emerging challenges in using network representations and collaborative filtering for robust, dynamic recommendation and relationship prediction?",
+   "recall": 0.5
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "recompute_leiden",
+   "store": "own_fresh",
+   "q": "What are the main approaches and emerging challenges in using network representations and collaborative filtering for robust, dynamic recommendation and relationship prediction?",
+   "recall": 0.0
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "recompute_leiden",
+   "store": "stale",
+   "q": "How can large-scale user-generated knowledge and professional-network data be leveraged for semantic search, entity understanding, and timely trend analysis?",
+   "recall": 0.0
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "recompute_leiden",
+   "store": "own_fresh",
+   "q": "How can large-scale user-generated knowledge and professional-network data be leveraged for semantic search, entity understanding, and timely trend analysis?",
+   "recall": 0.25
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "recompute_leiden",
+   "store": "stale",
+   "q": "What are the main approaches and trends in analyzing structure, behavior, and illicit activity in complex online and social networks?",
+   "recall": 0.0
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "recompute_leiden",
+   "store": "own_fresh",
+   "q": "What are the main approaches and trends in analyzing structure, behavior, and illicit activity in complex online and social networks?",
+   "recall": 0.0
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "recompute_leiden",
+   "store": "stale",
+   "q": "What are the main approaches and trade-offs for making recommender and ranking systems more equitable, diverse, and aligned with user and business goals?",
+   "recall": 0.25
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "recompute_leiden",
+   "store": "own_fresh",
+   "q": "What are the main approaches and trade-offs for making recommender and ranking systems more equitable, diverse, and aligned with user and business goals?",
+   "recall": 0.75
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "recompute_leiden",
+   "store": "stale",
+   "q": "What are the main approaches and challenges in organizing, preserving, and summarizing semantic knowledge from web, social media, and scientific sources?",
+   "recall": 0.0
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "recompute_leiden",
+   "store": "own_fresh",
+   "q": "What are the main approaches and challenges in organizing, preserving, and summarizing semantic knowledge from web, social media, and scientific sources?",
+   "recall": 0.0
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "recompute_leiden",
+   "store": "stale",
+   "q": "What are the main methods, data-quality challenges, and equity considerations in bibliometric evaluation of researchers and universities?",
+   "recall": 0.25
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "recompute_leiden",
+   "store": "own_fresh",
+   "q": "What are the main methods, data-quality challenges, and equity considerations in bibliometric evaluation of researchers and universities?",
+   "recall": 0.25
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "recompute_leiden",
+   "store": "stale",
+   "q": "What are the main approaches and design trends for adapting database storage and data structures to persistent and heterogeneous memory technologies?",
+   "recall": 0.5
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "recompute_leiden",
+   "store": "own_fresh",
+   "q": "What are the main approaches and design trends for adapting database storage and data structures to persistent and heterogeneous memory technologies?",
+   "recall": 1.0
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "recompute_leiden",
+   "store": "stale",
+   "q": "What methods and considerations are important for mapping, evaluating, and interpreting research and technology performance, influence, collaboration, and thematic evolution?",
+   "recall": 0.25
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "recompute_leiden",
+   "store": "own_fresh",
+   "q": "What methods and considerations are important for mapping, evaluating, and interpreting research and technology performance, influence, collaboration, and thematic evolution?",
+   "recall": 0.5
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "recompute_leiden",
+   "store": "stale",
+   "q": "What are the main approaches for extracting, prioritizing, and using actionable information from noisy social-media streams during rapidly evolving events?",
+   "recall": 0.25
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "recompute_leiden",
+   "store": "own_fresh",
+   "q": "What are the main approaches for extracting, prioritizing, and using actionable information from noisy social-media streams during rapidly evolving events?",
+   "recall": 0.25
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "recompute_leiden",
+   "store": "stale",
+   "q": "What are the main techniques for efficient querying, optimization, and ingestion across heterogeneous and large-scale data systems?",
+   "recall": 0.0
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "recompute_leiden",
+   "store": "own_fresh",
+   "q": "What are the main techniques for efficient querying, optimization, and ingestion across heterogeneous and large-scale data systems?",
+   "recall": 0.25
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "recompute_leiden",
+   "store": "stale",
+   "q": "What are the main approaches and emerging trends for improving search, retrieval, and ranking across heterogeneous, domain-specific, and question-answering information systems?",
+   "recall": 1.0
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "recompute_leiden",
+   "store": "own_fresh",
+   "q": "What are the main approaches and emerging trends for improving search, retrieval, and ranking across heterogeneous, domain-specific, and question-answering information systems?",
+   "recall": 1.0
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "recompute_leiden",
+   "store": "stale",
+   "q": "What are the main approaches and challenges in using online social platforms and digital traces to detect events, infer behavior, and improve information ecosystems?",
+   "recall": 0.25
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "recompute_leiden",
+   "store": "own_fresh",
+   "q": "What are the main approaches and challenges in using online social platforms and digital traces to detect events, infer behavior, and improve information ecosystems?",
+   "recall": 0.75
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "recompute_leiden",
+   "store": "stale",
+   "q": "What are the main approaches for improving the efficiency, scalability, and usability of querying complex and large-scale data?",
+   "recall": 0.0
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "recompute_leiden",
+   "store": "own_fresh",
+   "q": "What are the main approaches for improving the efficiency, scalability, and usability of querying complex and large-scale data?",
+   "recall": 0.25
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "recompute_leiden",
+   "store": "stale",
+   "q": "What are the main approaches and trade-offs in privacy-preserving data analytics and querying across outsourced, federated, and user-generated data?",
+   "recall": 0.5
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "recompute_leiden",
+   "store": "own_fresh",
+   "q": "What are the main approaches and trade-offs in privacy-preserving data analytics and querying across outsourced, federated, and user-generated data?",
+   "recall": 0.25
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "recompute_leiden",
+   "store": "stale",
+   "q": "What are the main mechanisms, structural patterns, and optimization approaches shaping the formation, evolution, and influence dynamics of social networks?",
+   "recall": 0.5
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "recompute_leiden",
+   "store": "own_fresh",
+   "q": "What are the main mechanisms, structural patterns, and optimization approaches shaping the formation, evolution, and influence dynamics of social networks?",
+   "recall": 0.0
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "recompute_leiden",
+   "store": "stale",
+   "q": "What are the main approaches to efficiently managing, querying, and analyzing large-scale heterogeneous, graph-structured, and semantically rich data?",
+   "recall": 0.0
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "recompute_leiden",
+   "store": "own_fresh",
+   "q": "What are the main approaches to efficiently managing, querying, and analyzing large-scale heterogeneous, graph-structured, and semantically rich data?",
+   "recall": 0.0
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "recompute_leiden",
+   "store": "stale",
+   "q": "What are the main approaches and trends for modeling, analyzing, and guiding information diffusion in dynamic social networks?",
+   "recall": 0.25
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "recompute_leiden",
+   "store": "own_fresh",
+   "q": "What are the main approaches and trends for modeling, analyzing, and guiding information diffusion in dynamic social networks?",
+   "recall": 0.25
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "warmstart_leiden",
+   "store": "stale",
+   "q": "What are the main approaches for flexible, efficient, and responsible querying and ranking across complex, heterogeneous data environments?",
+   "recall": 0.75
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "warmstart_leiden",
+   "store": "own_fresh",
+   "q": "What are the main approaches for flexible, efficient, and responsible querying and ranking across complex, heterogeneous data environments?",
+   "recall": 1.0
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "warmstart_leiden",
+   "store": "stale",
+   "q": "What approaches are used to make multimodal content retrieval and recommendation accurate, scalable, and interpretable?",
+   "recall": 0.0
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "warmstart_leiden",
+   "store": "own_fresh",
+   "q": "What approaches are used to make multimodal content retrieval and recommendation accurate, scalable, and interpretable?",
+   "recall": 1.0
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "warmstart_leiden",
+   "store": "stale",
+   "q": "What methods and trends are used to analyze identity, behavior, structure, and diffusion in multilayer online social networks?",
+   "recall": 0.0
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "warmstart_leiden",
+   "store": "own_fresh",
+   "q": "What methods and trends are used to analyze identity, behavior, structure, and diffusion in multilayer online social networks?",
+   "recall": 0.0
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "warmstart_leiden",
+   "store": "stale",
+   "q": "What approaches are used to improve retrieval and indexing of heterogeneous web and scholarly content beyond conventional keyword search?",
+   "recall": 0.0
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "warmstart_leiden",
+   "store": "own_fresh",
+   "q": "What approaches are used to improve retrieval and indexing of heterogeneous web and scholarly content beyond conventional keyword search?",
+   "recall": 0.25
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "warmstart_leiden",
+   "store": "stale",
+   "q": "What are the main methods, data challenges, and equity considerations in evaluating research performance and scholarly impact?",
+   "recall": 0.25
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "warmstart_leiden",
+   "store": "own_fresh",
+   "q": "What are the main methods, data challenges, and equity considerations in evaluating research performance and scholarly impact?",
+   "recall": 0.5
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "warmstart_leiden",
+   "store": "stale",
+   "q": "What are the main approaches and trends in analyzing structure, attention, adaptation, and information diffusion in complex social networks?",
+   "recall": 0.25
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "warmstart_leiden",
+   "store": "own_fresh",
+   "q": "What are the main approaches and trends in analyzing structure, attention, adaptation, and information diffusion in complex social networks?",
+   "recall": 0.25
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "warmstart_leiden",
+   "store": "stale",
+   "q": "What are the main approaches and trends in building high-performance, intelligent, and reliable data management systems?",
+   "recall": 0.0
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "warmstart_leiden",
+   "store": "own_fresh",
+   "q": "What are the main approaches and trends in building high-performance, intelligent, and reliable data management systems?",
+   "recall": 0.5
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "warmstart_leiden",
+   "store": "stale",
+   "q": "What are the main approaches and emerging considerations for improving personalized recommendations in socially connected, real-time online platforms?",
+   "recall": 0.5
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "warmstart_leiden",
+   "store": "own_fresh",
+   "q": "What are the main approaches and emerging considerations for improving personalized recommendations in socially connected, real-time online platforms?",
+   "recall": 0.5
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "warmstart_leiden",
+   "store": "stale",
+   "q": "What are the main approaches and evaluation challenges in automatically extracting salient keywords and keyphrases from unstructured text for search, categorization, and content summarization?",
+   "recall": 0.25
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "warmstart_leiden",
+   "store": "own_fresh",
+   "q": "What are the main approaches and evaluation challenges in automatically extracting salient keywords and keyphrases from unstructured text for search, categorization, and content summarization?",
+   "recall": 0.25
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "warmstart_leiden",
+   "store": "stale",
+   "q": "What are the main methods and applications for extracting, analyzing, and modeling networks from online and digital content?",
+   "recall": 0.5
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "warmstart_leiden",
+   "store": "own_fresh",
+   "q": "What are the main methods and applications for extracting, analyzing, and modeling networks from online and digital content?",
+   "recall": 0.0
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "warmstart_leiden",
+   "store": "stale",
+   "q": "What are the main approaches for extracting, organizing, ranking, and recommending information from social media, news, and scholarly content?",
+   "recall": 0.0
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "warmstart_leiden",
+   "store": "own_fresh",
+   "q": "What are the main approaches for extracting, organizing, ranking, and recommending information from social media, news, and scholarly content?",
+   "recall": 0.0
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "warmstart_leiden",
+   "store": "stale",
+   "q": "What are the main approaches and emerging trends in improving search, ranking, and question answering across heterogeneous and domain-specific information sources?",
+   "recall": 0.0
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "warmstart_leiden",
+   "store": "own_fresh",
+   "q": "What are the main approaches and emerging trends in improving search, ranking, and question answering across heterogeneous and domain-specific information sources?",
+   "recall": 0.25
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "warmstart_leiden",
+   "store": "stale",
+   "q": "What are the main approaches and trends in machine-learning-assisted legal document review and predictive coding?",
+   "recall": 0.5
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "warmstart_leiden",
+   "store": "own_fresh",
+   "q": "What are the main approaches and trends in machine-learning-assisted legal document review and predictive coding?",
+   "recall": 1.0
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "warmstart_leiden",
+   "store": "stale",
+   "q": "What are the main approaches and trade-offs for privacy-preserving data analytics, querying, and decision-making across outsourced and federated data?",
+   "recall": 0.25
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "warmstart_leiden",
+   "store": "own_fresh",
+   "q": "What are the main approaches and trade-offs for privacy-preserving data analytics, querying, and decision-making across outsourced and federated data?",
+   "recall": 0.5
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "warmstart_leiden",
+   "store": "stale",
+   "q": "What methods and trends support extracting location-aware, time-sensitive insights from social media and mobility data?",
+   "recall": 0.25
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "warmstart_leiden",
+   "store": "own_fresh",
+   "q": "What methods and trends support extracting location-aware, time-sensitive insights from social media and mobility data?",
+   "recall": 0.5
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "warmstart_leiden",
+   "store": "stale",
+   "q": "What are the main approaches and design trends for exploiting persistent memory and heterogeneous storage in modern data management systems?",
+   "recall": 0.5
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "warmstart_leiden",
+   "store": "own_fresh",
+   "q": "What are the main approaches and design trends for exploiting persistent memory and heterogeneous storage in modern data management systems?",
+   "recall": 1.0
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "warmstart_leiden",
+   "store": "stale",
+   "q": "What are the main approaches and challenges in supporting collaborative information seeking and exploratory data analysis?",
+   "recall": 0.0
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "warmstart_leiden",
+   "store": "own_fresh",
+   "q": "What are the main approaches and challenges in supporting collaborative information seeking and exploratory data analysis?",
+   "recall": 0.25
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "warmstart_leiden",
+   "store": "stale",
+   "q": "What are the main approaches and emerging considerations for improving large-scale recommender systems across personalization, efficiency, cold start, and fairness?",
+   "recall": 0.0
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "warmstart_leiden",
+   "store": "own_fresh",
+   "q": "What are the main approaches and emerging considerations for improving large-scale recommender systems across personalization, efficiency, cold start, and fairness?",
+   "recall": 0.0
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "warmstart_leiden",
+   "store": "stale",
+   "q": "What are the main approaches, data sources, and limitations in using bibliometric and alternative metrics to evaluate research visibility, impact, and performance?",
+   "recall": 0.5
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "warmstart_leiden",
+   "store": "own_fresh",
+   "q": "What are the main approaches, data sources, and limitations in using bibliometric and alternative metrics to evaluate research visibility, impact, and performance?",
+   "recall": 1.0
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "warmstart_leiden",
+   "store": "stale",
+   "q": "What are the main approaches and trends in organizing, enriching, and efficiently accessing knowledge from web, social-media, and scientific information sources?",
+   "recall": 0.25
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "warmstart_leiden",
+   "store": "own_fresh",
+   "q": "What are the main approaches and trends in organizing, enriching, and efficiently accessing knowledge from web, social-media, and scientific information sources?",
+   "recall": 0.25
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "warmstart_leiden",
+   "store": "stale",
+   "q": "What are the main approaches for efficiently managing, querying, analyzing, and tracking graph-structured and linked data?",
+   "recall": 0.25
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "warmstart_leiden",
+   "store": "own_fresh",
+   "q": "What are the main approaches for efficiently managing, querying, analyzing, and tracking graph-structured and linked data?",
+   "recall": 0.0
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "warmstart_leiden",
+   "store": "stale",
+   "q": "What are the main approaches and emerging trends in detecting and evaluating communities in complex, multilayer, and signed networks?",
+   "recall": 0.0
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "warmstart_leiden",
+   "store": "own_fresh",
+   "q": "What are the main approaches and emerging trends in detecting and evaluating communities in complex, multilayer, and signed networks?",
+   "recall": 0.25
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "warmstart_leiden",
+   "store": "stale",
+   "q": "What are the main approaches and trends in scalable querying and complex event detection over dynamic, high-volume data streams?",
+   "recall": 0.0
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "warmstart_leiden",
+   "store": "own_fresh",
+   "q": "What are the main approaches and trends in scalable querying and complex event detection over dynamic, high-volume data streams?",
+   "recall": 0.5
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "warmstart_leiden",
+   "store": "stale",
+   "q": "What methods and trends support reliable discovery, attribution, and reuse of scholarly information in digital research ecosystems?",
+   "recall": 0.5
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "warmstart_leiden",
+   "store": "own_fresh",
+   "q": "What methods and trends support reliable discovery, attribution, and reuse of scholarly information in digital research ecosystems?",
+   "recall": 0.75
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "warmstart_leiden",
+   "store": "stale",
+   "q": "What are the main modeling approaches and practical challenges in modern personalized recommender systems?",
+   "recall": 0.25
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "warmstart_leiden",
+   "store": "own_fresh",
+   "q": "What are the main modeling approaches and practical challenges in modern personalized recommender systems?",
+   "recall": 0.5
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "frontier_leiden",
+   "store": "stale",
+   "q": "What are the main approaches and trends for improving correctness, scalability, and programmability in modern transactional data systems?",
+   "recall": 0.0
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "frontier_leiden",
+   "store": "own_fresh",
+   "q": "What are the main approaches and trends for improving correctness, scalability, and programmability in modern transactional data systems?",
+   "recall": 0.75
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "frontier_leiden",
+   "store": "stale",
+   "q": "What are the main methods and emerging trends for analyzing, representing, and making predictions from complex temporal, weighted, heterogeneous, and multi-source networks?",
+   "recall": 0.0
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "frontier_leiden",
+   "store": "own_fresh",
+   "q": "What are the main methods and emerging trends for analyzing, representing, and making predictions from complex temporal, weighted, heterogeneous, and multi-source networks?",
+   "recall": 0.5
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "frontier_leiden",
+   "store": "stale",
+   "q": "What are the main methods and applications for extracting geographic, behavioral, and preference insights from social and spatial digital data?",
+   "recall": 0.25
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "frontier_leiden",
+   "store": "own_fresh",
+   "q": "What are the main methods and applications for extracting geographic, behavioral, and preference insights from social and spatial digital data?",
+   "recall": 0.75
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "frontier_leiden",
+   "store": "stale",
+   "q": "What approaches and emerging trends support organizing, retrieving, recommending, and analyzing user-generated social media content for events, organizations, and decision-making?",
+   "recall": 0.0
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "frontier_leiden",
+   "store": "own_fresh",
+   "q": "What approaches and emerging trends support organizing, retrieving, recommending, and analyzing user-generated social media content for events, organizations, and decision-making?",
+   "recall": 0.75
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "frontier_leiden",
+   "store": "stale",
+   "q": "What are the main approaches and challenges for detecting and evaluating communities in complex networks with multiple relations, evolving interactions, and incomplete observations?",
+   "recall": 0.0
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "frontier_leiden",
+   "store": "own_fresh",
+   "q": "What are the main approaches and challenges for detecting and evaluating communities in complex networks with multiple relations, evolving interactions, and incomplete observations?",
+   "recall": 0.5
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "frontier_leiden",
+   "store": "stale",
+   "q": "How can scientometric methods assess research performance, collaboration, and knowledge diffusion across scholarly systems?",
+   "recall": 0.25
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "frontier_leiden",
+   "store": "own_fresh",
+   "q": "How can scientometric methods assess research performance, collaboration, and knowledge diffusion across scholarly systems?",
+   "recall": 0.5
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "frontier_leiden",
+   "store": "stale",
+   "q": "What are the main approaches to using network structure, content, and behavioral data to understand and predict information flow and user dynamics in online networks?",
+   "recall": 0.25
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "frontier_leiden",
+   "store": "own_fresh",
+   "q": "What are the main approaches to using network structure, content, and behavioral data to understand and predict information flow and user dynamics in online networks?",
+   "recall": 0.5
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "frontier_leiden",
+   "store": "stale",
+   "q": "What are the main approaches for efficiently retrieving, organizing, and classifying information in large-scale structured, textual, and streaming data?",
+   "recall": 0.0
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "frontier_leiden",
+   "store": "own_fresh",
+   "q": "What are the main approaches for efficiently retrieving, organizing, and classifying information in large-scale structured, textual, and streaming data?",
+   "recall": 0.0
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "frontier_leiden",
+   "store": "stale",
+   "q": "What are the main approaches to making search, recommendation, and database query systems more flexible, efficient, and socially responsible under complex real-world data and user preferences?",
+   "recall": 0.0
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "frontier_leiden",
+   "store": "own_fresh",
+   "q": "What are the main approaches to making search, recommendation, and database query systems more flexible, efficient, and socially responsible under complex real-world data and user preferences?",
+   "recall": 0.0
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "frontier_leiden",
+   "store": "stale",
+   "q": "What are the main approaches and emerging challenges in building accurate, robust, and fair personalized recommender systems?",
+   "recall": 0.25
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "frontier_leiden",
+   "store": "own_fresh",
+   "q": "What are the main approaches and emerging challenges in building accurate, robust, and fair personalized recommender systems?",
+   "recall": 0.0
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "frontier_leiden",
+   "store": "stale",
+   "q": "What are the main approaches and trends in managing, querying, and optimizing graph-oriented data systems?",
+   "recall": 0.25
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "frontier_leiden",
+   "store": "own_fresh",
+   "q": "What are the main approaches and trends in managing, querying, and optimizing graph-oriented data systems?",
+   "recall": 0.75
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "frontier_leiden",
+   "store": "stale",
+   "q": "What computational approaches are used to analyze, detect, and intervene in harmful or polarized online information ecosystems?",
+   "recall": 0.25
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "frontier_leiden",
+   "store": "own_fresh",
+   "q": "What computational approaches are used to analyze, detect, and intervene in harmful or polarized online information ecosystems?",
+   "recall": 0.5
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "frontier_leiden",
+   "store": "stale",
+   "q": "What are the main approaches and evaluation considerations for automatically extracting keyphrases and generating concise titles from unstructured text?",
+   "recall": 0.25
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "frontier_leiden",
+   "store": "own_fresh",
+   "q": "What are the main approaches and evaluation considerations for automatically extracting keyphrases and generating concise titles from unstructured text?",
+   "recall": 0.25
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "frontier_leiden",
+   "store": "stale",
+   "q": "What are the main approaches to improving efficiency, accuracy, and reliability in modern data management systems?",
+   "recall": 0.0
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "frontier_leiden",
+   "store": "own_fresh",
+   "q": "What are the main approaches to improving efficiency, accuracy, and reliability in modern data management systems?",
+   "recall": 0.0
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "frontier_leiden",
+   "store": "stale",
+   "q": "What approaches and trends are emerging for using social media data to monitor public health behaviors, substance use, and population attitudes?",
+   "recall": 0.25
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "frontier_leiden",
+   "store": "own_fresh",
+   "q": "What approaches and trends are emerging for using social media data to monitor public health behaviors, substance use, and population attitudes?",
+   "recall": 0.5
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "frontier_leiden",
+   "store": "stale",
+   "q": "What methods and trends are used to analyze user behavior, identity, diffusion, and relationships in complex online and multilayer networks?",
+   "recall": 0.0
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "frontier_leiden",
+   "store": "own_fresh",
+   "q": "What methods and trends are used to analyze user behavior, identity, diffusion, and relationships in complex online and multilayer networks?",
+   "recall": 0.5
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "frontier_leiden",
+   "store": "stale",
+   "q": "What are the main approaches and challenges in using online platforms, web indicators, and alternative metrics to assess and discover scholarly research?",
+   "recall": 0.25
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "frontier_leiden",
+   "store": "own_fresh",
+   "q": "What are the main approaches and challenges in using online platforms, web indicators, and alternative metrics to assess and discover scholarly research?",
+   "recall": 0.5
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "frontier_leiden",
+   "store": "stale",
+   "q": "What are the main approaches and emerging applications of network-based analysis for fictional narratives?",
+   "recall": 0.0
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "frontier_leiden",
+   "store": "own_fresh",
+   "q": "What are the main approaches and emerging applications of network-based analysis for fictional narratives?",
+   "recall": 0.5
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "frontier_leiden",
+   "store": "stale",
+   "q": "What methods and theoretical foundations support reliable, tractable, and accountable query processing in modern data management?",
+   "recall": 0.0
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "frontier_leiden",
+   "store": "own_fresh",
+   "q": "What methods and theoretical foundations support reliable, tractable, and accountable query processing in modern data management?",
+   "recall": 0.25
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "frontier_leiden",
+   "store": "stale",
+   "q": "What are the main approaches and design trends for managing data structures and I/O efficiently across persistent memory and heterogeneous storage hierarchies?",
+   "recall": 0.5
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "frontier_leiden",
+   "store": "own_fresh",
+   "q": "What are the main approaches and design trends for managing data structures and I/O efficiently across persistent memory and heterogeneous storage hierarchies?",
+   "recall": 0.5
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "frontier_leiden",
+   "store": "stale",
+   "q": "What are the main approaches and emerging best practices for accurate, efficient, and explainable machine-learning-assisted legal document review?",
+   "recall": 0.5
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "frontier_leiden",
+   "store": "own_fresh",
+   "q": "What are the main approaches and emerging best practices for accurate, efficient, and explainable machine-learning-assisted legal document review?",
+   "recall": 1.0
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "frontier_leiden",
+   "store": "stale",
+   "q": "What are the main methods and emerging trends for improving data representation, querying, retrieval, and quality assessment in large-scale information systems?",
+   "recall": 0.0
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "frontier_leiden",
+   "store": "own_fresh",
+   "q": "What are the main methods and emerging trends for improving data representation, querying, retrieval, and quality assessment in large-scale information systems?",
+   "recall": 0.25
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "frontier_leiden",
+   "store": "stale",
+   "q": "What are the main approaches and emerging trends in analyzing and optimizing influence, diffusion, and coverage in social and networked systems?",
+   "recall": 0.25
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "frontier_leiden",
+   "store": "own_fresh",
+   "q": "What are the main approaches and emerging trends in analyzing and optimizing influence, diffusion, and coverage in social and networked systems?",
+   "recall": 0.5
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "frontier_leiden",
+   "store": "stale",
+   "q": "What are the main approaches and trends for efficiently processing complex event streams and benchmarking scalable big-data systems?",
+   "recall": 0.0
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "frontier_leiden",
+   "store": "own_fresh",
+   "q": "What are the main approaches and trends for efficiently processing complex event streams and benchmarking scalable big-data systems?",
+   "recall": 0.5
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "frontier_leiden",
+   "store": "stale",
+   "q": "What are the main approaches and trends for publishing, modeling, validating, and consuming domain-specific structured web data using semantic vocabularies?",
+   "recall": 0.0
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "frontier_leiden",
+   "store": "own_fresh",
+   "q": "What are the main approaches and trends for publishing, modeling, validating, and consuming domain-specific structured web data using semantic vocabularies?",
+   "recall": 0.25
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "hybrid",
+   "store": "stale",
+   "q": "What are the main methods and emerging trends for modeling, analyzing, and making predictions in complex heterogeneous and temporal networks?",
+   "recall": 0.0
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "hybrid",
+   "store": "own_fresh",
+   "q": "What are the main methods and emerging trends for modeling, analyzing, and making predictions in complex heterogeneous and temporal networks?",
+   "recall": 0.0
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "hybrid",
+   "store": "stale",
+   "q": "What are the main approaches to predicting emerging relationships, influence, and structure in evolving knowledge and social networks?",
+   "recall": 0.75
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "hybrid",
+   "store": "own_fresh",
+   "q": "What are the main approaches to predicting emerging relationships, influence, and structure in evolving knowledge and social networks?",
+   "recall": 0.75
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "hybrid",
+   "store": "stale",
+   "q": "What are the main approaches and trends for efficient, high-quality information retrieval, querying, and data enrichment over large, complex scientific and unstructured data collections?",
+   "recall": 0.0
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "hybrid",
+   "store": "own_fresh",
+   "q": "What are the main approaches and trends for efficient, high-quality information retrieval, querying, and data enrichment over large, complex scientific and unstructured data collections?",
+   "recall": 0.0
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "hybrid",
+   "store": "stale",
+   "q": "What approaches are emerging to make database querying, search, and recommendation ranking more flexible, robust, and socially fair?",
+   "recall": 0.25
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "hybrid",
+   "store": "own_fresh",
+   "q": "What approaches are emerging to make database querying, search, and recommendation ranking more flexible, robust, and socially fair?",
+   "recall": 0.25
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "hybrid",
+   "store": "stale",
+   "q": "What are the main modeling, optimization, learning, and societal considerations in influence propagation and diffusion interventions on social networks?",
+   "recall": 0.25
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "hybrid",
+   "store": "own_fresh",
+   "q": "What are the main modeling, optimization, learning, and societal considerations in influence propagation and diffusion interventions on social networks?",
+   "recall": 0.5
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "hybrid",
+   "store": "stale",
+   "q": "What are the main approaches and challenges in detecting, mitigating, and studying harmful or unreliable content in online social platforms?",
+   "recall": 0.25
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "hybrid",
+   "store": "own_fresh",
+   "q": "What are the main approaches and challenges in detecting, mitigating, and studying harmful or unreliable content in online social platforms?",
+   "recall": 0.0
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "hybrid",
+   "store": "stale",
+   "q": "What are the main approaches, opportunities, and limitations in using scholarly platforms and bibliographic data to study research visibility, impact, collaboration, and open access?",
+   "recall": 0.5
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "hybrid",
+   "store": "own_fresh",
+   "q": "What are the main approaches, opportunities, and limitations in using scholarly platforms and bibliographic data to study research visibility, impact, collaboration, and open access?",
+   "recall": 0.0
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "hybrid",
+   "store": "stale",
+   "q": "What are the main approaches, uses, and limitations of web-based metrics and platforms for discovering, evaluating, and understanding the impact of scholarly outputs?",
+   "recall": 0.25
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "hybrid",
+   "store": "own_fresh",
+   "q": "What are the main approaches, uses, and limitations of web-based metrics and platforms for discovering, evaluating, and understanding the impact of scholarly outputs?",
+   "recall": 0.0
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "hybrid",
+   "store": "stale",
+   "q": "What are the main approaches and emerging challenges in building accurate, robust, and fair personalized recommender systems?",
+   "recall": 0.5
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "hybrid",
+   "store": "own_fresh",
+   "q": "What are the main approaches and emerging challenges in building accurate, robust, and fair personalized recommender systems?",
+   "recall": 1.0
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "hybrid",
+   "store": "stale",
+   "q": "What are the main modeling approaches, analytical methods, and applications for temporal and multilayer network data?",
+   "recall": 0.75
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "hybrid",
+   "store": "own_fresh",
+   "q": "What are the main modeling approaches, analytical methods, and applications for temporal and multilayer network data?",
+   "recall": 0.25
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "hybrid",
+   "store": "stale",
+   "q": "What are the main approaches to analyzing, explaining, and efficiently evaluating complex database queries and data quality constraints?",
+   "recall": 0.25
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "hybrid",
+   "store": "own_fresh",
+   "q": "What are the main approaches to analyzing, explaining, and efficiently evaluating complex database queries and data quality constraints?",
+   "recall": 0.5
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "hybrid",
+   "store": "stale",
+   "q": "What are the main approaches and challenges in using schema.org-based semantic annotations to publish, validate, and consume domain-specific web data and services?",
+   "recall": 0.25
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "hybrid",
+   "store": "own_fresh",
+   "q": "What are the main approaches and challenges in using schema.org-based semantic annotations to publish, validate, and consume domain-specific web data and services?",
+   "recall": 1.0
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "hybrid",
+   "store": "stale",
+   "q": "What are the main approaches for organizing, ranking, and validating relevant information in large-scale social media and scientific knowledge collections?",
+   "recall": 0.25
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "hybrid",
+   "store": "own_fresh",
+   "q": "What are the main approaches for organizing, ranking, and validating relevant information in large-scale social media and scientific knowledge collections?",
+   "recall": 0.5
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "hybrid",
+   "store": "stale",
+   "q": "What are the main methods and findings for analyzing information diffusion, attention, and social structure in online communication networks?",
+   "recall": 0.0
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "hybrid",
+   "store": "own_fresh",
+   "q": "What are the main methods and findings for analyzing information diffusion, attention, and social structure in online communication networks?",
+   "recall": 0.25
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "hybrid",
+   "store": "stale",
+   "q": "What methods and considerations enable robust bibliometric assessment of research impact, fields, and publication dynamics?",
+   "recall": 0.25
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "hybrid",
+   "store": "own_fresh",
+   "q": "What methods and considerations enable robust bibliometric assessment of research impact, fields, and publication dynamics?",
+   "recall": 0.75
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "hybrid",
+   "store": "stale",
+   "q": "What are the main approaches and trends in answering flexible information needs over web tables, document tables, and knowledge graphs?",
+   "recall": 0.0
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "hybrid",
+   "store": "own_fresh",
+   "q": "What are the main approaches and trends in answering flexible information needs over web tables, document tables, and knowledge graphs?",
+   "recall": 0.25
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "hybrid",
+   "store": "stale",
+   "q": "What are the main approaches and trends in efficient cross-modal and multi-view hashing for large-scale retrieval?",
+   "recall": 0.25
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "hybrid",
+   "store": "own_fresh",
+   "q": "What are the main approaches and trends in efficient cross-modal and multi-view hashing for large-scale retrieval?",
+   "recall": 1.0
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "hybrid",
+   "store": "stale",
+   "q": "What are the main modeling, analysis, and inference approaches for opinion dynamics and influence in strategic social networks?",
+   "recall": 0.0
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "hybrid",
+   "store": "own_fresh",
+   "q": "What are the main modeling, analysis, and inference approaches for opinion dynamics and influence in strategic social networks?",
+   "recall": 0.25
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "hybrid",
+   "store": "stale",
+   "q": "What approaches are advancing efficient, trustworthy, and interoperable data management at scale?",
+   "recall": 0.0
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "hybrid",
+   "store": "own_fresh",
+   "q": "What approaches are advancing efficient, trustworthy, and interoperable data management at scale?",
+   "recall": 0.0
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "hybrid",
+   "store": "stale",
+   "q": "What methods and trends support knowledge discovery from large-scale social, web, and mobility data?",
+   "recall": 0.0
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "hybrid",
+   "store": "own_fresh",
+   "q": "What methods and trends support knowledge discovery from large-scale social, web, and mobility data?",
+   "recall": 0.25
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "hybrid",
+   "store": "stale",
+   "q": "What are the main approaches and trends in using linked knowledge networks to assess influence, organize information, and understand user interests?",
+   "recall": 0.75
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "hybrid",
+   "store": "own_fresh",
+   "q": "What are the main approaches and trends in using linked knowledge networks to assess influence, organize information, and understand user interests?",
+   "recall": 0.5
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "hybrid",
+   "store": "stale",
+   "q": "What emerging methods and governance practices are shaping modern data systems for efficient querying, distributed transactions, and responsible scientific data use?",
+   "recall": 0.0
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "hybrid",
+   "store": "own_fresh",
+   "q": "What emerging methods and governance practices are shaping modern data systems for efficient querying, distributed transactions, and responsible scientific data use?",
+   "recall": 0.25
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "hybrid",
+   "store": "stale",
+   "q": "What are the main approaches to improving efficiency and usability for complex analytics and machine-learning workloads in modern data systems?",
+   "recall": 0.75
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "hybrid",
+   "store": "own_fresh",
+   "q": "What are the main approaches to improving efficiency and usability for complex analytics and machine-learning workloads in modern data systems?",
+   "recall": 1.0
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "hybrid",
+   "store": "stale",
+   "q": "What are the main approaches and emerging trends in community detection and evaluation for complex, multilayer, and signed networks?",
+   "recall": 0.0
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "hybrid",
+   "store": "own_fresh",
+   "q": "What are the main approaches and emerging trends in community detection and evaluation for complex, multilayer, and signed networks?",
+   "recall": 0.5
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "hybrid",
+   "store": "stale",
+   "q": "What are the main approaches and trends in learning, optimizing, and evaluating search rankings for complex and heterogeneous result-page layouts?",
+   "recall": 0.25
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "hybrid",
+   "store": "own_fresh",
+   "q": "What are the main approaches and trends in learning, optimizing, and evaluating search rankings for complex and heterogeneous result-page layouts?",
+   "recall": 0.75
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "graphrag_update",
+   "store": "maintained",
+   "q": "What approaches are used to analyze and shape evolving networked systems across scientific, technological, and urban contexts?",
+   "recall": 0.25
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "graphrag_update",
+   "store": "fresh",
+   "q": "What approaches are used to analyze and shape evolving networked systems across scientific, technological, and urban contexts?",
+   "recall": 0.5
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "graphrag_update",
+   "store": "maintained",
+   "q": "What are the main approaches and trends in building personalized e-commerce recommendation and matching systems under sparse user information and real-time constraints?",
+   "recall": 1.0
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "graphrag_update",
+   "store": "fresh",
+   "q": "What are the main approaches and trends in building personalized e-commerce recommendation and matching systems under sparse user information and real-time constraints?",
+   "recall": 0.75
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "graphrag_update",
+   "store": "maintained",
+   "q": "What approaches can improve semantic matching, retrieval, and recommendation across heterogeneous digital content?",
+   "recall": 0.0
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "graphrag_update",
+   "store": "fresh",
+   "q": "What approaches can improve semantic matching, retrieval, and recommendation across heterogeneous digital content?",
+   "recall": 0.0
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "graphrag_update",
+   "store": "maintained",
+   "q": "What approaches are being used to make data-driven systems more context-aware, secure, scalable, and efficient across diverse applications?",
+   "recall": 0.0
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "graphrag_update",
+   "store": "fresh",
+   "q": "What approaches are being used to make data-driven systems more context-aware, secure, scalable, and efficient across diverse applications?",
+   "recall": 0.0
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "graphrag_update",
+   "store": "maintained",
+   "q": "What are the main graph-based approaches for exploring complex data patterns, analyzing influence, and predicting changes over time?",
+   "recall": 0.0
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "graphrag_update",
+   "store": "fresh",
+   "q": "What are the main graph-based approaches for exploring complex data patterns, analyzing influence, and predicting changes over time?",
+   "recall": 0.0
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "graphrag_update",
+   "store": "maintained",
+   "q": "What are the main approaches to delivering personalized product recommendations and search experiences under sparse, session-based, and interactive user feedback?",
+   "recall": 0.25
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "graphrag_update",
+   "store": "fresh",
+   "q": "What are the main approaches to delivering personalized product recommendations and search experiences under sparse, session-based, and interactive user feedback?",
+   "recall": 0.25
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "graphrag_update",
+   "store": "maintained",
+   "q": "What approaches are being developed to improve trust, accountability, openness and analysis in decentralized or privacy-sensitive digital information systems?",
+   "recall": 0.0
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "graphrag_update",
+   "store": "fresh",
+   "q": "What approaches are being developed to improve trust, accountability, openness and analysis in decentralized or privacy-sensitive digital information systems?",
+   "recall": 0.0
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "graphrag_update",
+   "store": "maintained",
+   "q": "What methods are used to analyze and predict influence and evolution in scholarly and complex networks?",
+   "recall": 0.0
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "graphrag_update",
+   "store": "fresh",
+   "q": "What methods are used to analyze and predict influence and evolution in scholarly and complex networks?",
+   "recall": 0.0
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "graphrag_update",
+   "store": "maintained",
+   "q": "What are the main approaches for reliable, scalable estimation and prediction from sparse, evolving, or large-scale observational data?",
+   "recall": 0.0
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "graphrag_update",
+   "store": "fresh",
+   "q": "What are the main approaches for reliable, scalable estimation and prediction from sparse, evolving, or large-scale observational data?",
+   "recall": 0.0
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "graphrag_update",
+   "store": "maintained",
+   "q": "What approaches support classification, prioritization, and recommendation when user needs or decision-relevant information are incomplete or uncertain?",
+   "recall": 0.75
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "graphrag_update",
+   "store": "fresh",
+   "q": "What approaches support classification, prioritization, and recommendation when user needs or decision-relevant information are incomplete or uncertain?",
+   "recall": 0.25
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "graphrag_update",
+   "store": "maintained",
+   "q": "What methods and considerations are important for drawing reliable social, spatial, and scientific insights from large-scale observational data?",
+   "recall": 0.0
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "graphrag_update",
+   "store": "fresh",
+   "q": "What methods and considerations are important for drawing reliable social, spatial, and scientific insights from large-scale observational data?",
+   "recall": 0.0
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "graphrag_update",
+   "store": "maintained",
+   "q": "What approaches are being developed to make data systems more efficient, flexible, and accessible for analysis and discovery?",
+   "recall": 0.0
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "graphrag_update",
+   "store": "fresh",
+   "q": "What approaches are being developed to make data systems more efficient, flexible, and accessible for analysis and discovery?",
+   "recall": 0.0
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "graphrag_update",
+   "store": "maintained",
+   "q": "What are the main approaches for efficiently analyzing, querying, and extracting insights from dynamic time-series and structured data?",
+   "recall": 0.0
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "graphrag_update",
+   "store": "fresh",
+   "q": "What are the main approaches for efficiently analyzing, querying, and extracting insights from dynamic time-series and structured data?",
+   "recall": 0.0
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "graphrag_update",
+   "store": "maintained",
+   "q": "How are large-scale data and network-based methods used to study influence, attention, power, and social mixing in complex social systems?",
+   "recall": 0.0
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "graphrag_update",
+   "store": "fresh",
+   "q": "How are large-scale data and network-based methods used to study influence, attention, power, and social mixing in complex social systems?",
+   "recall": 0.25
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "graphrag_update",
+   "store": "maintained",
+   "q": "What are the main approaches and trends in scalable similarity search, recommendation, and pattern discovery across structured data, queries, images, and visualizations?",
+   "recall": 0.25
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "graphrag_update",
+   "store": "fresh",
+   "q": "What are the main approaches and trends in scalable similarity search, recommendation, and pattern discovery across structured data, queries, images, and visualizations?",
+   "recall": 0.5
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "graphrag_update",
+   "store": "maintained",
+   "q": "What are the main approaches for learning useful representations and making reliable inferences from sparse, ambiguous, or weakly labeled data?",
+   "recall": 0.0
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "graphrag_update",
+   "store": "fresh",
+   "q": "What are the main approaches for learning useful representations and making reliable inferences from sparse, ambiguous, or weakly labeled data?",
+   "recall": 0.0
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "graphrag_update",
+   "store": "maintained",
+   "q": "What are the main approaches for scalable, flexible analysis, search, and querying of complex data in modern data management systems?",
+   "recall": 0.0
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "graphrag_update",
+   "store": "fresh",
+   "q": "What are the main approaches for scalable, flexible analysis, search, and querying of complex data in modern data management systems?",
+   "recall": 0.0
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "graphrag_update",
+   "store": "maintained",
+   "q": "What are the main approaches and challenges in using large-scale spatial and administrative data to analyse regional systems, mobility, cultural activity, and comparative performance?",
+   "recall": 0.25
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "graphrag_update",
+   "store": "fresh",
+   "q": "What are the main approaches and challenges in using large-scale spatial and administrative data to analyse regional systems, mobility, cultural activity, and comparative performance?",
+   "recall": 0.5
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "graphrag_update",
+   "store": "maintained",
+   "q": "What are the main approaches and trends in learning task-aware vector representations and similarity measures for complex structured or semantic data?",
+   "recall": 0.0
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "graphrag_update",
+   "store": "fresh",
+   "q": "What are the main approaches and trends in learning task-aware vector representations and similarity measures for complex structured or semantic data?",
+   "recall": 0.25
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "graphrag_update",
+   "store": "maintained",
+   "q": "What are the main approaches and applications of learned embeddings for measuring similarity and organizing complex domain-specific data?",
+   "recall": 0.0
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "graphrag_update",
+   "store": "fresh",
+   "q": "What are the main approaches and applications of learned embeddings for measuring similarity and organizing complex domain-specific data?",
+   "recall": 0.25
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "graphrag_update",
+   "store": "maintained",
+   "q": "What methods are used to infer human behavior and support decision-making from large-scale mobility, social activity, and purchasing data?",
+   "recall": 0.0
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "graphrag_update",
+   "store": "fresh",
+   "q": "What methods are used to infer human behavior and support decision-making from large-scale mobility, social activity, and purchasing data?",
+   "recall": 0.25
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "graphrag_update",
+   "store": "maintained",
+   "q": "What are the main approaches to building efficient, context-aware retrieval and search systems for large-scale, heterogeneous data?",
+   "recall": 0.25
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "graphrag_update",
+   "store": "fresh",
+   "q": "What are the main approaches to building efficient, context-aware retrieval and search systems for large-scale, heterogeneous data?",
+   "recall": 0.25
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "graphrag_update",
+   "store": "maintained",
+   "q": "What are the main approaches and challenges in using data-driven methods to understand behavior and support decision-making in digital platforms and scholarly ecosystems?",
+   "recall": 0.25
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "graphrag_update",
+   "store": "fresh",
+   "q": "What are the main approaches and challenges in using data-driven methods to understand behavior and support decision-making in digital platforms and scholarly ecosystems?",
+   "recall": 0.5
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "graphrag_update",
+   "store": "maintained",
+   "q": "What approaches are used to create semantic representations that improve retrieval, recommendation, and analysis across structured, visual, and query data?",
+   "recall": 0.0
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "graphrag_update",
+   "store": "fresh",
+   "q": "What approaches are used to create semantic representations that improve retrieval, recommendation, and analysis across structured, visual, and query data?",
+   "recall": 0.0
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "graphrag_update",
+   "store": "maintained",
+   "q": "What methodological challenges and analytical approaches arise when using large-scale publication, citation, mobility, and media networks to measure influence and interconnectedness?",
+   "recall": 0.0
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "graphrag_update",
+   "store": "fresh",
+   "q": "What methodological challenges and analytical approaches arise when using large-scale publication, citation, mobility, and media networks to measure influence and interconnectedness?",
+   "recall": 0.0
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "graphrag_update",
+   "store": "maintained",
+   "q": "What are the main approaches and trends in using behavioral data to improve shopping experiences and understand retail activity?",
+   "recall": 0.0
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "graphrag_update",
+   "store": "fresh",
+   "q": "What are the main approaches and trends in using behavioral data to improve shopping experiences and understand retail activity?",
+   "recall": 0.0
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "graphrag_update",
+   "store": "maintained",
+   "q": "What are the main approaches and challenges in analyzing and predicting patterns in large-scale, evolving data?",
+   "recall": 0.0
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "graphrag_update",
+   "store": "fresh",
+   "q": "What are the main approaches and challenges in analyzing and predicting patterns in large-scale, evolving data?",
+   "recall": 0.0
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "graphrag_update",
+   "store": "maintained",
+   "q": "What are the main computational approaches for analyzing structure, temporal dynamics, and behavior in complex networked and spatiotemporal data?",
+   "recall": 0.0
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "graphrag_update",
+   "store": "fresh",
+   "q": "What are the main computational approaches for analyzing structure, temporal dynamics, and behavior in complex networked and spatiotemporal data?",
+   "recall": 0.25
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "graphrag_update",
+   "store": "maintained",
+   "q": "What are the main approaches to improving decision-making, retrieval, and recommendations when information is incomplete, ambiguous, or heterogeneous?",
+   "recall": 0.25
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "graphrag_update",
+   "store": "fresh",
+   "q": "What are the main approaches to improving decision-making, retrieval, and recommendations when information is incomplete, ambiguous, or heterogeneous?",
+   "recall": 0.0
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "graphrag_update",
+   "store": "maintained",
+   "q": "What are the main approaches and emerging trends in building efficient, intelligent, and trustworthy data management systems?",
+   "recall": 0.0
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "graphrag_update",
+   "store": "fresh",
+   "q": "What are the main approaches and emerging trends in building efficient, intelligent, and trustworthy data management systems?",
+   "recall": 0.0
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "graphrag_update",
+   "store": "maintained",
+   "q": "What are the main approaches for resolving ambiguous entities and discovering meaningful patterns when labeled data are scarce and search spaces are large?",
+   "recall": 0.0
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "graphrag_update",
+   "store": "fresh",
+   "q": "What are the main approaches for resolving ambiguous entities and discovering meaningful patterns when labeled data are scarce and search spaces are large?",
+   "recall": 0.0
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "graphrag_update",
+   "store": "maintained",
+   "q": "What are the main data-driven approaches for understanding and forecasting urban social, cultural, and innovation dynamics?",
+   "recall": 0.0
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "graphrag_update",
+   "store": "fresh",
+   "q": "What are the main data-driven approaches for understanding and forecasting urban social, cultural, and innovation dynamics?",
+   "recall": 0.0
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "graphrag_update",
+   "store": "maintained",
+   "q": "How can web-based and community-contributed data be used to strengthen research infrastructure, preservation, and public-health monitoring?",
+   "recall": 0.0
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "graphrag_update",
+   "store": "fresh",
+   "q": "How can web-based and community-contributed data be used to strengthen research infrastructure, preservation, and public-health monitoring?",
+   "recall": 0.25
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "graphrag_update",
+   "store": "maintained",
+   "q": "What methods are used to model user preferences, recommendations, and engagement in interactive online platforms?",
+   "recall": 0.0
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "graphrag_update",
+   "store": "fresh",
+   "q": "What methods are used to model user preferences, recommendations, and engagement in interactive online platforms?",
+   "recall": 0.0
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "graphrag_update",
+   "store": "maintained",
+   "q": "What are the main approaches for improving the efficiency, adaptability, and usability of data analytics and query-processing tasks?",
+   "recall": 0.0
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "graphrag_update",
+   "store": "fresh",
+   "q": "What are the main approaches for improving the efficiency, adaptability, and usability of data analytics and query-processing tasks?",
+   "recall": 0.0
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "graphrag_update",
+   "store": "maintained",
+   "q": "What methods are used to model user behavior and interaction dynamics for prediction, search, and recommendation?",
+   "recall": 0.0
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "graphrag_update",
+   "store": "fresh",
+   "q": "What methods are used to model user behavior and interaction dynamics for prediction, search, and recommendation?",
+   "recall": 0.0
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "graphrag_update",
+   "store": "maintained",
+   "q": "What are the main approaches for modeling similarity, compatibility, and relevance in specialized domains when labeled data is scarce?",
+   "recall": 0.5
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "graphrag_update",
+   "store": "fresh",
+   "q": "What are the main approaches for modeling similarity, compatibility, and relevance in specialized domains when labeled data is scarce?",
+   "recall": 0.0
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "graphrag_update",
+   "store": "maintained",
+   "q": "What computational methods are used to analyze integrity, identity, motivation, and influence in large-scale research and work platforms?",
+   "recall": 0.0
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "graphrag_update",
+   "store": "fresh",
+   "q": "What computational methods are used to analyze integrity, identity, motivation, and influence in large-scale research and work platforms?",
+   "recall": 0.0
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "graphrag_update",
+   "store": "maintained",
+   "q": "What methods are used to discover patterns, make predictions, and improve data quality in large-scale temporal, relational, and textual data?",
+   "recall": 0.0
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "graphrag_update",
+   "store": "fresh",
+   "q": "What methods are used to discover patterns, make predictions, and improve data quality in large-scale temporal, relational, and textual data?",
+   "recall": 0.25
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "graphrag_update",
+   "store": "maintained",
+   "q": "What are the main methods for analyzing, querying, optimizing, and predicting patterns in complex and evolving graph-structured data?",
+   "recall": 0.0
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "graphrag_update",
+   "store": "fresh",
+   "q": "What are the main methods for analyzing, querying, optimizing, and predicting patterns in complex and evolving graph-structured data?",
+   "recall": 0.0
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "graphrag_update",
+   "store": "maintained",
+   "q": "How can network-based and contextual metrics reveal patterns of attention, engagement, influence, and innovation across societies and regions?",
+   "recall": 0.0
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "graphrag_update",
+   "store": "fresh",
+   "q": "How can network-based and contextual metrics reveal patterns of attention, engagement, influence, and innovation across societies and regions?",
+   "recall": 0.0
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "graphrag_update",
+   "store": "maintained",
+   "q": "What are the main approaches to using web-derived signals and user interactions for monitoring, discovery, and decision support?",
+   "recall": 0.0
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "graphrag_update",
+   "store": "fresh",
+   "q": "What are the main approaches to using web-derived signals and user interactions for monitoring, discovery, and decision support?",
+   "recall": 0.25
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "graphrag_update",
+   "store": "maintained",
+   "q": "What are the main approaches to building efficient, flexible, and trustworthy search and analytics systems for complex data?",
+   "recall": 0.25
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "graphrag_update",
+   "store": "fresh",
+   "q": "What are the main approaches to building efficient, flexible, and trustworthy search and analytics systems for complex data?",
+   "recall": 0.25
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "graphrag_update",
+   "store": "maintained",
+   "q": "How can learned representations improve semantic matching, clustering, retrieval, and recommendation across diverse data types?",
+   "recall": 0.25
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "graphrag_update",
+   "store": "fresh",
+   "q": "How can learned representations improve semantic matching, clustering, retrieval, and recommendation across diverse data types?",
+   "recall": 0.25
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "graphrag_update",
+   "store": "maintained",
+   "q": "What are the main approaches to modeling, analyzing, and exploiting relational structure in data systems and decision-making applications?",
+   "recall": 0.0
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "graphrag_update",
+   "store": "fresh",
+   "q": "What are the main approaches to modeling, analyzing, and exploiting relational structure in data systems and decision-making applications?",
+   "recall": 0.0
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "graphrag_update",
+   "store": "maintained",
+   "q": "What are the main methods and challenges for analyzing influence, impact, and usage patterns in large-scale scholarly and data systems?",
+   "recall": 0.0
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "graphrag_update",
+   "store": "fresh",
+   "q": "What are the main methods and challenges for analyzing influence, impact, and usage patterns in large-scale scholarly and data systems?",
+   "recall": 0.25
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "graphrag_update",
+   "store": "maintained",
+   "q": "What are the main approaches to improving efficiency, flexibility, and reliability in distributed data management and querying systems?",
+   "recall": 0.0
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "graphrag_update",
+   "store": "fresh",
+   "q": "What are the main approaches to improving efficiency, flexibility, and reliability in distributed data management and querying systems?",
+   "recall": 0.0
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "graphrag_update",
+   "store": "maintained",
+   "q": "What are the main approaches to using data-driven decision support and predictive analytics for prioritization, diagnosis, and resource planning?",
+   "recall": 0.0
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "graphrag_update",
+   "store": "fresh",
+   "q": "What are the main approaches to using data-driven decision support and predictive analytics for prioritization, diagnosis, and resource planning?",
+   "recall": 0.0
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "graphrag_update",
+   "store": "maintained",
+   "q": "What approaches can make scholarly and digital information infrastructures more open, durable, trustworthy, and resilient without relying on centralized intermediaries?",
+   "recall": 0.0
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "graphrag_update",
+   "store": "fresh",
+   "q": "What approaches can make scholarly and digital information infrastructures more open, durable, trustworthy, and resilient without relying on centralized intermediaries?",
+   "recall": 0.0
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "graphrag_update",
+   "store": "maintained",
+   "q": "What are the main approaches and trends in recommendation systems that leverage structured relationships, temporal behavior, and limited user information?",
+   "recall": 0.5
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "graphrag_update",
+   "store": "fresh",
+   "q": "What are the main approaches and trends in recommendation systems that leverage structured relationships, temporal behavior, and limited user information?",
+   "recall": 0.5
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "zep_attach",
+   "store": "maintained",
+   "q": "What methods are used to extract reliable behavioral, mobility, and information-quality insights from large-scale, incomplete, or noisy human-generated data?",
+   "recall": 0.0
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "zep_attach",
+   "store": "fresh",
+   "q": "What methods are used to extract reliable behavioral, mobility, and information-quality insights from large-scale, incomplete, or noisy human-generated data?",
+   "recall": 0.0
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "zep_attach",
+   "store": "maintained",
+   "q": "What approaches and infrastructure trends support open, scalable analysis of scientific influence, citations, grants, and evolving networks?",
+   "recall": 0.5
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "zep_attach",
+   "store": "fresh",
+   "q": "What approaches and infrastructure trends support open, scalable analysis of scientific influence, citations, grants, and evolving networks?",
+   "recall": 0.5
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "zep_attach",
+   "store": "maintained",
+   "q": "What are the main approaches for building intelligent systems that retrieve, recommend, diagnose, and optimize decisions from complex data and workloads?",
+   "recall": 0.0
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "zep_attach",
+   "store": "fresh",
+   "q": "What are the main approaches for building intelligent systems that retrieve, recommend, diagnose, and optimize decisions from complex data and workloads?",
+   "recall": 0.0
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "zep_attach",
+   "store": "maintained",
+   "q": "What are the main approaches for learning similarity representations and predictive models from structured, sequential, and multimodal data?",
+   "recall": 0.0
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "zep_attach",
+   "store": "fresh",
+   "q": "What are the main approaches for learning similarity representations and predictive models from structured, sequential, and multimodal data?",
+   "recall": 0.0
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "zep_attach",
+   "store": "maintained",
+   "q": "What are the main approaches for representing, analyzing, and improving decision-making in complex information and infrastructure systems?",
+   "recall": 0.0
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "zep_attach",
+   "store": "fresh",
+   "q": "What are the main approaches for representing, analyzing, and improving decision-making in complex information and infrastructure systems?",
+   "recall": 0.25
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "zep_attach",
+   "store": "maintained",
+   "q": "What are the main approaches to improving efficiency, performance, and accountability in data-intensive storage, retrieval, and access systems?",
+   "recall": 0.0
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "zep_attach",
+   "store": "fresh",
+   "q": "What are the main approaches to improving efficiency, performance, and accountability in data-intensive storage, retrieval, and access systems?",
+   "recall": 0.25
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "zep_attach",
+   "store": "maintained",
+   "q": "What methods and evaluation considerations are used to analyze, recommend, and assess influence across complex information ecosystems?",
+   "recall": 0.0
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "zep_attach",
+   "store": "fresh",
+   "q": "What methods and evaluation considerations are used to analyze, recommend, and assess influence across complex information ecosystems?",
+   "recall": 0.0
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "zep_attach",
+   "store": "maintained",
+   "q": "What are the main approaches and emerging trends in modeling user behavior for session-based recommendation and prediction?",
+   "recall": 0.5
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "zep_attach",
+   "store": "fresh",
+   "q": "What are the main approaches and emerging trends in modeling user behavior for session-based recommendation and prediction?",
+   "recall": 0.5
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "zep_attach",
+   "store": "maintained",
+   "q": "What are the main approaches for improving question understanding and answer retrieval when user queries are unclear, ill-formed, conversational, or require evidence from multiple documents?",
+   "recall": 0.25
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "zep_attach",
+   "store": "fresh",
+   "q": "What are the main approaches for improving question understanding and answer retrieval when user queries are unclear, ill-formed, conversational, or require evidence from multiple documents?",
+   "recall": 0.75
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "zep_attach",
+   "store": "maintained",
+   "q": "How can network-based analysis reveal dynamics, vulnerabilities, accountability, and information flows in complex socio-technical systems?",
+   "recall": 0.0
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "zep_attach",
+   "store": "fresh",
+   "q": "How can network-based analysis reveal dynamics, vulnerabilities, accountability, and information flows in complex socio-technical systems?",
+   "recall": 0.0
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "zep_attach",
+   "store": "maintained",
+   "q": "What are the main graph-based approaches for analyzing relationships, influence, and contextual patterns in complex research and social data?",
+   "recall": 0.0
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "zep_attach",
+   "store": "fresh",
+   "q": "What are the main graph-based approaches for analyzing relationships, influence, and contextual patterns in complex research and social data?",
+   "recall": 0.0
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "zep_attach",
+   "store": "maintained",
+   "q": "What are the main approaches and trends in recommendation for users with sparse, session-based, or multi-behavior interaction histories?",
+   "recall": 0.75
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "zep_attach",
+   "store": "fresh",
+   "q": "What are the main approaches and trends in recommendation for users with sparse, session-based, or multi-behavior interaction histories?",
+   "recall": 0.75
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "zep_attach",
+   "store": "maintained",
+   "q": "What are the main approaches and applications of learned embeddings for representing complex entities, interactions, and behavior patterns?",
+   "recall": 0.5
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "zep_attach",
+   "store": "fresh",
+   "q": "What are the main approaches and applications of learned embeddings for representing complex entities, interactions, and behavior patterns?",
+   "recall": 0.0
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "zep_attach",
+   "store": "maintained",
+   "q": "What are the main approaches and emerging trends in designing and maintaining efficient data indexes and storage systems?",
+   "recall": 0.0
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "zep_attach",
+   "store": "fresh",
+   "q": "What are the main approaches and emerging trends in designing and maintaining efficient data indexes and storage systems?",
+   "recall": 0.0
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "zep_attach",
+   "store": "maintained",
+   "q": "What are the main approaches and considerations for designing, optimizing, and applying indexing systems for modern data workloads?",
+   "recall": 0.0
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "zep_attach",
+   "store": "fresh",
+   "q": "What are the main approaches and considerations for designing, optimizing, and applying indexing systems for modern data workloads?",
+   "recall": 0.0
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "zep_attach",
+   "store": "maintained",
+   "q": "What are the main approaches and challenges in building open, community-supported infrastructures for discovering, preserving, and analyzing scholarly web resources and citation networks?",
+   "recall": 0.0
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "zep_attach",
+   "store": "fresh",
+   "q": "What are the main approaches and challenges in building open, community-supported infrastructures for discovering, preserving, and analyzing scholarly web resources and citation networks?",
+   "recall": 0.25
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "zep_attach",
+   "store": "maintained",
+   "q": "What are the main approaches to modeling user intent, behavior, and context for personalized ranking and recommendation in interactive systems?",
+   "recall": 0.25
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "zep_attach",
+   "store": "fresh",
+   "q": "What are the main approaches to modeling user intent, behavior, and context for personalized ranking and recommendation in interactive systems?",
+   "recall": 0.25
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "zep_attach",
+   "store": "maintained",
+   "q": "What are the main approaches to improving data-driven analysis, retrieval, and recommendation in modern data systems?",
+   "recall": 0.25
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "zep_attach",
+   "store": "fresh",
+   "q": "What are the main approaches to improving data-driven analysis, retrieval, and recommendation in modern data systems?",
+   "recall": 0.25
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "zep_attach",
+   "store": "maintained",
+   "q": "What are the main approaches and trends in personalized recommendation for online shopping and interactive content?",
+   "recall": 0.75
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "zep_attach",
+   "store": "fresh",
+   "q": "What are the main approaches and trends in personalized recommendation for online shopping and interactive content?",
+   "recall": 0.75
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "zep_attach",
+   "store": "maintained",
+   "q": "What methods and evaluation practices are used to analyze influence, structure, and decision-making in complex information and networked systems?",
+   "recall": 0.25
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "zep_attach",
+   "store": "fresh",
+   "q": "What methods and evaluation practices are used to analyze influence, structure, and decision-making in complex information and networked systems?",
+   "recall": 0.0
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "zep_attach",
+   "store": "maintained",
+   "q": "What are the main approaches and emerging trends in session-based and behavior-aware recommender systems?",
+   "recall": 0.25
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "zep_attach",
+   "store": "fresh",
+   "q": "What are the main approaches and emerging trends in session-based and behavior-aware recommender systems?",
+   "recall": 0.5
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "zep_attach",
+   "store": "maintained",
+   "q": "What are the main approaches and trends in learning robust representations and resolving ambiguity in large-scale, sparsely labeled data applications?",
+   "recall": 0.75
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "zep_attach",
+   "store": "fresh",
+   "q": "What are the main approaches and trends in learning robust representations and resolving ambiguity in large-scale, sparsely labeled data applications?",
+   "recall": 0.5
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "zep_attach",
+   "store": "maintained",
+   "q": "What methods and challenges shape robust, efficient information and mobility systems under dynamic demand and disinformation?",
+   "recall": 0.0
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "zep_attach",
+   "store": "fresh",
+   "q": "What methods and challenges shape robust, efficient information and mobility systems under dynamic demand and disinformation?",
+   "recall": 0.25
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "zep_attach",
+   "store": "maintained",
+   "q": "What are the main graph-based and learning approaches for analyzing structure, influence, behavior, and compatibility in complex data networks?",
+   "recall": 0.0
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "zep_attach",
+   "store": "fresh",
+   "q": "What are the main graph-based and learning approaches for analyzing structure, influence, behavior, and compatibility in complex data networks?",
+   "recall": 0.0
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "zep_attach",
+   "store": "maintained",
+   "q": "What approaches and trends improve question understanding and answer retrieval for noisy, unclear, and complex user queries?",
+   "recall": 0.0
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "zep_attach",
+   "store": "fresh",
+   "q": "What approaches and trends improve question understanding and answer retrieval for noisy, unclear, and complex user queries?",
+   "recall": 0.0
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "zep_attach",
+   "store": "maintained",
+   "q": "What are the main graph-based representation learning and efficient retrieval approaches for recommendation, matching, and similarity search?",
+   "recall": 0.0
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "zep_attach",
+   "store": "fresh",
+   "q": "What are the main graph-based representation learning and efficient retrieval approaches for recommendation, matching, and similarity search?",
+   "recall": 0.0
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "zep_attach",
+   "store": "maintained",
+   "q": "How can question-answering systems reliably handle complex, unclear, malformed, and ambiguous user queries while drawing on distributed textual evidence?",
+   "recall": 0.0
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "zep_attach",
+   "store": "fresh",
+   "q": "How can question-answering systems reliably handle complex, unclear, malformed, and ambiguous user queries while drawing on distributed textual evidence?",
+   "recall": 0.25
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "zep_attach",
+   "store": "maintained",
+   "q": "What are the main methods and challenges in constructing and interpreting large-scale relational data for research evaluation, mobility, citations, and media attention?",
+   "recall": 0.0
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "zep_attach",
+   "store": "fresh",
+   "q": "What are the main methods and challenges in constructing and interpreting large-scale relational data for research evaluation, mobility, citations, and media attention?",
+   "recall": 0.0
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "zep_attach",
+   "store": "maintained",
+   "q": "What are the main approaches for resolving ambiguous entities and relationships when labeled data are scarce or unavailable?",
+   "recall": 0.0
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "zep_attach",
+   "store": "fresh",
+   "q": "What are the main approaches for resolving ambiguous entities and relationships when labeled data are scarce or unavailable?",
+   "recall": 0.25
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "zep_attach",
+   "store": "maintained",
+   "q": "What are the main approaches for improving recommendation under large-scale, sparse, session-based, and behavior-rich user interactions?",
+   "recall": 0.5
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "zep_attach",
+   "store": "fresh",
+   "q": "What are the main approaches for improving recommendation under large-scale, sparse, session-based, and behavior-rich user interactions?",
+   "recall": 0.5
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "zep_attach",
+   "store": "maintained",
+   "q": "What are the main approaches and challenges in using large-scale behavioral and movement data for prediction, analytics, and decision support?",
+   "recall": 0.25
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "zep_attach",
+   "store": "fresh",
+   "q": "What are the main approaches and challenges in using large-scale behavioral and movement data for prediction, analytics, and decision support?",
+   "recall": 0.75
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "zep_attach",
+   "store": "maintained",
+   "q": "What are the main approaches and trends in personalized and session-aware e-commerce recommendation, especially under sparse or anonymous user data?",
+   "recall": 0.25
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "zep_attach",
+   "store": "fresh",
+   "q": "What are the main approaches and trends in personalized and session-aware e-commerce recommendation, especially under sparse or anonymous user data?",
+   "recall": 0.25
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "zep_attach",
+   "store": "maintained",
+   "q": "What are the main methods and trends for analyzing and shaping news information ecosystems, from media structures and attention flows to misinformation assessment and personalized recommendation?",
+   "recall": 0.0
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "zep_attach",
+   "store": "fresh",
+   "q": "What are the main methods and trends for analyzing and shaping news information ecosystems, from media structures and attention flows to misinformation assessment and personalized recommendation?",
+   "recall": 0.0
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "zep_attach",
+   "store": "maintained",
+   "q": "What are the main approaches to learning and exploiting similarity or compatibility for retrieval and disambiguation when labeled data are limited?",
+   "recall": 0.0
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "zep_attach",
+   "store": "fresh",
+   "q": "What are the main approaches to learning and exploiting similarity or compatibility for retrieval and disambiguation when labeled data are limited?",
+   "recall": 0.0
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "zep_attach",
+   "store": "maintained",
+   "q": "What are the main approaches and trends in modeling user and system interaction sessions to predict future actions and support recommendations or operational decisions?",
+   "recall": 0.5
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "zep_attach",
+   "store": "fresh",
+   "q": "What are the main approaches and trends in modeling user and system interaction sessions to predict future actions and support recommendations or operational decisions?",
+   "recall": 0.25
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "zep_attach",
+   "store": "maintained",
+   "q": "What approaches and trends shape the design of scalable, data-driven information systems and services?",
+   "recall": 0.0
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "zep_attach",
+   "store": "fresh",
+   "q": "What approaches and trends shape the design of scalable, data-driven information systems and services?",
+   "recall": 0.25
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "zep_attach",
+   "store": "maintained",
+   "q": "What are the main approaches to improving efficiency, reliability, and accountability in distributed data and blockchain systems?",
+   "recall": 0.0
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "zep_attach",
+   "store": "fresh",
+   "q": "What are the main approaches to improving efficiency, reliability, and accountability in distributed data and blockchain systems?",
+   "recall": 0.0
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "zep_attach",
+   "store": "maintained",
+   "q": "What are the main methodological considerations for designing and evaluating data-driven platforms and intelligent systems?",
+   "recall": 0.0
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "zep_attach",
+   "store": "fresh",
+   "q": "What are the main methodological considerations for designing and evaluating data-driven platforms and intelligent systems?",
+   "recall": 0.0
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "zep_attach",
+   "store": "maintained",
+   "q": "What are the main approaches and trends in session-based and behavior-aware recommendation under limited user history?",
+   "recall": 0.5
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "zep_attach",
+   "store": "fresh",
+   "q": "What are the main approaches and trends in session-based and behavior-aware recommendation under limited user history?",
+   "recall": 0.5
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "zep_attach",
+   "store": "maintained",
+   "q": "What are the main approaches to improving information analysis and retrieval by modeling relational structure, context, and temporal dynamics?",
+   "recall": 0.0
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "zep_attach",
+   "store": "fresh",
+   "q": "What are the main approaches to improving information analysis and retrieval by modeling relational structure, context, and temporal dynamics?",
+   "recall": 0.25
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "zep_attach",
+   "store": "maintained",
+   "q": "What are the main approaches and challenges in building reliable, open research data and analytical models from incomplete, ambiguous, or changing information environments?",
+   "recall": 0.0
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "zep_attach",
+   "store": "fresh",
+   "q": "What are the main approaches and challenges in building reliable, open research data and analytical models from incomplete, ambiguous, or changing information environments?",
+   "recall": 0.0
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "zep_attach",
+   "store": "maintained",
+   "q": "What are the main methods for modeling and analyzing contextual, temporal, and multi-relational patterns in complex networked data?",
+   "recall": 0.0
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "zep_attach",
+   "store": "fresh",
+   "q": "What are the main methods for modeling and analyzing contextual, temporal, and multi-relational patterns in complex networked data?",
+   "recall": 0.0
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "zep_attach",
+   "store": "maintained",
+   "q": "What approaches are used to infer intent and make predictions or answer complex queries from fragmented sequential and contextual evidence?",
+   "recall": 0.0
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "zep_attach",
+   "store": "fresh",
+   "q": "What approaches are used to infer intent and make predictions or answer complex queries from fragmented sequential and contextual evidence?",
+   "recall": 0.25
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "zep_attach",
+   "store": "maintained",
+   "q": "What are the main approaches and trends in using data-management and blockchain technologies to support efficient, trustworthy processing and sharing across heterogeneous systems?",
+   "recall": 0.0
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "zep_attach",
+   "store": "fresh",
+   "q": "What are the main approaches and trends in using data-management and blockchain technologies to support efficient, trustworthy processing and sharing across heterogeneous systems?",
+   "recall": 0.0
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "zep_attach",
+   "store": "maintained",
+   "q": "What are the main approaches and design trends for building open, trustworthy, and scalable indexing infrastructures for scholarly and other evolving data?",
+   "recall": 0.0
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "zep_attach",
+   "store": "fresh",
+   "q": "What are the main approaches and design trends for building open, trustworthy, and scalable indexing infrastructures for scholarly and other evolving data?",
+   "recall": 0.0
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "zep_attach",
+   "store": "maintained",
+   "q": "What methods and evaluation practices improve robust language understanding for noisy, varied, and semantically altered text?",
+   "recall": 0.25
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "zep_attach",
+   "store": "fresh",
+   "q": "What methods and evaluation practices improve robust language understanding for noisy, varied, and semantically altered text?",
+   "recall": 0.25
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "zep_attach",
+   "store": "maintained",
+   "q": "What methods are used to model and evaluate interaction structures in complex social, economic, and digital systems under changing data conditions?",
+   "recall": 0.0
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "zep_attach",
+   "store": "fresh",
+   "q": "What methods are used to model and evaluate interaction structures in complex social, economic, and digital systems under changing data conditions?",
+   "recall": 0.0
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "zep_attach",
+   "store": "maintained",
+   "q": "What are the main approaches for making language- and query-driven data systems more robust, adaptive, and efficient?",
+   "recall": 0.0
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "zep_attach",
+   "store": "fresh",
+   "q": "What are the main approaches for making language- and query-driven data systems more robust, adaptive, and efficient?",
+   "recall": 0.0
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "zep_attach",
+   "store": "maintained",
+   "q": "What approaches are being used to support trustworthy, efficient, and interoperable data and transaction workflows across heterogeneous and distributed platforms?",
+   "recall": 0.0
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "zep_attach",
+   "store": "fresh",
+   "q": "What approaches are being used to support trustworthy, efficient, and interoperable data and transaction workflows across heterogeneous and distributed platforms?",
+   "recall": 0.0
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "zep_attach",
+   "store": "maintained",
+   "q": "What are the main approaches and challenges in building comprehensive, open citation-data infrastructures for citation content analysis?",
+   "recall": 0.25
+  },
+  {
+   "probe": "coverage",
+   "maintainer": "zep_attach",
+   "store": "fresh",
+   "q": "What are the main approaches and challenges in building comprehensive, open citation-data infrastructures for citation content analysis?",
+   "recall": 0.0
+  }
+ ]
+}

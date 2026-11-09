@@ -841,6 +841,7 @@ def entity_graph_assets(M):
             if m in Q:
                 M[f"EgQa{t}Comp"] = f"{Q[m]['comprehensiveness']:.2f}"
                 M[f"EgQa{t}Div"] = f"{Q[m]['diversity']:.2f}"
+                M[f"EgQa{t}CompP"] = f"{Q[m]['comprehensiveness_p']:.2f}"
                 M[f"EgQa{t}P"] = f"{min(Q[m][c + '_p'] for c in ('comprehensiveness', 'diversity', 'empowerment', 'directness')):.2f}"
                 M[f"EgQa{t}Tok"] = f"{Q[m]['update_tokens'] / 1e6:.1f}M"
         qt = json.loads((Eg / "query_tokens.json").read_text())
@@ -1117,6 +1118,7 @@ def revision2_assets(M):
             for g, t in (("entity", ""), ("wikidata", "Wd")):
                 if g in h:
                     M[f"Hier{t}EtaMaintAll"] = pct(h[g]["all"]["maintainer"])
+                    M[f"Hier{t}Split"] = pct(h[g].get("recluster_split", h[g]["all"]["maintainer"]))
                     M[f"Hier{t}EtaTauAll"] = pct(h[g]["all"]["tau"])
                     M[f"Hier{t}EtaTau"] = pct(h[g]["reclustering"]["tau"])
                     M[f"Hier{t}EtaMin"] = pct(h[g]["reclustering"]["min_size"])
@@ -1156,7 +1158,18 @@ def revision2_assets(M):
         old = _pd.DataFrame(json.loads((A / "qa" / "results.json").read_text())["per_question"])
         more = _pd.DataFrame(json.loads((A / "qa" / "results_more.json").read_text())["per_question"])
         allq = _pd.concat([old, more, own]).pivot_table(index="q", columns="store", values="recall")
-        for m, t in (("hybrid", "Hyb"), ("warmstart_leiden", "Warm")):
+        allq["OWNFRESH|recompute_leiden"] = allq["FRESH|recompute all"]
+        res_own = []
+        for m in ("recompute_leiden", "warmstart_leiden", "frontier_leiden", "hybrid"):
+            e = (allq[f"{m}|tau=0.9"] - allq[f"OWNFRESH|{m}"]).dropna()
+            n_, mu, se = len(e), e.mean(), e.std(ddof=1) / np.sqrt(len(e))
+            pt = max(_st.t.sf((mu + 0.05) / se, n_ - 1), _st.t.cdf((mu - 0.05) / se, n_ - 1))
+            h = _st.t.ppf(0.95, n_ - 1) * se
+            res_own.append((mu, mu - h, mu + h, pt))
+        M["OwnNEq"] = str(sum(r[3] < 0.05 for r in res_own))
+        M["OwnCiLo"], M["OwnCiHi"] = f"{min(r[1] for r in res_own):.3f}", f"{max(r[2] for r in res_own):.3f}"
+        M["OwnDiffMin"], M["OwnDiffMax"] = f"{min(r[0] for r in res_own):+.3f}", f"{max(r[0] for r in res_own):+.3f}"
+        for m, t in (("hybrid", "Hyb"), ("warmstart_leiden", "Warm"), ("frontier_leiden", "Front")):
             a = allq[f"OWNFRESH|{m}"]
             M[f"Own{t}"] = f"{a.mean():.3f}"
             d = (a - allq["FRESH|recompute all"]).dropna()
@@ -1183,6 +1196,71 @@ def revision2_assets(M):
     M["ValQMin"], M["ValQMax"], M["ValQDistinct"] = f"{qs[0]:.3f}", f"{qs[-1]:.3f}", str(len(qs))
     pw = [r for r in v["entity"]["stores"] if r["store"] == "priced_warm"][0]
     M["EgPrWarmTostP"] = f"{pw['comprehensiveness_tost_p']:.3f}"
+    hs = A / "hier_sensitivity.json"
+    if hs.exists():
+        S = json.loads(hs.read_text())
+        big = [v for k, v in S.items() if not k.endswith("|10")]
+        M["SensSplitMin"], M["SensSplitMax"] = pct(min(v["split"] for v in big)), pct(max(v["split"] for v in big))
+        M["SensTauMin"] = pct(min(v["eta_tau"] for v in big))
+        M["SensDropMin"], M["SensDropMax"] = pct(min(v["drop"] for v in big)), pct(max(v["drop"] for v in big))
+        M["SensLastMin"], M["SensLastMax"] = pct(min(v["last"] for v in big)), pct(max(v["last"] for v in big))
+        M["SensMatchMin"] = f"{min(v['cost09']['reindex+match'] for v in big):.2f}"
+        M["SensMatchMax"] = f"{max(v['cost09']['reindex+match'] for v in big):.2f}"
+    pf = A / "probes.json"
+    if pf.exists():
+        import pandas as _pd
+        from scipy import stats as _st
+        P = json.loads(pf.read_text())
+        df = _pd.DataFrame(P["rows"])
+        for probe, mine, other, t in (("staleness", "stale", "own_fresh", "Stale"), ("coverage", "maintained", "fresh", "Cov")):
+            x = df[df.probe == probe].pivot_table(index=["maintainer", "q"], columns="store", values="recall").dropna()
+            d = x[mine] - x[other]
+            p_ = _st.wilcoxon(d, zero_method="zsplit").pvalue
+            M[f"Probe{t}N"] = str(len(d))
+            M[f"Probe{t}Mine"], M[f"Probe{t}Ref"] = f"{x[mine].mean():.2f}", f"{x[other].mean():.2f}"
+            M[f"Probe{t}Diff"] = f"{d.mean():+.2f}"
+            M[f"Probe{t}P"] = "<0.001" if p_ < 0.001 else f"={p_:.3f}"
+        S = {(r["probe"], r["maintainer"]): r for r in P["summary"]}
+        M["ProbeStaleSig"] = str(sum(1 for (pr, m), r in S.items() if pr == "staleness" and r["p"] < 0.05))
+        M["ProbeStaleMinDiff"] = f"{max(r['diff'] for (pr, m), r in S.items() if pr == 'staleness'):+.2f}"
+        M["ProbeStaleMaxDiff"] = f"{min(r['diff'] for (pr, m), r in S.items() if pr == 'staleness'):+.2f}"
+        M["ProbeCovGu"] = f"{S[('coverage', 'graphrag_update')]['diff']:+.3f}"
+        M["ProbeCovZep"] = f"{S[('coverage', 'zep_attach')]['diff']:+.3f}"
+    dl = A / "deletion_leak.json"
+    if dl.exists():
+        DL = json.loads(dl.read_text())
+        f1 = lambda x: f"{100 * x:.1f}\\%"  # noqa: E731
+        for pp, t in (("0.01", "One"), ("0.05", "Five")):
+            r = DL[pp]
+            M[f"DelGu{t}"], M[f"DelZep{t}"] = f1(r["graphrag_update"]["leak_share"]), f1(r["zep_attach"]["leak_share"])
+            M[f"DelRe{t}"] = f1(max(r["reindex+match"]["leak_share"], r["warm"]["leak_share"]))
+            M[f"DelLinGu{t}"] = f1(r["graphrag_update"]["lineage_cost"])
+            M[f"DelLinZep{t}"] = f1(r["zep_attach"]["lineage_cost"])
+            M[f"DelReCost{t}"] = pct(min(r["reindex+match"]["cost"], r["warm"]["cost"]))
+            M[f"DelTxtGu{t}"] = pct(r["graphrag_update"]["txt"][0] / max(r["graphrag_update"]["txt"][1], 1))
+            M[f"DelTxtZep{t}"] = pct(r["zep_attach"]["txt"][0] / max(r["zep_attach"]["txt"][1], 1))
+    qrf = A / "qa" / "results_qwenreader.json"
+    if qrf.exists():
+        import pandas as _pd
+        from scipy import stats as _st
+        w = _pd.DataFrame(json.loads(qrf.read_text())["per_question"]).pivot_table(index="q", columns="store", values="recall")
+        res = []
+        for c in w.columns:
+            if c == "FRESH|recompute all":
+                continue
+            d = (w[c] - w["FRESH|recompute all"]).dropna()
+            n_, mu, se = len(d), d.mean(), d.std(ddof=1) / np.sqrt(len(d))
+            pt = max(_st.t.sf((mu + 0.05) / se, n_ - 1), _st.t.cdf((mu - 0.05) / se, n_ - 1))
+            h = _st.t.ppf(0.95, n_ - 1) * se
+            res.append((mu, mu - h, mu + h, pt))
+        M["QrNEq"], M["QrN"] = str(sum(r[3] < 0.05 for r in res)), str(len(res))
+        M["QrCiLo"], M["QrCiHi"] = f"{min(r[1] for r in res):.3f}", f"{max(r[2] for r in res):.3f}"
+        M["QrMin"], M["QrMax"] = f"{w.mean().min():.2f}", f"{w.mean().max():.2f}"
+        M["QrFresh"] = f"{w['FRESH|recompute all'].mean():.2f}"
+    tm = json.loads((A / "tokmodel_check.json").read_text())
+    M["TokModelPearson"] = f"{tm['pearson']:.4f}"
+    M["TokModelSpearman"] = f"{tm['spearman']:.2f}"
+    M["TokModelRatio"] = f"{tm['ratio_median']:.2f}"
 
 
 def main():

@@ -36,11 +36,11 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "wikidata"))
 sys.path.insert(0, str(Path(__file__).parent))
 import config  # noqa: E402
 HERE = config.RESULTS
-import entity_graph_eval as eg  # noqa: E402
 import os  # noqa: E402
+import entity_graph_eval as eg  # noqa: E402
 GRAPH = os.environ.get("HIER_GRAPH", "entity")   # entity | wikidata
 
-SEED, MAXC = 0xDEADBEEF, 10
+SEED, MAXC = 0xDEADBEEF, int(os.environ.get("HIER_MAXC", "10"))
 TAUS = [0.9, 0.7, 0.5, 0.0]
 MINS = [1, 5, 10]
 
@@ -287,7 +287,7 @@ def run(seed):
             store = st["store"][0.9]
             dump[name] = [dict(level=int(k[1][0]), cur=sorted(int(x) for x in st["comms"][k[1]]),
                                written=sorted(int(x) for x in m)) for k, m in store.items() if k[0] == 1]
-        (HERE / f"graphrag_hier_stores_{GRAPH}.json").write_text(json.dumps(dump))
+        (HERE / (f"graphrag_hier_stores_{GRAPH}.json" if MAXC == 10 else f"graphrag_hier_stores_{GRAPH}_max{MAXC}.json")).write_text(json.dumps(dump))
     for name, st in state.items():
         res[name] = dict(Qleaf=float(np.nanmean(st["Qleaf"])), Qtop=float(np.nanmean(st["Qtop"])),
                          reports_final={str(ms): st["nrep"][-1][ms] for ms in MINS},
@@ -303,7 +303,7 @@ def main():
     out = {}
     for seed in range(3):
         out[str(seed)] = run(seed)
-        (HERE / ("graphrag_hier.json" if GRAPH == "entity" else f"graphrag_hier_{GRAPH}.json")).write_text(json.dumps(out, indent=1))
+        (HERE / (("graphrag_hier.json" if GRAPH == "entity" else f"graphrag_hier_{GRAPH}.json") if MAXC == 10 else f"graphrag_hier_{GRAPH}_max{MAXC}.json")).write_text(json.dumps(out, indent=1))
     print(json.dumps(out["0"], indent=1)[:3000])
 
 

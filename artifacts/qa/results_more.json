@@ -5401,6 +5401,906 @@
    "recall": 0.75
   },
   {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main language extensions and computational trade-offs in rule-based text extraction from documents?",
+   "recall": 0.0
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in applying machine learning to multilingual text classification, retrieval, and social-text analysis?",
+   "recall": 0.25
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "How can digital behavioral data and social-network analysis be used to understand, predict, and support changes in health, information-seeking, and community behavior?",
+   "recall": 0.25
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in mining, analyzing, and evaluating web-based information for knowledge discovery and decision support?",
+   "recall": 0.25
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What approaches are used to characterize, compare, and model structural organization in complex networks?",
+   "recall": 0.25
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in using social-media and educational digital traces to understand, predict, and support human behavior and information processes?",
+   "recall": 0.75
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in modeling latent structure and temporal evolution in complex networks?",
+   "recall": 0.5
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends for delivering fast, cost-efficient approximate and interactive analytics over large or distributed data?",
+   "recall": 0.25
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and emerging challenges for detecting, characterizing, and countering deception and misinformation in online social platforms?",
+   "recall": 0.25
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "How are learned representations and similarity methods being used to improve retrieval, recommendation, content-quality analysis, and network understanding?",
+   "recall": 0.5
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What do university rankings measure, how do their methodologies shape results, and what are their main limitations for evaluating institutions?",
+   "recall": 0.25
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and challenges in achieving interoperable, reliable transactions and asset management across blockchain systems?",
+   "recall": 0.0
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches for building robust machine learning systems when labeled data are scarce, weak, or noisy?",
+   "recall": 0.5
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in using structural decompositions for analyzing, representing, and querying complex data?",
+   "recall": 0.25
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in representing, managing, querying, and interoperating over semantic-web graph data?",
+   "recall": 0.25
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and emerging challenges in governing data and algorithmic systems responsibly?",
+   "recall": 0.0
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main methods and factors for uncovering community structure and modeling belief dynamics in social networks?",
+   "recall": 0.25
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends for achieving efficient, beyond-worst-case join and conjunctive-query evaluation in sequential and parallel database systems?",
+   "recall": 0.25
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and challenges in using social media, multimedia, and satellite data for real-time disaster detection, monitoring, and response?",
+   "recall": 0.5
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in modeling and analyzing multilayer and temporal networks?",
+   "recall": 0.5
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in embedding-based semantic text similarity for retrieval and classification?",
+   "recall": 0.5
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What feature engineering and classification approaches are most effective for mining user attributes, intentions, events, and deceptive content from social media?",
+   "recall": 0.5
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in query reformulation and session-aware search assistance?",
+   "recall": 0.25
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and design trends for exploiting persistent and emerging memory technologies in database systems?",
+   "recall": 0.5
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What methods and emerging trends support patent search, technology mapping, and forecasting from patent text and citation data?",
+   "recall": 0.25
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in learning effective binary hash codes for scalable image and cross-modal retrieval?",
+   "recall": 0.5
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends for detecting and assessing coordinated political manipulation and harmful behavior on social media?",
+   "recall": 1.0
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches to balancing relevance, accuracy, and diversity in conversational, recommendation, and ranking systems?",
+   "recall": 0.25
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main modeling, inference, and network-structural factors that shape information diffusion and social sensing in online social networks?",
+   "recall": 0.25
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and emerging trends in community detection for complex networks beyond structure-only clustering?",
+   "recall": 1.0
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the major methods, infrastructure needs, and application trends in data-driven analytics for decision support across operational, urban, and social-data settings?",
+   "recall": 0.25
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches for building accurate and scalable personalized recommendation systems?",
+   "recall": 0.25
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and emerging trends in detecting and mitigating fake news on social media?",
+   "recall": 0.5
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in learning transferable representations of users, nodes, and entities from social and networked data?",
+   "recall": 0.25
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches to scalable, robust analytics for dynamic and large-scale data?",
+   "recall": 0.5
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches for making process discovery and monitoring more accurate, scalable, and robust when applied to complex real-world event data?",
+   "recall": 0.25
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches, design considerations, and research trends in neural text matching and ranking for search, question answering, and conversational systems?",
+   "recall": 0.0
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What methods and trends support representation learning, network completion, and community discovery in incomplete and evolving networks?",
+   "recall": 0.5
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in extracting actionable clinical knowledge from electronic health record text?",
+   "recall": 0.25
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in assessing how journals, publication venues, and article-level visibility shape scholarly citation impact?",
+   "recall": 0.0
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and emerging trends for scalable entity resolution over large, heterogeneous data?",
+   "recall": 0.75
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends for efficiently evaluating, optimizing, and reasoning about complex database queries and data-driven inference tasks?",
+   "recall": 0.0
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends for scalable, low-supervision entity resolution over heterogeneous data?",
+   "recall": 0.5
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "How do differences in scholarly citation databases affect literature discovery, citation analysis, and research evaluation?",
+   "recall": 1.0
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main ontology- and concept-based approaches for overcoming vocabulary mismatch in semantic text retrieval?",
+   "recall": 1.0
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main methods and trends for reliability analysis and influence optimization in uncertain networks?",
+   "recall": 0.25
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and challenges in improving the quality, usability, and reuse of biomedical research metadata and knowledge platforms?",
+   "recall": 0.0
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "How are stochastic block models used and extended for community detection and structural change analysis in networks?",
+   "recall": 0.0
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and research trends for detecting, characterizing, and countering hate speech on social media?",
+   "recall": 0.0
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches, evaluation practices, and interpretation techniques for topic modeling and topic-structure analysis?",
+   "recall": 0.25
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in personalized search and product discovery using user behavior and contextual intent?",
+   "recall": 0.25
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in using contextual neural representations and learned term weighting to improve information retrieval and document ranking?",
+   "recall": 0.5
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trade-offs for scalable, personalized representation learning and retrieval in heterogeneous, evolving networks?",
+   "recall": 0.5
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What approaches and evaluation considerations are most important for building effective text and user-modeling systems when labeled data are limited or heterogeneous?",
+   "recall": 0.75
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "How are knowledge graphs and neural representation learning used to improve news recommendation and entity-centric retrieval?",
+   "recall": 0.5
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in detecting emerging events and specialized discussions from social-media text streams?",
+   "recall": 0.25
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches for analyzing influence, information diffusion, and user characteristics in large-scale social-media networks under limited data access?",
+   "recall": 0.25
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in representation learning and community analysis for multiplex and attributed networks?",
+   "recall": 0.5
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What methods and behavioral patterns characterize automated and coordinated influence operations in political social-media discourse?",
+   "recall": 0.25
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends for modeling, managing, validating, and efficiently querying RDF data for large-scale semantic-web analytics?",
+   "recall": 0.25
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "How can digital trace data, spatial analysis, and network methods improve public-health surveillance and targeting of vulnerable populations?",
+   "recall": 1.0
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main methods and trends for scalable, largely unsupervised network alignment and vertex similarity analysis?",
+   "recall": 0.5
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends for scalable structural analysis, optimization, and discovery in complex and multilayer networks?",
+   "recall": 0.5
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main computational approaches and research trends for understanding and responding to sexual violence and harassment through social media data?",
+   "recall": 0.25
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What approaches are used to model, optimize, and improve navigation in complex information and networked environments?",
+   "recall": 0.0
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What approaches and trends enable scalable, integrated data management and analytics for large, diverse, and continuously arriving data?",
+   "recall": 0.25
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in understanding, predicting, and supporting friendship ties in online social networks?",
+   "recall": 0.5
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and emerging trends in using pretrained language representations for domain-specific text understanding, retrieval, and classification?",
+   "recall": 0.25
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends for robust, scalable matching and analysis of noisy textual and scholarly metadata?",
+   "recall": 0.5
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in using motifs and graphlets to analyze higher-order structure in static and temporal networks?",
+   "recall": 0.75
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main bibliometric approaches for mapping research landscapes, identifying emerging themes, and comparing scientific performance across institutions and regions?",
+   "recall": 0.25
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches, evaluation practices, and emerging trends in community detection for real-world networks?",
+   "recall": 0.25
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches for using semantic information to improve information retrieval, phrase ranking, and document analysis?",
+   "recall": 0.5
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in understanding, matching, and generating structured tables from heterogeneous data sources?",
+   "recall": 0.0
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in community detection for multiplex and multilayer networks?",
+   "recall": 0.75
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "How are random-walk-based graph ranking and local analysis methods being extended to better capture network structure and dynamics?",
+   "recall": 0.75
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "How can semantic annotation and cross-lingual alignment improve discovery, querying, and analysis of multilingual knowledge resources?",
+   "recall": 0.75
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches to creating, standardizing, validating, and sharing semantic annotations for web content and resources?",
+   "recall": 0.5
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What methods and findings characterize state-sponsored social-media trolling campaigns and their influence on online information ecosystems?",
+   "recall": 0.25
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in declarative systems for end-to-end machine learning workflows?",
+   "recall": 0.5
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trade-offs in scalable, privacy-aware analysis of query, event, and operational logs?",
+   "recall": 0.75
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and emerging trends in semi-supervised learning for classification on graphs, relational data, and other low-label settings?",
+   "recall": 0.5
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches for improving transactional database performance under high contention and distributed workloads?",
+   "recall": 0.0
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main methodological trends and evaluation challenges in modern recommender-system research?",
+   "recall": 0.0
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches for retrieval, classification, and recommendation when semantic labels are scarce and content is heterogeneous or rapidly changing?",
+   "recall": 0.5
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in detecting and analyzing communities in attributed networks?",
+   "recall": 0.5
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What computational approaches are used to analyze movie narratives, representation, similarity, and audience preferences?",
+   "recall": 0.25
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends for organizing, analyzing, and learning from complex neuroimaging and network-structured data?",
+   "recall": 0.75
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches to understanding, governing, and evaluating complex institutions in digital environments?",
+   "recall": 0.5
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main data sources, modeling approaches, and challenges in analyzing and predicting human mobility patterns?",
+   "recall": 0.25
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and emerging trends in influence maximization under uncertain, dynamic, and computationally challenging network conditions?",
+   "recall": 0.5
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and emerging trends in influence maximization under realistic, dynamic marketing and diffusion settings?",
+   "recall": 0.25
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in scalable, label-efficient hashing for image and cross-modal retrieval?",
+   "recall": 1.0
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "How are semantic term-weighting and representation-learning methods improving text extraction, retrieval, classification, and clustering?",
+   "recall": 0.75
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and emerging trends in social-media fake-news detection beyond textual content?",
+   "recall": 0.75
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and contextual signals used to improve personalized point-of-interest recommendation in location-based social networks?",
+   "recall": 0.75
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends for mining association rules and frequent patterns efficiently while controlling redundancy and result explosion?",
+   "recall": 0.25
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in using email data to understand user behavior and build intelligent email assistance systems?",
+   "recall": 0.0
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in optimizing advertising, incentives, and information exposure in social networks?",
+   "recall": 0.75
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main machine-learning approaches for extracting structured knowledge from unstructured documents and using it in intelligent recipe and food applications?",
+   "recall": 0.5
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main methodological trends in topic modeling for scalable, interpretable semantic analysis and downstream knowledge applications?",
+   "recall": 1.0
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in context-aware, value-aware ranking and re-ranking for recommender systems?",
+   "recall": 0.75
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main mechanisms, network dynamics, and measurement approaches that shape and reveal creativity in collective and scientific settings?",
+   "recall": 0.25
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in discovering, explaining, and addressing opposing viewpoints in social-media controversies?",
+   "recall": 0.25
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main modeling, analysis, inference, and control approaches for epidemic spreading on complex networks?",
+   "recall": 0.75
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "How do fractional counting and normalization approaches affect the construction, analysis, and evaluation of bibliometric networks and research impact?",
+   "recall": 0.75
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and evaluation trends in modern personalized and sequential recommendation research?",
+   "recall": 0.25
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What methods and best practices are used to analyze, compare, and rank entities in networked, textual, and scholarly data?",
+   "recall": 0.0
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main methods and research trends for analyzing structural balance in signed networks?",
+   "recall": 0.5
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trade-offs for scalable approximate nearest-neighbor search and k-nearest-neighbor graph construction?",
+   "recall": 0.25
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends for improving scalable relational analytics and query processing on big-data platforms?",
+   "recall": 0.25
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "How do lightly moderated fringe social-media communities foster extremist discourse, polarization, and the spread of harmful information?",
+   "recall": 0.25
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and emerging trends for workload-aware physical design and query optimization in analytical databases?",
+   "recall": 0.5
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends for learning multimodal representations to support content understanding, similarity, ranking, and discovery in online platforms?",
+   "recall": 0.0
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main deep learning approaches and practical trends in personalized ranking, recommendation, and user-response prediction?",
+   "recall": 0.75
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "How can diverse online social data be combined to profile users and infer relationships or attributes, and what privacy risks and protections arise from these capabilities?",
+   "recall": 1.0
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What approaches and design trends are shaping open-domain non-factoid answer passage retrieval and question answering?",
+   "recall": 0.25
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends for organizing, clustering, and detecting anomalies in sparse short-text and text-network data?",
+   "recall": 0.75
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in adaptive data cleaning and parameterized data-processing workflows?",
+   "recall": 0.25
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "How can patent analytics support prior-art discovery, technology landscape mapping, and the identification of influential or emerging innovations?",
+   "recall": 0.25
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What approaches are used to infer and assess users\u2019 identity, status, credibility, and behavior from social-media data?",
+   "recall": 0.0
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "How do gender and collaboration patterns shape researchers\u2019 career opportunities, productivity, and scientific impact across academic fields and settings?",
+   "recall": 0.25
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches, uses, and limitations of bibliometric indicators in research evaluation?",
+   "recall": 0.5
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches, challenges, and evaluation trends in modern named entity recognition across diverse domains and text types?",
+   "recall": 0.0
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and computational trade-offs for reasoning about database dependencies and using them in query processing and data repair?",
+   "recall": 0.25
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches for selecting informative signals and integrating multiple views in graph-based data analysis, retrieval, and recommendation?",
+   "recall": 0.5
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What structural properties determine the computational complexity of intervention, uncertainty, and consistency tasks for conjunctive queries?",
+   "recall": 0.0
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What factors and methods shape the measurement, prediction, and comparison of scholarly citation impact?",
+   "recall": 0.25
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends for personalized recommendation and ranking in dynamic e-commerce settings?",
+   "recall": 0.0
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in utility-oriented pattern mining for complex, real-world data?",
+   "recall": 1.0
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and challenges in interpreting neural and learning-to-rank models for search and recommendation?",
+   "recall": 0.0
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in using cross-domain transfer to improve recommendation and related prediction tasks under sparse or shifted data?",
+   "recall": 0.5
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What methods and insights emerge from using large knowledge-network analyses to study influence and relationships among global actors?",
+   "recall": 0.0
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and emerging trends in influence maximization for social networks?",
+   "recall": 0.5
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main privacy, compliance, and responsible-use challenges and approaches for social and data-driven systems under modern data-protection regulation?",
+   "recall": 0.25
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and challenges for differential privacy in continuous, temporally correlated data releases?",
+   "recall": 0.0
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches for improving accurate, scalable prediction in e-commerce recommendation and retrieval under online-serving and data-quality constraints?",
+   "recall": 0.25
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in deep learning-based session-aware recommendation for dynamic and cold-start content?",
+   "recall": 0.75
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main neural approaches for improving multi-label prediction and relational representation in text and graph data?",
+   "recall": 0.25
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main modeling approaches and optimization trends for maximizing influence and shaping diffusion in social networks?",
+   "recall": 0.25
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends for resource-efficient approximate querying of large-scale video and edge-camera data?",
+   "recall": 0.25
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches to achieving efficient and decidable ontology-mediated query answering under logical constraints?",
+   "recall": 0.5
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main scalable algorithmic approaches and research trends for optimizing coverage, influence, and centrality in large networks?",
+   "recall": 0.75
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and emerging trends for improving matrix-completion-based recommender systems under sparse, biased, and evolving feedback?",
+   "recall": 0.75
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends for addressing cold-start and interpretability challenges in collaborative recommendation?",
+   "recall": 0.25
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main methods and trends for scalable, user-centered analysis and evaluation of interactive information-seeking behavior?",
+   "recall": 0.0
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in privacy-preserving and adversarial manipulation of graph mining tasks such as community detection, network embedding, and link prediction?",
+   "recall": 0.5
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in scalable network embedding based on matrix factorization?",
+   "recall": 0.25
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and challenges in multi-objective, multi-stakeholder recommendation for marketplace and platform settings?",
+   "recall": 0.5
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "How do pretrained contextual representations and transfer learning improve ranking and specialized natural-language processing tasks when labeled data are limited?",
+   "recall": 0.25
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in declarative, end-to-end systems for managing and optimizing machine learning workflows?",
+   "recall": 0.75
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in building efficient database indexes for dynamic workloads under tight performance and storage constraints?",
+   "recall": 0.0
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches for discovering accurate, interpretable process models from complex real-world event data?",
+   "recall": 0.0
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and insights from social-media research on sexual and gender-based violence disclosure, reporting, and advocacy campaigns?",
+   "recall": 0.0
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main neural and hybrid approaches for improving personalized recommender systems, particularly under sparse, cold-start, and context-dependent conditions?",
+   "recall": 0.75
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main limitations of journal impact factors, and what alternative approaches can improve the assessment of journal and article citation impact?",
+   "recall": 0.25
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and methodological trends for detecting community structure in bipartite networks and their projected representations?",
+   "recall": 0.25
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main semantic frameworks and reasoning approaches for querying and managing incomplete or uncertain databases?",
+   "recall": 0.25
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in personalized, list-wise recommendation that balance utility, diversity, and user feedback?",
+   "recall": 0.75
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main neural modeling approaches and practical trends for click-through and click prediction in advertising and search?",
+   "recall": 0.75
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and emerging trends in graph-based analysis, learning, sampling, and recovery of multivariate and dynamic signals?",
+   "recall": 0.25
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "How can data-driven educational systems improve assessment, personalized guidance, and student success in online and higher-education settings?",
+   "recall": 0.0
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches for assessing, discovering, and predicting the impact of online news and scientific information?",
+   "recall": 0.25
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in table-aware search and query answering?",
+   "recall": 0.0
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in influence optimization under uncertainty, adaptivity, and varied campaign objectives in social networks?",
+   "recall": 0.75
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and design trends in conversational information-seeking systems?",
+   "recall": 0.0
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and challenges in building social, data-driven Internet of Things services and recommendations?",
+   "recall": 0.5
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends for training effective retrieval and text-processing models when high-quality human labels are scarce or unreliable?",
+   "recall": 0.0
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trade-offs in designing scalable, reliable, and consistent distributed stream processing systems?",
+   "recall": 0.0
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends for improving mobile app search, organization, and personalized recommendation?",
+   "recall": 0.25
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "How can web-based scholarly search and profile platforms be used responsibly for citation-based research evaluation?",
+   "recall": 0.5
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in using pretrained contextual language models for information retrieval and ranking?",
+   "recall": 0.0
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in neural ad hoc ranking for document and passage retrieval?",
+   "recall": 0.0
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and emerging trends in inferring social-media users\u2019 home locations at fine geographic resolution?",
+   "recall": 0.25
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in declarative systems for data analytics, machine learning, and data-intensive optimization?",
+   "recall": 0.5
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches for continuously querying dynamic social and graph data to identify timely, representative, and influential information?",
+   "recall": 0.25
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main methods and trends for understanding, retrieving, completing, and augmenting web tables as knowledge resources?",
+   "recall": 0.0
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in socially aware, location-based group recommendation and activity planning?",
+   "recall": 0.0
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main modeling approaches and network factors that shape the spread and predictability of complex social contagions?",
+   "recall": 0.0
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main methods and research trends for analyzing structure, dynamics, and reliability in multiplex networks?",
+   "recall": 0.5
+  },
+  {
    "store": "papers|vector",
    "q": "What are the main language extensions and computational trade-offs in rule-based text extraction from documents?",
    "recall": 0.25

@@ -476,5 +476,66 @@
   "publisher": "ACM",
   "type": "proceedings-article",
   "doi": "10.1145/170035.170066"
+ },
+ "neo4jgds": {
+  "title": "Neo4j Graph Data Science Library Manual",
+  "authors": [
+   "{Neo4j, Inc.}"
+  ],
+  "year": 2026,
+  "venue": "software",
+  "url": "https://neo4j.com/docs/graph-data-science/current/",
+  "note": "Version 2.13; Louvain and Leiden procedures"
+ },
+ "ouyang2025hoh": {
+  "title": "HoH: A Dynamic Benchmark for Evaluating the Impact of Outdated Information on Retrieval-Augmented Generation",
+  "authors": [
+   "Jie Ouyang",
+   "Tingyue Pan",
+   "Mingyue Cheng",
+   "Ruiran Yan",
+   "Yucong Luo",
+   "Jiaying Lin",
+   "Qi Liu"
+  ],
+  "year": 2025,
+  "venue": "arXiv",
+  "arxiv": "2503.04800"
+ },
+ "wang2026agenticunlearning": {
+  "title": "Agentic Unlearning: When LLM Agent Meets Machine Unlearning",
+  "authors": [
+   "Bin Wang",
+   "Fan Wang",
+   "Pingping Wang",
+   "Jinyu Cong",
+   "Yang Yu",
+   "Yilong Yin",
+   "Zhongyi Han",
+   "Benzheng Wei"
+  ],
+  "year": 2026,
+  "venue": "arXiv",
+  "arxiv": "2602.17692"
+ },
+ "singh2026stalebench": {
+  "title": "StaleBench: A Benchmark for Answer Freshness in Retrieval-Augmented Generation",
+  "authors": [
+   "Karan Singh"
+  ],
+  "year": 2026,
+  "venue": "software",
+  "url": "https://doi.org/10.5281/zenodo.20697152",
+  "note": "Preprint, Zenodo"
+ },
+ "lightragrepo": {
+  "title": "LightRAG",
+  "authors": [
+   "{HKUDS}"
+  ],
+  "year": 2026,
+  "venue": "software",
+  "url": "https://github.com/HKUDS/LightRAG",
+  "note": "Document deletion with rebuild of affected entities and relationships (adelete\\_by\\_doc\\_id), accessed 9 November 2026"
  }
 }

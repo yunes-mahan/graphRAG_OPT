@@ -7,6 +7,7 @@
    "seed": 2.9607545399861266e-05,
    "residual(interactions)": 0.16245703913331944
   },
+  "recluster_split": 0.6098086393061928,
   "reclustering": {
    "tau": 0.8286312945728183,
    "maintainer": 0.00017209657429741656,
@@ -23,6 +24,7 @@
    "seed": 8.91477251538158e-06,
    "residual(interactions)": 0.1851748781511361
   },
+  "recluster_split": 0.6224581580481032,
   "reclustering": {
    "tau": 0.9744418701038908,
    "maintainer": 0.00013924305619378812,

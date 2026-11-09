@@ -75,7 +75,7 @@ def main():
         r["last"] = {str(t): rewrite(prev, ref, t) for t in (0.9, 0.5)}
         out[graph] = r
         print(graph, json.dumps(r), flush=True)
-        (HERE / "noise_hier.json").write_text(json.dumps(out, indent=1))
+        (HERE / ("noise_hier.json" if gh.MAXC == 10 else f"noise_hier_max{gh.MAXC}.json")).write_text(json.dumps(out, indent=1))
 
 
 if __name__ == "__main__":

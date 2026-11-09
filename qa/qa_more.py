@@ -28,7 +28,7 @@ import qa_run as qr  # noqa: E402
 QA = HERE / "qa"
 N_MORE = 180
 STORES = ["FRESH|recompute all", "recompute_leiden|tau=0.9", "warmstart_leiden|tau=0.9", "hybrid|tau=0.9",
-          "hybrid|tau=0.0", "recompute_leiden|tau=0.0"]
+          "hybrid|tau=0.0", "recompute_leiden|tau=0.0", "frontier_leiden|tau=0.9"]
 
 
 def more_questions(docs, years, old_seeds, cache):
@@ -82,7 +82,7 @@ def main():
     print("new questions:", len(items), flush=True)
     cs, ca, cj = qr.Cache("summaries"), qr.Cache("answers_more"), qr.Cache("judge_more")
     stores = {}
-    for m in ["recompute_leiden", "warmstart_leiden", "hybrid"]:
+    for m in ["recompute_leiden", "warmstart_leiden", "hybrid", "frontier_leiden"]:
         for tau, v in plan["methods"][m]["taus"].items():
             stores[f"{m}|tau={tau}"] = v["final_store"]
     lab = plan["methods"]["recompute_leiden"]["labels"][-1]

@@ -25,7 +25,7 @@ import qa_plan as qp  # noqa: E402
 import qa_run as qr  # noqa: E402
 
 QA = HERE / "qa"
-METHODS = ["hybrid", "warmstart_leiden"]
+METHODS = ["hybrid", "warmstart_leiden", "frontier_leiden"]
 
 
 def main(mode):

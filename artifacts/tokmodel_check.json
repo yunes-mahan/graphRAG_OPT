@@ -1,0 +1,87 @@
+{
+ "stores": [
+  {
+   "store": "recompute_leiden|0.9",
+   "model": 1691750,
+   "measured": 815500
+  },
+  {
+   "store": "recompute_leiden|0.7",
+   "model": 1325250,
+   "measured": 638776
+  },
+  {
+   "store": "recompute_leiden|0.5",
+   "model": 851000,
+   "measured": 406257
+  },
+  {
+   "store": "recompute_leiden|0.0",
+   "model": 362500,
+   "measured": 166875
+  },
+  {
+   "store": "warmstart_leiden|0.9",
+   "model": 1231500,
+   "measured": 589600
+  },
+  {
+   "store": "warmstart_leiden|0.7",
+   "model": 624500,
+   "measured": 295680
+  },
+  {
+   "store": "warmstart_leiden|0.5",
+   "model": 350750,
+   "measured": 163131
+  },
+  {
+   "store": "warmstart_leiden|0.0",
+   "model": 139000,
+   "measured": 59544
+  },
+  {
+   "store": "frontier_leiden|0.9",
+   "model": 1128750,
+   "measured": 534473
+  },
+  {
+   "store": "frontier_leiden|0.7",
+   "model": 420500,
+   "measured": 194040
+  },
+  {
+   "store": "frontier_leiden|0.5",
+   "model": 172000,
+   "measured": 73181
+  },
+  {
+   "store": "frontier_leiden|0.0",
+   "model": 77750,
+   "measured": 28699
+  },
+  {
+   "store": "hybrid|0.9",
+   "model": 916500,
+   "measured": 423088
+  },
+  {
+   "store": "hybrid|0.7",
+   "model": 297250,
+   "measured": 130863
+  },
+  {
+   "store": "hybrid|0.5",
+   "model": 161750,
+   "measured": 64393
+  },
+  {
+   "store": "hybrid|0.0",
+   "model": 106000,
+   "measured": 37870
+  }
+ ],
+ "spearman": 1.0,
+ "pearson": 0.9998596692032611,
+ "ratio_median": 0.4615425664897671
+}

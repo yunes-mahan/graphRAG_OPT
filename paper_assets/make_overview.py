@@ -9,7 +9,7 @@ HERE = Path(__file__).parent
 plt.rcParams.update({"font.family": "serif", "pdf.fonttype": 42})
 BLUE, GREEN, INK, GREY, LIGHT = "#2a78d6", "#1baf7a", "#0b0b0b", "#52514e", "#f6f5f1"
 
-fig, ax = plt.subplots(figsize=(4.75, 1.45))
+fig, ax = plt.subplots(figsize=(5.6, 1.75))
 ax.set_xlim(-0.6, 101.0)
 ax.set_ylim(0, 30)
 ax.axis("off")
@@ -20,22 +20,22 @@ def box(i, title, lines, edge=GREY):
     x = i * (W + GAP)
     ax.add_patch(FancyBboxPatch((x + 0.4, Y), W - 0.8, H, boxstyle="round,pad=0.3,rounding_size=1.5",
                                 fc=LIGHT, ec=edge, lw=0.9))
-    ax.text(x + W / 2, Y + H - 2.4, title, ha="center", va="top", fontsize=6.6, weight="bold", color=INK)
-    y = Y + H - 8.6
+    ax.text(x + W / 2, Y + H - 2.4, title, ha="center", va="top", fontsize=8.2, weight="bold", color=INK)
+    y = Y + H - 9.0
     for txt, col, it in lines:
-        ax.text(x + W / 2, y, txt, ha="center", va="top", fontsize=5.4, color=col,
+        ax.text(x + W / 2, y, txt, ha="center", va="top", fontsize=6.8, color=col,
                 style="italic" if it else "normal")
-        y -= 3.6
+        y -= 4.6
     return x
 
 
 xs = [box(0, "Graph update", [("version $G_t$:", GREY, 0), ("new entities,", GREY, 0), ("relationships", GREY, 0),
                                ("(removals)", GREY, 0)]),
       box(1, "1. Re-cluster?", [("yes: re-index", BLUE, 0), ("+ id matching", BLUE, 0),
-                                 ("no: append/attach", GREY, 0), ("(loses coverage)", GREY, 1)], edge=BLUE),
+                                 ("no: append or", GREY, 0), ("attach (coverage)", GREY, 1)], edge=BLUE),
       box(2, "2. Staleness", [("rewrite report", GREEN, 0), ("if Jaccard $<\\tau$;", GREEN, 0),
                                ("report only if", GREEN, 0), ("$\\geq s$ members", GREEN, 0)], edge=GREEN),
-      box(3, "Answers", [("global: reports", GREY, 0), ("of one level", GREY, 0), ("local: document", GREY, 0),
+      box(3, "Answers", [("global: reports", GREY, 0), ("of levels 0-2", GREY, 0), ("local: document", GREY, 0),
                           ("search", GREY, 0)])]
 for x in xs[:-1]:
     ax.add_patch(FancyArrowPatch((x + W - 0.2, Y + H / 2), (x + W + GAP + 0.2, Y + H / 2), arrowstyle="-|>",

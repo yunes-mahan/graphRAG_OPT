@@ -3,10 +3,12 @@
 Code, benchmark and reproducibility artifacts for the paper *"Maintaining GraphRAG Community Summaries on
 Evolving Knowledge Graphs [Experiment, Analysis & Benchmark]"* (Yunes Mahan, Machine Learning Reply).
 
-GraphRAG pipelines group a knowledge graph into communities and write an LLM summary per community.
-When the graph changes, communities must be maintained. This repository measures how well
-maintenance strategies keep **community quality** (modularity) high while **invalidating few
-summaries**, on growing real-world graphs and inside Neo4j.
+GraphRAG indexes a knowledge graph by clustering it into communities and storing one LLM-written report per
+community. When the graph changes, a system must decide whether to re-cluster and which reports to rewrite. This
+repository benchmarks these maintenance choices on seven evolving graphs, including an LLM-extracted entity graph
+clustered with Microsoft GraphRAG's hierarchical Leiden settings. It measures **report-rewrite cost** (LLM tokens),
+**coverage** (entities in a reported community), clustering quality, and the effect on **answers** to local and global
+questions.
 
 ## Contents
 
@@ -27,7 +29,8 @@ python benchmark/prepare_data.py                        # downloads OGB data (~1
 python benchmark/run_suite.py arxiv 2015 0 lazy,local_repair,hybrid,frontier_leiden
 ```
 
-Expected scores (λ = 0.15, arXiv-15, order 0): lazy 0.6361, local repair 0.6519, hybrid 0.6871.
+This replays four maintainers on one arXiv stream. To check every number of the paper instead, run
+`./quick_reproduce.sh` (no API key needed).
 
 ### Full benchmark
 
@@ -121,7 +124,10 @@ cached in `artifacts/qa/cache_*.json`, so the QA experiments re-run offline unle
 | Wikipedia stream | `wiki/wiki_crawl.py`, `wiki/wiki_analysis.py`, `wiki/wiki_extra.py`, `wiki/wiki_priced.py` |
 | Wikidata film KG | `wikidata/wd_films.py`, `wikidata/wd_eval.py` |
 | GraphRAG hierarchical clustering study (re-index, matching, warm start, GraphRAG update, Zep-style attach) | `python qa/graphrag_hier.py` (entity graph) and `HIER_GRAPH=wikidata python qa/graphrag_hier.py`, then `python qa/hier_anova.py` |
-| Recompute noise floor (seed change, edge deletion, last update) | `python qa/noise_floor.py` |
+| Instability of GraphRAG's hierarchical clustering (edge deletion, last update, seed) | `python qa/noise_hier.py` |
+| Flat Leiden instability | `python qa/noise_floor.py` |
+| End-to-end global QA on the hierarchical stores (top level) | `python qa/hier_qa.py run` (cached) |
+| Fresh reports of each maintainer's own partition (control) | `python qa/own_fresh.py run` (cached) |
 | Score validation and equivalence tests (TOST) | `python qa/validate_score.py` |
 | Topic-fingerprint control (random replacement) | `python qa/cosine_baseline.py` |
 | 300 local questions | `python qa/qa_more.py` (cached) |

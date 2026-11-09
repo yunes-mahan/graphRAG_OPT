@@ -108,9 +108,10 @@
   "year": 2019,
   "venue": "IEEE Transactions on Knowledge and Data Engineering",
   "volume": null,
-  "pages": "1-1",
+  "pages": null,
   "doi": "10.1109/TKDE.2019.2951419",
-  "type": "journal-article"
+  "type": "journal-article",
+  "note": "early access"
  },
  "hogan2021kg": {
   "title": "Knowledge Graphs",

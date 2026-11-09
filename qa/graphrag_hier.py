@@ -6,8 +6,10 @@ Every community on every level carries a report.
 Maintainers (per update):
   reindex        : full GraphRAG re-index; communities get fresh ids, every report is rewritten
   reindex+match  : full re-clustering, ids matched to the previous version by one-to-one majority overlap per level
-  graphrag_update: GraphRAG's incremental update: hierarchical Leiden on the delta relationships only (LCC of
-                   the delta), new communities appended with fresh ids, old communities and reports kept
+  graphrag_update: GraphRAG's incremental update: hierarchical Leiden on the delta graph only (LCC of the delta),
+                   new communities appended with fresh ids, old communities and reports kept.  The delta graph holds
+                   every relationship extracted from the batch's documents, including relationships restated
+                   between existing entities (entity graph); on Wikidata every edge of the new films
   warm           : hierarchical Leiden warm-started from the previous final clusters (new nodes singletons),
                    ids matched by overlap per level
   zep_attach     : Zep's dynamic extension: a new entity joins the leaf community of the plurality of its
@@ -41,6 +43,27 @@ GRAPH = os.environ.get("HIER_GRAPH", "entity")   # entity | wikidata
 SEED, MAXC = 0xDEADBEEF, 10
 TAUS = [0.9, 0.7, 0.5, 0.0]
 MINS = [1, 5, 10]
+
+
+def entity_batch_rels(seed, T):
+    """relationship indices extracted from the documents of each batch (same document order as eg.stream)."""
+    g = json.loads((eg.G / "graph.json").read_text())
+    rng = np.random.default_rng(seed)
+    years = {d: v["year"] for d, v in g["docs"].items()}
+    doc_t, t = {}, 1
+    for d, y in years.items():
+        if y <= eg.BASE:
+            doc_t[d] = 0
+    for y in range(eg.BASE + 1, eg.LAST + 1):
+        ids = rng.permutation(sorted(d for d, yy in years.items() if yy == y))
+        for part in np.array_split(ids, eg.BATCHES):
+            for d in part:
+                doc_t[d] = t
+            t += 1
+    out = [set() for _ in range(T)]
+    for d, v in g["docs"].items():
+        out[doc_t[d]].update(v["rels"])
+    return out
 
 
 def tok(n):
@@ -135,6 +158,7 @@ def run(seed):
         node_t, edge_t, T = se.schedule(d, seed)
     else:
         d, node_t, edge_t, T = eg.stream(seed)
+        batch_rels = entity_batch_rels(seed, T)
     E = d["edges"]
     res = {}
     state = {}
@@ -150,6 +174,7 @@ def run(seed):
         full_tok = {ms: sum(tok(len(m)) for m in fresh.values() if len(m) >= ms) for ms in MINS}
         new_nodes = set(np.where(node_t == t)[0].tolist())
         new_el = [(int(a), int(b)) for a, b in E[:, edge_t == t].T]
+        delta_el = sorted({(int(E[0, j]), int(E[1, j])) for j in batch_rels[t]}) if GRAPH == "entity" else new_el
         for name in ("reindex", "reindex+match", "graphrag_update", "warm", "zep_attach"):
             st = state.setdefault(name, dict(comms=None, store={tau: {} for tau in TAUS}, nextid=0, cost=defaultdict(list),
                                              Qleaf=[], Qtop=[], nrep=[]))
@@ -185,7 +210,7 @@ def run(seed):
                 comms = {(mp.get(k, (k[0], ("w", t, k[1])))): m for k, m in w.items()}
                 lv = None
             elif name == "graphrag_update":
-                lccd, _ = lcc_edges(new_el, np.arange(len(node_t))) if new_el else ([], set())
+                lccd, _ = lcc_edges(delta_el, np.arange(len(node_t))) if delta_el else ([], set())
                 dl = communities(complete_levels(hier(lccd, list(range(len(node_t))))[0])) if lccd else {}
                 comms = dict(st["comms"])
                 for k, m in dl.items():
@@ -256,6 +281,13 @@ def run(seed):
                             if len(m) >= ms:
                                 st["store"][tau][(ms, k)] = m
         print(f"seed {seed} version {t}/{T - 1}: fresh communities {len(fresh)}", flush=True)
+    if seed == 0:
+        dump = {}
+        for name, st in state.items():
+            store = st["store"][0.9]
+            dump[name] = [dict(level=int(k[1][0]), cur=sorted(int(x) for x in st["comms"][k[1]]),
+                               written=sorted(int(x) for x in m)) for k, m in store.items() if k[0] == 1]
+        (HERE / f"graphrag_hier_stores_{GRAPH}.json").write_text(json.dumps(dump))
     for name, st in state.items():
         res[name] = dict(Qleaf=float(np.nanmean(st["Qleaf"])), Qtop=float(np.nanmean(st["Qtop"])),
                          reports_final={str(ms): st["nrep"][-1][ms] for ms in MINS},

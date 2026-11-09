@@ -385,7 +385,7 @@ Maintainer & $\tau$ & recall [95\% CI] & $\Delta$ fresh & $p$ & regen. & input t
               ("Recompute, $\\tau$=0.9", "summaries|recompute tau=0.9", "#2a78d6"),
               ("Fresh, title-only", "summaries|fresh titles-only", "#2a78d6"),
               ("Vector RAG, 12 papers", "vector|12 papers", "#eb6834"),
-              (f"Vector RAG, {G[vm]['input_tokens'] / 1e3:.0f}k tok.", vm, "#eb6834")]
+              (f"Vector RAG, {vm.split('|')[1].split()[0]} papers (char.-matched)", vm, "#eb6834")]
     for i_, (lab_, key, col) in enumerate(rows_g):
         y = len(rows_g) - 1 - i_
         r = G[key]
@@ -961,7 +961,7 @@ def revision_assets(M):
                "$Q_\\mathrm{top}$ & coverage & reports\\\\\n" + "\n".join(blocks) + "\n\\bottomrule\n\\end{tabular}\n")
         (TAB / "hier.tex").write_text(tex)
     f = A / "hier_anova.json"
-    if f.exists():
+    if f.exists() and "identifier_maintainers" in json.loads(f.read_text()):
         h = json.loads(f.read_text())
         M["HierEtaTau"] = pct(h["identifier_maintainers"]["tau"])
         M["HierEtaMaint"] = f"{100 * h['identifier_maintainers']['maintainer']:.2f}\\%"
@@ -1073,38 +1073,116 @@ def judge_assets(M):
 
 
 def fig_noise(M):
-    """Recompute noise floor: share of report tokens rewritten (tau=0.9) by seed change, 0.1% edge drop, real update."""
-    f = A / "noise_floor.json"
+    """Instability of GraphRAG's hierarchical clustering: report tokens (tau=0.9) rewritten after re-clustering."""
+    f = A / "noise_hier.json"
     if not f.exists():
         return
-    nf = json.loads(f.read_text())
-    graphs = [("entity", "LLM entity graph"), ("collab", "ogbl-collab"), ("arxiv", "ogbn-arxiv")]
-    conds = [("seed", "other Leiden seed,\nunchanged graph", "#9b9a95", "///"),
-             ("drop0.001", "0.1% of edges\ndeleted", "#86b0e8", ".."),
-             ("last", "real last\nupdate", "#2a78d6", "")]
-    fig, ax = plt.subplots(figsize=(3.35, 1.75))
-    w = 0.26
+    nh = json.loads(f.read_text())
+    graphs = [("entity", "LLM entity graph"), ("wikidata", "Wikidata films")]
+    conds = [("drop0.001", "0.1% of edges deleted", "#86b0e8", ".."),
+             ("drop0.01", "1% of edges deleted", "#4a90e2", "\\\\"),
+             ("last", "real last update", "#1f5fae", ""),
+             ("seed", "other seed, same graph", "#9b9a95", "///")]
+    fig, ax = plt.subplots(figsize=(3.35, 1.8))
+    w = 0.2
     for j, (c, lab, col, hatch) in enumerate(conds):
         vals, errs = [], []
         for g, _ in graphs:
-            if c == "seed":
-                v = [x["rewrite"] for x in nf[g]["seed"]]
-                vals.append(np.mean(v)); errs.append([np.mean(v) - min(v), max(v) - np.mean(v)])
-            else:
-                vals.append(nf[g][c]["rewrite"]); errs.append([0, 0])
-        x = np.arange(len(graphs)) + (j - 1) * w
+            v = nh[g][c]["0.9"]
+            v = v if isinstance(v, list) else [v]
+            vals.append(np.mean(v))
+            errs.append([np.mean(v) - min(v), max(v) - np.mean(v)])
+        x = np.arange(len(graphs)) + (j - 1.5) * w
         ax.bar(x, vals, w * 0.92, color=col, edgecolor="white", hatch=hatch, linewidth=0.4, label=lab,
-               yerr=np.array(errs).T if c == "seed" else None, error_kw=dict(lw=0.6, capsize=1.5, ecolor="#52514e"))
+               yerr=np.array(errs).T, error_kw=dict(lw=0.6, capsize=1.5, ecolor="#52514e"))
     ax.set_xticks(np.arange(len(graphs)), [g[1] for g in graphs])
     ax.set_ylim(0, 1)
     ax.yaxis.set_major_formatter(matplotlib.ticker.PercentFormatter(1.0))
     ax.set_ylabel("report tokens rewritten")
     ax.grid(axis="y", lw=0.4, color="#e4e3df")
     ax.set_axisbelow(True)
-    ax.legend(loc="upper center", bbox_to_anchor=(0.5, 1.32), ncol=3, frameon=False, handlelength=1.2, columnspacing=0.8)
+    ax.legend(loc="upper center", bbox_to_anchor=(0.5, 1.3), ncol=2, frameon=False, handlelength=1.2, columnspacing=0.8)
     fig.tight_layout(pad=0.3)
     fig.savefig(FIG / "noise.pdf")
     plt.close(fig)
+
+def revision2_assets(M):
+    """Second revision: all-maintainer variance decomposition per graph, hierarchical instability, hierarchical QA,
+    own-partition fresh control, score-validation range, rollback TOST on the entity graph."""
+    pct = lambda x: f"{100 * x:.0f}\\%"  # noqa: E731
+    f = A / "hier_anova.json"
+    if f.exists():
+        h = json.loads(f.read_text())
+        if "entity" in h:
+            for g, t in (("entity", ""), ("wikidata", "Wd")):
+                if g in h:
+                    M[f"Hier{t}EtaMaintAll"] = pct(h[g]["all"]["maintainer"])
+                    M[f"Hier{t}EtaTauAll"] = pct(h[g]["all"]["tau"])
+                    M[f"Hier{t}EtaTau"] = pct(h[g]["reclustering"]["tau"])
+                    M[f"Hier{t}EtaMin"] = pct(h[g]["reclustering"]["min_size"])
+                    M[f"Hier{t}EtaMaint"] = "$<$0.1\\%" if h[g]['reclustering']['maintainer'] < 0.001 else f"{100 * h[g]['reclustering']['maintainer']:.1f}\\%"
+    M["HierWdMatchSave"] = f"{100 * (1 - float(M.get('HierWdCostMatchNine', '1'))):.0f}\\%"
+    f = A / "noise_hier.json"
+    if f.exists():
+        nh = json.loads(f.read_text())
+        for g, t in (("entity", "Eg"), ("wikidata", "Wd")):
+            if g not in nh:
+                continue
+            r = nh[g]
+            M[f"NhDrop{t}"] = pct(np.mean(r["drop0.001"]["0.9"]))
+            M[f"NhDropFive{t}"] = pct(np.mean(r["drop0.001"]["0.5"]))
+            M[f"NhDropOne{t}"] = pct(np.mean(r["drop0.01"]["0.9"]))
+            M[f"NhSeed{t}"] = pct(np.mean(r["seed"]["0.9"]))
+            M[f"NhLast{t}"] = pct(r["last"]["0.9"])
+            M[f"NhLastFive{t}"] = pct(r["last"]["0.5"])
+    f = A / "entity_graph" / "hier_qa.json"
+    if f.exists():
+        H = {r["store"]: r for r in json.loads(f.read_text())["summary"]}
+        crit = ("comprehensiveness", "diversity", "empowerment", "directness")
+        for s, t in (("warm", "Warm"), ("graphrag_update", "Gu"), ("zep_attach", "Zep")):
+            M[f"HqaComp{t}"] = f"{H[s]['comprehensiveness']:.2f}"
+            M[f"HqaMin{t}"] = f"{min(H[s][c] for c in crit):.2f}"
+            M[f"HqaMax{t}"] = f"{max(H[s][c] for c in crit):.2f}"
+            M[f"HqaP{t}"] = f"{min(H[s][c + '_p'] for c in crit):.3f}"
+        for s, t in (("fresh", "Fresh"), ("warm", "Warm"), ("graphrag_update", "Gu"), ("zep_attach", "Zep")):
+            M[f"HqaRep{t}"] = str(H[s]["reports"])
+            M[f"HqaQtok{t}"] = f"{H[s]['query_tokens'] / 1e3:.0f}k"
+        M["HqaQtokX"] = f"{H['graphrag_update']['query_tokens'] / H['fresh']['query_tokens']:.1f}"
+    f = A / "qa" / "own_fresh.json"
+    if f.exists():
+        import pandas as _pd
+        from scipy import stats as _st
+        own = _pd.DataFrame(json.loads(f.read_text())["per_question"])
+        old = _pd.DataFrame(json.loads((A / "qa" / "results.json").read_text())["per_question"])
+        more = _pd.DataFrame(json.loads((A / "qa" / "results_more.json").read_text())["per_question"])
+        allq = _pd.concat([old, more, own]).pivot_table(index="q", columns="store", values="recall")
+        for m, t in (("hybrid", "Hyb"), ("warmstart_leiden", "Warm")):
+            a = allq[f"OWNFRESH|{m}"]
+            M[f"Own{t}"] = f"{a.mean():.3f}"
+            d = (a - allq["FRESH|recompute all"]).dropna()
+            M[f"Own{t}VsFreshP"] = f"{_st.wilcoxon(d, zero_method='zsplit').pvalue:.3f}"
+            M[f"Own{t}VsFresh"] = f"{d.mean():+.3f}"
+            mt = f"{m}|tau=0.9"
+            e = (allq[mt] - a).dropna()
+            M[f"Own{t}Stale"] = f"{allq[mt].mean():.3f}"
+            M[f"Own{t}StaleDiff"] = f"{e.mean():+.3f}"
+            M[f"Own{t}StaleP"] = f"{_st.wilcoxon(e, zero_method='zsplit').pvalue:.2f}"
+        M["OwnFresh"] = f"{allq['FRESH|recompute all'].mean():.3f}"
+        plan = json.loads((A / "qa" / "plan.json").read_text())
+        nt = np.load(A / "qa" / "node_t.npy")
+        pres = np.where(nt >= 0)[0]
+        for m, t in (("hybrid", "OwnHybCount"), ("recompute_leiden", "OwnFreshCount")):
+            cnt = {}
+            for v, c in zip(pres, plan["methods"][m]["labels"][-1]):
+                cnt[int(c)] = cnt.get(int(c), 0) + 1
+            M[t] = str(sum(1 for x in cnt.values() if x >= 5))
+        summ = {r["store"]: r for r in json.loads((A / "qa" / "results.json").read_text())["summary"]}
+        M["QATokWarmNine"] = f"{summ['warmstart_leiden|tau=0.9']['update_input_tokens'] / 1e3:.0f}k"
+    v = json.loads((A / "validate_score.json").read_text())
+    qs = sorted({round(s["Q"], 3) for s in v["local"]["stores"]})
+    M["ValQMin"], M["ValQMax"], M["ValQDistinct"] = f"{qs[0]:.3f}", f"{qs[-1]:.3f}", str(len(qs))
+    pw = [r for r in v["entity"]["stores"] if r["store"] == "priced_warm"][0]
+    M["EgPrWarmTostP"] = f"{pw['comprehensiveness_tost_p']:.3f}"
 
 
 def main():
@@ -1134,6 +1212,7 @@ def main():
     fig_rollback_lambda(M)
     revision_assets(M)
     judge_assets(M)
+    revision2_assets(M)
     fig_noise(M)
     lines = ["% AUTO-GENERATED by make_assets.py from measured result files. Do not edit."]
     lines += [f"\\newcommand{{\\{k}}}{{{v}}}" for k, v in sorted(M.items())]

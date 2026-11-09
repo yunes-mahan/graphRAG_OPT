@@ -1,42 +1,34 @@
 {
- "all": {
-  "tau": 0.1892335077444473,
-  "maintainer": 0.6110017720420067,
-  "min_size": 0.037568067157314936,
-  "seed": 3.14896041949026e-05,
-  "residual(interactions)": 0.16216516345203613
+ "entity": {
+  "all": {
+   "tau": 0.18970914172715433,
+   "maintainer": 0.6100120777403298,
+   "min_size": 0.03779213385379653,
+   "seed": 2.9607545399861266e-05,
+   "residual(interactions)": 0.16245703913331944
+  },
+  "reclustering": {
+   "tau": 0.8286312945728183,
+   "maintainer": 0.00017209657429741656,
+   "min_size": 0.12424729595702605,
+   "seed": 0.00012433428804712812,
+   "residual(interactions)": 0.046824978607811096
+  }
  },
- "identifier_maintainers": {
-  "tau": 0.8286312945728183,
-  "maintainer": 0.00017209657429741656,
-  "min_size": 0.12424729595702605,
-  "seed": 0.00012433428804712812,
-  "residual(interactions)": 0.046824978607811096
- },
- "means": {
-  "0.0": {
-   "graphrag_update": 0.048,
-   "reindex+match": 0.155,
-   "warm": 0.159,
-   "zep_attach": 0.017
+ "wikidata": {
+  "all": {
+   "tau": 0.19173195182272587,
+   "maintainer": 0.6226606228440719,
+   "min_size": 0.0004236324095507467,
+   "seed": 8.91477251538158e-06,
+   "residual(interactions)": 0.1851748781511361
   },
-  "0.5": {
-   "graphrag_update": 0.048,
-   "reindex+match": 0.355,
-   "warm": 0.36,
-   "zep_attach": 0.028
-  },
-  "0.7": {
-   "graphrag_update": 0.048,
-   "reindex+match": 0.522,
-   "warm": 0.525,
-   "zep_attach": 0.053
-  },
-  "0.9": {
-   "graphrag_update": 0.048,
-   "reindex+match": 0.649,
-   "warm": 0.659,
-   "zep_attach": 0.131
+  "reclustering": {
+   "tau": 0.9744418701038908,
+   "maintainer": 0.00013924305619378812,
+   "min_size": 0.005343079536593368,
+   "seed": 4.383190398362799e-05,
+   "residual(interactions)": 0.02003197539933843
   }
  }
 }

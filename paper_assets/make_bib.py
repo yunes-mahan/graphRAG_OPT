@@ -45,8 +45,7 @@ for key, m in refs.items():
     if m.get("venue") == "arXiv":
         entries.append(
             f"@misc{{{key},\n  author = {{{authors(m['authors'])}}},\n  title = {{{{{tex(m['title'])}}}}},\n"
-            f"  year = {{{m['year']}}},\n  eprint = {{{m['arxiv']}}},\n  archivePrefix = {{arXiv}},\n"
-            f"  howpublished = {{arXiv:{m['arxiv']}}}\n}}")
+            f"  year = {{{m['year']}}},\n  eprint = {{{m['arxiv']}}},\n  archivePrefix = {{arXiv}}\n}}")
     else:
         kind = "inproceedings" if m.get("type") in ("proceedings-article", "book-chapter", "conference") else "article"
         venue_field = "booktitle" if kind == "inproceedings" else "journal"

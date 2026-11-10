@@ -1,0 +1,1196 @@
+{
+ "never": {
+  "n": 100,
+  "median_size": 172.5,
+  "joined_share": 0.45770767818260866,
+  "input_share": 0.33657533095160214,
+  "rel_match": 0.9405408982198622,
+  "rows": [
+   {
+    "maintainer": "recompute_leiden",
+    "size": 776,
+    "joined": 605,
+    "joined_share": 0.779639175257732,
+    "input_share": 0.04297520661157025,
+    "rel_match": 0.7334098931563688
+   },
+   {
+    "maintainer": "recompute_leiden",
+    "size": 172,
+    "joined": 57,
+    "joined_share": 0.3313953488372093,
+    "input_share": 0.19298245614035087,
+    "rel_match": 1.0103432356079372
+   },
+   {
+    "maintainer": "recompute_leiden",
+    "size": 468,
+    "joined": 309,
+    "joined_share": 0.6602564102564102,
+    "input_share": 0.07119741100323625,
+    "rel_match": 0.8579940542702611
+   },
+   {
+    "maintainer": "recompute_leiden",
+    "size": 64,
+    "joined": 9,
+    "joined_share": 0.140625,
+    "input_share": 0.7777777777777778,
+    "rel_match": 0.7131591569750093
+   },
+   {
+    "maintainer": "recompute_leiden",
+    "size": 695,
+    "joined": 685,
+    "joined_share": 0.9856115107913669,
+    "input_share": 0.051094890510948905,
+    "rel_match": 1.0842235728965215
+   },
+   {
+    "maintainer": "recompute_leiden",
+    "size": 113,
+    "joined": 64,
+    "joined_share": 0.5663716814159292,
+    "input_share": 0.28125,
+    "rel_match": 0.9443431300791351
+   },
+   {
+    "maintainer": "recompute_leiden",
+    "size": 148,
+    "joined": 98,
+    "joined_share": 0.6621621621621622,
+    "input_share": 0.21428571428571427,
+    "rel_match": 0.6921853458742164
+   },
+   {
+    "maintainer": "recompute_leiden",
+    "size": 154,
+    "joined": 101,
+    "joined_share": 0.6558441558441559,
+    "input_share": 0.2079207920792079,
+    "rel_match": 0.9367386663605894
+   },
+   {
+    "maintainer": "recompute_leiden",
+    "size": 1032,
+    "joined": 858,
+    "joined_share": 0.8313953488372093,
+    "input_share": 0.0337995337995338,
+    "rel_match": 0.9647161402513886
+   },
+   {
+    "maintainer": "recompute_leiden",
+    "size": 86,
+    "joined": 26,
+    "joined_share": 0.3023255813953488,
+    "input_share": 0.4230769230769231,
+    "rel_match": 1.09562166295902
+   },
+   {
+    "maintainer": "recompute_leiden",
+    "size": 1302,
+    "joined": 930,
+    "joined_share": 0.7142857142857143,
+    "input_share": 0.02795698924731183,
+    "rel_match": 0.8040167555070747
+   },
+   {
+    "maintainer": "recompute_leiden",
+    "size": 180,
+    "joined": 81,
+    "joined_share": 0.45,
+    "input_share": 0.25925925925925924,
+    "rel_match": 1.0421993658444584
+   },
+   {
+    "maintainer": "recompute_leiden",
+    "size": 173,
+    "joined": 60,
+    "joined_share": 0.3468208092485549,
+    "input_share": 0.2,
+    "rel_match": 0.8427561145635261
+   },
+   {
+    "maintainer": "recompute_leiden",
+    "size": 907,
+    "joined": 489,
+    "joined_share": 0.5391400220507166,
+    "input_share": 0.03885480572597137,
+    "rel_match": 1.027954740875698
+   },
+   {
+    "maintainer": "recompute_leiden",
+    "size": 10,
+    "joined": 5,
+    "joined_share": 0.5,
+    "input_share": 1.0,
+    "rel_match": 1.2086369850235592
+   },
+   {
+    "maintainer": "recompute_leiden",
+    "size": 907,
+    "joined": 841,
+    "joined_share": 0.9272326350606395,
+    "input_share": 0.039239001189060645,
+    "rel_match": 1.020788460797137
+   },
+   {
+    "maintainer": "recompute_leiden",
+    "size": 154,
+    "joined": 70,
+    "joined_share": 0.45454545454545453,
+    "input_share": 0.2,
+    "rel_match": 1.0759397129949526
+   },
+   {
+    "maintainer": "recompute_leiden",
+    "size": 793,
+    "joined": 685,
+    "joined_share": 0.8638083228247163,
+    "input_share": 0.04671532846715328,
+    "rel_match": 0.6938397882955936
+   },
+   {
+    "maintainer": "recompute_leiden",
+    "size": 498,
+    "joined": 370,
+    "joined_share": 0.7429718875502008,
+    "input_share": 0.07297297297297298,
+    "rel_match": 0.9472759670215066
+   },
+   {
+    "maintainer": "recompute_leiden",
+    "size": 695,
+    "joined": 540,
+    "joined_share": 0.7769784172661871,
+    "input_share": 0.04814814814814815,
+    "rel_match": 1.06009028102682
+   },
+   {
+    "maintainer": "recompute_leiden",
+    "size": 793,
+    "joined": 749,
+    "joined_share": 0.9445145018915511,
+    "input_share": 0.04539385847797063,
+    "rel_match": 1.1185958054116985
+   },
+   {
+    "maintainer": "recompute_leiden",
+    "size": 111,
+    "joined": 41,
+    "joined_share": 0.36936936936936937,
+    "input_share": 0.24390243902439024,
+    "rel_match": 0.6770311825711605
+   },
+   {
+    "maintainer": "recompute_leiden",
+    "size": 93,
+    "joined": 18,
+    "joined_share": 0.1935483870967742,
+    "input_share": 0.2777777777777778,
+    "rel_match": 0.5128432802860705
+   },
+   {
+    "maintainer": "recompute_leiden",
+    "size": 793,
+    "joined": 547,
+    "joined_share": 0.6897856242118537,
+    "input_share": 0.04753199268738574,
+    "rel_match": 0.9670711404249335
+   },
+   {
+    "maintainer": "recompute_leiden",
+    "size": 776,
+    "joined": 479,
+    "joined_share": 0.6172680412371134,
+    "input_share": 0.04384133611691023,
+    "rel_match": 1.1198981975222495
+   },
+   {
+    "maintainer": "warmstart_leiden",
+    "size": 165,
+    "joined": 60,
+    "joined_share": 0.36363636363636365,
+    "input_share": 0.2833333333333333,
+    "rel_match": 0.9693546001527789
+   },
+   {
+    "maintainer": "warmstart_leiden",
+    "size": 21,
+    "joined": 16,
+    "joined_share": 0.7619047619047619,
+    "input_share": 1.0,
+    "rel_match": 1.1371053971817113
+   },
+   {
+    "maintainer": "warmstart_leiden",
+    "size": 139,
+    "joined": 37,
+    "joined_share": 0.26618705035971224,
+    "input_share": 0.21621621621621623,
+    "rel_match": 0.8491653482319286
+   },
+   {
+    "maintainer": "warmstart_leiden",
+    "size": 81,
+    "joined": 32,
+    "joined_share": 0.3950617283950617,
+    "input_share": 0.4375,
+    "rel_match": 1.2589711560232797
+   },
+   {
+    "maintainer": "warmstart_leiden",
+    "size": 820,
+    "joined": 399,
+    "joined_share": 0.4865853658536585,
+    "input_share": 0.042606516290726815,
+    "rel_match": 0.931731680417539
+   },
+   {
+    "maintainer": "warmstart_leiden",
+    "size": 752,
+    "joined": 303,
+    "joined_share": 0.4029255319148936,
+    "input_share": 0.039603960396039604,
+    "rel_match": 0.8799932803594407
+   },
+   {
+    "maintainer": "warmstart_leiden",
+    "size": 723,
+    "joined": 425,
+    "joined_share": 0.5878284923928078,
+    "input_share": 0.05411764705882353,
+    "rel_match": 1.0365967566725982
+   },
+   {
+    "maintainer": "warmstart_leiden",
+    "size": 29,
+    "joined": 9,
+    "joined_share": 0.3103448275862069,
+    "input_share": 1.0,
+    "rel_match": 0.8343385214576556
+   },
+   {
+    "maintainer": "warmstart_leiden",
+    "size": 26,
+    "joined": 12,
+    "joined_share": 0.46153846153846156,
+    "input_share": 1.0,
+    "rel_match": 0.8664220380192125
+   },
+   {
+    "maintainer": "warmstart_leiden",
+    "size": 169,
+    "joined": 108,
+    "joined_share": 0.6390532544378699,
+    "input_share": 0.23148148148148148,
+    "rel_match": 0.8071384702950631
+   },
+   {
+    "maintainer": "warmstart_leiden",
+    "size": 160,
+    "joined": 87,
+    "joined_share": 0.54375,
+    "input_share": 0.21839080459770116,
+    "rel_match": 0.7835191051583145
+   },
+   {
+    "maintainer": "warmstart_leiden",
+    "size": 495,
+    "joined": 368,
+    "joined_share": 0.7434343434343434,
+    "input_share": 0.07336956521739131,
+    "rel_match": 0.8986385634070583
+   },
+   {
+    "maintainer": "warmstart_leiden",
+    "size": 9,
+    "joined": 4,
+    "joined_share": 0.4444444444444444,
+    "input_share": 1.0,
+    "rel_match": 1.1138797155217162
+   },
+   {
+    "maintainer": "warmstart_leiden",
+    "size": 101,
+    "joined": 31,
+    "joined_share": 0.3069306930693069,
+    "input_share": 0.3225806451612903,
+    "rel_match": 0.8290724179488183
+   },
+   {
+    "maintainer": "warmstart_leiden",
+    "size": 254,
+    "joined": 155,
+    "joined_share": 0.610236220472441,
+    "input_share": 0.11612903225806452,
+    "rel_match": 0.7300886469135792
+   },
+   {
+    "maintainer": "warmstart_leiden",
+    "size": 10,
+    "joined": 5,
+    "joined_share": 0.5,
+    "input_share": 1.0,
+    "rel_match": 1.2086369850235592
+   },
+   {
+    "maintainer": "warmstart_leiden",
+    "size": 104,
+    "joined": 9,
+    "joined_share": 0.08653846153846154,
+    "input_share": 0.4444444444444444,
+    "rel_match": 0.7126337141781957
+   },
+   {
+    "maintainer": "warmstart_leiden",
+    "size": 29,
+    "joined": 4,
+    "joined_share": 0.13793103448275862,
+    "input_share": 1.0,
+    "rel_match": 0.9295872950921567
+   },
+   {
+    "maintainer": "warmstart_leiden",
+    "size": 318,
+    "joined": 141,
+    "joined_share": 0.44339622641509435,
+    "input_share": 0.0851063829787234,
+    "rel_match": 0.8566985499072067
+   },
+   {
+    "maintainer": "warmstart_leiden",
+    "size": 177,
+    "joined": 64,
+    "joined_share": 0.3615819209039548,
+    "input_share": 0.171875,
+    "rel_match": 0.8284491180583888
+   },
+   {
+    "maintainer": "warmstart_leiden",
+    "size": 257,
+    "joined": 154,
+    "joined_share": 0.5992217898832685,
+    "input_share": 0.13636363636363635,
+    "rel_match": 0.6528361842935005
+   },
+   {
+    "maintainer": "warmstart_leiden",
+    "size": 755,
+    "joined": 393,
+    "joined_share": 0.5205298013245033,
+    "input_share": 0.04580152671755725,
+    "rel_match": 0.8512077781630438
+   },
+   {
+    "maintainer": "warmstart_leiden",
+    "size": 80,
+    "joined": 25,
+    "joined_share": 0.3125,
+    "input_share": 0.48,
+    "rel_match": 0.7621595159050633
+   },
+   {
+    "maintainer": "warmstart_leiden",
+    "size": 211,
+    "joined": 88,
+    "joined_share": 0.41706161137440756,
+    "input_share": 0.20454545454545456,
+    "rel_match": 0.9150253223915367
+   },
+   {
+    "maintainer": "warmstart_leiden",
+    "size": 826,
+    "joined": 570,
+    "joined_share": 0.6900726392251816,
+    "input_share": 0.04736842105263158,
+    "rel_match": 1.1245981626322443
+   },
+   {
+    "maintainer": "frontier_leiden",
+    "size": 85,
+    "joined": 25,
+    "joined_share": 0.29411764705882354,
+    "input_share": 0.4,
+    "rel_match": 1.13479278143306
+   },
+   {
+    "maintainer": "frontier_leiden",
+    "size": 913,
+    "joined": 497,
+    "joined_share": 0.5443592552026287,
+    "input_share": 0.04225352112676056,
+    "rel_match": 1.1527948358342306
+   },
+   {
+    "maintainer": "frontier_leiden",
+    "size": 199,
+    "joined": 89,
+    "joined_share": 0.4472361809045226,
+    "input_share": 0.15730337078651685,
+    "rel_match": 0.702540355019111
+   },
+   {
+    "maintainer": "frontier_leiden",
+    "size": 138,
+    "joined": 48,
+    "joined_share": 0.34782608695652173,
+    "input_share": 0.2916666666666667,
+    "rel_match": 1.1659774911482816
+   },
+   {
+    "maintainer": "frontier_leiden",
+    "size": 727,
+    "joined": 349,
+    "joined_share": 0.48005502063273725,
+    "input_share": 0.05157593123209169,
+    "rel_match": 0.9057225353689958
+   },
+   {
+    "maintainer": "frontier_leiden",
+    "size": 158,
+    "joined": 51,
+    "joined_share": 0.3227848101265823,
+    "input_share": 0.1568627450980392,
+    "rel_match": 0.7042478941374285
+   },
+   {
+    "maintainer": "frontier_leiden",
+    "size": 91,
+    "joined": 14,
+    "joined_share": 0.15384615384615385,
+    "input_share": 0.35714285714285715,
+    "rel_match": 0.5706788832881495
+   },
+   {
+    "maintainer": "frontier_leiden",
+    "size": 64,
+    "joined": 9,
+    "joined_share": 0.140625,
+    "input_share": 0.7777777777777778,
+    "rel_match": 0.7131591569750093
+   },
+   {
+    "maintainer": "frontier_leiden",
+    "size": 154,
+    "joined": 46,
+    "joined_share": 0.2987012987012987,
+    "input_share": 0.32608695652173914,
+    "rel_match": 1.2188253814166596
+   },
+   {
+    "maintainer": "frontier_leiden",
+    "size": 864,
+    "joined": 591,
+    "joined_share": 0.6840277777777778,
+    "input_share": 0.04568527918781726,
+    "rel_match": 1.1044457537419186
+   },
+   {
+    "maintainer": "frontier_leiden",
+    "size": 216,
+    "joined": 91,
+    "joined_share": 0.4212962962962963,
+    "input_share": 0.16483516483516483,
+    "rel_match": 0.8615931050175855
+   },
+   {
+    "maintainer": "frontier_leiden",
+    "size": 614,
+    "joined": 432,
+    "joined_share": 0.7035830618892508,
+    "input_share": 0.05324074074074074,
+    "rel_match": 1.070325279205708
+   },
+   {
+    "maintainer": "frontier_leiden",
+    "size": 26,
+    "joined": 12,
+    "joined_share": 0.46153846153846156,
+    "input_share": 1.0,
+    "rel_match": 0.8664220380192125
+   },
+   {
+    "maintainer": "frontier_leiden",
+    "size": 612,
+    "joined": 311,
+    "joined_share": 0.5081699346405228,
+    "input_share": 0.06430868167202572,
+    "rel_match": 1.0130017763976429
+   },
+   {
+    "maintainer": "frontier_leiden",
+    "size": 14,
+    "joined": 8,
+    "joined_share": 0.5714285714285714,
+    "input_share": 1.0,
+    "rel_match": 1.1564184213134765
+   },
+   {
+    "maintainer": "frontier_leiden",
+    "size": 142,
+    "joined": 31,
+    "joined_share": 0.21830985915492956,
+    "input_share": 0.22580645161290322,
+    "rel_match": 0.9573063476167224
+   },
+   {
+    "maintainer": "frontier_leiden",
+    "size": 244,
+    "joined": 62,
+    "joined_share": 0.2540983606557377,
+    "input_share": 0.08064516129032258,
+    "rel_match": 0.8820880518851555
+   },
+   {
+    "maintainer": "frontier_leiden",
+    "size": 48,
+    "joined": 21,
+    "joined_share": 0.4375,
+    "input_share": 0.7619047619047619,
+    "rel_match": 0.7960558589993846
+   },
+   {
+    "maintainer": "frontier_leiden",
+    "size": 247,
+    "joined": 67,
+    "joined_share": 0.27125506072874495,
+    "input_share": 0.08955223880597014,
+    "rel_match": 0.8515254214798202
+   },
+   {
+    "maintainer": "frontier_leiden",
+    "size": 10,
+    "joined": 5,
+    "joined_share": 0.5,
+    "input_share": 1.0,
+    "rel_match": 1.2086369850235592
+   },
+   {
+    "maintainer": "frontier_leiden",
+    "size": 9,
+    "joined": 4,
+    "joined_share": 0.4444444444444444,
+    "input_share": 1.0,
+    "rel_match": 1.1138797155217162
+   },
+   {
+    "maintainer": "frontier_leiden",
+    "size": 112,
+    "joined": 30,
+    "joined_share": 0.26785714285714285,
+    "input_share": 0.23333333333333334,
+    "rel_match": 0.7774253240997392
+   },
+   {
+    "maintainer": "frontier_leiden",
+    "size": 319,
+    "joined": 133,
+    "joined_share": 0.4169278996865204,
+    "input_share": 0.05263157894736842,
+    "rel_match": 0.8355194290773297
+   },
+   {
+    "maintainer": "frontier_leiden",
+    "size": 16,
+    "joined": 10,
+    "joined_share": 0.625,
+    "input_share": 1.0,
+    "rel_match": 0.8710895569262525
+   },
+   {
+    "maintainer": "frontier_leiden",
+    "size": 13,
+    "joined": 5,
+    "joined_share": 0.38461538461538464,
+    "input_share": 1.0,
+    "rel_match": 1.6123285093402149
+   },
+   {
+    "maintainer": "hybrid",
+    "size": 959,
+    "joined": 484,
+    "joined_share": 0.5046923879040668,
+    "input_share": 0.0371900826446281,
+    "rel_match": 1.2424976250965485
+   },
+   {
+    "maintainer": "hybrid",
+    "size": 25,
+    "joined": 4,
+    "joined_share": 0.16,
+    "input_share": 1.0,
+    "rel_match": 1.0688570960799135
+   },
+   {
+    "maintainer": "hybrid",
+    "size": 124,
+    "joined": 27,
+    "joined_share": 0.21774193548387097,
+    "input_share": 0.2962962962962963,
+    "rel_match": 1.2098886590847422
+   },
+   {
+    "maintainer": "hybrid",
+    "size": 155,
+    "joined": 43,
+    "joined_share": 0.27741935483870966,
+    "input_share": 0.3023255813953488,
+    "rel_match": 1.2904312168675651
+   },
+   {
+    "maintainer": "hybrid",
+    "size": 302,
+    "joined": 112,
+    "joined_share": 0.3708609271523179,
+    "input_share": 0.044642857142857144,
+    "rel_match": 0.9183881146469348
+   },
+   {
+    "maintainer": "hybrid",
+    "size": 546,
+    "joined": 306,
+    "joined_share": 0.5604395604395604,
+    "input_share": 0.05228758169934641,
+    "rel_match": 1.19201783242374
+   },
+   {
+    "maintainer": "hybrid",
+    "size": 99,
+    "joined": 22,
+    "joined_share": 0.2222222222222222,
+    "input_share": 0.4090909090909091,
+    "rel_match": 1.4573338717868283
+   },
+   {
+    "maintainer": "hybrid",
+    "size": 244,
+    "joined": 59,
+    "joined_share": 0.24180327868852458,
+    "input_share": 0.0847457627118644,
+    "rel_match": 0.9297581634234168
+   },
+   {
+    "maintainer": "hybrid",
+    "size": 796,
+    "joined": 495,
+    "joined_share": 0.621859296482412,
+    "input_share": 0.046464646464646465,
+    "rel_match": 1.1614321384744726
+   },
+   {
+    "maintainer": "hybrid",
+    "size": 42,
+    "joined": 13,
+    "joined_share": 0.30952380952380953,
+    "input_share": 0.7692307692307693,
+    "rel_match": 0.8343131454777122
+   },
+   {
+    "maintainer": "hybrid",
+    "size": 236,
+    "joined": 52,
+    "joined_share": 0.22033898305084745,
+    "input_share": 0.07692307692307693,
+    "rel_match": 0.80413309054128
+   },
+   {
+    "maintainer": "hybrid",
+    "size": 13,
+    "joined": 5,
+    "joined_share": 0.38461538461538464,
+    "input_share": 1.0,
+    "rel_match": 1.6123285093402149
+   },
+   {
+    "maintainer": "hybrid",
+    "size": 129,
+    "joined": 30,
+    "joined_share": 0.23255813953488372,
+    "input_share": 0.36666666666666664,
+    "rel_match": 1.1450427712419338
+   },
+   {
+    "maintainer": "hybrid",
+    "size": 741,
+    "joined": 226,
+    "joined_share": 0.3049932523616734,
+    "input_share": 0.05309734513274336,
+    "rel_match": 0.9983021262583978
+   },
+   {
+    "maintainer": "hybrid",
+    "size": 593,
+    "joined": 166,
+    "joined_share": 0.2799325463743676,
+    "input_share": 0.060240963855421686,
+    "rel_match": 0.932072922023621
+   },
+   {
+    "maintainer": "hybrid",
+    "size": 11,
+    "joined": 5,
+    "joined_share": 0.45454545454545453,
+    "input_share": 1.0,
+    "rel_match": 1.0886397415224398
+   },
+   {
+    "maintainer": "hybrid",
+    "size": 14,
+    "joined": 9,
+    "joined_share": 0.6428571428571429,
+    "input_share": 1.0,
+    "rel_match": 1.0941564412218772
+   },
+   {
+    "maintainer": "hybrid",
+    "size": 102,
+    "joined": 38,
+    "joined_share": 0.37254901960784315,
+    "input_share": 0.3684210526315789,
+    "rel_match": 1.1212166385394404
+   },
+   {
+    "maintainer": "hybrid",
+    "size": 192,
+    "joined": 63,
+    "joined_share": 0.328125,
+    "input_share": 0.12698412698412698,
+    "rel_match": 1.11311143888527
+   },
+   {
+    "maintainer": "hybrid",
+    "size": 200,
+    "joined": 66,
+    "joined_share": 0.33,
+    "input_share": 0.18181818181818182,
+    "rel_match": 0.8297546519073847
+   },
+   {
+    "maintainer": "hybrid",
+    "size": 232,
+    "joined": 60,
+    "joined_share": 0.25862068965517243,
+    "input_share": 0.2,
+    "rel_match": 0.8421015505816776
+   },
+   {
+    "maintainer": "hybrid",
+    "size": 184,
+    "joined": 109,
+    "joined_share": 0.592391304347826,
+    "input_share": 0.1834862385321101,
+    "rel_match": 1.0694113907566363
+   },
+   {
+    "maintainer": "hybrid",
+    "size": 481,
+    "joined": 172,
+    "joined_share": 0.3575883575883576,
+    "input_share": 0.06976744186046512,
+    "rel_match": 0.8516577236757118
+   },
+   {
+    "maintainer": "hybrid",
+    "size": 641,
+    "joined": 248,
+    "joined_share": 0.3868954758190328,
+    "input_share": 0.056451612903225805,
+    "rel_match": 0.8979535521053574
+   },
+   {
+    "maintainer": "hybrid",
+    "size": 10,
+    "joined": 5,
+    "joined_share": 0.5,
+    "input_share": 1.0,
+    "rel_match": 1.042185708813675
+   }
+  ]
+ },
+ "tau09": {
+  "n": 47,
+  "median_size": 254.0,
+  "joined_share": 0.05292661332436299,
+  "input_share": 0.16011496651651477,
+  "rel_match": 0.9249075384185328,
+  "rows": [
+   {
+    "maintainer": "recompute_leiden",
+    "size": 173,
+    "joined": 14,
+    "joined_share": 0.08092485549132948,
+    "input_share": 0.21428571428571427,
+    "rel_match": 0.6088094667606191
+   },
+   {
+    "maintainer": "warmstart_leiden",
+    "size": 826,
+    "joined": 70,
+    "joined_share": 0.0847457627118644,
+    "input_share": 0.014285714285714285,
+    "rel_match": 0.9423627343830259
+   },
+   {
+    "maintainer": "warmstart_leiden",
+    "size": 495,
+    "joined": 45,
+    "joined_share": 0.09090909090909091,
+    "input_share": 0.06666666666666667,
+    "rel_match": 0.7887538690148228
+   },
+   {
+    "maintainer": "warmstart_leiden",
+    "size": 177,
+    "joined": 4,
+    "joined_share": 0.022598870056497175,
+    "input_share": 0.0,
+    "rel_match": 0.947419141236367
+   },
+   {
+    "maintainer": "warmstart_leiden",
+    "size": 820,
+    "joined": 65,
+    "joined_share": 0.07926829268292683,
+    "input_share": 0.015384615384615385,
+    "rel_match": 0.9245411908653212
+   },
+   {
+    "maintainer": "warmstart_leiden",
+    "size": 423,
+    "joined": 16,
+    "joined_share": 0.037825059101654845,
+    "input_share": 0.0,
+    "rel_match": 0.8892653556194244
+   },
+   {
+    "maintainer": "warmstart_leiden",
+    "size": 752,
+    "joined": 32,
+    "joined_share": 0.0425531914893617,
+    "input_share": 0.0625,
+    "rel_match": 0.944911293837518
+   },
+   {
+    "maintainer": "warmstart_leiden",
+    "size": 254,
+    "joined": 21,
+    "joined_share": 0.08267716535433071,
+    "input_share": 0.0,
+    "rel_match": 0.5602629537660461
+   },
+   {
+    "maintainer": "warmstart_leiden",
+    "size": 101,
+    "joined": 4,
+    "joined_share": 0.039603960396039604,
+    "input_share": 0.5,
+    "rel_match": 0.9198899020732316
+   },
+   {
+    "maintainer": "warmstart_leiden",
+    "size": 211,
+    "joined": 14,
+    "joined_share": 0.06635071090047394,
+    "input_share": 0.14285714285714285,
+    "rel_match": 1.0157011864247392
+   },
+   {
+    "maintainer": "warmstart_leiden",
+    "size": 455,
+    "joined": 10,
+    "joined_share": 0.02197802197802198,
+    "input_share": 0.1,
+    "rel_match": 0.9191797335162231
+   },
+   {
+    "maintainer": "warmstart_leiden",
+    "size": 160,
+    "joined": 4,
+    "joined_share": 0.025,
+    "input_share": 0.25,
+    "rel_match": 1.711271523223866
+   },
+   {
+    "maintainer": "frontier_leiden",
+    "size": 96,
+    "joined": 4,
+    "joined_share": 0.041666666666666664,
+    "input_share": 0.25,
+    "rel_match": 0.9530130298697902
+   },
+   {
+    "maintainer": "frontier_leiden",
+    "size": 727,
+    "joined": 38,
+    "joined_share": 0.052269601100412656,
+    "input_share": 0.10526315789473684,
+    "rel_match": 0.7501400237418655
+   },
+   {
+    "maintainer": "frontier_leiden",
+    "size": 199,
+    "joined": 6,
+    "joined_share": 0.03015075376884422,
+    "input_share": 0.3333333333333333,
+    "rel_match": 0.702529148290667
+   },
+   {
+    "maintainer": "frontier_leiden",
+    "size": 496,
+    "joined": 41,
+    "joined_share": 0.08266129032258064,
+    "input_share": 0.07317073170731707,
+    "rel_match": 0.836665956528584
+   },
+   {
+    "maintainer": "frontier_leiden",
+    "size": 913,
+    "joined": 71,
+    "joined_share": 0.07776560788608981,
+    "input_share": 0.028169014084507043,
+    "rel_match": 0.9722857949115619
+   },
+   {
+    "maintainer": "frontier_leiden",
+    "size": 760,
+    "joined": 24,
+    "joined_share": 0.031578947368421054,
+    "input_share": 0.08333333333333333,
+    "rel_match": 0.9239494679947363
+   },
+   {
+    "maintainer": "frontier_leiden",
+    "size": 623,
+    "joined": 24,
+    "joined_share": 0.038523274478330656,
+    "input_share": 0.041666666666666664,
+    "rel_match": 0.9409443817373739
+   },
+   {
+    "maintainer": "frontier_leiden",
+    "size": 158,
+    "joined": 13,
+    "joined_share": 0.08227848101265822,
+    "input_share": 0.15384615384615385,
+    "rel_match": 0.7443305111896501
+   },
+   {
+    "maintainer": "frontier_leiden",
+    "size": 154,
+    "joined": 5,
+    "joined_share": 0.032467532467532464,
+    "input_share": 0.6,
+    "rel_match": 1.4755830882335703
+   },
+   {
+    "maintainer": "frontier_leiden",
+    "size": 112,
+    "joined": 4,
+    "joined_share": 0.03571428571428571,
+    "input_share": 0.25,
+    "rel_match": 0.8639948477769397
+   },
+   {
+    "maintainer": "frontier_leiden",
+    "size": 225,
+    "joined": 8,
+    "joined_share": 0.035555555555555556,
+    "input_share": 0.25,
+    "rel_match": 0.71957943284585
+   },
+   {
+    "maintainer": "frontier_leiden",
+    "size": 864,
+    "joined": 63,
+    "joined_share": 0.07291666666666667,
+    "input_share": 0.015873015873015872,
+    "rel_match": 0.9631831968545913
+   },
+   {
+    "maintainer": "frontier_leiden",
+    "size": 319,
+    "joined": 11,
+    "joined_share": 0.034482758620689655,
+    "input_share": 0.0,
+    "rel_match": 0.898392317964949
+   },
+   {
+    "maintainer": "frontier_leiden",
+    "size": 612,
+    "joined": 44,
+    "joined_share": 0.0718954248366013,
+    "input_share": 0.06818181818181818,
+    "rel_match": 0.9193306774255116
+   },
+   {
+    "maintainer": "frontier_leiden",
+    "size": 216,
+    "joined": 17,
+    "joined_share": 0.0787037037037037,
+    "input_share": 0.23529411764705882,
+    "rel_match": 1.03027466334017
+   },
+   {
+    "maintainer": "frontier_leiden",
+    "size": 158,
+    "joined": 5,
+    "joined_share": 0.03164556962025317,
+    "input_share": 0.2,
+    "rel_match": 1.1202856038853326
+   },
+   {
+    "maintainer": "frontier_leiden",
+    "size": 614,
+    "joined": 47,
+    "joined_share": 0.07654723127035831,
+    "input_share": 0.0425531914893617,
+    "rel_match": 1.1056782902185784
+   },
+   {
+    "maintainer": "frontier_leiden",
+    "size": 244,
+    "joined": 14,
+    "joined_share": 0.05737704918032787,
+    "input_share": 0.07142857142857142,
+    "rel_match": 0.8974256792093885
+   },
+   {
+    "maintainer": "frontier_leiden",
+    "size": 96,
+    "joined": 4,
+    "joined_share": 0.041666666666666664,
+    "input_share": 0.5,
+    "rel_match": 1.0544517223088559
+   },
+   {
+    "maintainer": "hybrid",
+    "size": 796,
+    "joined": 53,
+    "joined_share": 0.06658291457286432,
+    "input_share": 0.0,
+    "rel_match": 0.958900025727956
+   },
+   {
+    "maintainer": "hybrid",
+    "size": 546,
+    "joined": 42,
+    "joined_share": 0.07692307692307693,
+    "input_share": 0.047619047619047616,
+    "rel_match": 1.2888020246509237
+   },
+   {
+    "maintainer": "hybrid",
+    "size": 244,
+    "joined": 4,
+    "joined_share": 0.01639344262295082,
+    "input_share": 0.25,
+    "rel_match": 0.6445174982477259
+   },
+   {
+    "maintainer": "hybrid",
+    "size": 236,
+    "joined": 18,
+    "joined_share": 0.07627118644067797,
+    "input_share": 0.05555555555555555,
+    "rel_match": 0.8774168576785756
+   },
+   {
+    "maintainer": "hybrid",
+    "size": 741,
+    "joined": 21,
+    "joined_share": 0.02834008097165992,
+    "input_share": 0.14285714285714285,
+    "rel_match": 0.9249075384185328
+   },
+   {
+    "maintainer": "hybrid",
+    "size": 641,
+    "joined": 22,
+    "joined_share": 0.0343213728549142,
+    "input_share": 0.045454545454545456,
+    "rel_match": 0.8912205269650312
+   },
+   {
+    "maintainer": "hybrid",
+    "size": 148,
+    "joined": 13,
+    "joined_share": 0.08783783783783784,
+    "input_share": 0.38461538461538464,
+    "rel_match": 1.1902563247510516
+   },
+   {
+    "maintainer": "hybrid",
+    "size": 62,
+    "joined": 6,
+    "joined_share": 0.0967741935483871,
+    "input_share": 0.8333333333333334,
+    "rel_match": 0.5100250829323919
+   },
+   {
+    "maintainer": "hybrid",
+    "size": 593,
+    "joined": 15,
+    "joined_share": 0.025295109612141653,
+    "input_share": 0.06666666666666667,
+    "rel_match": 1.050311323805256
+   },
+   {
+    "maintainer": "hybrid",
+    "size": 481,
+    "joined": 13,
+    "joined_share": 0.02702702702702703,
+    "input_share": 0.07692307692307693,
+    "rel_match": 0.8193263200562743
+   },
+   {
+    "maintainer": "hybrid",
+    "size": 217,
+    "joined": 14,
+    "joined_share": 0.06451612903225806,
+    "input_share": 0.21428571428571427,
+    "rel_match": 1.0683649871200689
+   },
+   {
+    "maintainer": "hybrid",
+    "size": 302,
+    "joined": 12,
+    "joined_share": 0.039735099337748346,
+    "input_share": 0.0,
+    "rel_match": 0.7963086671611704
+   },
+   {
+    "maintainer": "hybrid",
+    "size": 959,
+    "joined": 75,
+    "joined_share": 0.07820646506777894,
+    "input_share": 0.04,
+    "rel_match": 1.1048833330081127
+   },
+   {
+    "maintainer": "hybrid",
+    "size": 192,
+    "joined": 8,
+    "joined_share": 0.041666666666666664,
+    "input_share": 0.25,
+    "rel_match": 1.3916896010732605
+   },
+   {
+    "maintainer": "hybrid",
+    "size": 155,
+    "joined": 4,
+    "joined_share": 0.025806451612903226,
+    "input_share": 0.25,
+    "rel_match": 1.2316802516450411
+   },
+   {
+    "maintainer": "hybrid",
+    "size": 232,
+    "joined": 5,
+    "joined_share": 0.021551724137931036,
+    "input_share": 0.2,
+    "rel_match": 0.9926856834503107
+   }
+  ]
+ }
+}

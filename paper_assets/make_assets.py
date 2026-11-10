@@ -1286,6 +1286,43 @@ def revision2_assets(M):
             M[f"{t}N"], M[f"{t}Diff"] = str(len(d)), f"{d.mean():+.2f}"
             M[f"{t}Stale"], M[f"{t}Ref"] = f"{pv['stale'].mean():.2f}", f"{pv['own_fresh'].mean():.2f}"
             M[f"{t}P"] = "<0.001" if p_ < 0.001 else f"={p_:.2f}"
+    dc = A / "dilution_check.json"
+    if dc.exists():
+        D = json.loads(dc.read_text())
+        M["DilNineSize"], M["DilNeverSize"] = f"{D['tau09']['median_size']:.0f}", f"{D['never']['median_size']:.0f}"
+        M["DilNineJoined"], M["DilNeverJoined"] = pct(D["tau09"]["joined_share"]), pct(D["never"]["joined_share"])
+        M["DilNineInput"], M["DilNeverInput"] = pct(D["tau09"]["input_share"]), pct(D["never"]["input_share"])
+    rs = A / "refresh_sched.json"
+    if rs.exists():
+        RS = json.loads(rs.read_text())
+        for g, t in (("qa_stream", "Qa"), ("entity_graph", "Eg")):
+            for f_, ft in (("0.1", "Ten"), ("0.2", "Twenty")):
+                r = RS[g][f_]
+                for pol, pt in (("jaccard", "Jac"), ("round_robin", "Rr"), ("oldest", "Old"), ("largest", "Big")):
+                    M[f"Rs{t}{ft}{pt}"] = pct(r[pol])
+    sv = A / "stability_variants.json"
+    if sv.exists():
+        SV = json.loads(sv.read_text())
+        lab = {"leiden": "GraphRAG Leiden", "consensus": "Consensus (10 runs)",
+               "kcore": "k-core (BFS split)", "warm": "Warm start"}
+        blocks = []
+        for g, gname in (("entity", "LLM entity graph"), ("wikidata", "Wikidata films")):
+            rows = []
+            for k in ("leiden", "consensus", "kcore", "warm"):
+                r = SV[g][k]
+                rows.append(f"{lab[k]} & {'yes' if k != 'warm' else 'no'} & {100 * np.mean(r['drop']):.0f}\\% & {100 * r['last']:.0f}\\% & "
+                            f"{r['leaf']:.3f} & {r['top']:.3f} & {100 * r['coverage']:.0f}\\% & {r['reports']:,} \\\\".replace(",", "{,}"))
+                t = {"entity": "", "wikidata": "Wd"}[g]
+                M[f"Sv{t}{k.capitalize()}Drop"] = pct(np.mean(r["drop"]))
+                M[f"Sv{t}{k.capitalize()}Last"] = pct(r["last"])
+                M[f"Sv{t}{k.capitalize()}Top"] = f"{r['top']:.3f}"
+                M[f"Sv{t}{k.capitalize()}Leaf"] = f"{r['leaf']:.3f}"
+                M[f"Sv{t}{k.capitalize()}Rep"] = f"{r['reports']:,}".replace(",", "{,}")
+                M[f"Sv{t}{k.capitalize()}Cov"] = pct(r["coverage"])
+            blocks.append(f"\\midrule\n\\multicolumn{{8}}{{l}}{{\\emph{{{gname}}}}}\\\\\n" + "\n".join(rows))
+        (TAB / "stability.tex").write_text(
+            "\\begin{tabular}{l c c c c c c r}\n\\toprule\n & repr. & 0.1\\% del. & last upd. & $Q_\\mathrm{leaf}$ & "
+            "$Q_\\mathrm{top}$ & coverage & reports\\\\\n" + "\n".join(blocks) + "\n\\bottomrule\n\\end{tabular}\n")
     tm = json.loads((A / "tokmodel_check.json").read_text())
     M["TokModelPearson"] = f"{tm['pearson']:.4f}"
     M["TokModelSpearman"] = f"{tm['spearman']:.2f}"

@@ -540,5 +540,61 @@
   "venue": "software",
   "url": "https://github.com/HKUDS/LightRAG",
   "note": "Document deletion with rebuild of affected entities and relationships (adelete_by_doc_id), accessed 9 November 2026"
+ },
+ "hossain2026kcore": {
+  "title": "Core-based Hierarchies for Efficient GraphRAG",
+  "authors": [
+   "Jakir Hossain",
+   "Ahmet Erdem Sar{\\i}y{\\\"u}ce"
+  ],
+  "year": 2026,
+  "venue": "Proceedings of the 32nd ACM SIGKDD Conference on Knowledge Discovery and Data Mining (KDD 2026), to appear; arXiv:2603.05207",
+  "type": "conference",
+  "url": "https://arxiv.org/abs/2603.05207"
+ },
+ "lancichinetti2012consensus": {
+  "title": "Consensus clustering in complex networks",
+  "authors": [
+   "Andrea Lancichinetti",
+   "Santo Fortunato"
+  ],
+  "year": 2012,
+  "venue": "Scientific Reports",
+  "volume": "2",
+  "pages": "336",
+  "publisher": "Springer Nature",
+  "type": "journal-article",
+  "doi": "10.1038/srep00336"
+ },
+ "sariyuce2013streaming": {
+  "title": "Streaming algorithms for k-core decomposition",
+  "authors": [
+   "Ahmet Erdem Sar{\\i}y{\\\"u}ce",
+   "Bu{\\u{g}}ra Gedik",
+   "Gabriela Jacques-Silva",
+   "Kun-Lung Wu",
+   "{\\\"U}mit V. {\\c{C}}ataly{\\\"u}rek"
+  ],
+  "year": 2013,
+  "venue": "Proceedings of the VLDB Endowment",
+  "volume": "6",
+  "issue": "6",
+  "pages": "433-444",
+  "publisher": "VLDB Endowment",
+  "type": "journal-article",
+  "doi": "10.14778/2536336.2536344"
+ },
+ "cho2000freshness": {
+  "title": "Synchronizing a database to improve freshness",
+  "authors": [
+   "Junghoo Cho",
+   "Hector Garcia-Molina"
+  ],
+  "year": 2000,
+  "venue": "Proceedings of the 2000 ACM SIGMOD International Conference on Management of Data",
+  "pages": "117-128",
+  "publisher": "ACM",
+  "type": "proceedings-article",
+  "doi": "10.1145/342009.335391"
  }
 }

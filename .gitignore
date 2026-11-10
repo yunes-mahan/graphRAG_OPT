@@ -13,3 +13,7 @@ paper_assets/tables/
 paper_assets/figures/
 paper_assets/numbers.*
 token_task/resources/*.npz
+
+# human validation of the LLM judge: future work
+qa/human_check.py
+human_check/

@@ -21,6 +21,7 @@ import config  # noqa: E402
 HERE = config.RESULTS
 import entity_graph_eval as eg  # noqa: E402
 import noise_hier as nh  # noqa: E402
+import consensus_lib as cl  # noqa: E402
 import stability_variants as sv  # noqa: E402
 
 
@@ -47,15 +48,16 @@ def main():
         sv.leiden(el, n)
         out = dict(plain_seconds=time.time() - t0)
         for runs in (10, 50, 100):
+          for ra in (False, True):
             t0 = time.time()
-            ref = sv.consensus(el, n, runs)
+            ref = cl.consensus(el, n, runs, ra)
             secs = time.time() - t0
             q = sv.quality(ref, el, n)
             q["seconds"] = secs
-            q["drop"] = [nh.rewrite(ref, sv.consensus(x, n, runs), 0.9) for x in drops]
-            q["last"] = nh.rewrite(sv.consensus(before, n, runs), ref, 0.9)
-            out[str(runs)] = q
-            print(graph, runs, {k: (np.round(v, 3).tolist() if isinstance(v, (list, float)) else v) for k, v in q.items()},
+            q["drop"] = [nh.rewrite(ref, cl.consensus(x, n, runs, ra), 0.9) for x in drops]
+            q["last"] = nh.rewrite(cl.consensus(before, n, runs, ra), ref, 0.9)
+            out[str(runs) + ("r" if ra else "")] = q
+            print(graph, runs, "reattach" if ra else "", {k: (np.round(v, 3).tolist() if isinstance(v, (list, float)) else v) for k, v in q.items()},
                   flush=True)
             res[graph] = out
             (HERE / "consensus_runs.json").write_text(json.dumps(res, indent=1, default=float))

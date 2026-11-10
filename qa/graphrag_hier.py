@@ -42,6 +42,9 @@ GRAPH = os.environ.get("HIER_GRAPH", "entity")   # entity | wikidata
 
 SEED, MAXC = 0xDEADBEEF, int(os.environ.get("HIER_MAXC", "10"))
 TAUS = [0.9, 0.7, 0.5, 0.0]
+ONLY = [x for x in os.environ.get("HIER_ONLY", "").split(",") if x]           # e.g. "consensus"
+CONS_RUNS = int(os.environ.get("HIER_CONS_RUNS", "100"))
+CONS_REATTACH = os.environ.get("HIER_CONS_REATTACH", "1") == "1"
 MINS = [1, 5, 10]
 
 
@@ -175,10 +178,19 @@ def run(seed):
         new_nodes = set(np.where(node_t == t)[0].tolist())
         new_el = [(int(a), int(b)) for a, b in E[:, edge_t == t].T]
         delta_el = sorted({(int(E[0, j]), int(E[1, j])) for j in batch_rels[t]}) if GRAPH == "entity" else new_el
-        for name in ("reindex", "reindex+match", "graphrag_update", "warm", "zep_attach"):
+        for name in (ONLY or ("reindex", "reindex+match", "graphrag_update", "warm", "zep_attach")):
             st = state.setdefault(name, dict(comms=None, store={tau: {} for tau in TAUS}, nextid=0, cost=defaultdict(list),
                                              Qleaf=[], Qtop=[], nrep=[]))
-            if t == 0 or st["comms"] is None:
+            if name == "consensus":                                   # consensus clustering + id matching
+                import consensus_lib as cl
+                cc = cl.consensus(el, len(node_t), CONS_RUNS, CONS_REATTACH)
+                if st["comms"] is None:
+                    comms = {(k[0], ("s", k[1])): m for k, m in cc.items()}
+                else:
+                    mp = match_ids(st["comms"], cc)
+                    comms = {(mp.get(k, (k[0], ("s", t, k[1])))): m for k, m in cc.items()}
+                lv = None
+            elif t == 0 or st["comms"] is None:
                 comms = {(k[0], ("c", k[1])): m for k, m in fresh.items()}
                 lv = fresh_lv
             elif name == "reindex":
@@ -272,6 +284,8 @@ def run(seed):
                                 cost += tok(len(m))
                                 store[(ms, k)] = m
                         st["cost"][(tau, ms)].append(cost / max(full_tok[ms], 1))
+                        own = sum(tok(len(m)) for m in comms.values() if len(m) >= ms)
+                        st.setdefault("cost_own", defaultdict(list))[(tau, ms)].append(cost / max(own, 1))
                     for k in [k for k in store if k[1] not in comms]:
                         del store[k]
             else:
@@ -281,7 +295,7 @@ def run(seed):
                             if len(m) >= ms:
                                 st["store"][tau][(ms, k)] = m
         print(f"seed {seed} version {t}/{T - 1}: fresh communities {len(fresh)}", flush=True)
-    if seed == 0:
+    if seed == 0 and not ONLY:
         dump = {}
         for name, st in state.items():
             store = st["store"][0.9]
@@ -295,15 +309,17 @@ def run(seed):
                          coverage_final={str(ms): float(st["cov"][ms][-1]) for ms in MINS},
                          coverage_lcc={str(ms): float(np.mean(st["cov_lcc"][ms])) for ms in MINS},
                          cost_series={f"{tau}|{ms}": [float(x) for x in v] for (tau, ms), v in st["cost"].items()},
-                         cost={f"{tau}|{ms}": float(np.mean(v)) for (tau, ms), v in st["cost"].items()})
+                         cost={f"{tau}|{ms}": float(np.mean(v)) for (tau, ms), v in st["cost"].items()},
+                         cost_own={f"{tau}|{ms}": float(np.mean(v)) for (tau, ms), v in st.get("cost_own", {}).items()})
     return res
 
 
 def main():
     out = {}
-    for seed in range(3):
+    seeds = [int(x) for x in os.environ.get("HIER_SEEDS", "0,1,2").split(",")]
+    for seed in seeds:
         out[str(seed)] = run(seed)
-        (HERE / (("graphrag_hier.json" if GRAPH == "entity" else f"graphrag_hier_{GRAPH}.json") if MAXC == 10 else f"graphrag_hier_{GRAPH}_max{MAXC}.json")).write_text(json.dumps(out, indent=1))
+        (HERE / (f"graphrag_hier_{GRAPH}_{'_'.join(ONLY)}{os.environ.get('HIER_SUFFIX', '')}.json" if ONLY else (("graphrag_hier.json" if GRAPH == "entity" else f"graphrag_hier_{GRAPH}.json") if MAXC == 10 else f"graphrag_hier_{GRAPH}_max{MAXC}.json"))).write_text(json.dumps(out, indent=1))
     print(json.dumps(out["0"], indent=1)[:3000])
 
 

@@ -1303,16 +1303,22 @@ def revision2_assets(M):
     sv = A / "stability_variants.json"
     if sv.exists():
         SV = json.loads(sv.read_text())
-        lab = {"leiden": "GraphRAG Leiden", "consensus": "Consensus (10 runs)",
-               "kcore": "k-core (BFS split)", "warm": "Warm start"}
+        CRf = A / "consensus_runs.json"
+        CR = json.loads(CRf.read_text()) if CRf.exists() else {}
         blocks = []
         for g, gname in (("entity", "LLM entity graph"), ("wikidata", "Wikidata films")):
+            t = {"entity": "", "wikidata": "Wd"}[g]
+            rows_src = [("GraphRAG Leiden", "yes", SV[g]["leiden"])]
+            for k in ("10", "50", "100"):
+                if f"{k}r" in CR.get(g, {}):
+                    rows_src.append((f"Consensus, {k} runs", "yes", CR[g][f"{k}r"]))
+            rows_src += [("k-core (BFS split)", "yes", SV[g]["kcore"]), ("Warm start", "no", SV[g]["warm"])]
             rows = []
+            for lab_, rep_, r in rows_src:
+                rows.append(f"{lab_} & {rep_} & {100 * np.mean(r['drop']):.0f}\\% & {100 * r['last']:.0f}\\% & "
+                            f"{r['leaf']:.3f} & {r['top']:.3f} & {100 * r['coverage']:.0f}\\% & {r['reports']:,} \\\\".replace(",", "{,}"))
             for k in ("leiden", "consensus", "kcore", "warm"):
                 r = SV[g][k]
-                rows.append(f"{lab[k]} & {'yes' if k != 'warm' else 'no'} & {100 * np.mean(r['drop']):.0f}\\% & {100 * r['last']:.0f}\\% & "
-                            f"{r['leaf']:.3f} & {r['top']:.3f} & {100 * r['coverage']:.0f}\\% & {r['reports']:,} \\\\".replace(",", "{,}"))
-                t = {"entity": "", "wikidata": "Wd"}[g]
                 M[f"Sv{t}{k.capitalize()}Drop"] = pct(np.mean(r["drop"]))
                 M[f"Sv{t}{k.capitalize()}Last"] = pct(r["last"])
                 M[f"Sv{t}{k.capitalize()}Top"] = f"{r['top']:.3f}"
@@ -1335,6 +1341,21 @@ def revision2_assets(M):
                 M[f"Cr{t}{kt}Sec"] = f"{r['seconds']:.0f}"
                 M[f"Cr{t}{kt}Rep"] = f"{r['reports']:,}".replace(",", "{,}")
                 M[f"Cr{t}{kt}Cov"] = pct(r["coverage"])
+                if k + "r" in CR[g]:
+                    rr = CR[g][k + "r"]
+                    M[f"Cr{t}{kt}RDrop"], M[f"Cr{t}{kt}RLast"] = pct(np.mean(rr["drop"])), pct(rr["last"])
+                    M[f"Cr{t}{kt}RCov"], M[f"Cr{t}{kt}RLeaf"] = pct(rr["coverage"]), f"{rr['leaf']:.3f}"
+                    M[f"Cr{t}{kt}RTop"] = f"{rr['top']:.3f}"
+    for g, t in (("entity", ""), ("wikidata", "Wd")):
+        f = A / f"graphrag_hier_{g}_consensus.json"
+        if f.exists():
+            D = json.loads(f.read_text())
+            mm = lambda fn: float(np.mean([fn(D[k]["consensus"]) for k in D]))  # noqa: E731
+            M[f"Cs{t}Cost"] = f"{mm(lambda r: r['cost']['0.9|1']):.2f}"
+            M[f"Cs{t}Own"] = f"{mm(lambda r: r['cost_own']['0.9|1']):.2f}"
+            M[f"Cs{t}Top"] = f"{mm(lambda r: r['Qtop']):.3f}"
+            M[f"Cs{t}Cov"] = pct(mm(lambda r: r['coverage_final']['1']))
+            M[f"Cs{t}N"] = str(len(D))
     tm = json.loads((A / "tokmodel_check.json").read_text())
     M["TokModelPearson"] = f"{tm['pearson']:.4f}"
     M["TokModelSpearman"] = f"{tm['spearman']:.2f}"

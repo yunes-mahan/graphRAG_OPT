@@ -17,3 +17,4 @@ token_task/resources/*.npz
 # human validation of the LLM judge: future work
 qa/human_check.py
 human_check/
+quick_reproduce.log

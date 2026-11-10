@@ -1323,6 +1323,18 @@ def revision2_assets(M):
         (TAB / "stability.tex").write_text(
             "\\begin{tabular}{l c c c c c c r}\n\\toprule\n & repr. & 0.1\\% del. & last upd. & $Q_\\mathrm{leaf}$ & "
             "$Q_\\mathrm{top}$ & coverage & reports\\\\\n" + "\n".join(blocks) + "\n\\bottomrule\n\\end{tabular}\n")
+    cr = A / "consensus_runs.json"
+    if cr.exists():
+        CR = json.loads(cr.read_text())
+        for g, t in (("entity", ""), ("wikidata", "Wd")):
+            M[f"Cr{t}Plain"] = f"{CR[g]['plain_seconds']:.1f}"
+            for k, kt in (("10", "Ten"), ("50", "Fifty"), ("100", "Hundred")):
+                r = CR[g][k]
+                M[f"Cr{t}{kt}Drop"] = pct(np.mean(r["drop"]))
+                M[f"Cr{t}{kt}Last"] = pct(r["last"])
+                M[f"Cr{t}{kt}Sec"] = f"{r['seconds']:.0f}"
+                M[f"Cr{t}{kt}Rep"] = f"{r['reports']:,}".replace(",", "{,}")
+                M[f"Cr{t}{kt}Cov"] = pct(r["coverage"])
     tm = json.loads((A / "tokmodel_check.json").read_text())
     M["TokModelPearson"] = f"{tm['pearson']:.4f}"
     M["TokModelSpearman"] = f"{tm['spearman']:.2f}"

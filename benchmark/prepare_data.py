@@ -23,9 +23,14 @@ def main():
     from ogb.nodeproppred import NodePropPredDataset
 
     config.OGB_ROOT.mkdir(parents=True, exist_ok=True)
-    NodePropPredDataset("ogbn-arxiv", root=str(config.OGB_ROOT))  # downloads raw files
-    LinkPropPredDataset("ogbl-collab", root=str(config.OGB_ROOT))
+    # OGB is only used to download the raw CSV files, which are read directly below. Re-instantiating an OGB dataset
+    # whose processed cache exists fails under PyTorch >= 2.6 (torch.load weights_only), so skip it when the raw
+    # files are already present.
     raw = config.OGB_ROOT / "ogbn_arxiv" / "raw"
+    if not (raw / "edge.csv.gz").exists():
+        NodePropPredDataset("ogbn-arxiv", root=str(config.OGB_ROOT))
+    if not (config.OGB_ROOT / "ogbl_collab" / "raw" / "edge.csv.gz").exists():
+        LinkPropPredDataset("ogbl-collab", root=str(config.OGB_ROOT))
     e = pd.read_csv(raw / "edge.csv.gz", header=None).values.T
     e = e[:, e[0] != e[1]]
     e = np.unique(np.sort(e, 0), axis=1)

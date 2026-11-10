@@ -135,7 +135,7 @@ cached in `artifacts/qa/cache_*.json`, so the QA experiments re-run offline unle
 | Targeted staleness and coverage probes | `python qa/probes.py run` (cached); local Qwen pipeline incl. tau=0.9: `python qa/qwen_probes.py 0.0` and `0.9` |
 | Deletion leak test and lineage rule | `python qa/deletion_leak.py` |
 | Sensitivity to GraphRAG's max cluster size | `HIER_MAXC=25 python qa/graphrag_hier.py` (also 50, `HIER_GRAPH=wikidata`, `qa/noise_hier.py`), then `python qa/sens_summary.py` |
-| Reproducibility vs stability (consensus, k-core, warm start) | `python qa/stability_variants.py` |
+| Reproducibility vs stability (consensus, k-core, warm start) | `python qa/stability_variants.py`; 10/50/100 consensus runs with timing: `python qa/consensus_runs.py` |
 | Refresh scheduling under a token budget | `python qa/refresh_sched.py` |
 | Dilution check for the staleness probe | `python qa/dilution_check.py` |
 | Token model vs measured tokens | `python qa/tokmodel_check.py` |

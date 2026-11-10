@@ -1219,11 +1219,18 @@ def revision2_assets(M):
             M[f"Probe{t}N"] = str(len(d))
             M[f"Probe{t}Mine"], M[f"Probe{t}Ref"] = f"{x[mine].mean():.2f}", f"{x[other].mean():.2f}"
             M[f"Probe{t}Diff"] = f"{d.mean():+.2f}"
+            M[f"Probe{t}Loss"] = f"{-d.mean():.2f}"
             M[f"Probe{t}P"] = "<0.001" if p_ < 0.001 else f"={p_:.3f}"
         S = {(r["probe"], r["maintainer"]): r for r in P["summary"]}
         M["ProbeStaleSig"] = str(sum(1 for (pr, m), r in S.items() if pr == "staleness" and r["p"] < 0.05))
         M["ProbeStaleMinDiff"] = f"{max(r['diff'] for (pr, m), r in S.items() if pr == 'staleness'):+.2f}"
         M["ProbeStaleMaxDiff"] = f"{min(r['diff'] for (pr, m), r in S.items() if pr == 'staleness'):+.2f}"
+        ps = sorted(r["p"] for (pr, m), r in S.items() if pr == "staleness")
+        holm = [min(1, p_ * (len(ps) - i)) for i, p_ in enumerate(ps)]
+        holm = [max(holm[:i + 1]) for i in range(len(holm))]
+        M["ProbeStaleSigHolm"] = str(sum(h < 0.05 for h in holm))
+        M["ProbeCovGuP"] = f"{S[('coverage', 'graphrag_update')]['p']:.3f}"
+        M["ProbeCovZepP"] = f"{S[('coverage', 'zep_attach')]['p']:.3f}"
         M["ProbeCovGu"] = f"{S[('coverage', 'graphrag_update')]['diff']:+.3f}"
         M["ProbeCovZep"] = f"{S[('coverage', 'zep_attach')]['diff']:+.3f}"
     dl = A / "deletion_leak.json"
@@ -1239,6 +1246,12 @@ def revision2_assets(M):
             M[f"DelReCost{t}"] = pct(min(r["reindex+match"]["cost"], r["warm"]["cost"]))
             M[f"DelTxtGu{t}"] = pct(r["graphrag_update"]["txt"][0] / max(r["graphrag_update"]["txt"][1], 1))
             M[f"DelTxtZep{t}"] = pct(r["zep_attach"]["txt"][0] / max(r["zep_attach"]["txt"][1], 1))
+            M[f"DelRelGu{t}"] = f1(r["graphrag_update"]["rel_leak_share"])
+            M[f"DelRelZep{t}"] = f1(r["zep_attach"]["rel_leak_share"])
+            M[f"DelEntGu{t}"] = f1(r["graphrag_update"]["ent_leak_share"])
+            M[f"DelEntZep{t}"] = f1(r["zep_attach"]["ent_leak_share"])
+            M[f"DelDocGu{t}"] = f1(r["graphrag_update"]["doc_lineage_cost"])
+            M[f"DelDocZep{t}"] = f1(r["zep_attach"]["doc_lineage_cost"])
     qrf = A / "qa" / "results_qwenreader.json"
     if qrf.exists():
         import pandas as _pd
@@ -1261,6 +1274,9 @@ def revision2_assets(M):
     M["TokModelPearson"] = f"{tm['pearson']:.4f}"
     M["TokModelSpearman"] = f"{tm['spearman']:.2f}"
     M["TokModelRatio"] = f"{tm['ratio_median']:.2f}"
+    if "entity" in tm:
+        M["TokModelEgSpearman"] = f"{tm['entity']['spearman']:.2f}"
+        M["TokModelEgPearson"] = f"{tm['entity']['pearson']:.2f}"
 
 
 def main():

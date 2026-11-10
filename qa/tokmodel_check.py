@@ -32,3 +32,29 @@ res = dict(stores=rows, spearman=float(stats.spearmanr(mo, me).statistic), pears
            ratio_median=float(np.median(me / mo)))
 print({k: v for k, v in res.items() if k != "stores"})
 (HERE / "tokmodel_check.json").write_text(json.dumps(res, indent=1))
+
+# ---- flat LLM entity graph: the 7 maintainer stores of qa_entity.py (reports for communities >= 10 entities)
+import hashlib  # noqa: E402
+import entity_graph_eval as eg  # noqa: E402
+import qa_entity as qe  # noqa: E402
+
+G = HERE / "entity_graph"
+r = json.loads((G / "eval.json").read_text())
+cr = json.loads((G / "cache_reports.json").read_text())
+_, node_t, _, _ = eg.stream(0)
+erows = []
+for m in qe.STORES:
+    labels = [np.asarray(x) for x in r[f"{m}|labels0"]]
+    ev, _ = qe.events(labels, node_t)
+    ev = [s for t, s in ev if t > 0]
+    model = sum(1500 + min(8000, 250 * len(s)) for s in ev)
+    meas = 0
+    for s in ev:
+        u = cr[hashlib.sha1(("ereport|" + ",".join(map(str, s))).encode()).hexdigest()]["usage"]
+        meas += u["inp"] + u["out"]
+    erows.append(dict(store=m, model=model, measured=meas))
+mo, me = np.array([x["model"] for x in erows]), np.array([x["measured"] for x in erows])
+res["entity"] = dict(stores=erows, spearman=float(stats.spearmanr(mo, me).statistic),
+                     pearson=float(stats.pearsonr(mo, me).statistic), ratio_median=float(np.median(me / mo)))
+print("entity graph:", {k: v for k, v in res["entity"].items() if k != "stores"})
+(HERE / "tokmodel_check.json").write_text(json.dumps(res, indent=1))

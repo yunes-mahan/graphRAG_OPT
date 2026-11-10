@@ -39,6 +39,10 @@ import hier_qa as hq  # noqa: E402
 import qa_plan as qp  # noqa: E402
 import qa_run as qr  # noqa: E402
 
+import os  # noqa: E402
+TAU = os.environ.get("PROBE_TAU", "0.0")          # "0.0" = never refreshed; "0.9" = kept by the Jaccard rule
+ONLY = os.environ.get("PROBE_ONLY", "both")        # staleness | coverage | both
+SUFFIX = os.environ.get("PROBE_SUFFIX", "")
 QA = HERE / "qa"
 G = HERE / "entity_graph"
 MAINT = ["recompute_leiden", "warmstart_leiden", "frontier_leiden", "hybrid"]
@@ -85,7 +89,7 @@ def main(mode):
     # ---------- staleness probe: (maintainer, community) pairs
     stale_jobs = []
     for m in MAINT:
-        final = plan["methods"][m]["taus"]["0.0"]["final_store"]       # member sets at the last write
+        final = plan["methods"][m]["taus"][TAU]["final_store"]       # member sets at the last write
         lab = plan["methods"][m]["labels"][-1]
         cur = {}
         for v, c in zip(present, lab):
@@ -95,6 +99,8 @@ def main(mode):
             ws = set(w)
             best = max(cur.values(), key=lambda c: len(c & ws))      # current community of that report
             joined = sorted(best - ws)
+            if TAU != "0.0" and len(best & ws) / len(best | ws) < float(TAU):
+                continue                                              # only reports the Jaccard rule keeps
             if len(joined) >= 4:
                 cand.append(joined)
         pick = [cand[i] for i in rng.permutation(len(cand))[:25]]
@@ -128,7 +134,7 @@ def main(mode):
         for v, c in zip(present, plan["methods"][m]["labels"][-1]):
             comm.setdefault(int(c), []).append(int(v))
         own[m] = [cs.get(qr.key_of(sorted(x)))["text"] for x in comm.values() if len(x) >= qp.MIN_SIZE]
-    stale = {m: [cs.get(qr.key_of(s))["text"] for s in plan["methods"][m]["taus"]["0.0"]["final_store"]] for m in MAINT}
+    stale = {m: [cs.get(qr.key_of(s))["text"] for s in plan["methods"][m]["taus"][TAU]["final_store"]] for m in MAINT}
 
     def run_stale(a):
         m, joined = a
@@ -138,7 +144,7 @@ def main(mode):
             return []
         out = []
         for kind, reps in (("stale", stale[m]), ("own_fresh", own[m])):
-            ans = answer_from(it["question"], reps, ca, f"{kind}|{m}")
+            ans = answer_from(it["question"], reps, ca, f"{kind}|{m}" + ("" if TAU == "0.0" or kind != "stale" else f"|tau{TAU}"))
             j = qr.judge(it, ans["text"], cj)
             out.append(dict(probe="staleness", maintainer=m, store=kind, q=it["question"], recall=float(np.mean(j["covered"]))))
         return out
@@ -176,7 +182,12 @@ def main(mode):
 
     with cf.ThreadPoolExecutor(12) as ex:
         rows = [r for rs in ex.map(run_stale, stale_jobs) for r in rs]
-        rows += [r for rs in ex.map(run_cov, cov_jobs) for r in rs]
+        if ONLY == "staleness":
+            rows = [r for rs in ex.map(run_stale, stale_jobs) for r in rs]
+        elif ONLY == "coverage":
+            rows = [r for rs in ex.map(run_cov, cov_jobs) for r in rs]
+        else:
+            rows += [r for rs in ex.map(run_cov, cov_jobs) for r in rs]
     df = pd.DataFrame(rows)
     summ = []
     for (probe, m), x in df.groupby(["probe", "maintainer"]):
@@ -191,7 +202,7 @@ def main(mode):
                          reference=float(pv[other].mean()), diff=float(d.mean()), p=p))
     res = pd.DataFrame(summ)
     print(res.round(3).to_string(index=False))
-    for probe in ("staleness", "coverage"):
+    for probe in sorted(df.probe.unique()):
         x = df[df.probe == probe]
         pv = x.pivot_table(index=["maintainer", "q"], columns="store", values="recall").dropna()
         mine = "stale" if probe == "staleness" else "maintained"
@@ -199,7 +210,7 @@ def main(mode):
         d = pv[mine] - pv[other]
         print(probe, "pooled n", len(d), "diff", round(d.mean(), 3), "p",
               round(stats.wilcoxon(d, zero_method="zsplit").pvalue, 4))
-    (HERE / "probes.json").write_text(json.dumps(dict(summary=summ, rows=rows), indent=1))
+    (HERE / f"probes{SUFFIX}.json").write_text(json.dumps(dict(summary=summ, rows=rows), indent=1))
 
 
 if __name__ == "__main__":

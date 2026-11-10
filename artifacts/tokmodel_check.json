@@ -83,5 +83,47 @@
  ],
  "spearman": 1.0,
  "pearson": 0.9998596692032611,
- "ratio_median": 0.4615425664897671
+ "ratio_median": 0.4615425664897671,
+ "entity": {
+  "stores": [
+   {
+    "store": "recompute_leiden",
+    "model": 9422250,
+    "measured": 4481694
+   },
+   {
+    "store": "warmstart_leiden",
+    "model": 7030750,
+    "measured": 3464446
+   },
+   {
+    "store": "frontier_leiden",
+    "model": 4614000,
+    "measured": 1987577
+   },
+   {
+    "store": "lazy",
+    "model": 2915000,
+    "measured": 1384534
+   },
+   {
+    "store": "graphrag_delta",
+    "model": 3958250,
+    "measured": 529675
+   },
+   {
+    "store": "priced_warm",
+    "model": 3415000,
+    "measured": 1546072
+   },
+   {
+    "store": "priced_frontier",
+    "model": 4291000,
+    "measured": 1831961
+   }
+  ],
+  "spearman": 0.8928571428571429,
+  "pearson": 0.935084293146774,
+  "ratio_median": 0.4527297218155198
+ }
 }

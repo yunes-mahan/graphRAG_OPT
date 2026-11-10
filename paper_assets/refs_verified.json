@@ -399,7 +399,7 @@
   "year": 2026,
   "venue": "software",
   "url": "https://github.com/microsoft/graphrag",
-  "note": "Version 3.2; incremental update in index/update/communities.py, accessed 8 November 2026"
+  "note": "Versions 3.2.0 and 3.3.0 (identical clustering and incremental-update code); incremental update in index/update/communities.py, accessed 10 November 2026"
  },
  "aynaud2013evolving": {
   "title": "Communities in Evolving Networks: Definitions, Detection, and Analysis Techniques",
@@ -499,8 +499,11 @@
    "Qi Liu"
   ],
   "year": 2025,
-  "venue": "arXiv",
-  "arxiv": "2503.04800"
+  "venue": "Proceedings of the 63rd Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)",
+  "pages": "6036-6063",
+  "publisher": "Association for Computational Linguistics",
+  "type": "proceedings-article",
+  "doi": "10.18653/v1/2025.acl-long.301"
  },
  "wang2026agenticunlearning": {
   "title": "Agentic Unlearning: When LLM Agent Meets Machine Unlearning",
@@ -536,6 +539,6 @@
   "year": 2026,
   "venue": "software",
   "url": "https://github.com/HKUDS/LightRAG",
-  "note": "Document deletion with rebuild of affected entities and relationships (adelete\\_by\\_doc\\_id), accessed 9 November 2026"
+  "note": "Document deletion with rebuild of affected entities and relationships (adelete_by_doc_id), accessed 9 November 2026"
  }
 }

@@ -22,7 +22,18 @@ def leaves(comms):
     return leaf
 
 
-def consensus(edges, n, runs=10, reattach=False):
+def _hier(e, gh):
+    res = gh.gn.hierarchical_leiden(e, max_cluster_size=gh.MAXC, seed=0xDEADBEEF, use_modularity=True)
+    lev = defaultdict(dict)
+    for h in res:
+        lev[h.level][int(h.node)] = h.cluster
+    return gh.communities(gh.complete_levels(dict(lev)))
+
+
+def consensus(edges, n, runs=10, reattach=False, mode="threshold", floor=0.05):
+    """mode: threshold (drop edges below 0.5 agreement), soft (keep all LCC edges, weight = max(agreement, floor)),
+    leafup (consensus leaves from `threshold` + reattachment, upper levels by GraphRAG's hierarchical Leiden on the
+    graph of leaves, with original edges as weights)."""
     import graphrag_hier as gh
     import noise_hier as nh
     lcc, _ = gh.lcc_edges(edges, np.arange(n))
@@ -31,13 +42,36 @@ def consensus(edges, n, runs=10, reattach=False):
         lf = leaves(nh.cluster(edges, n, s))
         for a, b in lcc:
             agree[(a, b)] += lf.get(a) == lf.get(b)
+    if mode == "soft":
+        return _hier([(str(a), str(b), float(max(agree[(a, b)] / runs, floor))) for a, b in lcc], gh)
+    if mode == "leafup":
+        base = consensus_from(agree, lcc, runs, True, gh)
+        lf = leaves(base)
+        leaf_ids = {}
+        for v, k in lf.items():
+            leaf_ids.setdefault(k, len(leaf_ids))
+        w = defaultdict(float)
+        for a, b in lcc:
+            la, lb = leaf_ids.get(lf.get(a)), leaf_ids.get(lf.get(b))
+            if la is not None and lb is not None and la != lb:
+                w[(min(la, lb), max(la, lb))] += 1.0
+        upper = _hier([(str(a), str(b), x) for (a, b), x in w.items()], gh)
+        members = defaultdict(set)
+        for v, k in lf.items():
+            members[leaf_ids[k]].add(v)
+        out = {}
+        top_level = max((k[0] for k in upper), default=-1) + 1
+        for (l, c), ms in upper.items():
+            out[(l, ("u", c))] = frozenset(v for leaf in ms for v in members[leaf])
+        for lid, ms in members.items():
+            out[(top_level, ("l", lid))] = frozenset(ms)
+        return out
+    return consensus_from(agree, lcc, runs, reattach, gh)
+
+
+def consensus_from(agree, lcc, runs, reattach, gh):
     keep = [(a, b) for a, b in lcc if agree[(a, b)] / runs >= 0.5]
-    e = [(str(a), str(b), float(agree[(a, b)] / runs)) for a, b in keep]
-    res = gh.gn.hierarchical_leiden(e, max_cluster_size=gh.MAXC, seed=0xDEADBEEF, use_modularity=True)
-    lev = defaultdict(dict)
-    for h in res:
-        lev[h.level][int(h.node)] = h.cluster
-    comms = gh.communities(gh.complete_levels(dict(lev)))
+    comms = _hier([(str(a), str(b), float(agree[(a, b)] / runs)) for a, b in keep], gh)
     if not reattach:
         return comms
     comms = {k: set(m) for k, m in comms.items()}

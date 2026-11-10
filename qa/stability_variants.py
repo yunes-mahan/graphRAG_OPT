@@ -110,6 +110,11 @@ def quality(comms, edges, n):
         sub = g.induced_subgraph(vs)
         _, lab = np.unique([part[v] for v in vs], return_inverse=True)
         out[name] = sub.modularity(lab.tolist())
+    from collections import Counter
+    lv = Counter(k[0] for k in comms)
+    tops = [m for k, m in comms.items() if k[0] == 0]
+    out["levels"], out["n_top"] = len(lv), len(tops)
+    out["largest_top"] = max((len(m) for m in tops), default=0)
     covered = set().union(*comms.values()) if comms else set()
     out["coverage"] = len(covered) / max(len({x for e in edges for x in e}), 1)
     out["reports"] = len(comms)

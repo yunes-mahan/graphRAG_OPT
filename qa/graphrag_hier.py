@@ -45,6 +45,7 @@ TAUS = [0.9, 0.7, 0.5, 0.0]
 ONLY = [x for x in os.environ.get("HIER_ONLY", "").split(",") if x]           # e.g. "consensus"
 CONS_RUNS = int(os.environ.get("HIER_CONS_RUNS", "100"))
 CONS_REATTACH = os.environ.get("HIER_CONS_REATTACH", "1") == "1"
+CONS_MODE = os.environ.get("HIER_CONS_MODE", "threshold")
 MINS = [1, 5, 10]
 
 
@@ -183,7 +184,7 @@ def run(seed):
                                              Qleaf=[], Qtop=[], nrep=[]))
             if name == "consensus":                                   # consensus clustering + id matching
                 import consensus_lib as cl
-                cc = cl.consensus(el, len(node_t), CONS_RUNS, CONS_REATTACH)
+                cc = cl.consensus(el, len(node_t), CONS_RUNS, CONS_REATTACH, CONS_MODE)
                 if st["comms"] is None:
                     comms = {(k[0], ("s", k[1])): m for k, m in cc.items()}
                 else:

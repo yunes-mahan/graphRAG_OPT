@@ -1305,17 +1305,49 @@ def revision2_assets(M):
         SV = json.loads(sv.read_text())
         CRf = A / "consensus_runs.json"
         CR = json.loads(CRf.read_text()) if CRf.exists() else {}
+        TS = json.loads((A / "table3_structure.json").read_text()) if (A / "table3_structure.json").exists() else {}
+
+        def stream_cost(g, mode):
+            if mode is None:
+                fn, key = A / ("graphrag_hier.json" if g == "entity" else "graphrag_hier_wikidata.json"), "reindex+match"
+            elif mode == "threshold":
+                fn, key = A / f"graphrag_hier_{g}_consensus.json", "consensus"
+            else:
+                key, D = "consensus", {}
+                for f_ in [A / f"graphrag_hier_{g}_consensus_{mode}.json"] + [A / f"graphrag_hier_{g}_consensus_{mode}_s{sd}.json" for sd in (0, 1, 2)]:
+                    if f_.exists():
+                        D.update(json.loads(f_.read_text()))
+                return float(np.mean([D[x][key]["cost"]["0.9|1"] for x in D])) if D else None
+            if not fn.exists():
+                return None
+            D = json.loads(fn.read_text())
+            return float(np.mean([D[x][key]["cost"]["0.9|1"] for x in D]))
         blocks = []
         for g, gname in (("entity", "LLM entity graph"), ("wikidata", "Wikidata films")):
             t = {"entity": "", "wikidata": "Wd"}[g]
-            rows_src = [("GraphRAG Leiden", "yes", SV[g]["leiden"])]
-            for k in ("10", "50", "100"):
+            fxf = A / f"consensus_fix_{g}.json"
+            FX = json.loads(fxf.read_text()) if fxf.exists() else {}
+            rows_src = [("GraphRAG Leiden", "yes", FX.get("leiden", SV[g]["leiden"]), stream_cost(g, None))]
+            for k in ("10", "50"):
                 if f"{k}r" in CR.get(g, {}):
-                    rows_src.append((f"Consensus, {k} runs", "yes", CR[g][f"{k}r"]))
-            rows_src += [("k-core (BFS split)", "yes", SV[g]["kcore"]), ("Warm start", "no", SV[g]["warm"])]
+                    r = dict(CR[g][f"{k}r"])
+                    r.update(TS.get(g, {}).get(f"threshold{k}", {}))
+                    rows_src.append((f"Consensus, {k} runs", "yes", r, None))
+            if "threshold" in FX:
+                rows_src.append(("Consensus, 100 runs", "yes", FX["threshold"], stream_cost(g, "threshold")))
+            if "soft" in FX:
+                rows_src.append(("Soft consensus, 100", "yes", FX["soft"], stream_cost(g, "soft")))
+            if "leafup" in FX:
+                rows_src.append(("Cons.\\ leaves + Leiden", "yes", FX["leafup"], stream_cost(g, "leafup")))
+            kc = dict(SV[g]["kcore"]); kc.update(TS.get(g, {}).get("kcore", {}))
+            wm = dict(SV[g]["warm"]); wm.update(TS.get(g, {}).get("warm", {}))
+            rows_src += [("k-core (BFS split)", "yes", kc, None), ("Warm start", "no", wm, None)]
             rows = []
-            for lab_, rep_, r in rows_src:
-                rows.append(f"{lab_} & {rep_} & {100 * np.mean(r['drop']):.0f}\\% & {100 * r['last']:.0f}\\% & "
+            for lab_, rep_, r, sc in rows_src:
+                sc_ = "--" if sc is None else f"{sc:.2f}"
+                nt_ = r.get("n_top"); lt_ = r.get("largest_top")
+                rows.append(f"{lab_} & {rep_} & {100 * np.mean(r['drop']):.0f}\\% & {100 * r['last']:.0f}\\% & {sc_} & "
+                            f"{r.get('levels', '--')} & {nt_:,} & {lt_:,} & "
                             f"{r['leaf']:.3f} & {r['top']:.3f} & {100 * r['coverage']:.0f}\\% & {r['reports']:,} \\\\".replace(",", "{,}"))
             for k in ("leiden", "consensus", "kcore", "warm"):
                 r = SV[g][k]
@@ -1325,10 +1357,21 @@ def revision2_assets(M):
                 M[f"Sv{t}{k.capitalize()}Leaf"] = f"{r['leaf']:.3f}"
                 M[f"Sv{t}{k.capitalize()}Rep"] = f"{r['reports']:,}".replace(",", "{,}")
                 M[f"Sv{t}{k.capitalize()}Cov"] = pct(r["coverage"])
-            blocks.append(f"\\midrule\n\\multicolumn{{8}}{{l}}{{\\emph{{{gname}}}}}\\\\\n" + "\n".join(rows))
+            for name_, tag in (("leiden", "Ld"), ("threshold", "Th"), ("soft", "Soft"), ("leafup", "Lu")):
+                if name_ in FX:
+                    r = FX[name_]
+                    M[f"Fx{t}{tag}Drop"], M[f"Fx{t}{tag}Last"] = pct(np.mean(r["drop"])), pct(r["last"])
+                    M[f"Fx{t}{tag}Levels"], M[f"Fx{t}{tag}Top"] = str(r["levels"]), f"{r['n_top']:,}".replace(",", "{,}")
+                    M[f"Fx{t}{tag}Largest"] = f"{r['largest_top']:,}".replace(",", "{,}")
+                    M[f"Fx{t}{tag}Qtop"] = f"{r['top']:.3f}"
+                    sc = stream_cost(g, None if name_ == "leiden" else name_)
+                    if sc is not None:
+                        M[f"Fx{t}{tag}Stream"] = f"{sc:.2f}"
+            blocks.append(f"\\midrule\n\\multicolumn{{12}}{{l}}{{\\emph{{{gname}}}}}\\\\\n" + "\n".join(rows))
         (TAB / "stability.tex").write_text(
-            "\\begin{tabular}{l c c c c c c r}\n\\toprule\n & repr. & 0.1\\% del. & last upd. & $Q_\\mathrm{leaf}$ & "
-            "$Q_\\mathrm{top}$ & coverage & reports\\\\\n" + "\n".join(blocks) + "\n\\bottomrule\n\\end{tabular}\n")
+            "\\begin{tabular}{l c c c c c r r c c c r}\n\\toprule\n & repr. & 0.1\\% del. & last upd. & stream & levels & top & "
+            "largest & $Q_\\mathrm{leaf}$ & $Q_\\mathrm{top}$ & cov. & reports\\\\\n" + "\n".join(blocks) + "\n\\bottomrule\n\\end{tabular}\n")
+
     cr = A / "consensus_runs.json"
     if cr.exists():
         CR = json.loads(cr.read_text())

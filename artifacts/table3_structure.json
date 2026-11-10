@@ -1,0 +1,46 @@
+{
+ "entity": {
+  "threshold10": {
+   "levels": 2,
+   "n_top": 7853,
+   "largest_top": 60
+  },
+  "threshold50": {
+   "levels": 2,
+   "n_top": 8195,
+   "largest_top": 60
+  },
+  "kcore": {
+   "levels": 6,
+   "n_top": 4035,
+   "largest_top": 10
+  },
+  "warm": {
+   "levels": 5,
+   "n_top": 111,
+   "largest_top": 3316
+  }
+ },
+ "wikidata": {
+  "threshold10": {
+   "levels": 3,
+   "n_top": 9319,
+   "largest_top": 189
+  },
+  "threshold50": {
+   "levels": 2,
+   "n_top": 9980,
+   "largest_top": 189
+  },
+  "kcore": {
+   "levels": 9,
+   "n_top": 6794,
+   "largest_top": 10
+  },
+  "warm": {
+   "levels": 6,
+   "n_top": 63,
+   "largest_top": 10191
+  }
+ }
+}

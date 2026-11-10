@@ -1,0 +1,700 @@
+{
+ "summary": [
+  {
+   "probe": "staleness",
+   "maintainer": "frontier_leiden",
+   "n": 19,
+   "maintained": 0.2236842105263158,
+   "reference": 0.14473684210526316,
+   "diff": 0.07894736842105263,
+   "p": 0.26283973770498703
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "hybrid",
+   "n": 16,
+   "maintained": 0.234375,
+   "reference": 0.25,
+   "diff": -0.015625,
+   "p": 0.8955329031670437
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "recompute_leiden",
+   "n": 1,
+   "maintained": 0.75,
+   "reference": 0.5,
+   "diff": 0.25,
+   "p": 1.0
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "warmstart_leiden",
+   "n": 11,
+   "maintained": 0.1590909090909091,
+   "reference": 0.20454545454545456,
+   "diff": -0.045454545454545456,
+   "p": 0.75
+  }
+ ],
+ "rows": [
+  {
+   "probe": "staleness",
+   "maintainer": "recompute_leiden",
+   "store": "stale",
+   "q": "What are the main approaches and trends in entity summarization and knowledge base timeline generation?",
+   "recall": 0.75
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "recompute_leiden",
+   "store": "own_fresh",
+   "q": "What are the main approaches and trends in entity summarization and knowledge base timeline generation?",
+   "recall": 0.5
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "warmstart_leiden",
+   "store": "stale",
+   "q": "What are the main approaches and trends in modern recommender systems and related fields?",
+   "recall": 0.0
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "warmstart_leiden",
+   "store": "own_fresh",
+   "q": "What are the main approaches and trends in modern recommender systems and related fields?",
+   "recall": 0.5
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "warmstart_leiden",
+   "store": "stale",
+   "q": "What are the main approaches and trends in improving information retrieval and knowledge discovery from structured and unstructured data sources?",
+   "recall": 0.25
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "warmstart_leiden",
+   "store": "own_fresh",
+   "q": "What are the main approaches and trends in improving information retrieval and knowledge discovery from structured and unstructured data sources?",
+   "recall": 0.5
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "warmstart_leiden",
+   "store": "stale",
+   "q": "What are the main approaches and trends in improving scholarly data management and reproducibility in research?",
+   "recall": 0.25
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "warmstart_leiden",
+   "store": "own_fresh",
+   "q": "What are the main approaches and trends in improving scholarly data management and reproducibility in research?",
+   "recall": 0.25
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "warmstart_leiden",
+   "store": "stale",
+   "q": "What are the main approaches and trends in evaluating and predicting the impact of scholarly publications?",
+   "recall": 0.75
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "warmstart_leiden",
+   "store": "own_fresh",
+   "q": "What are the main approaches and trends in evaluating and predicting the impact of scholarly publications?",
+   "recall": 0.5
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "warmstart_leiden",
+   "store": "stale",
+   "q": "What are the main approaches and trends in influence maximization and community detection in social networks?",
+   "recall": 0.0
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "warmstart_leiden",
+   "store": "own_fresh",
+   "q": "What are the main approaches and trends in influence maximization and community detection in social networks?",
+   "recall": 0.0
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "warmstart_leiden",
+   "store": "stale",
+   "q": "What are the main approaches and trends in modeling and analyzing complex systems and user behaviors in digital environments?",
+   "recall": 0.0
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "warmstart_leiden",
+   "store": "own_fresh",
+   "q": "What are the main approaches and trends in modeling and analyzing complex systems and user behaviors in digital environments?",
+   "recall": 0.0
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "warmstart_leiden",
+   "store": "stale",
+   "q": "What are the main approaches and trends in analyzing social and cultural phenomena using digital data?",
+   "recall": 0.0
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "warmstart_leiden",
+   "store": "own_fresh",
+   "q": "What are the main approaches and trends in analyzing social and cultural phenomena using digital data?",
+   "recall": 0.0
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "warmstart_leiden",
+   "store": "stale",
+   "q": "What are the main approaches and trends in privacy-preserving data analysis techniques?",
+   "recall": 0.5
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "warmstart_leiden",
+   "store": "own_fresh",
+   "q": "What are the main approaches and trends in privacy-preserving data analysis techniques?",
+   "recall": 0.25
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "warmstart_leiden",
+   "store": "stale",
+   "q": "What are the main approaches and trends in improving the citation and visibility of scientific datasets?",
+   "recall": 0.0
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "warmstart_leiden",
+   "store": "own_fresh",
+   "q": "What are the main approaches and trends in improving the citation and visibility of scientific datasets?",
+   "recall": 0.0
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "warmstart_leiden",
+   "store": "stale",
+   "q": "What are the main approaches and trends in data management and analysis for handling complex and dynamic data environments?",
+   "recall": 0.0
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "warmstart_leiden",
+   "store": "own_fresh",
+   "q": "What are the main approaches and trends in data management and analysis for handling complex and dynamic data environments?",
+   "recall": 0.0
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "warmstart_leiden",
+   "store": "stale",
+   "q": "What are the main approaches and trends in multi-modal data integration for event detection and citation recommendation?",
+   "recall": 0.0
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "warmstart_leiden",
+   "store": "own_fresh",
+   "q": "What are the main approaches and trends in multi-modal data integration for event detection and citation recommendation?",
+   "recall": 0.25
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "frontier_leiden",
+   "store": "stale",
+   "q": "What are the main approaches and trends in the analysis of institutional and governance structures in academic and digital environments?",
+   "recall": 0.0
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "frontier_leiden",
+   "store": "own_fresh",
+   "q": "What are the main approaches and trends in the analysis of institutional and governance structures in academic and digital environments?",
+   "recall": 0.0
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "frontier_leiden",
+   "store": "stale",
+   "q": "What are the main approaches and trends in network analysis and modeling?",
+   "recall": 0.0
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "frontier_leiden",
+   "store": "own_fresh",
+   "q": "What are the main approaches and trends in network analysis and modeling?",
+   "recall": 0.0
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "frontier_leiden",
+   "store": "stale",
+   "q": "What are the main approaches and trends in analyzing social media data for understanding human behavior and communication?",
+   "recall": 0.5
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "frontier_leiden",
+   "store": "own_fresh",
+   "q": "What are the main approaches and trends in analyzing social media data for understanding human behavior and communication?",
+   "recall": 0.5
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "frontier_leiden",
+   "store": "stale",
+   "q": "What are the main approaches and trends in improving search and information retrieval systems?",
+   "recall": 0.0
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "frontier_leiden",
+   "store": "own_fresh",
+   "q": "What are the main approaches and trends in improving search and information retrieval systems?",
+   "recall": 0.0
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "frontier_leiden",
+   "store": "stale",
+   "q": "What are the main approaches and trends in network analysis and information retrieval?",
+   "recall": 0.0
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "frontier_leiden",
+   "store": "own_fresh",
+   "q": "What are the main approaches and trends in network analysis and information retrieval?",
+   "recall": 0.0
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "frontier_leiden",
+   "store": "stale",
+   "q": "What are the main approaches and trends in modeling and analyzing social and online interaction networks?",
+   "recall": 0.0
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "frontier_leiden",
+   "store": "own_fresh",
+   "q": "What are the main approaches and trends in modeling and analyzing social and online interaction networks?",
+   "recall": 0.0
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "frontier_leiden",
+   "store": "stale",
+   "q": "What are the main approaches and trends in the evaluation and analysis of scholarly impact and research output?",
+   "recall": 0.25
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "frontier_leiden",
+   "store": "own_fresh",
+   "q": "What are the main approaches and trends in the evaluation and analysis of scholarly impact and research output?",
+   "recall": 0.25
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "frontier_leiden",
+   "store": "stale",
+   "q": "What are the main approaches and trends in the evaluation and analysis of scholarly research and its impact?",
+   "recall": 0.0
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "frontier_leiden",
+   "store": "own_fresh",
+   "q": "What are the main approaches and trends in the evaluation and analysis of scholarly research and its impact?",
+   "recall": 0.0
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "frontier_leiden",
+   "store": "stale",
+   "q": "What are the main approaches and trends in improving efficiency and effectiveness in knowledge sharing and data processing systems?",
+   "recall": 0.0
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "frontier_leiden",
+   "store": "own_fresh",
+   "q": "What are the main approaches and trends in improving efficiency and effectiveness in knowledge sharing and data processing systems?",
+   "recall": 0.0
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "frontier_leiden",
+   "store": "stale",
+   "q": "What are the main approaches and trends in improving information retrieval and plagiarism detection in STEM and mathematical documents?",
+   "recall": 0.5
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "frontier_leiden",
+   "store": "own_fresh",
+   "q": "What are the main approaches and trends in improving information retrieval and plagiarism detection in STEM and mathematical documents?",
+   "recall": 0.5
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "frontier_leiden",
+   "store": "stale",
+   "q": "What are the main approaches and trends in data management and analysis for handling complex and evolving data environments?",
+   "recall": 0.0
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "frontier_leiden",
+   "store": "own_fresh",
+   "q": "What are the main approaches and trends in data management and analysis for handling complex and evolving data environments?",
+   "recall": 0.0
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "frontier_leiden",
+   "store": "stale",
+   "q": "What are the main approaches and trends in modern recommender system research?",
+   "recall": 0.25
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "frontier_leiden",
+   "store": "own_fresh",
+   "q": "What are the main approaches and trends in modern recommender system research?",
+   "recall": 0.0
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "frontier_leiden",
+   "store": "stale",
+   "q": "What are the main approaches and trends in influence maximization and social network analysis?",
+   "recall": 0.75
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "frontier_leiden",
+   "store": "own_fresh",
+   "q": "What are the main approaches and trends in influence maximization and social network analysis?",
+   "recall": 0.0
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "frontier_leiden",
+   "store": "stale",
+   "q": "What are the main approaches and trends in query processing and database systems research?",
+   "recall": 0.5
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "frontier_leiden",
+   "store": "own_fresh",
+   "q": "What are the main approaches and trends in query processing and database systems research?",
+   "recall": 0.0
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "frontier_leiden",
+   "store": "stale",
+   "q": "What are the main approaches and trends in graph processing and knowledge graph management?",
+   "recall": 0.75
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "frontier_leiden",
+   "store": "own_fresh",
+   "q": "What are the main approaches and trends in graph processing and knowledge graph management?",
+   "recall": 1.0
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "frontier_leiden",
+   "store": "stale",
+   "q": "What are the main approaches and trends in analyzing and addressing challenges in social network dynamics?",
+   "recall": 0.0
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "frontier_leiden",
+   "store": "own_fresh",
+   "q": "What are the main approaches and trends in analyzing and addressing challenges in social network dynamics?",
+   "recall": 0.0
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "frontier_leiden",
+   "store": "stale",
+   "q": "What are the main approaches and trends in analyzing social media data for understanding user behavior and information dynamics?",
+   "recall": 0.0
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "frontier_leiden",
+   "store": "own_fresh",
+   "q": "What are the main approaches and trends in analyzing social media data for understanding user behavior and information dynamics?",
+   "recall": 0.0
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "frontier_leiden",
+   "store": "stale",
+   "q": "What are the main approaches and trends in analyzing online engagement and impact of academic research?",
+   "recall": 0.25
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "frontier_leiden",
+   "store": "own_fresh",
+   "q": "What are the main approaches and trends in analyzing online engagement and impact of academic research?",
+   "recall": 0.0
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "frontier_leiden",
+   "store": "stale",
+   "q": "What are the main approaches and trends in privacy-preserving data analysis techniques?",
+   "recall": 0.5
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "frontier_leiden",
+   "store": "own_fresh",
+   "q": "What are the main approaches and trends in privacy-preserving data analysis techniques?",
+   "recall": 0.5
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "hybrid",
+   "store": "stale",
+   "q": "What are the main approaches and trends in modern recommender system research?",
+   "recall": 0.5
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "hybrid",
+   "store": "own_fresh",
+   "q": "What are the main approaches and trends in modern recommender system research?",
+   "recall": 0.0
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "hybrid",
+   "store": "stale",
+   "q": "What are the main approaches and trends in detecting and mitigating misinformation and controversial content in social networks?",
+   "recall": 0.25
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "hybrid",
+   "store": "own_fresh",
+   "q": "What are the main approaches and trends in detecting and mitigating misinformation and controversial content in social networks?",
+   "recall": 0.5
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "hybrid",
+   "store": "stale",
+   "q": "What are the main approaches and trends in analyzing digital engagement and academic impact in research?",
+   "recall": 0.25
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "hybrid",
+   "store": "own_fresh",
+   "q": "What are the main approaches and trends in analyzing digital engagement and academic impact in research?",
+   "recall": 0.0
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "hybrid",
+   "store": "stale",
+   "q": "What are the main approaches and trends in query answering and data management under uncertainty and constraints?",
+   "recall": 0.0
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "hybrid",
+   "store": "own_fresh",
+   "q": "What are the main approaches and trends in query answering and data management under uncertainty and constraints?",
+   "recall": 0.75
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "hybrid",
+   "store": "stale",
+   "q": "What are the main approaches and trends in analyzing network dynamics and social media data?",
+   "recall": 0.5
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "hybrid",
+   "store": "own_fresh",
+   "q": "What are the main approaches and trends in analyzing network dynamics and social media data?",
+   "recall": 0.25
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "hybrid",
+   "store": "stale",
+   "q": "What are the main approaches and trends in community detection and network analysis?",
+   "recall": 0.0
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "hybrid",
+   "store": "own_fresh",
+   "q": "What are the main approaches and trends in community detection and network analysis?",
+   "recall": 0.0
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "hybrid",
+   "store": "stale",
+   "q": "What are the main approaches and trends in network analysis and link prediction across different types of networks?",
+   "recall": 0.0
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "hybrid",
+   "store": "own_fresh",
+   "q": "What are the main approaches and trends in network analysis and link prediction across different types of networks?",
+   "recall": 0.25
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "hybrid",
+   "store": "stale",
+   "q": "What are the main approaches and trends in handling complex data queries and event detection in modern information systems?",
+   "recall": 0.75
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "hybrid",
+   "store": "own_fresh",
+   "q": "What are the main approaches and trends in handling complex data queries and event detection in modern information systems?",
+   "recall": 0.5
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "hybrid",
+   "store": "stale",
+   "q": "What are the main approaches and trends in the evaluation and analysis of scholarly impact and research landscapes?",
+   "recall": 0.5
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "hybrid",
+   "store": "own_fresh",
+   "q": "What are the main approaches and trends in the evaluation and analysis of scholarly impact and research landscapes?",
+   "recall": 0.25
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "hybrid",
+   "store": "stale",
+   "q": "What are the main approaches and trends in modern database systems and query evaluation techniques?",
+   "recall": 0.0
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "hybrid",
+   "store": "own_fresh",
+   "q": "What are the main approaches and trends in modern database systems and query evaluation techniques?",
+   "recall": 0.0
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "hybrid",
+   "store": "stale",
+   "q": "What are the main approaches and trends in graph data management and processing?",
+   "recall": 0.5
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "hybrid",
+   "store": "own_fresh",
+   "q": "What are the main approaches and trends in graph data management and processing?",
+   "recall": 0.5
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "hybrid",
+   "store": "stale",
+   "q": "What are the main approaches and trends in influence propagation and community detection in social networks?",
+   "recall": 0.0
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "hybrid",
+   "store": "own_fresh",
+   "q": "What are the main approaches and trends in influence propagation and community detection in social networks?",
+   "recall": 0.0
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "hybrid",
+   "store": "stale",
+   "q": "What are the main approaches and trends in network analysis and information retrieval?",
+   "recall": 0.0
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "hybrid",
+   "store": "own_fresh",
+   "q": "What are the main approaches and trends in network analysis and information retrieval?",
+   "recall": 0.0
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "hybrid",
+   "store": "stale",
+   "q": "What are the main approaches and trends in improving data sharing, cleaning, and entity resolution?",
+   "recall": 0.5
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "hybrid",
+   "store": "own_fresh",
+   "q": "What are the main approaches and trends in improving data sharing, cleaning, and entity resolution?",
+   "recall": 0.5
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "hybrid",
+   "store": "stale",
+   "q": "What are the main approaches and trends in improving data compression and information retrieval systems?",
+   "recall": 0.0
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "hybrid",
+   "store": "own_fresh",
+   "q": "What are the main approaches and trends in improving data compression and information retrieval systems?",
+   "recall": 0.0
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "hybrid",
+   "store": "stale",
+   "q": "What are the main approaches and trends in network analysis and bibliometric methods for evaluating scientific contributions and information retrieval?",
+   "recall": 0.0
+  },
+  {
+   "probe": "staleness",
+   "maintainer": "hybrid",
+   "store": "own_fresh",
+   "q": "What are the main approaches and trends in network analysis and bibliometric methods for evaluating scientific contributions and information retrieval?",
+   "recall": 0.5
+  }
+ ]
+}

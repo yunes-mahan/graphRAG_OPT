@@ -1270,6 +1270,22 @@ def revision2_assets(M):
         M["QrCiLo"], M["QrCiHi"] = f"{min(r[1] for r in res):.3f}", f"{max(r[2] for r in res):.3f}"
         M["QrMin"], M["QrMax"] = f"{w.mean().min():.2f}", f"{w.mean().max():.2f}"
         M["QrFresh"] = f"{w['FRESH|recompute all'].mean():.2f}"
+    ex = A / "tau09_exposure.json"
+    if ex.exists():
+        X = json.loads(ex.read_text())
+        M["ExpReports"], M["ExpGained"], M["ExpGainedFour"] = str(X["reports"]), str(X["gained"]), str(X["gained4"])
+    for fn, t in (("probes_qwen_never.json", "QpNever"), ("probes_qwen_tau09.json", "QpNine")):
+        f = A / fn
+        if f.exists():
+            import pandas as _pd
+            from scipy import stats as _st
+            x = _pd.DataFrame(json.loads(f.read_text())["rows"])
+            pv = x.pivot_table(index=["maintainer", "q"], columns="store", values="recall").dropna()
+            d = pv["stale"] - pv["own_fresh"]
+            p_ = _st.wilcoxon(d, zero_method="zsplit").pvalue
+            M[f"{t}N"], M[f"{t}Diff"] = str(len(d)), f"{d.mean():+.2f}"
+            M[f"{t}Stale"], M[f"{t}Ref"] = f"{pv['stale'].mean():.2f}", f"{pv['own_fresh'].mean():.2f}"
+            M[f"{t}P"] = "<0.001" if p_ < 0.001 else f"={p_:.2f}"
     tm = json.loads((A / "tokmodel_check.json").read_text())
     M["TokModelPearson"] = f"{tm['pearson']:.4f}"
     M["TokModelSpearman"] = f"{tm['spearman']:.2f}"

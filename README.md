@@ -132,7 +132,7 @@ cached in `artifacts/qa/cache_*.json`, so the QA experiments re-run offline unle
 | Topic-fingerprint control (random replacement) | `python qa/cosine_baseline.py` |
 | 300 local questions | `python qa/qa_more.py` (cached) |
 | Second judge (Qwen3-14B, local via Ollama, absolute 1-10 ratings) | `ollama pull qwen3:14b`, then `python qa/qwen_judge.py entity`, `global`, `local` |
-| Targeted staleness and coverage probes | `python qa/probes.py run` (cached) |
+| Targeted staleness and coverage probes | `python qa/probes.py run` (cached); local Qwen pipeline incl. tau=0.9: `python qa/qwen_probes.py 0.0` and `0.9` |
 | Deletion leak test and lineage rule | `python qa/deletion_leak.py` |
 | Sensitivity to GraphRAG's max cluster size | `HIER_MAXC=25 python qa/graphrag_hier.py` (also 50, `HIER_GRAPH=wikidata`, `qa/noise_hier.py`), then `python qa/sens_summary.py` |
 | Token model vs measured tokens | `python qa/tokmodel_check.py` |

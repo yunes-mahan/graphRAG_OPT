@@ -186,7 +186,8 @@ New experiments (scripts in `revision/v12/` and `revision/v12_qwen/`, outputs in
 for restricted designs (`make eta_variants`), total tokens per update (`make tco`), coverage of Table 6
 (`make coverage_t6`), GraphRAG update with `use_lcc` off (`make gu_lcc`), coarse levels on global answers with Qwen
 (`make coarse_answers`; judge uninformative, see paper), 300 local questions for the never-refreshed stores with Qwen
-(`make never300`), TOST-margin provenance (`make margin`), rollback factor per graph (`make rollback_factor`).
+(`make never300`), TOST-margin provenance (`make margin`) and the non-inferiority tests at a stricter margin of
+±0.035 (`make margin035`, `revision/v12/d2_tost_035.py`), rollback factor per graph (`make rollback_factor`).
 The A/A test of the pairwise judge was stopped (the local judge prefers the second answer almost always); its partial
 caches are in `artifacts/v12_qwen/`. To re-run: copy `revision/v12` and `revision/v12_qwen` into `$GCM_RESULTS/` next
 to `v2/` (see `revision/README.md`), then run the script named in the target.

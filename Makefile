@@ -9,7 +9,7 @@ RES ?= $(CURDIR)/artifacts
 A    = paper_assets
 
 .PHONY: all assets check reproduce numbers table1 table2 table3 table4 table5 table6 table7 table8 table9 \
-        fig1 fig2 fig3 fig4 fig_lambda batch_sweep matching eta_variants tco coverage_t6 gu_lcc rollback_factor margin \
+        fig1 fig2 fig3 fig4 fig_lambda batch_sweep matching eta_variants tco coverage_t6 gu_lcc rollback_factor margin margin035 \
         coarse_answers never300 costsens
 
 all assets:
@@ -56,6 +56,7 @@ coverage_t6:     ; @cat $(V12)/b5_coverage_t6.json
 gu_lcc:          ; @ls $(V12)/b7/
 rollback_factor: ; @cat $(V12)/a5_rollback_factor.json
 margin:          ; @cat $(V12)/d2_margin_provenance.json
-coarse_answers:  ; @python -c "import json;d=json.load(open('$(RES)/v12_qwen/c1_coarse_global.json'));d.pop('rows');print(json.dumps(d,indent=1))"
-never300:        ; @python -c "import json;d=json.load(open('$(RES)/v12_qwen/c3_never_300.json'));d.pop('per_question');print(json.dumps(d,indent=1))"
+margin035:       ; @$(PY) -c "import json;d=json.load(open('$(V12)/d2_tost_035.json'));[print(k,m,v['n_noninferior'],'/',v['n_stores'],'non-inferior, lowest bound',round(v['min_lower'],3)) for k in d for m,v in d[k].items()]"
+coarse_answers:  ; @$(PY) -c "import json;d=json.load(open('$(RES)/v12_qwen/c1_coarse_global.json'));d.pop('rows');print(json.dumps(d,indent=1))"
+never300:        ; @$(PY) -c "import json;d=json.load(open('$(RES)/v12_qwen/c3_never_300.json'));d.pop('per_question');print(json.dumps(d,indent=1))"
 costsens: assets ; @cat $(A)/tables/costsens.tex

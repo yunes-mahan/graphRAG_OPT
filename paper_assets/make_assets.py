@@ -1797,10 +1797,25 @@ def v2_assets(M):
         M["EvNoNeverTau"], M["EvWdNoNeverTau"] = pc_(EV["entity"]["no_never"]["tau_within"]), pc_(EV["wikidata"]["no_never"]["tau_within"])
         M["EvNoNeverSize"] = pc_(EV["entity"]["no_never"]["size_within"])
         M["EvNoZepSplit"], M["EvWdNoZepSplit"] = pc_(EV["entity"]["no_zep"]["split"]), pc_(EV["wikidata"]["no_zep"]["split"])
+        for g, p in (("entity", "Ev"), ("wikidata", "EvWd")):      # ranges over the three designs (all / no never / no Zep)
+            for k, n in (("split", "Split"), ("tau_within", "Tau")):
+                v = [EV[g][d][k] for d in ("all", "no_never", "no_zep")]
+                M[f"{p}{n}Min"], M[f"{p}{n}Max"] = pc_(min(v)), pc_(max(v))
+        M["EvInitMax"] = f"{100 * max(EV[g][d]['initialisation_within'] for g in EV for d in EV[g]):.2f}\\%"
+    f = V12 / "d2_tost_035.json"
+    if f.exists():                          # D2 (V12): robustness of the non-inferiority tests at a margin of 0.035
+        TM = json.loads(f.read_text())
+        r = {k: TM[k]["0.035"] for k in TM}
+        M["TmMargin"] = "0.035"
+        for k, n in (("more300", "More"), ("own", "Own"), ("c2", "Ctwo"), ("c3", "Cth")):
+            M[f"Tm{n}Lo"] = f"{r[k]['min_lower']:.3f}"
+            M[f"Tm{n}NNi"], M[f"Tm{n}N"] = str(r[k]["n_noninferior"]), str(r[k]["n_stores"])
+        M["TmCtwoFailLo"] = f"{min(s['lo'] for s in r['c2']['stores'].values() if not s['noninferior']):.3f}"
     f = V12 / "d2_margin_provenance.json"
     if f.exists():                          # D2 (V12)
         DP = json.loads(f.read_text())
         M["MarginShare"] = f"{100 * DP['margin_share_of_fresh']:.0f}\\%"
+        M["TmShare"] = f"{100 * 0.035 / DP['fresh_recall']:.0f}\\%"
     f = V12 / "b5_coverage_t6.json"
     if f.exists():                          # B5 (V12)
         CT = json.loads(f.read_text())

@@ -1,0 +1,402 @@
+{
+ "entity": {
+  "RkH": {
+   "levels": [
+    {
+     "level": 0,
+     "communities": 1,
+     "singletons": 0,
+     "min": 40345,
+     "median": 40345.0,
+     "max": 40345
+    },
+    {
+     "level": 1,
+     "communities": 5218,
+     "singletons": 0,
+     "min": 2,
+     "median": 3.0,
+     "max": 21074
+    },
+    {
+     "level": 2,
+     "communities": 2990,
+     "singletons": 0,
+     "min": 2,
+     "median": 4.0,
+     "max": 5400
+    },
+    {
+     "level": 3,
+     "communities": 568,
+     "singletons": 0,
+     "min": 2,
+     "median": 5.0,
+     "max": 1266
+    },
+    {
+     "level": 4,
+     "communities": 93,
+     "singletons": 0,
+     "min": 2,
+     "median": 8.0,
+     "max": 298
+    },
+    {
+     "level": 5,
+     "communities": 22,
+     "singletons": 0,
+     "min": 2,
+     "median": 22.5,
+     "max": 36
+    }
+   ],
+   "reports": 8892,
+   "singletons": 0
+  },
+  "M2hC": {
+   "levels": [
+    {
+     "level": 0,
+     "communities": 1,
+     "singletons": 0,
+     "min": 40345,
+     "median": 40345.0,
+     "max": 40345
+    },
+    {
+     "level": 1,
+     "communities": 3606,
+     "singletons": 0,
+     "min": 2,
+     "median": 4.0,
+     "max": 21075
+    },
+    {
+     "level": 2,
+     "communities": 2815,
+     "singletons": 0,
+     "min": 2,
+     "median": 5.0,
+     "max": 5400
+    },
+    {
+     "level": 3,
+     "communities": 549,
+     "singletons": 0,
+     "min": 2,
+     "median": 6.0,
+     "max": 1266
+    },
+    {
+     "level": 4,
+     "communities": 90,
+     "singletons": 0,
+     "min": 2,
+     "median": 11.0,
+     "max": 298
+    },
+    {
+     "level": 5,
+     "communities": 22,
+     "singletons": 0,
+     "min": 2,
+     "median": 35.0,
+     "max": 51
+    }
+   ],
+   "reports": 7083,
+   "singletons": 0
+  },
+  "MRC": {
+   "levels": [
+    {
+     "level": 0,
+     "communities": 1,
+     "singletons": 0,
+     "min": 40345,
+     "median": 40345.0,
+     "max": 40345
+    },
+    {
+     "level": 1,
+     "communities": 2480,
+     "singletons": 0,
+     "min": 3,
+     "median": 5.0,
+     "max": 21126
+    },
+    {
+     "level": 2,
+     "communities": 2171,
+     "singletons": 0,
+     "min": 3,
+     "median": 6.0,
+     "max": 5407
+    },
+    {
+     "level": 3,
+     "communities": 425,
+     "singletons": 0,
+     "min": 3,
+     "median": 9.0,
+     "max": 1266
+    },
+    {
+     "level": 4,
+     "communities": 75,
+     "singletons": 0,
+     "min": 3,
+     "median": 16.0,
+     "max": 298
+    },
+    {
+     "level": 5,
+     "communities": 19,
+     "singletons": 0,
+     "min": 3,
+     "median": 32.0,
+     "max": 46
+    }
+   ],
+   "reports": 5171,
+   "singletons": 0
+  }
+ },
+ "wikidata": {
+  "RkH": {
+   "levels": [
+    {
+     "level": 0,
+     "communities": 1,
+     "singletons": 0,
+     "min": 67934,
+     "median": 67934.0,
+     "max": 67934
+    },
+    {
+     "level": 1,
+     "communities": 6121,
+     "singletons": 0,
+     "min": 2,
+     "median": 4.0,
+     "max": 34507
+    },
+    {
+     "level": 2,
+     "communities": 2269,
+     "singletons": 0,
+     "min": 2,
+     "median": 4.0,
+     "max": 25159
+    },
+    {
+     "level": 3,
+     "communities": 1245,
+     "singletons": 0,
+     "min": 2,
+     "median": 4.0,
+     "max": 19900
+    },
+    {
+     "level": 4,
+     "communities": 854,
+     "singletons": 0,
+     "min": 2,
+     "median": 4.0,
+     "max": 15973
+    },
+    {
+     "level": 5,
+     "communities": 625,
+     "singletons": 0,
+     "min": 2,
+     "median": 4.0,
+     "max": 12357
+    },
+    {
+     "level": 6,
+     "communities": 464,
+     "singletons": 0,
+     "min": 2,
+     "median": 5.0,
+     "max": 8977
+    },
+    {
+     "level": 7,
+     "communities": 305,
+     "singletons": 0,
+     "min": 2,
+     "median": 4.0,
+     "max": 6765
+    },
+    {
+     "level": 8,
+     "communities": 491,
+     "singletons": 0,
+     "min": 2,
+     "median": 24.0,
+     "max": 58
+    }
+   ],
+   "reports": 12375,
+   "singletons": 0
+  },
+  "M2hC": {
+   "levels": [
+    {
+     "level": 0,
+     "communities": 1,
+     "singletons": 0,
+     "min": 67934,
+     "median": 67934.0,
+     "max": 67934
+    },
+    {
+     "level": 1,
+     "communities": 4297,
+     "singletons": 0,
+     "min": 2,
+     "median": 6.0,
+     "max": 34508
+    },
+    {
+     "level": 2,
+     "communities": 1586,
+     "singletons": 0,
+     "min": 2,
+     "median": 5.0,
+     "max": 25159
+    },
+    {
+     "level": 3,
+     "communities": 947,
+     "singletons": 0,
+     "min": 2,
+     "median": 5.0,
+     "max": 19901
+    },
+    {
+     "level": 4,
+     "communities": 697,
+     "singletons": 0,
+     "min": 2,
+     "median": 5.0,
+     "max": 15973
+    },
+    {
+     "level": 5,
+     "communities": 542,
+     "singletons": 0,
+     "min": 2,
+     "median": 6.0,
+     "max": 12357
+    },
+    {
+     "level": 6,
+     "communities": 417,
+     "singletons": 0,
+     "min": 2,
+     "median": 6.0,
+     "max": 8977
+    },
+    {
+     "level": 7,
+     "communities": 281,
+     "singletons": 0,
+     "min": 2,
+     "median": 6.0,
+     "max": 6765
+    },
+    {
+     "level": 8,
+     "communities": 483,
+     "singletons": 0,
+     "min": 2,
+     "median": 30.0,
+     "max": 82
+    }
+   ],
+   "reports": 9251,
+   "singletons": 0
+  },
+  "MRC": {
+   "levels": [
+    {
+     "level": 0,
+     "communities": 1,
+     "singletons": 0,
+     "min": 67934,
+     "median": 67934.0,
+     "max": 67934
+    },
+    {
+     "level": 1,
+     "communities": 4221,
+     "singletons": 0,
+     "min": 3,
+     "median": 6.0,
+     "max": 34513
+    },
+    {
+     "level": 2,
+     "communities": 1448,
+     "singletons": 0,
+     "min": 3,
+     "median": 6.0,
+     "max": 25162
+    },
+    {
+     "level": 3,
+     "communities": 804,
+     "singletons": 0,
+     "min": 3,
+     "median": 6.0,
+     "max": 19900
+    },
+    {
+     "level": 4,
+     "communities": 562,
+     "singletons": 0,
+     "min": 3,
+     "median": 6.0,
+     "max": 15973
+    },
+    {
+     "level": 5,
+     "communities": 438,
+     "singletons": 0,
+     "min": 3,
+     "median": 7.0,
+     "max": 12357
+    },
+    {
+     "level": 6,
+     "communities": 327,
+     "singletons": 0,
+     "min": 3,
+     "median": 8.0,
+     "max": 8977
+    },
+    {
+     "level": 7,
+     "communities": 219,
+     "singletons": 0,
+     "min": 3,
+     "median": 8.0,
+     "max": 6765
+    },
+    {
+     "level": 8,
+     "communities": 430,
+     "singletons": 0,
+     "min": 2,
+     "median": 32.0,
+     "max": 79
+    }
+   ],
+   "reports": 8450,
+   "singletons": 0
+  }
+ }
+}

@@ -247,7 +247,16 @@ def run(seed):
         for name in (ONLY or ("reindex", "reindex+match", "graphrag_update", "warm", "zep_attach")):
             st = state.setdefault(name, dict(comms=None, store={tau: {} for tau in TAUS}, nextid=0, cost=defaultdict(list),
                                              Qleaf=[], Qtop=[], nrep=[]))
-            if name == "kcore_authors":                             # VLDB revision B2: authors' k-core code + id matching
+            if name == "kcore":                                       # k-core hierarchy (BFS split) + id matching (V13/T2)
+                import stability_variants as sv
+                cc = sv.kcore(el, len(node_t))
+                if st["comms"] is None:
+                    comms = {(k[0], ("s", k[1])): m for k, m in cc.items()}
+                else:
+                    mp = match_ids(st["comms"], cc)
+                    comms = {(mp.get(k, (k[0], ("s", t, k[1])))): m for k, m in cc.items()}
+                lv = None
+            elif name == "kcore_authors":                             # VLDB revision B2: authors' k-core code + id matching
                 sys.path.insert(0, str(HERE / "v2"))
                 import b2_kcore_authors as ka
                 cc = ka.authors_kcore(el, len(node_t), os.environ.get("KCORE_TYPE", "RkH"))
@@ -352,6 +361,9 @@ def run(seed):
                         cov |= m
                 st.setdefault("cov", defaultdict(list))[ms].append(len(cov & set(nodes.tolist())) / len(nodes))
                 st.setdefault("cov_lcc", defaultdict(list))[ms].append(len(cov & keep) / max(len(keep), 1))
+                newn = set(np.where(node_t == t)[0].tolist())       # V13/T3: coverage of this update's new entities
+                if t > 0 and newn:
+                    st.setdefault("cov_new", defaultdict(list))[ms].append(len(cov & newn) / len(newn))
             if t > 0:
                 for tau in TAUS:
                     store = st["store"][tau]
@@ -407,6 +419,8 @@ def run(seed):
                          cost_series={f"{tau}|{ms}": [float(x) for x in v] for (tau, ms), v in st["cost"].items()},
                          cost={f"{tau}|{ms}": float(np.mean(v)) for (tau, ms), v in st["cost"].items()},
                          cost_own={f"{tau}|{ms}": float(np.mean(v)) for (tau, ms), v in st.get("cost_own", {}).items()})
+        if "cov_new" in st:
+            res[name]["coverage_new"] = {str(ms): float(np.mean(st["cov_new"][ms])) for ms in MINS}
         if "bd" in st:
             res[name]["breakdown_tau09"] = {f"{lv}|{bk}": v for (lv, bk), v in st["bd"].items()}
         if TOKVARIANTS:

@@ -10,6 +10,7 @@ A    = paper_assets
 
 .PHONY: all assets check reproduce numbers table1 table2 table3 table4 table5 table6 table7 table8 table9 \
         fig1 fig2 fig3 fig4 fig_lambda batch_sweep matching eta_variants tco coverage_t6 gu_lcc rollback_factor margin margin035 \
+        lcc kcore_levels batch_newcov wiki_all extra_rows reuse_checks \
         coarse_answers never300 costsens
 
 all assets:
@@ -60,3 +61,11 @@ margin035:       ; @$(PY) -c "import json;d=json.load(open('$(V12)/d2_tost_035.j
 coarse_answers:  ; @$(PY) -c "import json;d=json.load(open('$(RES)/v12_qwen/c1_coarse_global.json'));d.pop('rows');print(json.dumps(d,indent=1))"
 never300:        ; @$(PY) -c "import json;d=json.load(open('$(RES)/v12_qwen/c3_never_300.json'));d.pop('per_question');print(json.dumps(d,indent=1))"
 costsens: assets ; @cat $(A)/tables/costsens.tex
+
+# ---- V13 table fixes (T1-T5): cached results; re-run with the script named in revision/v12/
+lcc:          ; @cat $(V12)/t1_lcc.json                 # Table 2: largest connected component vs all entities
+kcore_levels: ; @cat $(V12)/t2_kcore_levels.json        # Table 3: k-core communities per level (no singletons)
+batch_newcov: assets ; @cat $(A)/tables/batch.tex; cat $(V12)/t3_arxiv.json   # Table 4: coverage of new nodes, 2020 pool
+wiki_all:     ; @cat $(V12)/t4_wiki.json                # Table 7: all maintainers on Wikipedia (snapshot adapter)
+extra_rows:   ; @cat $(V12)/t4/extra_rows.json; cat $(V12)/t4/scale_*.json   # Table 7: DF Leiden, local repair, citation2 cells
+reuse_checks: ; @cat $(V12)/t5_reuse_checks.json        # Table 8: fresh cells, self-comparison in the fidelity check

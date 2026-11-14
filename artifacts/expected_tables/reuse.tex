@@ -2,16 +2,16 @@
 \toprule
 Maintainer & rule & input & written & update tokens & subst. & local ($p$) & global win\\
 \midrule
-Recompute & ID & full & 213 & 816k (100\%) & 0\% & 0.35 (0.11) & 0.53 / 0.52 \\
-Recompute & topic & full & 91 & 320k (39\%) & 18\% & 0.34 (0.30) & 0.73 / 0.69 \\
-Warm-start & ID & full & 159 & 590k (72\%) & 2\% & 0.29 (0.32) & 0.54 / 0.53 \\
-Warm-start & topic & full & 55 & 158k (19\%) & 33\% & 0.29 (0.64) & 0.59 / 0.60 \\
-Frontier-restr. & topic & titles & 43 & 30k (3.7\%) & 41\% & 0.32 (0.82) & 0.64 / 0.59 \\
-Hybrid & topic & titles & 46 & 26k (3.2\%) & 31\% & 0.32 (0.74) & 0.64 / 0.61 \\
-Warm + rollback & ID & full & 105 & 347k (43\%) & 1\% & 0.30 (0.84) & 0.68 / 0.56 \\
-Warm + rollback & topic & full & 30 & 53k (6.5\%) & 15\% & 0.33 (0.58) & 0.62 / 0.57 \\
-Warm + rollback & topic & titles & 30 & 20k (2.5\%) & 31\% & 0.33 (0.63) & 0.51 / 0.46 \\
+Recompute & ID & full & 213 & 816k (100\%) & 0 / 0\% & 0.35 (0.11) & 0.53 / 0.52 \\
+Recompute & topic & full & 91 & 320k (39\%) & 18 / 33\% & 0.34 (0.30) & 0.73 / 0.69 \\
+Warm-start & ID & full & 159 & 590k (72\%) & 2 / 5\% & 0.29 (0.32) & 0.54 / 0.53 \\
+Warm-start & topic & full & 55 & 158k (19\%) & 33 / 45\% & 0.29 (0.64) & 0.59 / 0.60 \\
+Frontier-restr. & topic & titles & 43 & 30k (3.7\%) & 41 / 41\% & 0.32 (0.82) & 0.64 / 0.59 \\
+Hybrid & topic & titles & 46 & 26k (3.2\%) & 31 / 31\% & 0.32 (0.74) & 0.64 / 0.61 \\
+Warm + rollback & ID & full & 105 & 347k (43\%) & 1 / 3\% & 0.30 (0.84) & 0.68 / 0.56 \\
+Warm + rollback & topic & full & 30 & 53k (6.5\%) & 15 / 26\% & 0.33 (0.58) & 0.62 / 0.57 \\
+Warm + rollback & topic & titles & 30 & 20k (2.5\%) & 31 / 31\% & 0.33 (0.63) & 0.51 / 0.46 \\
 \midrule
-Fresh reference & all & full & \multicolumn{3}{c}{(reference)} & 0.32 & 0.50 / 0.50 \\
+Fresh reference & all & full & 55 & 164k$^{*}$ & -- & 0.32 & 0.50 / 0.50 \\
 \bottomrule
 \end{tabular}

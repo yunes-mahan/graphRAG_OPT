@@ -1,0 +1,255 @@
+{
+ "pool_2020": 8892,
+ "10|0|recompute_leiden": {
+  "coverage": 0.9949187425079556,
+  "coverage_new": 1.0,
+  "new_reported_per_update": 40.5,
+  "new_reported_mean_size": 229.15359478381455,
+  "new_nodes": 10.0
+ },
+ "10|0|warmstart_leiden": {
+  "coverage": 0.9945698469806102,
+  "coverage_new": 1.0,
+  "new_reported_per_update": 3.9,
+  "new_reported_mean_size": 16.484420289855073,
+  "new_nodes": 10.0
+ },
+ "10|0|frontier_leiden": {
+  "coverage": 0.9946899179111921,
+  "coverage_new": 1.0,
+  "new_reported_per_update": 0.0,
+  "new_reported_mean_size": 0.0,
+  "new_nodes": 10.0
+ },
+ "10|0|graphrag_delta": {
+  "coverage": 0.9943427529750192,
+  "coverage_new": 0.0,
+  "new_reported_per_update": 0.0,
+  "new_reported_mean_size": 0.0,
+  "new_nodes": 10.0
+ },
+ "10|1|recompute_leiden": {
+  "coverage": 0.994993487579449,
+  "coverage_new": 0.99,
+  "new_reported_per_update": 41.4,
+  "new_reported_mean_size": 278.4147930649083,
+  "new_nodes": 10.0
+ },
+ "10|1|warmstart_leiden": {
+  "coverage": 0.9945556835975143,
+  "coverage_new": 0.99,
+  "new_reported_per_update": 4.5,
+  "new_reported_mean_size": 18.151666666666667,
+  "new_nodes": 10.0
+ },
+ "10|1|frontier_leiden": {
+  "coverage": 0.9946916172065382,
+  "coverage_new": 0.99,
+  "new_reported_per_update": 0.1,
+  "new_reported_mean_size": 0.5,
+  "new_nodes": 10.0
+ },
+ "10|1|graphrag_delta": {
+  "coverage": 0.9943427529750192,
+  "coverage_new": 0.0,
+  "new_reported_per_update": 0.0,
+  "new_reported_mean_size": 0.0,
+  "new_nodes": 10.0
+ },
+ "10|2|recompute_leiden": {
+  "coverage": 0.9949323501755795,
+  "coverage_new": 0.9800000000000001,
+  "new_reported_per_update": 44.7,
+  "new_reported_mean_size": 212.9218139524975,
+  "new_nodes": 10.0
+ },
+ "10|2|warmstart_leiden": {
+  "coverage": 0.9945619164528069,
+  "coverage_new": 0.9800000000000001,
+  "new_reported_per_update": 4.6,
+  "new_reported_mean_size": 33.777777777777786,
+  "new_nodes": 10.0
+ },
+ "10|2|frontier_leiden": {
+  "coverage": 0.9946797254204884,
+  "coverage_new": 0.9800000000000001,
+  "new_reported_per_update": 0.0,
+  "new_reported_mean_size": 0.0,
+  "new_nodes": 10.0
+ },
+ "10|2|graphrag_delta": {
+  "coverage": 0.9943427529750192,
+  "coverage_new": 0.0,
+  "new_reported_per_update": 0.0,
+  "new_reported_mean_size": 0.0,
+  "new_nodes": 10.0
+ },
+ "100|0|recompute_leiden": {
+  "coverage": 0.9952126844475185,
+  "coverage_new": 0.9960000000000001,
+  "new_reported_per_update": 45.2,
+  "new_reported_mean_size": 267.2781993631236,
+  "new_nodes": 100.0
+ },
+ "100|0|warmstart_leiden": {
+  "coverage": 0.9948941531355004,
+  "coverage_new": 0.9960000000000001,
+  "new_reported_per_update": 4.5,
+  "new_reported_mean_size": 33.54548872180451,
+  "new_nodes": 100.0
+ },
+ "100|0|frontier_leiden": {
+  "coverage": 0.9950189478412441,
+  "coverage_new": 0.9960000000000001,
+  "new_reported_per_update": 0.1,
+  "new_reported_mean_size": 0.5,
+  "new_nodes": 100.0
+ },
+ "100|0|graphrag_delta": {
+  "coverage": 0.9920414690446222,
+  "coverage_new": 0.152,
+  "new_reported_per_update": 2.7,
+  "new_reported_mean_size": 5.716666666666667,
+  "new_nodes": 100.0
+ },
+ "100|1|recompute_leiden": {
+  "coverage": 0.9953317441570632,
+  "coverage_new": 0.9960000000000001,
+  "new_reported_per_update": 42.6,
+  "new_reported_mean_size": 273.8497010212169,
+  "new_nodes": 100.0
+ },
+ "100|1|warmstart_leiden": {
+  "coverage": 0.994852396291088,
+  "coverage_new": 0.9960000000000001,
+  "new_reported_per_update": 5.2,
+  "new_reported_mean_size": 27.926309523809522,
+  "new_nodes": 100.0
+ },
+ "100|1|frontier_leiden": {
+  "coverage": 0.9949597620604138,
+  "coverage_new": 0.9960000000000001,
+  "new_reported_per_update": 0.1,
+  "new_reported_mean_size": 0.5,
+  "new_nodes": 100.0
+ },
+ "100|1|graphrag_delta": {
+  "coverage": 0.991996399669977,
+  "coverage_new": 0.126,
+  "new_reported_per_update": 2.2,
+  "new_reported_mean_size": 5.7,
+  "new_nodes": 100.0
+ },
+ "100|2|recompute_leiden": {
+  "coverage": 0.9952988127639039,
+  "coverage_new": 0.9949999999999999,
+  "new_reported_per_update": 42.0,
+  "new_reported_mean_size": 274.405652419926,
+  "new_nodes": 100.0
+ },
+ "100|2|warmstart_leiden": {
+  "coverage": 0.9949578865926011,
+  "coverage_new": 0.9949999999999999,
+  "new_reported_per_update": 4.3,
+  "new_reported_mean_size": 35.618235294117646,
+  "new_nodes": 100.0
+ },
+ "100|2|frontier_leiden": {
+  "coverage": 0.995017224577878,
+  "coverage_new": 0.9949999999999999,
+  "new_reported_per_update": 0.0,
+  "new_reported_mean_size": 0.0,
+  "new_nodes": 100.0
+ },
+ "100|2|graphrag_delta": {
+  "coverage": 0.9919815862275577,
+  "coverage_new": 0.148,
+  "new_reported_per_update": 2.5,
+  "new_reported_mean_size": 5.958333333333333,
+  "new_nodes": 100.0
+ },
+ "1000|0|recompute_leiden": {
+  "coverage": 0.9975546165676819,
+  "coverage_new": 0.9975555555555555,
+  "new_reported_per_update": 36.1,
+  "new_reported_mean_size": 297.2700462015292,
+  "new_nodes": 889.2
+ },
+ "1000|0|warmstart_leiden": {
+  "coverage": 0.9971946156263449,
+  "coverage_new": 0.9975555555555555,
+  "new_reported_per_update": 5.2,
+  "new_reported_mean_size": 32.63,
+  "new_nodes": 889.2
+ },
+ "1000|0|frontier_leiden": {
+  "coverage": 0.9972399343085528,
+  "coverage_new": 0.9974175386148479,
+  "new_reported_per_update": 0.8,
+  "new_reported_mean_size": 3.45,
+  "new_nodes": 889.2
+ },
+ "1000|0|graphrag_delta": {
+  "coverage": 0.9851977889639798,
+  "coverage_new": 0.671384653712008,
+  "new_reported_per_update": 29.0,
+  "new_reported_mean_size": 18.555281862745097,
+  "new_nodes": 889.2
+ },
+ "1000|1|recompute_leiden": {
+  "coverage": 0.9976868258713764,
+  "coverage_new": 0.9973333333333332,
+  "new_reported_per_update": 37.8,
+  "new_reported_mean_size": 284.7902017864071,
+  "new_nodes": 889.2
+ },
+ "1000|1|warmstart_leiden": {
+  "coverage": 0.9972494066378254,
+  "coverage_new": 0.9969999999999999,
+  "new_reported_per_update": 5.5,
+  "new_reported_mean_size": 49.39686147186147,
+  "new_nodes": 889.2
+ },
+ "1000|1|frontier_leiden": {
+  "coverage": 0.9973003151598344,
+  "coverage_new": 0.9971111111111112,
+  "new_reported_per_update": 0.9,
+  "new_reported_mean_size": 3.5,
+  "new_nodes": 889.2
+ },
+ "1000|1|graphrag_delta": {
+  "coverage": 0.9849269351161258,
+  "coverage_new": 0.6648629795714999,
+  "new_reported_per_update": 28.7,
+  "new_reported_mean_size": 18.691689365218778,
+  "new_nodes": 889.2
+ },
+ "1000|2|recompute_leiden": {
+  "coverage": 0.9977154968598008,
+  "coverage_new": 0.9971111111111112,
+  "new_reported_per_update": 41.0,
+  "new_reported_mean_size": 290.64052076591804,
+  "new_nodes": 889.2
+ },
+ "1000|2|warmstart_leiden": {
+  "coverage": 0.9972268346780928,
+  "coverage_new": 0.9968888888888888,
+  "new_reported_per_update": 4.6,
+  "new_reported_mean_size": 28.80411764705882,
+  "new_nodes": 889.2
+ },
+ "1000|2|frontier_leiden": {
+  "coverage": 0.9972204656959509,
+  "coverage_new": 0.9969865470852017,
+  "new_reported_per_update": 0.7,
+  "new_reported_mean_size": 2.7333333333333334,
+  "new_nodes": 889.2
+ },
+ "1000|2|graphrag_delta": {
+  "coverage": 0.9851115668673984,
+  "coverage_new": 0.6674623816641755,
+  "new_reported_per_update": 28.7,
+  "new_reported_mean_size": 18.92258376815674,
+  "new_nodes": 889.2
+ }
+}

@@ -188,6 +188,12 @@ for restricted designs (`make eta_variants`), total tokens per update (`make tco
 (`make coarse_answers`; judge uninformative, see paper), 300 local questions for the never-refreshed stores with Qwen
 (`make never300`), TOST-margin provenance (`make margin`) and the non-inferiority tests at a stricter margin of
 ±0.035 (`make margin035`, `revision/v12/d2_tost_035.py`), rollback factor per graph (`make rollback_factor`).
+V13 table fixes (CPU only, no LLM calls; scripts `revision/v12/t*.py`, outputs `artifacts/v12/t*`): LCC sizes behind
+Table 2's coverage (`make lcc`), all stream cells of Table 3 and k-core levels (`make kcore_levels`), coverage of new
+nodes and the 2020 pool for Table 4 (`make batch_newcov`), all maintainers on Wikipedia, DF Leiden and local repair
+rows and the remaining ogbl-citation2 cells of Table 7 (`make wiki_all`, `make extra_rows`), and the Table 8 fresh
+cells and self-comparison check (`make reuse_checks`). `qa/graphrag_hier.py` gained the BFS k-core mode
+(`HIER_ONLY=kcore`) and records `coverage_new`; defaults are unchanged.
 The A/A test of the pairwise judge was stopped (the local judge prefers the second answer almost always); its partial
 caches are in `artifacts/v12_qwen/`. To re-run: copy `revision/v12` and `revision/v12_qwen` into `$GCM_RESULTS/` next
 to `v2/` (see `revision/README.md`), then run the script named in the target.

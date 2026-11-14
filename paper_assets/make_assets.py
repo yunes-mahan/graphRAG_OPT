@@ -732,7 +732,7 @@ def token_metric_assets(M):
                 continue
             mu = np.mean(v)
             ci = _st.t.ppf(0.975, len(v) - 1) * np.std(v, ddof=1) / np.sqrt(len(v)) if len(v) > 1 else 0
-            txt = f"{mu:.3f}$\\pm${ci:.3f}" if ci >= 5e-4 else f"{mu:.4f}$\\pm${ci:.4f}"   # A3 (V12)
+            txt = f"{mu:.3f}$\\pm${ci:.3f}" if ci >= 5e-4 else f"{mu:.3f}$\\pm${{<}}0.001$"   # T7 (V13): 3 decimals
             row.append(f"\\textbf{{{txt}}}" if best[g] is not None and mu >= best[g] - 5e-4 else txt)
         gm = [np.mean(cell[(m, g)]) for g, _ in groups if cell[(m, g)]]
         row.append(f"{np.mean(gm):.3f}" if len(gm) == len(groups) else "--")
@@ -823,6 +823,11 @@ def newmethod_assets(M):
             ("priced_warm|id|full", "Warm + rollback", "ID", "full"),
             ("priced_warm|topic:0.95|full", "Warm + rollback", "topic", "full"),
             ("priced_warm|topic:0.95|titles", "Warm + rollback", "topic", "titles")]
+    t5f = A / "v12" / "t5_reuse_checks.json"   # T5 (V13): subst. also over pairs that are not a text vs itself
+    T5R = json.loads(t5f.read_text()) if t5f.exists() else None
+    if T5R:
+        r_ = T5R["table8"]["recompute_leiden|id|full"]
+        M["SubSelfRecId"], M["SubNRecId"] = str(r_["identical_text"]), str(r_["final_reports"])
     lines = []
     for key, m, rule, inp in rows:
         r = allr[key]
@@ -830,11 +835,12 @@ def newmethod_assets(M):
         gd = r.get("global_diversity", r.get("g_dive"))
         lp = r.get("local_p_vs_fresh", r.get("local_p"))
         lines.append(f"{m} & {rule} & {inp} & {r['written']} & {r['update_tokens'] / 1e3:.0f}k ({(lambda x: f'{x:.1f}' if x < 10 else f'{x:.0f}')(100 * r['update_tokens'] / base)}\\%) & "
-                     f"{100 * r['substantive']:.0f}\\% & {r['local_recall']:.2f} ({lp:.2f}) & {gc:.2f} / {gd:.2f} \\\\")
+                     f"{100 * r['substantive']:.0f}" + (f" / {100 * T5R['table8'][key]['subst_nonidentical']:.0f}" if T5R else "") +
+                     f"\\% & {r['local_recall']:.2f} ({lp:.2f}) & {gc:.2f} / {gd:.2f} \\\\")
     tex = ("\\begin{tabular}{l l l r r r c c}\n\\toprule\n"
            "Maintainer & rule & input & written & update tokens & subst. & local ($p$) & global win\\\\\n"
-           "\\midrule\n" + "\n".join(lines) + "\n\\midrule\n"
-           f"Fresh reference & all & full & \\multicolumn{{3}}{{c}}{{(reference)}} & {json.loads((A / 'qa' / 'results.json').read_text())['summary'][[x['store'] for x in json.loads((A / 'qa' / 'results.json').read_text())['summary']].index('FRESH|recompute all')]['recall']:.2f} & 0.50 / 0.50 \\\\\n"
+           "\\midrule\n" + "\n".join(lines) + "\n\\midrule\n" +
+           (f"Fresh reference & all & full & {T5R['fresh']['written']} & {T5R['fresh']['tokens'] / 1e3:.0f}k$^{{*}}$ & -- & " if T5R else "Fresh reference & all & full & \\multicolumn{3}{c}{(reference)} & ") + f"{json.loads((A / 'qa' / 'results.json').read_text())['summary'][[x['store'] for x in json.loads((A / 'qa' / 'results.json').read_text())['summary']].index('FRESH|recompute all')]['recall']:.2f} & 0.50 / 0.50 \\\\\n"
            "\\bottomrule\n\\end{tabular}\n")
     (TAB / "reuse.tex").write_text(tex)
     pt = allr["priced_warm|topic:0.95|titles"]
@@ -982,7 +988,13 @@ def extra_graphs_table(M):
     S = json.loads((A / "scale.json").read_text()) if (A / "scale.json").exists() else {}
     meth = [("priced_warm", "Warm-start + rollback"), ("priced_frontier", "Frontier-restr.\\ + rollback"),
             ("warmstart_leiden", "Warm-start Leiden"), ("frontier_leiden", "Frontier-restr.\\ Leiden"), ("hybrid", "Hybrid"),
-            ("lazy", "Lazy attach (Zep)"), ("recompute_leiden", "Recompute Leiden"), ("graphrag_delta", "GraphRAG update (delta)")]
+            ("df_leiden_sahu", "DF Leiden (Sahu's code)"), ("lazy", "Lazy attach (Zep)"), ("recompute_leiden", "Recompute Leiden"),
+            ("local_repair", "Local repair"), ("graphrag_delta", "GraphRAG update (delta)")]
+    xf = A / "v12" / "t4" / "extra_rows.json"           # T4 (V13): DF Leiden and local repair on Wikidata / entity graph
+    X = json.loads(xf.read_text()) if xf.exists() else {}
+    for sf in sorted((A / "v12" / "t4").glob("scale_*.json")):   # T4 (V13): more citation2 cells
+        if sf.exists():
+            S = {**S, **{k: v for k, v in json.loads(sf.read_text()).items() if not k.endswith("_ref")}}
     ct = A / "v12" / "b5_coverage_t6.json"
     covt6 = json.loads(ct.read_text()) if ct.exists() else None
 
@@ -991,11 +1003,25 @@ def extra_graphs_table(M):
     cols = {}
     for name, R in (("wd", W), ("eg", E)):
         cols[name] = {m: [R[f"{m}|{k}"]["score"] for k in range(5)] for m, _ in meth if all(f"{m}|{k}" in R for k in range(5))}
+    xcov = {}
+    for name, g in (("wd", "wikidata"), ("eg", "entity")):
+        for m, _ in meth:
+            if m not in cols[name] and all(f"{g}|{m}|{k}" in X for k in range(5)):
+                cols[name][m] = [X[f"{g}|{m}|{k}"]["score"] for k in range(5)]
+                xcov[(name, m)] = float(np.mean([X[f"{g}|{m}|{k}"]["coverage"] for k in range(5)]))
     cols["cit"] = {m: [S[f"1.0|{m}"]["score"]] for m, _ in meth if f"1.0|{m}" in S}
     # B6 (V12): Wikipedia stream (one real order with deletions; 5 Leiden seeds), wiki/wiki_priced.py, lambda = 0.31
     WP = json.loads((A / "wiki" / "priced_results.json").read_text())
     wmap = {"recompute_leiden": "recompute", "warmstart_leiden": "warm", "priced_warm": "priced"}
     cols["wiki"] = {m: [r[0] - 0.31 * r[1] for r in WP[w]["runs"]] for m, w in wmap.items()}
+    wf = A / "v12" / "t4_wiki.json"                      # T4 (V13): all maintainers via the snapshot adapter
+    if wf.exists():
+        TW = json.loads(wf.read_text())
+        for m in TW:
+            v = [q - 0.31 * c for q, c in TW[m]["runs"]]
+            if m in cols["wiki"]:
+                assert np.allclose(v, cols["wiki"][m]), m        # the adapter reproduces wiki_priced.py exactly
+            cols["wiki"][m] = v
     best = {c: max(np.mean(v) for v in cols[c].values()) for c in cols}
     rows = []
     for m, lab in meth:
@@ -1007,10 +1033,11 @@ def extra_graphs_table(M):
                     cells.append("--")
                 continue
             v = cols[c][m]
-            txt = f"{np.mean(v):.3f}" + ((f"$\\pm${ci(v):.3f}" if ci(v) >= 5e-4 else f"$\\pm${ci(v):.4f}") if len(v) > 1 else "")
+            txt = f"{np.mean(v):.3f}" + ((f"$\\pm${ci(v):.3f}" if ci(v) >= 5e-4 else "$\\pm{<}0.001$") if len(v) > 1 else "")
             cells.append(f"\\textbf{{{txt}}}" if np.mean(v) >= best[c] - 5e-4 else txt)
             if c in ("wd", "eg") and covt6:                     # B5 (V12): coverage column
-                cells.append(f"{100 * covt6['wikidata' if c == 'wd' else 'entity'][m]['mean']:.1f}")
+                cv_ = xcov.get((c, m), covt6['wikidata' if c == 'wd' else 'entity'].get(m, {}).get('mean'))
+                cells.append(f"{100 * cv_:.1f}")
         rows.append(" & ".join(cells) + " \\\\")
     tex = (("\\begin{tabular}{l c c c c c c}\n\\toprule\nMaintainer & Wikidata (5) & cov.\\,\\% & entity gr.\\ (5) & cov.\\,\\% & Wikipedia & citation2\\\\\n")
            if covt6 else "\\begin{tabular}{l c c c}\n\\toprule\nMaintainer & Wikidata films (5) & LLM entity graph (5) & ogbl-citation2 (1)\\\\\n")
@@ -1083,11 +1110,17 @@ def revision_assets(M):
                 f"{c['0.9']:.2f}", f"{c['0.5']:.2f}", f"{c['0.0']:.2f}")
             M[f"{pre}Qtop{t}"], M[f"{pre}Qleaf{t}"], M[f"{pre}Cov{t}"] = f"{qt:.3f}", f"{ql:.3f}", pct(cov)
             M[f"{pre}Rep{t}"] = f"{rep:,.0f}".replace(",", "{,}")
-            never = "--" if m == "reindex" else f"{c['0.0']:.2f}"
+            never = f"{c['0.0']:.2f}"            # T1 (V13): re-index rewrites everything also under "never"
             rows.append(f"{lab} & {c['0.9']:.2f} & {c['0.7']:.2f} & {c['0.5']:.2f} & {never} & {ql:.3f} & {qt:.3f} & "
                         f"{100 * cov:.0f}\\% & {rep:,.0f} \\\\".replace(",", "{,}"))
         blocks.append(f"\\midrule\n\\multicolumn{{9}}{{l}}{{\\emph{{{gname}}} ({len(seeds)} update orders)}}\\\\\n" + "\n".join(rows))
         M[f"{pre}Seeds"] = str(len(seeds))
+        M[f"{pre}ZepNeverMax"] = f"{max(d[s_]['zep_attach']['cost']['0.0|1'] for s_ in seeds):.2f}"
+    lf = A / "v12" / "t1_lcc.json"
+    if lf.exists():                         # T1 (V13): GraphRAG clusters only the largest connected component
+        L = json.loads(lf.read_text())
+        for g, t in (("entity", "Eg"), ("wikidata", "Wd")):
+            M[f"Lcc{t}N"], M[f"Lcc{t}All"] = f"{L[g]['lcc']:,}".replace(",", "{,}"), f"{L[g]['entities']:,}".replace(",", "{,}")
     if blocks:
         tex = ("\\begin{tabular}{l c c c c c c c r}\n\\toprule\n"
                " & \\multicolumn{4}{c}{report tokens per update (rel.\\ to re-index)} & & & & \\\\\n"
@@ -1457,6 +1490,14 @@ def revision2_assets(M):
                 return None
             D = json.loads(fn.read_text())
             return float(np.mean([D[x][key]["cost"]["0.9|1"] for x in D]))
+        def t2_stream(g, key, files):
+            """T2 (V13): per-update stream cost (tau 0.9) over orders 0-2, merged from several result files."""
+            D = {}
+            for f_ in files:
+                if f_.exists():
+                    D.update({x: v for x, v in json.loads(f_.read_text()).items() if key in v})
+            return float(np.mean([D[x][key]["cost"]["0.9|1"] for x in ("0", "1", "2")])) if all(x in D for x in ("0", "1", "2")) else None
+        T2D = A / "v12" / "t2"
         blocks = []
         for g, gname in (("entity", "LLM entity graph"), ("wikidata", "Wikidata films")):
             t = {"entity": "", "wikidata": "Wd"}[g]
@@ -1467,7 +1508,7 @@ def revision2_assets(M):
                 if f"{k}r" in CR.get(g, {}):
                     r = dict(CR[g][f"{k}r"])
                     r.update(TS.get(g, {}).get(f"threshold{k}", {}))
-                    rows_src.append((f"Consensus, {k} runs", "yes", r, None))
+                    rows_src.append((f"Consensus, {k} runs", "yes", r, stream_cost(g, f"r{k}")))   # T2 (V13)
             if "threshold" in FX:
                 rows_src.append(("Consensus, 100 runs", "yes", FX["threshold"], stream_cost(g, "threshold")))
             if "soft" in FX:
@@ -1477,20 +1518,17 @@ def revision2_assets(M):
             kc = dict(SV[g]["kcore"]); kc.update(TS.get(g, {}).get("kcore", {}))
             wm = dict(SV[g]["warm"]); wm.update(TS.get(g, {}).get("warm", {}))
             # A4: warm start's structure columns are those of the GraphRAG reference it starts from (see caption)
-            rows_src += [("k-core, our BFS stand-in", "yes", kc, None)]
+            rows_src += [("k-core, our BFS stand-in", "yes", kc, t2_stream(g, "kcore", [T2D / f"kcore_{g}_-_s{x}.json" for x in range(3)]))]
             # B2 (VLDB revision): the authors' own k-core hierarchy (Hossain & Sariyuce), v2/b2_kcore_authors.py
             KA = json.loads((A / "v2" / "b2_kcore_authors.json").read_text()) if (A / "v2" / "b2_kcore_authors.json").exists() else {}
             for ct in ("RkH", "M2hC", "MRC"):
                 if ct in KA.get(g, {}):
-                    sf = A / "v2" / "hier5" / f"kcore_authors_{g}_{ct}.json"
-                    sc_ = None
-                    if sf.exists():
-                        Dk = json.loads(sf.read_text())
-                        if len(Dk) == 3:
-                            sc_ = float(np.mean([Dk[x]["kcore_authors"]["cost"]["0.9|1"] for x in Dk]))
+                    sc_ = t2_stream(g, "kcore_authors", [A / "v2" / "hier5" / f"kcore_authors_{g}_{ct}.json"] +
+                                    [T2D / f"kcore_authors_{g}_{ct}_s{x}.json" for x in range(3)])
                     rows_src.append((f"k-core, authors' {ct}", "yes", KA[g][ct], sc_))
             # A4: warm start's structure columns are those of the GraphRAG reference it starts from (see caption)
-            rows_src += [("Warm start$^{\\dagger}$", "no", wm, None)]
+            rows_src += [("Warm start$^{\\dagger}$", "no", wm,
+                          t2_stream(g, "warm", [A / ("graphrag_hier.json" if g == "entity" else "graphrag_hier_wikidata.json")]))]
             rows = []
             for lab_, rep_, r, sc in rows_src:
                 sc_ = "--" if sc is None else f"{sc:.2f}"
@@ -1695,27 +1733,50 @@ def v2_assets(M):
     if f.exists():                          # B1 (V12): batch-size sweep table + macros
         BS = json.loads(f.read_text())
         pc1 = lambda x: f"{100 * x:.1f}" if x >= 0.001 else f"{100 * x:.2f}"  # noqa: E731
+        # T3 (V13): one coverage definition for every row (mean over versions of the share of present nodes in a
+        # reported community; hierarchy: every community, flat: >= 5 members), coverage of each update's NEW nodes,
+        # and "n/a" where a maintainer does not apply (flat maintainers on GraphRAG's hierarchy)
+        T3D = A / "v12" / "t3"
+        T3A = json.loads((A / "v12" / "t3_arxiv.json").read_text()) if (A / "v12" / "t3_arxiv.json").exists() else {}
+        def t3e(B, k):
+            fs_ = [T3D / f"gu_entity_b{B}_s{x}.json" for x in range(3)]
+            return float(np.mean([json.loads(f_.read_text())[str(x)]["graphrag_update"][k]["1"] for x, f_ in enumerate(fs_)])) if all(f_.exists() for f_ in fs_) else None
+        def t3a(B, k, m="graphrag_delta"):
+            v = [T3A.get(f"{B}|{x}|{m}", {}).get(k) for x in range(3)]
+            return float(np.mean(v)) if all(x is not None for x in v) else None
+        pc0 = lambda x: "--" if x is None else f"{100 * x:.0f}"  # noqa: E731
         rows = []
         for B, r in sorted(BS["entity"].items(), key=lambda kv: int(kv[0])):
             rows.append(" & ".join([f"entity, {B}", f"{r['new_nodes']:.0f}", pc1(r["reindex+match"]["C09"]), pc1(r["warm"]["C09"]),
-                                    "--", "--", f"{pc1(r['graphrag_update']['C09'])} ({100 * r['graphrag_update']['coverage']:.0f})"]) + " \\\\")
+                                    "n/a", "n/a", pc1(r['graphrag_update']['C09']), pc0(t3e(B, "coverage")), pc0(t3e(B, "coverage_new"))]) + " \\\\")
         rows.append("\\midrule")
         for B, r in sorted(BS["arxiv"].items(), key=lambda kv: int(kv[0])):
             if "recompute_leiden" not in r:
                 continue
             g = lambda m, k: pc1(r[m][k]) if m in r else "--"  # noqa: E731
             rows.append(" & ".join([f"arXiv, {B}", f"{r['new_nodes']:.0f}", g("recompute_leiden", "C09"), g("warmstart_leiden", "C09"),
-                                    g("frontier_leiden", "C09"), g("df_leiden_sahu", "C09"),
-                                    f"{g('graphrag_delta', 'C09')} ({100 * r['graphrag_delta']['coverage']:.0f})"]) + " \\\\")
+                                    g("frontier_leiden", "C09"), g("df_leiden_sahu", "C09"), g("graphrag_delta", "C09"),
+                                    pc0(r["graphrag_delta"]["coverage"]), pc0(t3a(B, "coverage_new"))]) + " \\\\")
         (TAB / "batch.tex").write_text(
-            "\\begin{tabular}{l r c c c c c}\n\\toprule\nbatch & new & re-cl.\\,+\\,match & warm & frontier & DF & GraphRAG (cov.)\\\\\n"
+            "\\begin{tabular}{l r c c c c c c c}\n\\toprule\n & & \\multicolumn{5}{c}{\\% of a re-index per update ($\\tau=0.9$)} & \\multicolumn{2}{c}{GraphRAG cov.\\,\\%}\\\\\n"
+            "\\cmidrule(lr){3-7}\\cmidrule(lr){8-9}\nbatch & new & re-cl.\\,+\\,match & warm & frontier & DF & GraphRAG & all & new\\\\\n"
             "\\midrule\n" + "\n".join(rows) + "\n\\bottomrule\n\\end{tabular}\n")
+        if T3A:
+            M["BsArxPool"] = f"{T3A['pool_2020']:,}".replace(",", "{,}")
+            for B, tg in (("100", "Hundred"), ("1000", "Thousand")):
+                v = t3a(B, "new_reported_per_update")
+                if v is not None:
+                    M[f"BsArxGdNewRep{tg}"] = f"{v:.1f}"
         e1, e100 = BS["entity"]["1"], BS["entity"]["100"]
         M["BsEgOneNew"], M["BsEgHundredNew"] = f"{e1['new_nodes']:.0f}", f"{e100['new_nodes']:.0f}"
         M["BsEgReOne"], M["BsEgReHundred"] = f"{100 * e1['reindex+match']['C09']:.0f}\\%", f"{100 * e100['reindex+match']['C09']:.0f}\\%"
         M["BsEgWarmOne"] = f"{100 * e1['warm']['C09']:.0f}\\%"
-        M["BsEgGuHundred"], M["BsEgGuCovHundred"] = f"{100 * e100['graphrag_update']['C09']:.1f}\\%", f"{100 * e100['graphrag_update']['coverage']:.0f}\\%"
-        M["BsEgReCovHundred"] = f"{100 * e100['reindex+match']['coverage']:.0f}\\%"
+        # T3 (V13): coverage = mean over versions (same definition as every row of Table 4)
+        R100 = json.loads((V12 / "b1" / "entity_b100.json").read_text())
+        cmean = lambda m: float(np.mean([R100[x][m]["coverage"]["1"] for x in R100]))  # noqa: E731
+        M["BsEgGuHundred"], M["BsEgGuCovHundred"] = f"{100 * e100['graphrag_update']['C09']:.1f}\\%", f"{100 * cmean('graphrag_update'):.0f}\\%"
+        M["BsEgReCovHundred"] = f"{100 * cmean('reindex+match'):.0f}\\%"
+        M["BsEgGuCovNewHundred"] = f"{100 * float(np.mean([json.loads((A / 'v12' / 't3' / f'gu_entity_b100_s{x}.json').read_text())[str(x)]['graphrag_update']['coverage_new']['1'] for x in range(3)])):.0f}\\%"
         ar = {int(k): v for k, v in BS["arxiv"].items() if "frontier_leiden" in v}
         if ar:
             lo, hi = min(ar), max(ar)
@@ -1820,6 +1881,7 @@ def v2_assets(M):
     if f.exists():                          # B5 (V12)
         CT = json.loads(f.read_text())
         M["CovLazyEg"], M["CovWarmEg"] = f"{100 * CT['entity']['lazy']['mean']:.1f}\\%", f"{100 * CT['entity']['warmstart_leiden']['mean']:.1f}\\%"
+        M["CovLazyEgFine"], M["CovGdEgFine"] = f"{100 * CT['entity']['lazy']['mean']:.2f}\\%", f"{100 * CT['entity']['graphrag_delta']['mean']:.2f}\\%"   # T4 (V13)
     f = V12 / "a5_rollback_factor.json"
     if f.exists():                          # A5 (V12): exact (T+1)/T per graph vs the fixed 16/15
         RF = json.loads(f.read_text())

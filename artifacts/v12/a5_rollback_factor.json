@@ -1,0 +1,44 @@
+{
+ "arxiv-15": {
+  "versions": 16,
+  "updates": 15,
+  "exact": 1.0666666666666667,
+  "deviation_of_fixed": 0.0
+ },
+ "collab-12": {
+  "versions": 16,
+  "updates": 15,
+  "exact": 1.0666666666666667,
+  "deviation_of_fixed": 0.0
+ },
+ "arxiv-17": {
+  "versions": 10,
+  "updates": 9,
+  "exact": 1.1111111111111112,
+  "deviation_of_fixed": -0.040000000000000036
+ },
+ "collab-10": {
+  "versions": 22,
+  "updates": 21,
+  "exact": 1.0476190476190477,
+  "deviation_of_fixed": 0.018181818181818077
+ },
+ "entity": {
+  "versions": 13,
+  "updates": 12,
+  "exact": 1.0833333333333333,
+  "deviation_of_fixed": -0.01538461538461533
+ },
+ "wikidata": {
+  "versions": 25,
+  "updates": 24,
+  "exact": 1.0416666666666667,
+  "deviation_of_fixed": 0.02400000000000002
+ },
+ "wikipedia": {
+  "versions": 9,
+  "updates": 8,
+  "exact": 1.125,
+  "deviation_of_fixed": -0.051851851851851816
+ }
+}

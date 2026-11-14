@@ -1,0 +1,25 @@
+{
+ "files": {
+  "validate_score.py": {
+   "created": "2026-11-09T15:13",
+   "modified": "2026-11-09T15:13"
+  },
+  "qa/results.json": {
+   "created": "2026-11-06T11:23",
+   "modified": "2026-11-06T14:10"
+  },
+  "qa_more.py": {
+   "created": "2026-11-09T15:24",
+   "modified": "2026-11-09T20:58"
+  },
+  "qa/results_more.json": {
+   "created": "2026-11-09T15:39",
+   "modified": "2026-11-09T21:00"
+  }
+ },
+ "margin": 0.05,
+ "fresh_recall": 0.31666666666666665,
+ "margin_share_of_fresh": 0.15789473684210528,
+ "margin_set_before_120q_results": false,
+ "margin_set_before_180q_generated": true
+}

@@ -115,7 +115,8 @@ Expected runtime on the hardware below: `make all` / `make check` 2-5 minutes; `
 (downloads about 1 GB of OGB data). Table/figure numbers follow the VLDB 2027 submission. Table 1 is typed in the
 paper; its numbers are recomputed from the data by `revision/a12_handtyped.py` (`make table1`).
 
-The experiments added for the VLDB 2027 revision (k-core and dynamic-frontier Leiden with the authors' code, HIT-Leiden
+The patch applied to the authors' k-core code (one line: an uninitialised print-only counter) is
+`revision/kcore_patch.diff`. The experiments added for the VLDB 2027 revision (k-core and dynamic-frontier Leiden with the authors' code, HIT-Leiden
 validation, cost-model sensitivity, Pareto view, 5 document orders, open-model replication with a local Qwen3-14B) are
 in `revision/`; see `revision/README.md` for how to re-run them, including the Qwen experiments.
 
@@ -168,9 +169,24 @@ leidenalg 0.12; Neo4j 5 Community + GDS 2.13.
 - LLMs: gpt-5.6-luna / gpt-5.6-terra (OpenAI Chat Completions, accessed 6-10 Nov 2026, API default sampling; all
   outputs cached in `artifacts/`). Local model: Ollama 0.40.15, `qwen3:14b` (digest bdbd181c33f2, Q4_K_M), temperature
   0, seed 0, thinking off, context 16,384 (`revision/qwen_backend.py`).
+- Qwen model file: Ollama blob `sha256-a8cc1361f3145dc01f6d77c6c82c9116b9ffe3c97b34716fe20418455876c40e` (manifest digest
+  bdbd181c33f2); V12 global runs use context 32,768, V11/C3 local runs 16,384 (`revision/v12_qwen/qwen12.py`,
+  `revision/qwen_backend.py`). Ollama is run with `OLLAMA_NUM_PARALLEL=1` (one request at a time).
 - Third-party code is fetched at pinned commits by `revision/fetch_external.sh` (Kcore-GraphRAG ae7b2ef,
   leiden-communities-openmp-dynamic 28c304f, unofficial hit-leiden 9247424); containers: `docker.io/library/rust:1.83`.
 
 ## Licence
 Code: Apache-2.0 (see `LICENSE`). Derived data: ogbn-arxiv / ogbl-collab / ogbl-citation2 follow the OGB licences
 (ODC-BY); Wikidata content is CC0; Wikipedia text is CC BY-SA and is re-crawled by `wiki/wiki_crawl.py`.
+
+## VLDB 2027 revision, round 2 (V12)
+
+New experiments (scripts in `revision/v12/` and `revision/v12_qwen/`, outputs in `artifacts/v12*/`): batch-size sweep
+(`make batch_sweep`), rewrite share by level/size and greedy vs Hungarian matching (`make matching`), variance shares
+for restricted designs (`make eta_variants`), total tokens per update (`make tco`), coverage of Table 6
+(`make coverage_t6`), GraphRAG update with `use_lcc` off (`make gu_lcc`), coarse levels on global answers with Qwen
+(`make coarse_answers`; judge uninformative, see paper), 300 local questions for the never-refreshed stores with Qwen
+(`make never300`), TOST-margin provenance (`make margin`), rollback factor per graph (`make rollback_factor`).
+The A/A test of the pairwise judge was stopped (the local judge prefers the second answer almost always); its partial
+caches are in `artifacts/v12_qwen/`. To re-run: copy `revision/v12` and `revision/v12_qwen` into `$GCM_RESULTS/` next
+to `v2/` (see `revision/README.md`), then run the script named in the target.

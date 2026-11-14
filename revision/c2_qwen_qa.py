@@ -59,7 +59,8 @@ def main(nq):
     cs, cq, cq2, ca, cj = qr.Cache("summaries"), qr.Cache("questions"), qr.Cache("questions_more"), qr.Cache("answers"), qr.Cache("judge")
     stores = {}
     for m in ["recompute_leiden", "warmstart_leiden", "frontier_leiden", "hybrid"]:
-        stores[f"{m}|tau=0.9"] = plan["methods"][m]["taus"]["0.9"]["final_store"]
+        for tau, v in plan["methods"][m]["taus"].items():      # all tolerances (V12/C3 uses "never" = 0.0)
+            stores[f"{m}|tau={tau}"] = v["final_store"]
     lab = plan["methods"]["recompute_leiden"]["labels"][-1]
     node_t = np.load(QA / "node_t.npy")
     comm = {}

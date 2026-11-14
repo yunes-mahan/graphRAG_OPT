@@ -2,14 +2,15 @@
 # (no LLM calls, no API key, a few minutes on a laptop). Override the results tree with RES=/path/to/results.
 #   make all        regenerate every table, figure and number (paper_assets/{tables,figures,numbers.tex})
 #   make check      regenerate and compare EVERY number with the paper's (artifacts/expected_*)
-#   make table4     regenerate and show Table 4 (same for table1..table9, fig1..fig5)
+#   make table4     regenerate and show Table 4 (same for table1..table9, fig1..fig4)
 #   make reproduce  quick end-to-end check incl. re-running two maintainers from the raw OGB data (quick_reproduce.sh)
 PY  ?= python
 RES ?= $(CURDIR)/artifacts
 A    = paper_assets
 
 .PHONY: all assets check reproduce numbers table1 table2 table3 table4 table5 table6 table7 table8 table9 \
-        fig1 fig2 fig3 fig4 fig5
+        fig1 fig2 fig3 fig4 fig_lambda batch_sweep matching eta_variants tco coverage_t6 gu_lcc rollback_factor margin \
+        coarse_answers never300 costsens
 
 all assets:
 	cd $(A) && PAPER_RESULTS=$(RES) $(PY) make_assets.py > make_assets.log && $(PY) make_overview.py > /dev/null
@@ -29,17 +30,32 @@ table1:
 	@cat $(RES)/v2/a12_handtyped.json
 table2: assets ; @cat $(A)/tables/hier.tex            # GraphRAG hierarchy under maintenance (5 orders)
 table3: assets ; @cat $(A)/tables/stability.tex       # reproducibility vs stability (consensus, k-core, warm start)
-table4: assets ; @cat $(A)/tables/tokenmetric.tex     # token-level score of the flat maintainers
-table5: assets ; @cat $(A)/tables/qa.tex              # local questions
-table6: assets ; @cat $(A)/tables/extra.tex           # Wikidata, entity graph, ogbl-citation2
-table7: assets ; @cat $(A)/tables/reuse.tex           # report reuse rules
-table8: assets                                       # key findings: text table, all numbers are macros
-	@grep -E "Hier(Wd)?Split|HierEtaTau|HierCov|NhDrop|BfRollFrom|MoreN|ProbeStaleLoss|LocVec|LocSums|Del(Gu|Zep)Five" $(A)/numbers.tex
-table9: assets ; @cat $(A)/tables/costsens.tex        # cost-model sensitivity
+table4: assets ; @cat $(A)/tables/batch.tex           # batch-size sweep
+table5: assets ; @cat $(A)/tables/tokenmetric.tex     # token-level score of the flat maintainers (+ coverage)
+table6: assets ; @cat $(A)/tables/qa.tex              # local questions
+table7: assets ; @cat $(A)/tables/extra.tex           # Wikidata, entity graph, Wikipedia, ogbl-citation2 (+ coverage)
+table8: assets ; @cat $(A)/tables/reuse.tex           # report reuse rules
+table9: assets                                       # key findings: text table, all numbers are macros
+	@grep -E "Hier(Wd)?Split|HierEtaTau|HierCov|NhDrop|BfRollFrom|MoreN|ProbeStaleLoss|LocVec|LocSums|Del(Gu|Zep)Five|PrHeldGain|CosRandSeven" $(A)/numbers.tex
 
 fig1:
 	cd $(A) && $(PY) make_overview.py && echo "$(A)/figures/overview.pdf"
 fig2: assets ; @echo "$(A)/figures/noise.pdf"
 fig3: assets ; @echo "$(A)/figures/pareto_heldout.pdf"
-fig4: assets ; @echo "$(A)/figures/lambda_heldout.pdf"
-fig5: assets ; @echo "$(A)/figures/qa.pdf"
+fig4: assets ; @echo "$(A)/figures/qa.pdf"
+# figures/tables kept in the artifact only (removed from the paper for space): held-out ranking over lambda, cost sensitivity
+fig_lambda: assets ; @echo "$(A)/figures/lambda_heldout.pdf"
+
+# ---- VLDB revision round 2 (V12): show the cached result of each new experiment (re-run: see README, V12 section)
+V12 = $(RES)/v12
+batch_sweep: assets ; @cat $(A)/tables/batch.tex; cat $(V12)/b1_summary.json
+matching:        ; @cat $(V12)/b2_summary.json
+eta_variants:    ; @cat $(V12)/b3_eta_variants.json
+tco:             ; @cat $(V12)/b4_tco.json
+coverage_t6:     ; @cat $(V12)/b5_coverage_t6.json
+gu_lcc:          ; @ls $(V12)/b7/
+rollback_factor: ; @cat $(V12)/a5_rollback_factor.json
+margin:          ; @cat $(V12)/d2_margin_provenance.json
+coarse_answers:  ; @python -c "import json;d=json.load(open('$(RES)/v12_qwen/c1_coarse_global.json'));d.pop('rows');print(json.dumps(d,indent=1))"
+never300:        ; @python -c "import json;d=json.load(open('$(RES)/v12_qwen/c3_never_300.json'));d.pop('per_question');print(json.dumps(d,indent=1))"
+costsens: assets ; @cat $(A)/tables/costsens.tex

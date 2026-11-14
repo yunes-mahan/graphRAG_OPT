@@ -1,0 +1,69 @@
+{
+ "full_reindex_tokens_per_update_modelled": 57525625.0,
+ "extraction_tokens_per_update_measured": 341932.3333333333,
+ "extraction_tokens_total_measured": 7650077.0,
+ "maintainers": {
+  "reindex": {
+   "report_tokens_per_update_modelled": 57525625.0,
+   "query_tokens_measured": 30935.866666666665,
+   "total": {
+    "0": 57867557.333333336,
+    "1": 57898493.2,
+    "10": 58176916.0,
+    "100": 60961144.0,
+    "1000": 88803424.0
+   }
+  },
+  "reindex+match": {
+   "report_tokens_per_update_modelled": 32848713.90891995,
+   "query_tokens_measured": 30935.866666666665,
+   "total": {
+    "0": 33190646.24225328,
+    "1": 33221582.10891995,
+    "10": 33500004.90891995,
+    "100": 36284232.908919945,
+    "1000": 64126512.908919945
+   }
+  },
+  "warm": {
+   "report_tokens_per_update_modelled": 33797726.74023763,
+   "query_tokens_measured": 30514.9,
+   "total": {
+    "0": 34139659.07357097,
+    "1": 34170173.973570965,
+    "10": 34444808.07357097,
+    "100": 37191149.07357097,
+    "1000": 64654559.07357097
+   }
+  },
+  "graphrag_update": {
+   "report_tokens_per_update_modelled": 2453647.7360705268,
+   "query_tokens_measured": 156145.06666666668,
+   "total": {
+    "0": 2795580.0694038603,
+    "1": 2951725.136070527,
+    "10": 4357030.736070527,
+    "100": 18410086.73607053,
+    "1000": 158940646.73607054
+   }
+  },
+  "zep_attach": {
+   "report_tokens_per_update_modelled": 3996601.8998625767,
+   "query_tokens_measured": 26171.3,
+   "total": {
+    "0": 4338534.23319591,
+    "1": 4364705.53319591,
+    "10": 4600247.23319591,
+    "100": 6955664.23319591,
+    "1000": 30509834.23319591
+   }
+  }
+ },
+ "break_even_queries_per_update": {
+  "reindex+match|warm": 2254.3657407182413,
+  "graphrag_update|reindex": 439.8397023855233,
+  "graphrag_update|reindex+match": 242.75425586018775,
+  "graphrag_update|warm": 249.49484535296403,
+  "graphrag_update|zep_attach": 11.871273745179218
+ }
+}

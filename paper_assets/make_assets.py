@@ -297,8 +297,8 @@ def fig_pareto_heldout(M):
     name = {m: B5_LABEL[m] for m in B5_LABEL}
     wi = P["winner_intervals"]
     order = sorted(wi, key=lambda m: wi[m][0])
-    M["BfWinners"] = "; ".join(f"{name[m].replace('(Sahu', '(Sahu')} for $\\lambda\\in[{wi[m][0]:.2f},{wi[m][1]:.2f}]$"
-                               for m in order)
+    M["BfWinners"] = "; ".join(f"{name[m]} for " + (f"$\\lambda={wi[m][0]:.2f}$" if wi[m][0] == wi[m][1] else
+                                                      f"$\\lambda\\in[{wi[m][0]:.2f},{wi[m][1]:.2f}]$") for m in order)
     for gname, t in zip(groups, ("ArxF", "ColT", "ArxS", "ColTen")):
         M[f"BfPar{t}"] = str(len(P["groups"][gname]["pareto_Q_C"]))
     allpar = set.intersection(*[set(P["groups"][g]["pareto_Q_C"]) for g in groups])
@@ -732,7 +732,7 @@ def token_metric_assets(M):
                 continue
             mu = np.mean(v)
             ci = _st.t.ppf(0.975, len(v) - 1) * np.std(v, ddof=1) / np.sqrt(len(v)) if len(v) > 1 else 0
-            txt = f"{mu:.3f}$\\pm${ci:.3f}"
+            txt = f"{mu:.3f}$\\pm${ci:.3f}" if ci >= 5e-4 else f"{mu:.4f}$\\pm${ci:.4f}"   # A3 (V12)
             row.append(f"\\textbf{{{txt}}}" if best[g] is not None and mu >= best[g] - 5e-4 else txt)
         gm = [np.mean(cell[(m, g)]) for g, _ in groups if cell[(m, g)]]
         row.append(f"{np.mean(gm):.3f}" if len(gm) == len(groups) else "--")
@@ -749,9 +749,22 @@ def token_metric_assets(M):
         order = sorted(means, key=means.get, reverse=True)
         M["TokHeldBest"], M["TokHeldBestV"] = order[0], f"{means[order[0]]:.3f}"
         M["TokHeldSecond"], M["TokHeldSecondV"] = order[1], f"{means[order[1]]:.3f}"
+        M["PrHeldGain"] = f"{means['Warm-start + rollback'] - means['Warm-start Leiden']:+.3f}"   # D4 (V12)
     ns = {g: max((len(cell[(m, g)]) for m, _ in names), default=0) for g, _ in groups}
     head = " & ".join(["Maintainer", "dev."] + [f"{l} ({ns[g]})" for g, l in groups] + ["mean"])
-    tex = ("\\begin{tabular}{l c c c c c c}\n\\toprule\n" + head + "\\\\\n\\midrule\n" +
+    # B5 (V12): coverage column = mean over the four held-out groups of the mean share of present nodes in a reported
+    # community (>= 5 members), from analysis/v2/b5_pareto.json
+    bp = A / "v2" / "b5_pareto.json"
+    if bp.exists():
+        BP = json.loads(bp.read_text())
+        lab2m = {lab: m for m, lab in names}
+        for r in rows:
+            m = lab2m[r[0]]
+            cv = [BP["groups"][gg]["maintainers"][m]["cov"][0] for gg in BP["groups"] if m in BP["groups"][gg]["maintainers"]]
+            r.append(f"{100 * np.mean(cv):.1f}\\%" if len(cv) == len(BP["groups"]) else "--")
+        head += " & cov."
+    ncols = len(head.split(" & "))
+    tex = ("\\begin{tabular}{l " + "c " * (ncols - 1) + "}\n\\toprule\n" + head + "\\\\\n\\midrule\n" +
            "\n".join(" & ".join(r) + " \\\\" for r in rows) + "\n\\bottomrule\n\\end{tabular}\n")
     (TAB / "tokenmetric.tex").write_text(tex)
 
@@ -970,25 +983,38 @@ def extra_graphs_table(M):
     meth = [("priced_warm", "Warm-start + rollback"), ("priced_frontier", "Frontier-restr.\\ + rollback"),
             ("warmstart_leiden", "Warm-start Leiden"), ("frontier_leiden", "Frontier-restr.\\ Leiden"), ("hybrid", "Hybrid"),
             ("lazy", "Lazy attach (Zep)"), ("recompute_leiden", "Recompute Leiden"), ("graphrag_delta", "GraphRAG update (delta)")]
+    ct = A / "v12" / "b5_coverage_t6.json"
+    covt6 = json.loads(ct.read_text()) if ct.exists() else None
+
     def ci(vals):
         return float(_st.t.ppf(0.975, len(vals) - 1) * np.std(vals, ddof=1) / np.sqrt(len(vals)))
     cols = {}
     for name, R in (("wd", W), ("eg", E)):
         cols[name] = {m: [R[f"{m}|{k}"]["score"] for k in range(5)] for m, _ in meth if all(f"{m}|{k}" in R for k in range(5))}
     cols["cit"] = {m: [S[f"1.0|{m}"]["score"]] for m, _ in meth if f"1.0|{m}" in S}
+    # B6 (V12): Wikipedia stream (one real order with deletions; 5 Leiden seeds), wiki/wiki_priced.py, lambda = 0.31
+    WP = json.loads((A / "wiki" / "priced_results.json").read_text())
+    wmap = {"recompute_leiden": "recompute", "warmstart_leiden": "warm", "priced_warm": "priced"}
+    cols["wiki"] = {m: [r[0] - 0.31 * r[1] for r in WP[w]["runs"]] for m, w in wmap.items()}
     best = {c: max(np.mean(v) for v in cols[c].values()) for c in cols}
     rows = []
     for m, lab in meth:
         cells = [lab]
-        for c in ("wd", "eg", "cit"):
+        for c in ("wd", "eg", "wiki", "cit"):
             if m not in cols[c]:
                 cells.append("not run")
+                if c in ("wd", "eg") and covt6:
+                    cells.append("--")
                 continue
             v = cols[c][m]
-            txt = f"{np.mean(v):.3f}" + (f"$\\pm${ci(v):.3f}" if len(v) > 1 else "")
+            txt = f"{np.mean(v):.3f}" + ((f"$\\pm${ci(v):.3f}" if ci(v) >= 5e-4 else f"$\\pm${ci(v):.4f}") if len(v) > 1 else "")
             cells.append(f"\\textbf{{{txt}}}" if np.mean(v) >= best[c] - 5e-4 else txt)
+            if c in ("wd", "eg") and covt6:                     # B5 (V12): coverage column
+                cells.append(f"{100 * covt6['wikidata' if c == 'wd' else 'entity'][m]['mean']:.1f}")
         rows.append(" & ".join(cells) + " \\\\")
-    tex = ("\\begin{tabular}{l c c c}\n\\toprule\nMaintainer & Wikidata films (5) & LLM entity graph (5) & ogbl-citation2 (1)\\\\\n"
+    tex = (("\\begin{tabular}{l c c c c c c}\n\\toprule\nMaintainer & Wikidata (5) & cov.\\,\\% & entity gr.\\ (5) & cov.\\,\\% & Wikipedia & citation2\\\\\n")
+           if covt6 else "\\begin{tabular}{l c c c}\n\\toprule\nMaintainer & Wikidata films (5) & LLM entity graph (5) & ogbl-citation2 (1)\\\\\n")
+    tex = (tex +
            "\\midrule\n" + "\n".join(rows) + "\n\\bottomrule\n\\end{tabular}\n")
     (TAB / "extra.tex").write_text(tex)
 
@@ -1541,7 +1567,8 @@ def v2_assets(M):
     taus, sizes = {k.split("|")[0] for k in keys}, {k.split("|")[1] for k in keys}
     cells = {(s, m, k) for s in d for m in ms for k in d[s][m]["cost"]}
     assert len(cells) == len(d) * len(ms) * len(taus) * len(sizes)          # balanced, one observation per cell
-    M["AnovaDesign"] = f"{len(d)}\\times{len(ms)}\\times{len(taus)}\\times{len(sizes)}={len(cells)}"
+    M["AnovaDesign"] = (f"{len(ms)}\\text{{ maintainers}}\\times{len(taus)}\\,\\tau\\times{len(sizes)}\\,s\\times"
+                        f"{len(d)}\\text{{ orders}}={len(cells)}")   # A2 (V12): full re-index excluded
     M["AnovaNRe"] = str(len(d) * 2 * len(taus) * len(sizes))
     # largest |Q_leaf| or |Q_top| difference between the two re-clustering maintainers in Table 2 (5 orders)
     qd = 0.0
@@ -1658,6 +1685,132 @@ def v2_assets(M):
         if F2:
             k2 = [F2["variants"][v][g]["kendall"] for v in F2["variants"] for g in F2["variants"][v]]
             M["CsExtraKendMin"] = f"{min(k2):.2f}"
+    V12 = A / "v12"
+    f = V / "a5_token_ratio.json"
+    if f.exists():                          # A1 (V12): exact token counts behind the ratio
+        T5 = json.loads(f.read_text())
+        M["QATokMaxExact"] = f"{T5['max_tokens']:,}".replace(",", "{,}")
+        M["QATokMinExact"] = f"{T5['min_tokens']:,}".replace(",", "{,}")
+    f = V12 / "b1_summary.json"
+    if f.exists():                          # B1 (V12): batch-size sweep table + macros
+        BS = json.loads(f.read_text())
+        pc1 = lambda x: f"{100 * x:.1f}" if x >= 0.001 else f"{100 * x:.2f}"  # noqa: E731
+        rows = []
+        for B, r in sorted(BS["entity"].items(), key=lambda kv: int(kv[0])):
+            rows.append(" & ".join([f"entity, {B}", f"{r['new_nodes']:.0f}", pc1(r["reindex+match"]["C09"]), pc1(r["warm"]["C09"]),
+                                    "--", "--", f"{pc1(r['graphrag_update']['C09'])} ({100 * r['graphrag_update']['coverage']:.0f})"]) + " \\\\")
+        rows.append("\\midrule")
+        for B, r in sorted(BS["arxiv"].items(), key=lambda kv: int(kv[0])):
+            if "recompute_leiden" not in r:
+                continue
+            g = lambda m, k: pc1(r[m][k]) if m in r else "--"  # noqa: E731
+            rows.append(" & ".join([f"arXiv, {B}", f"{r['new_nodes']:.0f}", g("recompute_leiden", "C09"), g("warmstart_leiden", "C09"),
+                                    g("frontier_leiden", "C09"), g("df_leiden_sahu", "C09"),
+                                    f"{g('graphrag_delta', 'C09')} ({100 * r['graphrag_delta']['coverage']:.0f})"]) + " \\\\")
+        (TAB / "batch.tex").write_text(
+            "\\begin{tabular}{l r c c c c c}\n\\toprule\nbatch & new & re-cl.\\,+\\,match & warm & frontier & DF & GraphRAG (cov.)\\\\\n"
+            "\\midrule\n" + "\n".join(rows) + "\n\\bottomrule\n\\end{tabular}\n")
+        e1, e100 = BS["entity"]["1"], BS["entity"]["100"]
+        M["BsEgOneNew"], M["BsEgHundredNew"] = f"{e1['new_nodes']:.0f}", f"{e100['new_nodes']:.0f}"
+        M["BsEgReOne"], M["BsEgReHundred"] = f"{100 * e1['reindex+match']['C09']:.0f}\\%", f"{100 * e100['reindex+match']['C09']:.0f}\\%"
+        M["BsEgWarmOne"] = f"{100 * e1['warm']['C09']:.0f}\\%"
+        M["BsEgGuHundred"], M["BsEgGuCovHundred"] = f"{100 * e100['graphrag_update']['C09']:.1f}\\%", f"{100 * e100['graphrag_update']['coverage']:.0f}\\%"
+        M["BsEgReCovHundred"] = f"{100 * e100['reindex+match']['coverage']:.0f}\\%"
+        ar = {int(k): v for k, v in BS["arxiv"].items() if "frontier_leiden" in v}
+        if ar:
+            lo, hi = min(ar), max(ar)
+            M["BsArxFrontMin"] = pc1(min(v["frontier_leiden"]["C09"] for v in ar.values())) + "\\%"
+            M["BsArxFrontMax"] = pc1(max(v["frontier_leiden"]["C09"] for v in ar.values())) + "\\%"
+            M["BsArxWarmMin"] = pc1(min(v["warmstart_leiden"]["C09"] for v in ar.values())) + "\\%"
+            M["BsArxWarmMax"] = pc1(max(v["warmstart_leiden"]["C09"] for v in ar.values())) + "\\%"
+            M["BsArxReMin"] = f"{100 * min(v['recompute_leiden']['C09'] for v in ar.values()):.0f}\\%"
+            M["BsArxReMax"] = f"{100 * max(v['recompute_leiden']['C09'] for v in ar.values()):.0f}\\%"
+            M["BsArxNewMin"], M["BsArxNewMax"] = f"{ar[lo]['new_nodes']:.0f}", f"{ar[hi]['new_nodes']:.0f}"
+            dfv = [v["df_leiden_sahu"]["C09"] for v in ar.values() if "df_leiden_sahu" in v]
+            if dfv:
+                M["BsArxDfMin"], M["BsArxDfMax"] = f"{100 * min(dfv):.0f}\\%", f"{100 * max(dfv):.0f}\\%"
+    f = A / "v12_qwen" / "c1_coarse_global.json"
+    if f.exists():                          # C1 (V12): coarse levels on global answers (Qwen, pairwise)
+        CQ = json.loads(f.read_text())
+        st = CQ["stores"]
+        M["CqBudget"] = str(CQ["budget"])
+        M["CqCovCons"], M["CqCovKcl"] = f"{100 * CQ['coverage']['consensus_top']:.1f}\\%", f"{100 * CQ['coverage']['kcore_l1_top']:.0f}\\%"
+        sec = [1 - st[s]["first_position_share"] for s in st]
+        M["CqSecondMin"], M["CqSecondMax"] = f"{100 * min(sec):.1f}\\%", f"{100 * max(sec):.1f}\\%"
+        M["CqTieMax"] = f"{100 * max(st[s]['tie_rate'] for s in st):.0f}\\%"
+        wins = [st[s][c]["win"] for s in st for c in ("comprehensiveness", "diversity", "empowerment", "directness")]
+        M["CqWinMin"], M["CqWinMax"] = f"{min(wins):.2f}", f"{max(wins):.2f}"
+    f = V12 / "b2_summary.json"
+    if f.exists():                          # B2 (V12): rewrite share by level / size; greedy vs Hungarian matching
+        B2 = json.loads(f.read_text())
+        e, w = B2["entity"]["reindex+match"], B2["wikidata"]["reindex+match"]
+        lv_e = sorted(e["by_level"], key=int)
+        M["BtTopEg"], M["BtTopWd"] = f"{100 * e['by_level']['0']['token_share']:.0f}\\%", f"{100 * w['by_level']['0']['token_share']:.0f}\\%"
+        dl = [e["by_level"][k]["token_share"] for k in ("2", "3", "4")]
+        M["BtDeepMin"], M["BtDeepMax"] = f"{100 * min(dl):.0f}\\%", f"{100 * max(dl):.0f}\\%"
+        M["BtBigEg"], M["BtSmallEg"] = f"{100 * e['by_size']['>200']['token_share']:.0f}\\%", f"{100 * e['by_size']['<=10']['token_share']:.0f}\\%"
+        M["BtMidEg"] = f"{100 * e['by_size']['51-200']['token_share']:.0f}\\%"
+        hg = {}
+        for gg in ("entity", "wikidata"):
+            Gj = json.loads((V12 / "b2" / f"{gg}_greedy.json").read_text())
+            Hj = json.loads((V12 / "b2" / f"{gg}_hungarian.json").read_text())
+            for mm in ("reindex+match", "warm"):
+                for t in ("0.9", "0.7", "0.5", "0.0"):
+                    hg[(gg, mm, t)] = (np.mean([Hj[s][mm]["cost"][f"{t}|1"] for s in Hj]) -
+                                       np.mean([Gj[s][mm]["cost"][f"{t}|1"] for s in Gj]))
+        M["BtHungNine"] = f"{max(abs(v) for k, v in hg.items() if k[2] == '0.9'):.3f}"
+        M["BtHungMid"] = f"{max(abs(v) for k, v in hg.items() if k[2] in ('0.7', '0.5')):.3f}"
+        M["BtHungNever"] = f"{min(v for k, v in hg.items() if k[2] == '0.0'):.3f}"
+    f = V12 / "b7" / "entity_gu_nolcc.json"
+    if f.exists():                          # B7 (V12): GraphRAG update with use_lcc off (3 orders)
+        for gg, t in (("entity", ""), ("wikidata", "Wd")):
+            Nn = json.loads((V12 / "b7" / f"{gg}_gu_nolcc.json").read_text())
+            mm = lambda D, fn: float(np.mean([fn(D[s]["graphrag_update"]) for s in D]))  # noqa: E731
+            M[f"Bs{t}GuNoLccCov"] = f"{100 * mm(Nn, lambda r: r['coverage_final']['1']):.0f}\\%"
+            M[f"Bs{t}GuNoLccCost"] = f"{mm(Nn, lambda r: r['cost']['0.9|1']):.2f}"
+            M[f"Bs{t}GuNoLccQtop"] = f"{mm(Nn, lambda r: r['Qtop']):.3f}"
+            M[f"Bs{t}GuNoLccRep"] = f"{mm(Nn, lambda r: r['reports_final']['1']):,.0f}".replace(",", "{,}")
+    f = A / "v12_qwen" / "c3_never_300.json"
+    if f.exists():                          # C3 (V12): 300 questions for the two never-refreshed cheap stores (Qwen)
+        C3 = json.loads(f.read_text())
+        mt = [r for r in C3["summary"] if r["store"] != "FRESH|recompute all"]
+        M["CthNQ"] = str(next(r for r in C3["summary"] if r["store"] == "FRESH|recompute all")["n_q"])
+        M["CthNEq"], M["CthN"] = str(sum(r["equivalent"] for r in mt)), str(len(mt))
+        M["CthCiLo"], M["CthCiHi"] = f"{min(r['ci90'][0] for r in mt):.3f}", f"{max(r['ci90'][1] for r in mt):.3f}"
+        M["CthDiff"] = f"{min(r['diff'] for r in mt):+.3f}"
+    f = V12 / "b4_tco.json"
+    if f.exists():                          # B4 (V12): total tokens per update
+        TC = json.loads(f.read_text())
+        M["TcoExtract"] = f"{TC['extraction_tokens_per_update_measured'] / 1e6:.2f}M"
+        M["TcoReindex"] = f"{TC['full_reindex_tokens_per_update_modelled'] / 1e6:.1f}M"
+        mm = TC["maintainers"]
+        M["TcoMatchRep"] = f"{mm['reindex+match']['report_tokens_per_update_modelled'] / 1e6:.1f}M"
+        M["TcoGuRep"] = f"{mm['graphrag_update']['report_tokens_per_update_modelled'] / 1e6:.1f}M"
+        M["TcoGuQ"], M["TcoMatchQ"] = f"{mm['graphrag_update']['query_tokens_measured'] / 1e3:.0f}k", f"{mm['reindex+match']['query_tokens_measured'] / 1e3:.0f}k"
+        be = TC["break_even_queries_per_update"]
+        M["TcoBeGuMatch"], M["TcoBeGuZep"] = f"{be['graphrag_update|reindex+match']:.0f}", f"{be['graphrag_update|zep_attach']:.0f}"
+    f = V12 / "b3_eta_variants.json"
+    if f.exists():                          # B3 (V12): variance shares under restricted designs
+        EV = json.loads(f.read_text())
+        pc_ = lambda x: f"{100 * x:.0f}\\%"  # noqa: E731
+        M["EvNoNeverSplit"], M["EvWdNoNeverSplit"] = pc_(EV["entity"]["no_never"]["split"]), pc_(EV["wikidata"]["no_never"]["split"])
+        M["EvNoNeverTau"], M["EvWdNoNeverTau"] = pc_(EV["entity"]["no_never"]["tau_within"]), pc_(EV["wikidata"]["no_never"]["tau_within"])
+        M["EvNoNeverSize"] = pc_(EV["entity"]["no_never"]["size_within"])
+        M["EvNoZepSplit"], M["EvWdNoZepSplit"] = pc_(EV["entity"]["no_zep"]["split"]), pc_(EV["wikidata"]["no_zep"]["split"])
+    f = V12 / "d2_margin_provenance.json"
+    if f.exists():                          # D2 (V12)
+        DP = json.loads(f.read_text())
+        M["MarginShare"] = f"{100 * DP['margin_share_of_fresh']:.0f}\\%"
+    f = V12 / "b5_coverage_t6.json"
+    if f.exists():                          # B5 (V12)
+        CT = json.loads(f.read_text())
+        M["CovLazyEg"], M["CovWarmEg"] = f"{100 * CT['entity']['lazy']['mean']:.1f}\\%", f"{100 * CT['entity']['warmstart_leiden']['mean']:.1f}\\%"
+    f = V12 / "a5_rollback_factor.json"
+    if f.exists():                          # A5 (V12): exact (T+1)/T per graph vs the fixed 16/15
+        RF = json.loads(f.read_text())
+        M["RbFacMin"], M["RbFacMax"] = f"{min(r['exact'] for r in RF.values()):.3f}", f"{max(r['exact'] for r in RF.values()):.3f}"
+        M["RbDevMin"] = f"{100 * min(r['deviation_of_fixed'] for r in RF.values()):.1f}\\%"
+        M["RbDevMax"] = f"{100 * max(r['deviation_of_fixed'] for r in RF.values()):+.1f}\\%"
     f = V / "b6_hier5.json"
     if f.exists():
         B6 = json.loads(f.read_text())

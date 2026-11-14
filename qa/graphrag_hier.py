@@ -134,8 +134,54 @@ def communities(levels):
     return {k: frozenset(v) for k, v in out.items()}
 
 
+def match_ids_hungarian(prev, cur):
+    """V12/B2: optimal one-to-one matching per level maximising the total Jaccard similarity (Hungarian algorithm,
+    solved per connected component of the overlap graph, which is exact because components share no members)."""
+    from scipy.optimize import linear_sum_assignment
+    owner = {}
+    for k, m in prev.items():
+        for v in m:
+            owner[(k[0], v)] = k
+    pairs = {}
+    for k, m in cur.items():
+        cnt = Counter(owner.get((k[0], v)) for v in m)
+        cnt.pop(None, None)
+        for p, n in cnt.items():
+            pairs[(k, p)] = n / (len(m) + len(prev[p]) - n)
+    adj = defaultdict(set)
+    for (k, p) in pairs:
+        adj[("c", k)].add(("p", p))
+        adj[("p", p)].add(("c", k))
+    mp, seen = {}, set()
+    for start in adj:
+        if start in seen:
+            continue
+        comp, stack = [], [start]
+        seen.add(start)
+        while stack:
+            x = stack.pop()
+            comp.append(x)
+            for y in adj[x]:
+                if y not in seen:
+                    seen.add(y)
+                    stack.append(y)
+        cs = [x[1] for x in comp if x[0] == "c"]
+        ps = [x[1] for x in comp if x[0] == "p"]
+        W = np.zeros((len(cs), len(ps)))
+        for i, k in enumerate(cs):
+            for j, p in enumerate(ps):
+                W[i, j] = pairs.get((k, p), 0.0)
+        ri, ci = linear_sum_assignment(-W)
+        for i, j in zip(ri, ci):
+            if W[i, j] > 0:
+                mp[cs[i]] = ps[j]
+    return mp
+
+
 def match_ids(prev, cur):
     """one-to-one majority-overlap matching per level: cur key -> prev key (or new key)."""
+    if os.environ.get("HIER_MATCH") == "hungarian":
+        return match_ids_hungarian(prev, cur)
     mp, used = {}, set()
     pairs = []
     by_level = defaultdict(list)
@@ -172,6 +218,11 @@ def run(seed):
         import wd_eval as wd
         d = wd.build()[0]
         node_t, edge_t, T = se.schedule(d, seed)
+    elif os.environ.get("HIER_SMALLBATCH"):                 # V12/B1: small-batch sweep stream "B,N" (entity graph)
+        sys.path.insert(0, str(HERE / "v12"))                 # revision/v12 copied into $GCM_RESULTS/v12 (revision/README.md)
+        import b1_streams
+        bb, nn = (int(x) for x in os.environ["HIER_SMALLBATCH"].split(","))
+        d, node_t, edge_t, T, batch_rels = b1_streams.entity_stream(bb, nn, seed)
     else:
         d, node_t, edge_t, T = eg.stream(seed)
         batch_rels = entity_batch_rels(seed, T)
@@ -247,7 +298,12 @@ def run(seed):
                 comms = {(mp.get(k, (k[0], ("w", t, k[1])))): m for k, m in w.items()}
                 lv = None
             elif name == "graphrag_update":
-                lccd, _ = lcc_edges(delta_el, np.arange(len(node_t))) if delta_el else ([], set())
+                # GraphRAG clusters only the largest connected component of the delta (cluster_graph.use_lcc, default
+                # True; graphrag/index/operations/cluster_graph.py line 69 in 3.2.0/3.3.0).  V12/B7: HIER_GU_LCC=0 = use_lcc off.
+                if os.environ.get("HIER_GU_LCC", "1") == "0":
+                    lccd = sorted({(min(a, b), max(a, b)) for a, b in delta_el if a != b})
+                else:
+                    lccd, _ = lcc_edges(delta_el, np.arange(len(node_t))) if delta_el else ([], set())
                 dl = communities(complete_levels(hier(lccd, list(range(len(node_t))))[0])) if lccd else {}
                 comms = dict(st["comms"])
                 for k, m in dl.items():
@@ -306,7 +362,17 @@ def run(seed):
                             if len(m) < ms:
                                 continue
                             old = store.get((ms, k))
-                            if old is None or (tau > 0 and len(m & old) / len(m | old) < tau):
+                            rewrite = old is None or (tau > 0 and len(m & old) / len(m | old) < tau)
+                            if os.environ.get("HIER_BREAKDOWN") and tau == 0.9 and ms == 1:   # V12/B2
+                                bk = (int(k[0]), "<=10" if len(m) <= 10 else "11-50" if len(m) <= 50 else
+                                      "51-200" if len(m) <= 200 else ">200")
+                                rec = st.setdefault("bd", {}).setdefault(bk, [0.0, 0.0, 0, 0])
+                                rec[1] += tok(len(m))
+                                rec[3] += 1
+                                if rewrite:
+                                    rec[0] += tok(len(m))
+                                    rec[2] += 1
+                            if rewrite:
                                 cost += tok(len(m))
                                 for vn, v in TOKVARIANTS.items():
                                     costv[vn] += tokv(len(m), v)
@@ -341,6 +407,8 @@ def run(seed):
                          cost_series={f"{tau}|{ms}": [float(x) for x in v] for (tau, ms), v in st["cost"].items()},
                          cost={f"{tau}|{ms}": float(np.mean(v)) for (tau, ms), v in st["cost"].items()},
                          cost_own={f"{tau}|{ms}": float(np.mean(v)) for (tau, ms), v in st.get("cost_own", {}).items()})
+        if "bd" in st:
+            res[name]["breakdown_tau09"] = {f"{lv}|{bk}": v for (lv, bk), v in st["bd"].items()}
         if TOKVARIANTS:
             res[name]["cost_variants"] = {f"{vn}|{tau}|{ms}": float(np.mean(v)) for (vn, tau, ms), v in st["costv"].items()}
     return res

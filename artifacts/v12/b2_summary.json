@@ -1,0 +1,242 @@
+{
+ "entity": {
+  "reindex+match": {
+   "by_level": {
+    "0": {
+     "token_share": 0.9507271089376488,
+     "report_share": 0.9005801687763713,
+     "reports": 3792
+    },
+    "1": {
+     "token_share": 0.7992566708526055,
+     "report_share": 0.7506633254716981,
+     "reports": 54272
+    },
+    "2": {
+     "token_share": 0.5250688105520201,
+     "report_share": 0.509709889849111,
+     "reports": 202268
+    },
+    "3": {
+     "token_share": 0.46456582208768615,
+     "report_share": 0.4612518628912072,
+     "reports": 236192
+    },
+    "4": {
+     "token_share": 0.5433333630758523,
+     "report_share": 0.5413236929922136,
+     "reports": 143840
+    },
+    "5": {
+     "token_share": 1.0,
+     "report_share": 1.0,
+     "reports": 7970
+    }
+   },
+   "by_size": {
+    ">200": {
+     "token_share": 1.0,
+     "report_share": 1.0,
+     "reports": 1954
+    },
+    "51-200": {
+     "token_share": 0.9808121374386435,
+     "report_share": 0.9808121374386435,
+     "reports": 4482
+    },
+    "11-50": {
+     "token_share": 0.7942055998960438,
+     "report_share": 0.7693364783099169,
+     "reports": 48755
+    },
+    "<=10": {
+     "token_share": 0.5068567550047851,
+     "report_share": 0.5026983375004004,
+     "reports": 593143
+    }
+   },
+   "cost_greedy": 0.5683225556214005,
+   "cost_hungarian": 0.5683225556214005,
+   "hungarian_minus_greedy": 0.0
+  },
+  "warm": {
+   "by_level": {
+    "0": {
+     "token_share": 0.959286334390796,
+     "report_share": 0.9203056768558951,
+     "reports": 3664
+    },
+    "1": {
+     "token_share": 0.7925293097348994,
+     "report_share": 0.7452983258352386,
+     "reports": 54236
+    },
+    "2": {
+     "token_share": 0.5188954052080716,
+     "report_share": 0.5030531298900676,
+     "reports": 202579
+    },
+    "3": {
+     "token_share": 0.45867435848408394,
+     "report_share": 0.4549142283091087,
+     "reports": 235917
+    },
+    "4": {
+     "token_share": 0.5271703902516881,
+     "report_share": 0.5246018202502845,
+     "reports": 168768
+    }
+   },
+   "by_size": {
+    ">200": {
+     "token_share": 1.0,
+     "report_share": 1.0,
+     "reports": 1977
+    },
+    "<=10": {
+     "token_share": 0.4938461741735429,
+     "report_share": 0.4889867913665761,
+     "reports": 609677
+    },
+    "11-50": {
+     "token_share": 0.7826926788391846,
+     "report_share": 0.7560786553524804,
+     "reports": 49024
+    },
+    "51-200": {
+     "token_share": 0.9792688363798484,
+     "report_share": 0.9792688363798484,
+     "reports": 4486
+    }
+   },
+   "cost_greedy": 0.5859949472166573,
+   "cost_hungarian": 0.5859949472166573,
+   "hungarian_minus_greedy": 0.0
+  }
+ },
+ "wikidata": {
+  "reindex+match": {
+   "by_level": {
+    "0": {
+     "token_share": 0.8652065588172715,
+     "report_share": 0.8048926014319809,
+     "reports": 5028
+    },
+    "1": {
+     "token_share": 0.8526124284137288,
+     "report_share": 0.8277655398578929,
+     "reports": 60377
+    },
+    "2": {
+     "token_share": 0.7508457377958191,
+     "report_share": 0.7385495393062682,
+     "reports": 313983
+    },
+    "3": {
+     "token_share": 0.7067862282204722,
+     "report_share": 0.7474617680127821,
+     "reports": 591455
+    },
+    "4": {
+     "token_share": 0.7070389097249585,
+     "report_share": 0.7516642579603857,
+     "reports": 622049
+    },
+    "5": {
+     "token_share": 0.7563948637957044,
+     "report_share": 0.7933659733787456,
+     "reports": 479166
+    }
+   },
+   "by_size": {
+    ">200": {
+     "token_share": 0.9899005355776588,
+     "report_share": 0.9899005355776588,
+     "reports": 6535
+    },
+    "11-50": {
+     "token_share": 0.5775466258980966,
+     "report_share": 0.5765391059797103,
+     "reports": 371222
+    },
+    "51-200": {
+     "token_share": 0.837805925289824,
+     "report_share": 0.837805925289824,
+     "reports": 27948
+    },
+    "<=10": {
+     "token_share": 0.7961581342594996,
+     "report_share": 0.7992454179876652,
+     "reports": 1666353
+    }
+   },
+   "cost_greedy": 0.7361137500687973,
+   "cost_hungarian": 0.7361137500687973,
+   "hungarian_minus_greedy": 0.0
+  },
+  "warm": {
+   "by_level": {
+    "0": {
+     "token_share": 0.8565544929962444,
+     "report_share": 0.8040144339197113,
+     "reports": 4434
+    },
+    "1": {
+     "token_share": 0.8497364804759612,
+     "report_share": 0.8251289659125391,
+     "reports": 59318
+    },
+    "2": {
+     "token_share": 0.7414959413900654,
+     "report_share": 0.7269422241364022,
+     "reports": 315772
+    },
+    "3": {
+     "token_share": 0.6884734956500033,
+     "report_share": 0.7299662413515606,
+     "reports": 592737
+    },
+    "4": {
+     "token_share": 0.6891425043269183,
+     "report_share": 0.7347242921013413,
+     "reports": 621346
+    },
+    "5": {
+     "token_share": 0.7522800198771586,
+     "report_share": 0.7886064580809558,
+     "reports": 478780
+    },
+    "6": {
+     "token_share": 1.0,
+     "report_share": 1.0,
+     "reports": 9322
+    }
+   },
+   "by_size": {
+    ">200": {
+     "token_share": 0.9895271831202834,
+     "report_share": 0.9895271831202834,
+     "reports": 6493
+    },
+    "<=10": {
+     "token_share": 0.7824401021279102,
+     "report_share": 0.7866536478563182,
+     "reports": 1673476
+    },
+    "11-50": {
+     "token_share": 0.5692021217082355,
+     "report_share": 0.5665837346174425,
+     "reports": 373800
+    },
+    "51-200": {
+     "token_share": 0.8405511811023622,
+     "report_share": 0.8405511811023622,
+     "reports": 27940
+    }
+   },
+   "cost_greedy": 0.7401112899843958,
+   "cost_hungarian": 0.7401112899843958,
+   "hungarian_minus_greedy": 0.0
+  }
+ }
+}

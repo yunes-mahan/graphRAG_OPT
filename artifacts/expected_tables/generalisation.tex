@@ -1,0 +1,13 @@
+\begin{tabular}{l cccc}
+\toprule
+Method & arXiv-15 & collab-12 & arXiv-17 & collab-10\\
+\midrule
+Recompute Leiden & 0.635\,$\pm$\,0.000 & 0.741\,$\pm$\,0.000 & 0.591\,$\pm$\,0.001 & 0.749\,$\pm$\,0.002 \\
+Warm-start Leiden & 0.650\,$\pm$\,0.003 & 0.844\,$\pm$\,0.001 & 0.647\,$\pm$\,0.002 & 0.851\,$\pm$\,0.001 \\
+Frontier-restr. Leiden & 0.674\,$\pm$\,0.001 & \textbf{0.877\,$\pm$\,0.000} & 0.676\,$\pm$\,0.004 & \textbf{0.881\,$\pm$\,0.001} \\
+Lazy attach & 0.636\,$\pm$\,0.000 & 0.834\,$\pm$\,0.000 & 0.670\,$\pm$\,0.000 & 0.820\,$\pm$\,0.001 \\
+GraphRAG update (delta) & 0.347\,$\pm$\,0.000 & 0.747\,$\pm$\,0.000 & 0.415\,$\pm$\,0.000 & 0.701\,$\pm$\,0.000 \\
+Local repair & 0.652\,$\pm$\,0.000 & 0.865\,$\pm$\,0.000 & \textbf{0.679\,$\pm$\,0.001} & 0.862\,$\pm$\,0.000 \\
+Hybrid (local repair + refresh) & \textbf{0.688\,$\pm$\,0.002} & 0.865\,$\pm$\,0.000 & \textbf{0.679\,$\pm$\,0.001} & 0.862\,$\pm$\,0.000 \\
+\bottomrule
+\end{tabular}

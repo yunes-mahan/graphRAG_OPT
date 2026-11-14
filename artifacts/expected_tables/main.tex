@@ -1,0 +1,17 @@
+\begin{tabular}{l ccc ccc}
+\toprule
+ & \multicolumn{3}{c}{arXiv-15 (10 orders)} & \multicolumn{3}{c}{collab-12 (10 orders)}\\
+\cmidrule(lr){2-4}\cmidrule(lr){5-7}
+Method & $\bar Q$ & $\bar R$ & score & $\bar Q$ & $\bar R$ & score\\
+\midrule
+Recompute Leiden & 0.777 & 0.951 & 0.635\,$\pm$\,0.000 & 0.883 & 0.951 & 0.741\,$\pm$\,0.000 \\
+Warm-start Leiden & 0.743 & 0.618 & 0.650\,$\pm$\,0.003 & 0.886 & 0.278 & 0.844\,$\pm$\,0.001 \\
+Frontier-restr. Leiden & 0.735 & 0.405 & 0.674\,$\pm$\,0.001 & 0.880 & 0.018 & \textbf{0.877\,$\pm$\,0.000} \\
+GDS Louvain (seeded) & 0.742 & 0.509 & 0.665$^\dagger$ & 0.876 & 0.074 & 0.865$^\dagger$ \\
+Lazy attach & 0.666 & 0.200 & 0.636\,$\pm$\,0.000 & 0.836 & 0.013 & 0.834\,$\pm$\,0.000 \\
+\midrule
+GraphRAG update (delta) & 0.358 & 0.074 & 0.347\,$\pm$\,0.000 & 0.751 & 0.024 & 0.747\,$\pm$\,0.000 \\
+Local repair & 0.685 & 0.219 & 0.652\,$\pm$\,0.000 & 0.867 & 0.018 & 0.865\,$\pm$\,0.000 \\
+Hybrid (local repair + refresh) & 0.730 & 0.281 & \textbf{0.688\,$\pm$\,0.002} & 0.867 & 0.018 & 0.865\,$\pm$\,0.000 \\
+\bottomrule
+\end{tabular}

@@ -3,6 +3,7 @@ For the 16 QA-stream stores (4 maintainers x 4 tolerances): modelled update cost
 (re)writes after version 0; measured = input + output tokens of the same gpt-5.6-luna calls (cache).
 Writes tokmodel_check.json."""
 import json
+import sys
 from pathlib import Path
 
 import numpy as np

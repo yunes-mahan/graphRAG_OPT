@@ -1,0 +1,3853 @@
+{
+ "settings": {
+  "runtime": "ollama",
+  "model": "qwen3:14b",
+  "digest": "bdbd181c33f2",
+  "parameters": "14.8B",
+  "quantization": "Q4_K_M",
+  "temperature": 0,
+  "seed": 0,
+  "think": false,
+  "num_ctx": 16384,
+  "ollama": "ollama version is 0.40.15"
+ },
+ "stores": [
+  "FRESH|recompute all",
+  "recompute_leiden|tau=0.9",
+  "warmstart_leiden|tau=0.9",
+  "frontier_leiden|tau=0.9",
+  "hybrid|tau=0.9"
+ ],
+ "n_questions": 150,
+ "summary": [
+  {
+   "store": "FRESH|recompute all",
+   "recall": 0.1896551724137931,
+   "ci_lo": 0.15,
+   "ci_hi": 0.23275862068965517,
+   "n_q": 145
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "recall": 0.1724137931034483,
+   "ci_lo": 0.13448275862068965,
+   "ci_hi": 0.21551724137931033,
+   "n_q": 145,
+   "diff": -0.017241379310344827,
+   "wilcoxon_p": 0.18497424455416034,
+   "tost_p": 3.416853528049969e-05,
+   "ci90": [
+    -0.030463474546742107,
+    -0.004019284073947549
+   ],
+   "equivalent": true,
+   "noninferior": true
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "recall": 0.18448275862068966,
+   "ci_lo": 0.14482758620689656,
+   "ci_hi": 0.22758620689655173,
+   "n_q": 145,
+   "diff": -0.005172413793103448,
+   "wilcoxon_p": 0.7312013129328705,
+   "tost_p": 0.012523970801117557,
+   "ci90": [
+    -0.03794704243428268,
+    0.027602214848075787
+   ],
+   "equivalent": true,
+   "noninferior": true
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "recall": 0.22241379310344828,
+   "ci_lo": 0.1810344827586207,
+   "ci_hi": 0.2655172413793103,
+   "n_q": 145,
+   "diff": 0.032758620689655175,
+   "wilcoxon_p": 0.08122780198457544,
+   "tost_p": 0.20095379969154528,
+   "ci90": [
+    -0.0011928969562396904,
+    0.06671013833555003
+   ],
+   "equivalent": false,
+   "noninferior": true
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "recall": 0.2413793103448276,
+   "ci_lo": 0.19995689655172416,
+   "ci_hi": 0.28620689655172415,
+   "n_q": 145,
+   "diff": 0.05172413793103448,
+   "wilcoxon_p": 0.0480228481224305,
+   "tost_p": 0.5295708893005626,
+   "ci90": [
+    0.01331880300623347,
+    0.0901294728558355
+   ],
+   "equivalent": false,
+   "noninferior": true
+  }
+ ],
+ "per_question": [
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in improving information retrieval through statistical and distributional modeling?",
+   "recall": 0.5
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in improving information retrieval through statistical and distributional modeling?",
+   "recall": 0.5
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in improving information retrieval through statistical and distributional modeling?",
+   "recall": 0.75
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in improving information retrieval through statistical and distributional modeling?",
+   "recall": 1.0
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in improving information retrieval through statistical and distributional modeling?",
+   "recall": 0.5
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in the analysis of dynamic networks and social systems?",
+   "recall": 0.0
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in the analysis of dynamic networks and social systems?",
+   "recall": 0.0
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in the analysis of dynamic networks and social systems?",
+   "recall": 0.0
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in the analysis of dynamic networks and social systems?",
+   "recall": 0.5
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in the analysis of dynamic networks and social systems?",
+   "recall": 0.75
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in the development and evaluation of index structures for modern data management systems?",
+   "recall": 0.5
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in the development and evaluation of index structures for modern data management systems?",
+   "recall": 0.0
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in the development and evaluation of index structures for modern data management systems?",
+   "recall": 0.0
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in the development and evaluation of index structures for modern data management systems?",
+   "recall": 0.0
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in the development and evaluation of index structures for modern data management systems?",
+   "recall": 0.0
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in modeling and analyzing temporal and bipartite networks?",
+   "recall": 0.0
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in modeling and analyzing temporal and bipartite networks?",
+   "recall": 0.0
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in modeling and analyzing temporal and bipartite networks?",
+   "recall": 0.0
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in modeling and analyzing temporal and bipartite networks?",
+   "recall": 0.25
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in modeling and analyzing temporal and bipartite networks?",
+   "recall": 0.75
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in network simplification and path computation?",
+   "recall": 0.0
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in network simplification and path computation?",
+   "recall": 0.0
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in network simplification and path computation?",
+   "recall": 0.5
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in network simplification and path computation?",
+   "recall": 0.0
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in network simplification and path computation?",
+   "recall": 0.0
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in evaluating and improving the quality of topic models and clustering algorithms?",
+   "recall": 0.0
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in evaluating and improving the quality of topic models and clustering algorithms?",
+   "recall": 0.0
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in evaluating and improving the quality of topic models and clustering algorithms?",
+   "recall": 0.0
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in evaluating and improving the quality of topic models and clustering algorithms?",
+   "recall": 0.0
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in evaluating and improving the quality of topic models and clustering algorithms?",
+   "recall": 0.0
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in improving tag recommendation systems?",
+   "recall": 0.0
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in improving tag recommendation systems?",
+   "recall": 0.0
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in improving tag recommendation systems?",
+   "recall": 0.0
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in improving tag recommendation systems?",
+   "recall": 0.5
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in improving tag recommendation systems?",
+   "recall": 0.0
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in educational data mining and team dynamics in software development?",
+   "recall": 0.25
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in educational data mining and team dynamics in software development?",
+   "recall": 0.25
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in educational data mining and team dynamics in software development?",
+   "recall": 0.25
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in educational data mining and team dynamics in software development?",
+   "recall": 0.25
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in educational data mining and team dynamics in software development?",
+   "recall": 0.25
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in systems that involve asking questions to improve information retrieval and knowledge acquisition?",
+   "recall": 0.75
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in systems that involve asking questions to improve information retrieval and knowledge acquisition?",
+   "recall": 0.75
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in systems that involve asking questions to improve information retrieval and knowledge acquisition?",
+   "recall": 0.0
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in systems that involve asking questions to improve information retrieval and knowledge acquisition?",
+   "recall": 0.0
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in systems that involve asking questions to improve information retrieval and knowledge acquisition?",
+   "recall": 0.0
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in big data analytics across different domains?",
+   "recall": 0.5
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in big data analytics across different domains?",
+   "recall": 0.25
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in big data analytics across different domains?",
+   "recall": 0.5
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in big data analytics across different domains?",
+   "recall": 0.5
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in big data analytics across different domains?",
+   "recall": 0.25
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in analyzing user behavior and interactions on social media platforms?",
+   "recall": 0.75
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in analyzing user behavior and interactions on social media platforms?",
+   "recall": 0.75
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in analyzing user behavior and interactions on social media platforms?",
+   "recall": 0.5
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in analyzing user behavior and interactions on social media platforms?",
+   "recall": 0.75
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in analyzing user behavior and interactions on social media platforms?",
+   "recall": 0.75
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in optimizing linear and relational algebra for large-scale data processing?",
+   "recall": 0.25
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in optimizing linear and relational algebra for large-scale data processing?",
+   "recall": 0.0
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in optimizing linear and relational algebra for large-scale data processing?",
+   "recall": 0.0
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in optimizing linear and relational algebra for large-scale data processing?",
+   "recall": 0.0
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in optimizing linear and relational algebra for large-scale data processing?",
+   "recall": 0.0
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in question routing and expert recommendation in community question answering systems?",
+   "recall": 0.5
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in question routing and expert recommendation in community question answering systems?",
+   "recall": 0.5
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in question routing and expert recommendation in community question answering systems?",
+   "recall": 0.75
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in question routing and expert recommendation in community question answering systems?",
+   "recall": 0.75
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in question routing and expert recommendation in community question answering systems?",
+   "recall": 0.0
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in clickbait detection research?",
+   "recall": 0.0
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in clickbait detection research?",
+   "recall": 0.0
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in clickbait detection research?",
+   "recall": 0.0
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in clickbait detection research?",
+   "recall": 0.0
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in clickbait detection research?",
+   "recall": 0.5
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in community detection for networks with overlapping structures?",
+   "recall": 0.25
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in community detection for networks with overlapping structures?",
+   "recall": 0.25
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in community detection for networks with overlapping structures?",
+   "recall": 0.0
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in community detection for networks with overlapping structures?",
+   "recall": 0.0
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in community detection for networks with overlapping structures?",
+   "recall": 0.0
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in the study of social bots and their impact on social media?",
+   "recall": 0.5
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in the study of social bots and their impact on social media?",
+   "recall": 0.75
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in the study of social bots and their impact on social media?",
+   "recall": 0.75
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in the study of social bots and their impact on social media?",
+   "recall": 0.75
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in the study of social bots and their impact on social media?",
+   "recall": 0.75
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in evaluating the impact of scholarly publications and journals?",
+   "recall": 0.5
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in evaluating the impact of scholarly publications and journals?",
+   "recall": 0.75
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in evaluating the impact of scholarly publications and journals?",
+   "recall": 0.75
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in evaluating the impact of scholarly publications and journals?",
+   "recall": 0.25
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in evaluating the impact of scholarly publications and journals?",
+   "recall": 0.75
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in community detection within multilayer networks?",
+   "recall": 0.0
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in community detection within multilayer networks?",
+   "recall": 0.0
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in community detection within multilayer networks?",
+   "recall": 0.25
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in community detection within multilayer networks?",
+   "recall": 0.0
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in community detection within multilayer networks?",
+   "recall": 0.25
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in influence maximization in social networks?",
+   "recall": 0.0
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in influence maximization in social networks?",
+   "recall": 0.0
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in influence maximization in social networks?",
+   "recall": 0.0
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in influence maximization in social networks?",
+   "recall": 0.0
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in influence maximization in social networks?",
+   "recall": 0.0
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in network embedding methods for heterogeneous and complex networks?",
+   "recall": 0.25
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in network embedding methods for heterogeneous and complex networks?",
+   "recall": 0.25
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in network embedding methods for heterogeneous and complex networks?",
+   "recall": 0.0
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in network embedding methods for heterogeneous and complex networks?",
+   "recall": 0.0
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in network embedding methods for heterogeneous and complex networks?",
+   "recall": 0.0
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in time series analysis and representation?",
+   "recall": 0.5
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in time series analysis and representation?",
+   "recall": 0.5
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in time series analysis and representation?",
+   "recall": 0.5
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in time series analysis and representation?",
+   "recall": 0.5
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in time series analysis and representation?",
+   "recall": 0.5
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in analyzing user engagement and interaction in social networks?",
+   "recall": 0.5
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in analyzing user engagement and interaction in social networks?",
+   "recall": 0.25
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in analyzing user engagement and interaction in social networks?",
+   "recall": 0.25
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in analyzing user engagement and interaction in social networks?",
+   "recall": 0.0
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in analyzing user engagement and interaction in social networks?",
+   "recall": 0.25
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in modeling dynamic networks over time?",
+   "recall": 0.0
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in modeling dynamic networks over time?",
+   "recall": 0.0
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in modeling dynamic networks over time?",
+   "recall": 0.0
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in modeling dynamic networks over time?",
+   "recall": 0.0
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in modeling dynamic networks over time?",
+   "recall": 0.0
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in analyzing topics and communities on social media platforms?",
+   "recall": 0.0
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in analyzing topics and communities on social media platforms?",
+   "recall": 0.0
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in analyzing topics and communities on social media platforms?",
+   "recall": 0.0
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in analyzing topics and communities on social media platforms?",
+   "recall": 0.25
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in analyzing topics and communities on social media platforms?",
+   "recall": 0.0
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in analyzing mobility and accessibility using big data and computational tools?",
+   "recall": 0.5
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in analyzing mobility and accessibility using big data and computational tools?",
+   "recall": 0.5
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in analyzing mobility and accessibility using big data and computational tools?",
+   "recall": 0.0
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in analyzing mobility and accessibility using big data and computational tools?",
+   "recall": 0.75
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in analyzing mobility and accessibility using big data and computational tools?",
+   "recall": 0.0
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in community detection in networks?",
+   "recall": 0.0
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in community detection in networks?",
+   "recall": 0.0
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in community detection in networks?",
+   "recall": 0.5
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in community detection in networks?",
+   "recall": 0.0
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in community detection in networks?",
+   "recall": 0.0
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in adversarial attacks on network embedding and community detection?",
+   "recall": 0.0
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in adversarial attacks on network embedding and community detection?",
+   "recall": 0.0
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in adversarial attacks on network embedding and community detection?",
+   "recall": 0.0
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in adversarial attacks on network embedding and community detection?",
+   "recall": 0.0
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in adversarial attacks on network embedding and community detection?",
+   "recall": 0.0
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in handling uncertainty in graph and database systems?",
+   "recall": 0.0
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in handling uncertainty in graph and database systems?",
+   "recall": 0.0
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in handling uncertainty in graph and database systems?",
+   "recall": 0.0
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in handling uncertainty in graph and database systems?",
+   "recall": 0.25
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in handling uncertainty in graph and database systems?",
+   "recall": 0.25
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in understanding and addressing information overload in digital communication?",
+   "recall": 0.0
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in understanding and addressing information overload in digital communication?",
+   "recall": 0.0
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in understanding and addressing information overload in digital communication?",
+   "recall": 0.0
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in understanding and addressing information overload in digital communication?",
+   "recall": 0.0
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in understanding and addressing information overload in digital communication?",
+   "recall": 0.0
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in network immunization strategies?",
+   "recall": 0.0
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in network immunization strategies?",
+   "recall": 0.0
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in network immunization strategies?",
+   "recall": 0.0
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in network immunization strategies?",
+   "recall": 0.0
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in network immunization strategies?",
+   "recall": 0.0
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in linking medical knowledge and social media for healthcare applications?",
+   "recall": 0.0
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in linking medical knowledge and social media for healthcare applications?",
+   "recall": 0.0
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in linking medical knowledge and social media for healthcare applications?",
+   "recall": 0.0
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in linking medical knowledge and social media for healthcare applications?",
+   "recall": 0.0
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in linking medical knowledge and social media for healthcare applications?",
+   "recall": 0.25
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in user intent modeling and prediction across different domains?",
+   "recall": 0.0
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in user intent modeling and prediction across different domains?",
+   "recall": 0.0
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in user intent modeling and prediction across different domains?",
+   "recall": 0.25
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in user intent modeling and prediction across different domains?",
+   "recall": 0.0
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in user intent modeling and prediction across different domains?",
+   "recall": 0.5
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in predicting the popularity of content and goods in virtual and social environments?",
+   "recall": 0.0
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in predicting the popularity of content and goods in virtual and social environments?",
+   "recall": 0.0
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in predicting the popularity of content and goods in virtual and social environments?",
+   "recall": 0.75
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in predicting the popularity of content and goods in virtual and social environments?",
+   "recall": 0.5
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in predicting the popularity of content and goods in virtual and social environments?",
+   "recall": 0.5
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in graph representation learning for financial and transaction network analysis?",
+   "recall": 0.25
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in graph representation learning for financial and transaction network analysis?",
+   "recall": 0.25
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in graph representation learning for financial and transaction network analysis?",
+   "recall": 0.0
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in graph representation learning for financial and transaction network analysis?",
+   "recall": 0.0
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in graph representation learning for financial and transaction network analysis?",
+   "recall": 0.75
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in incorporating knowledge graphs into recommender systems?",
+   "recall": 0.0
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in incorporating knowledge graphs into recommender systems?",
+   "recall": 0.0
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in incorporating knowledge graphs into recommender systems?",
+   "recall": 0.0
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in incorporating knowledge graphs into recommender systems?",
+   "recall": 0.0
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in incorporating knowledge graphs into recommender systems?",
+   "recall": 0.25
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in modeling latent structures in networks?",
+   "recall": 0.25
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in modeling latent structures in networks?",
+   "recall": 0.25
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in modeling latent structures in networks?",
+   "recall": 0.0
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in modeling latent structures in networks?",
+   "recall": 0.25
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in modeling latent structures in networks?",
+   "recall": 0.0
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in time series analysis and interdisciplinary research?",
+   "recall": 0.0
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in time series analysis and interdisciplinary research?",
+   "recall": 0.0
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in time series analysis and interdisciplinary research?",
+   "recall": 0.0
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in time series analysis and interdisciplinary research?",
+   "recall": 0.25
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in time series analysis and interdisciplinary research?",
+   "recall": 0.25
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in session-based recommendation systems?",
+   "recall": 0.0
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in session-based recommendation systems?",
+   "recall": 0.0
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in session-based recommendation systems?",
+   "recall": 0.25
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in session-based recommendation systems?",
+   "recall": 0.0
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in session-based recommendation systems?",
+   "recall": 0.25
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in neural network-based text classification and sentiment analysis?",
+   "recall": 0.5
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in neural network-based text classification and sentiment analysis?",
+   "recall": 0.25
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in neural network-based text classification and sentiment analysis?",
+   "recall": 0.0
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in neural network-based text classification and sentiment analysis?",
+   "recall": 0.25
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in neural network-based text classification and sentiment analysis?",
+   "recall": 0.5
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in analyzing the spread of misinformation on social media?",
+   "recall": 0.0
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in analyzing the spread of misinformation on social media?",
+   "recall": 0.0
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in analyzing the spread of misinformation on social media?",
+   "recall": 0.0
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in analyzing the spread of misinformation on social media?",
+   "recall": 0.0
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in analyzing the spread of misinformation on social media?",
+   "recall": 0.25
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in social network recommendation and influence maximization?",
+   "recall": 0.0
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in social network recommendation and influence maximization?",
+   "recall": 0.0
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in social network recommendation and influence maximization?",
+   "recall": 0.0
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in social network recommendation and influence maximization?",
+   "recall": 0.0
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in social network recommendation and influence maximization?",
+   "recall": 0.0
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in dynamic query evaluation and enumeration under database updates?",
+   "recall": 0.0
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in dynamic query evaluation and enumeration under database updates?",
+   "recall": 0.0
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in dynamic query evaluation and enumeration under database updates?",
+   "recall": 0.0
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in dynamic query evaluation and enumeration under database updates?",
+   "recall": 0.0
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in dynamic query evaluation and enumeration under database updates?",
+   "recall": 0.0
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in using social media data for public health and societal analysis?",
+   "recall": 0.75
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in using social media data for public health and societal analysis?",
+   "recall": 0.75
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in using social media data for public health and societal analysis?",
+   "recall": 0.5
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in using social media data for public health and societal analysis?",
+   "recall": 0.5
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in using social media data for public health and societal analysis?",
+   "recall": 0.25
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in the development and application of learned index structures in database systems?",
+   "recall": 0.0
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in the development and application of learned index structures in database systems?",
+   "recall": 0.0
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in the development and application of learned index structures in database systems?",
+   "recall": 0.0
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in the development and application of learned index structures in database systems?",
+   "recall": 0.0
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in the development and application of learned index structures in database systems?",
+   "recall": 0.25
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in influence maximization in social networks?",
+   "recall": 0.0
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in influence maximization in social networks?",
+   "recall": 0.0
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in influence maximization in social networks?",
+   "recall": 0.0
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in influence maximization in social networks?",
+   "recall": 0.0
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in influence maximization in social networks?",
+   "recall": 0.0
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in estimating data and knowledge completeness in large-scale systems?",
+   "recall": 0.0
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in estimating data and knowledge completeness in large-scale systems?",
+   "recall": 0.0
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in estimating data and knowledge completeness in large-scale systems?",
+   "recall": 0.0
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in estimating data and knowledge completeness in large-scale systems?",
+   "recall": 0.0
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in estimating data and knowledge completeness in large-scale systems?",
+   "recall": 0.0
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in modern question answering systems?",
+   "recall": 0.0
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in modern question answering systems?",
+   "recall": 0.0
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in modern question answering systems?",
+   "recall": 0.0
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in modern question answering systems?",
+   "recall": 0.0
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in modern question answering systems?",
+   "recall": 0.25
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in assessing the trustworthiness and bias of news media and social content?",
+   "recall": 0.0
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in assessing the trustworthiness and bias of news media and social content?",
+   "recall": 0.0
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in assessing the trustworthiness and bias of news media and social content?",
+   "recall": 0.0
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in assessing the trustworthiness and bias of news media and social content?",
+   "recall": 0.0
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in assessing the trustworthiness and bias of news media and social content?",
+   "recall": 0.0
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in analyzing and modeling online discussions and argumentation?",
+   "recall": 0.5
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in analyzing and modeling online discussions and argumentation?",
+   "recall": 0.5
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in analyzing and modeling online discussions and argumentation?",
+   "recall": 0.25
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in analyzing and modeling online discussions and argumentation?",
+   "recall": 0.25
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in analyzing and modeling online discussions and argumentation?",
+   "recall": 0.25
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in comparing complex data structures and results from different methods?",
+   "recall": 0.0
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in comparing complex data structures and results from different methods?",
+   "recall": 0.0
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in comparing complex data structures and results from different methods?",
+   "recall": 0.0
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in comparing complex data structures and results from different methods?",
+   "recall": 0.0
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in comparing complex data structures and results from different methods?",
+   "recall": 0.0
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in influence maximization in social networks?",
+   "recall": 0.0
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in influence maximization in social networks?",
+   "recall": 0.0
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in influence maximization in social networks?",
+   "recall": 0.0
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in influence maximization in social networks?",
+   "recall": 0.0
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in influence maximization in social networks?",
+   "recall": 0.0
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in anomaly detection on dynamic and attributed networks?",
+   "recall": 0.0
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in anomaly detection on dynamic and attributed networks?",
+   "recall": 0.0
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in anomaly detection on dynamic and attributed networks?",
+   "recall": 0.25
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in anomaly detection on dynamic and attributed networks?",
+   "recall": 0.0
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in anomaly detection on dynamic and attributed networks?",
+   "recall": 0.0
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in explainable recommendation systems?",
+   "recall": 0.0
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in explainable recommendation systems?",
+   "recall": 0.0
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in explainable recommendation systems?",
+   "recall": 0.0
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in explainable recommendation systems?",
+   "recall": 0.0
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in explainable recommendation systems?",
+   "recall": 0.0
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in quantifying and understanding controversy in social media?",
+   "recall": 0.5
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in quantifying and understanding controversy in social media?",
+   "recall": 0.5
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in quantifying and understanding controversy in social media?",
+   "recall": 0.5
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in quantifying and understanding controversy in social media?",
+   "recall": 0.5
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in quantifying and understanding controversy in social media?",
+   "recall": 0.5
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in spatial and temporal data processing for location-based services?",
+   "recall": 0.25
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in spatial and temporal data processing for location-based services?",
+   "recall": 0.25
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in spatial and temporal data processing for location-based services?",
+   "recall": 0.25
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in spatial and temporal data processing for location-based services?",
+   "recall": 0.0
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in spatial and temporal data processing for location-based services?",
+   "recall": 0.25
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in topic modeling?",
+   "recall": 0.25
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in topic modeling?",
+   "recall": 0.25
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in topic modeling?",
+   "recall": 0.5
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in topic modeling?",
+   "recall": 0.5
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in topic modeling?",
+   "recall": 0.5
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in the management and evaluation of peer review processes in academic publishing?",
+   "recall": 0.0
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in the management and evaluation of peer review processes in academic publishing?",
+   "recall": 0.0
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in the management and evaluation of peer review processes in academic publishing?",
+   "recall": 0.0
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in the management and evaluation of peer review processes in academic publishing?",
+   "recall": 0.0
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in the management and evaluation of peer review processes in academic publishing?",
+   "recall": 0.0
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in improving search and summarization for e-commerce applications?",
+   "recall": 0.25
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in improving search and summarization for e-commerce applications?",
+   "recall": 0.0
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in improving search and summarization for e-commerce applications?",
+   "recall": 0.0
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in improving search and summarization for e-commerce applications?",
+   "recall": 0.5
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in improving search and summarization for e-commerce applications?",
+   "recall": 0.25
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in ontology learning and application for knowledge extraction and search?",
+   "recall": 0.5
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in ontology learning and application for knowledge extraction and search?",
+   "recall": 0.5
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in ontology learning and application for knowledge extraction and search?",
+   "recall": 0.0
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in ontology learning and application for knowledge extraction and search?",
+   "recall": 0.75
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in ontology learning and application for knowledge extraction and search?",
+   "recall": 0.25
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in comparing and analyzing networks and metric spaces?",
+   "recall": 0.0
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in comparing and analyzing networks and metric spaces?",
+   "recall": 0.0
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in comparing and analyzing networks and metric spaces?",
+   "recall": 0.0
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in comparing and analyzing networks and metric spaces?",
+   "recall": 0.0
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in comparing and analyzing networks and metric spaces?",
+   "recall": 0.0
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in using knowledge graphs for fact checking and explanation?",
+   "recall": 0.0
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in using knowledge graphs for fact checking and explanation?",
+   "recall": 0.0
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in using knowledge graphs for fact checking and explanation?",
+   "recall": 0.25
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in using knowledge graphs for fact checking and explanation?",
+   "recall": 0.0
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in using knowledge graphs for fact checking and explanation?",
+   "recall": 0.0
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in the study of document spanners and their computational properties?",
+   "recall": 0.0
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in the study of document spanners and their computational properties?",
+   "recall": 0.0
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in the study of document spanners and their computational properties?",
+   "recall": 0.0
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in the study of document spanners and their computational properties?",
+   "recall": 0.0
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in the study of document spanners and their computational properties?",
+   "recall": 0.0
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in diversification and optimization for influence maximization in social networks?",
+   "recall": 0.5
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in diversification and optimization for influence maximization in social networks?",
+   "recall": 0.5
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in diversification and optimization for influence maximization in social networks?",
+   "recall": 0.5
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in diversification and optimization for influence maximization in social networks?",
+   "recall": 0.5
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in diversification and optimization for influence maximization in social networks?",
+   "recall": 0.5
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in analyzing community structure and vulnerability in complex networks?",
+   "recall": 0.0
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in analyzing community structure and vulnerability in complex networks?",
+   "recall": 0.0
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in analyzing community structure and vulnerability in complex networks?",
+   "recall": 0.0
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in analyzing community structure and vulnerability in complex networks?",
+   "recall": 0.0
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in analyzing community structure and vulnerability in complex networks?",
+   "recall": 0.0
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in entity consolidation and data integration?",
+   "recall": 0.0
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in entity consolidation and data integration?",
+   "recall": 0.0
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in entity consolidation and data integration?",
+   "recall": 0.0
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in entity consolidation and data integration?",
+   "recall": 0.0
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in entity consolidation and data integration?",
+   "recall": 0.0
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in detecting physical events using social media data?",
+   "recall": 0.5
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in detecting physical events using social media data?",
+   "recall": 0.5
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in detecting physical events using social media data?",
+   "recall": 0.5
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in detecting physical events using social media data?",
+   "recall": 0.25
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in detecting physical events using social media data?",
+   "recall": 0.5
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in citation recommendation and related research areas?",
+   "recall": 0.0
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in citation recommendation and related research areas?",
+   "recall": 0.0
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in citation recommendation and related research areas?",
+   "recall": 0.0
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in citation recommendation and related research areas?",
+   "recall": 0.0
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in citation recommendation and related research areas?",
+   "recall": 0.25
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in influence maximization and related problems in social networks?",
+   "recall": 0.0
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in influence maximization and related problems in social networks?",
+   "recall": 0.0
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in influence maximization and related problems in social networks?",
+   "recall": 0.0
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in influence maximization and related problems in social networks?",
+   "recall": 0.0
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in influence maximization and related problems in social networks?",
+   "recall": 0.0
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in fact checking and claim verification?",
+   "recall": 0.0
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in fact checking and claim verification?",
+   "recall": 0.0
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in fact checking and claim verification?",
+   "recall": 0.25
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in fact checking and claim verification?",
+   "recall": 0.0
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in fact checking and claim verification?",
+   "recall": 0.0
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in heterogeneous graph and network embedding?",
+   "recall": 0.0
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in heterogeneous graph and network embedding?",
+   "recall": 0.0
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in heterogeneous graph and network embedding?",
+   "recall": 0.0
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in heterogeneous graph and network embedding?",
+   "recall": 0.0
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in heterogeneous graph and network embedding?",
+   "recall": 0.0
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in modeling and enforcing constraints and invariants in data and process systems?",
+   "recall": 0.25
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in modeling and enforcing constraints and invariants in data and process systems?",
+   "recall": 0.25
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in modeling and enforcing constraints and invariants in data and process systems?",
+   "recall": 0.25
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in modeling and enforcing constraints and invariants in data and process systems?",
+   "recall": 0.25
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in modeling and enforcing constraints and invariants in data and process systems?",
+   "recall": 0.25
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in optimizing data processing systems for high performance and scalability?",
+   "recall": 0.0
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in optimizing data processing systems for high performance and scalability?",
+   "recall": 0.0
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in optimizing data processing systems for high performance and scalability?",
+   "recall": 0.0
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in optimizing data processing systems for high performance and scalability?",
+   "recall": 0.0
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in optimizing data processing systems for high performance and scalability?",
+   "recall": 0.0
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in the analysis of dense subgraphs and network stability in graph mining?",
+   "recall": 0.0
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in the analysis of dense subgraphs and network stability in graph mining?",
+   "recall": 0.0
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in the analysis of dense subgraphs and network stability in graph mining?",
+   "recall": 0.0
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in the analysis of dense subgraphs and network stability in graph mining?",
+   "recall": 0.0
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in the analysis of dense subgraphs and network stability in graph mining?",
+   "recall": 0.0
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in detecting coordinated activities and influence campaigns on social media?",
+   "recall": 0.75
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in detecting coordinated activities and influence campaigns on social media?",
+   "recall": 0.75
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in detecting coordinated activities and influence campaigns on social media?",
+   "recall": 0.25
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in detecting coordinated activities and influence campaigns on social media?",
+   "recall": 0.75
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in detecting coordinated activities and influence campaigns on social media?",
+   "recall": 0.5
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in network embedding methods for dynamic and evolving networks?",
+   "recall": 0.0
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in network embedding methods for dynamic and evolving networks?",
+   "recall": 0.0
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in network embedding methods for dynamic and evolving networks?",
+   "recall": 0.5
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in network embedding methods for dynamic and evolving networks?",
+   "recall": 0.25
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in network embedding methods for dynamic and evolving networks?",
+   "recall": 0.25
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in community detection for large-scale and sparse networks?",
+   "recall": 0.0
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in community detection for large-scale and sparse networks?",
+   "recall": 0.0
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in community detection for large-scale and sparse networks?",
+   "recall": 0.0
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in community detection for large-scale and sparse networks?",
+   "recall": 0.25
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in community detection for large-scale and sparse networks?",
+   "recall": 0.25
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in blockchain-based data management and querying?",
+   "recall": 0.0
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in blockchain-based data management and querying?",
+   "recall": 0.0
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in blockchain-based data management and querying?",
+   "recall": 0.0
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in blockchain-based data management and querying?",
+   "recall": 0.0
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in blockchain-based data management and querying?",
+   "recall": 0.25
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in improving text representation and semantic similarity for short and informal texts?",
+   "recall": 0.0
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in improving text representation and semantic similarity for short and informal texts?",
+   "recall": 0.0
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in improving text representation and semantic similarity for short and informal texts?",
+   "recall": 0.0
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in improving text representation and semantic similarity for short and informal texts?",
+   "recall": 0.25
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in improving text representation and semantic similarity for short and informal texts?",
+   "recall": 0.5
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in link prediction within network science?",
+   "recall": 0.0
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in link prediction within network science?",
+   "recall": 0.0
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in link prediction within network science?",
+   "recall": 0.25
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in link prediction within network science?",
+   "recall": 0.25
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in link prediction within network science?",
+   "recall": 0.0
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in overlapping community detection in social networks?",
+   "recall": 0.0
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in overlapping community detection in social networks?",
+   "recall": 0.0
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in overlapping community detection in social networks?",
+   "recall": 0.0
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in overlapping community detection in social networks?",
+   "recall": 0.0
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in overlapping community detection in social networks?",
+   "recall": 0.0
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in modeling opinion dynamics in social networks?",
+   "recall": 0.25
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in modeling opinion dynamics in social networks?",
+   "recall": 0.25
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in modeling opinion dynamics in social networks?",
+   "recall": 0.0
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in modeling opinion dynamics in social networks?",
+   "recall": 0.0
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in modeling opinion dynamics in social networks?",
+   "recall": 0.5
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in data integration and migration across computational science and open data platforms?",
+   "recall": 0.5
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in data integration and migration across computational science and open data platforms?",
+   "recall": 0.5
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in data integration and migration across computational science and open data platforms?",
+   "recall": 0.75
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in data integration and migration across computational science and open data platforms?",
+   "recall": 0.5
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in data integration and migration across computational science and open data platforms?",
+   "recall": 0.75
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in distributed stream processing systems?",
+   "recall": 0.0
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in distributed stream processing systems?",
+   "recall": 0.0
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in distributed stream processing systems?",
+   "recall": 0.0
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in distributed stream processing systems?",
+   "recall": 0.0
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in distributed stream processing systems?",
+   "recall": 0.0
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in studying diversity, bias, and inequality in online platforms and social networks?",
+   "recall": 0.0
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in studying diversity, bias, and inequality in online platforms and social networks?",
+   "recall": 0.0
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in studying diversity, bias, and inequality in online platforms and social networks?",
+   "recall": 0.0
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in studying diversity, bias, and inequality in online platforms and social networks?",
+   "recall": 0.0
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in studying diversity, bias, and inequality in online platforms and social networks?",
+   "recall": 0.25
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in the comparative analysis of academic databases like Web of Science and Scopus?",
+   "recall": 0.0
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in the comparative analysis of academic databases like Web of Science and Scopus?",
+   "recall": 0.0
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in the comparative analysis of academic databases like Web of Science and Scopus?",
+   "recall": 0.0
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in the comparative analysis of academic databases like Web of Science and Scopus?",
+   "recall": 0.0
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in the comparative analysis of academic databases like Web of Science and Scopus?",
+   "recall": 0.0
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in improving relevance ranking and semantic understanding in information retrieval?",
+   "recall": 0.25
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in improving relevance ranking and semantic understanding in information retrieval?",
+   "recall": 0.0
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in improving relevance ranking and semantic understanding in information retrieval?",
+   "recall": 0.75
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in improving relevance ranking and semantic understanding in information retrieval?",
+   "recall": 0.75
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in improving relevance ranking and semantic understanding in information retrieval?",
+   "recall": 1.0
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in studying cultural assimilation and polarization using digital data?",
+   "recall": 0.5
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in studying cultural assimilation and polarization using digital data?",
+   "recall": 0.5
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in studying cultural assimilation and polarization using digital data?",
+   "recall": 0.5
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in studying cultural assimilation and polarization using digital data?",
+   "recall": 0.5
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in studying cultural assimilation and polarization using digital data?",
+   "recall": 0.25
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in modeling user search behavior and query reformulation in search sessions?",
+   "recall": 0.0
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in modeling user search behavior and query reformulation in search sessions?",
+   "recall": 0.0
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in modeling user search behavior and query reformulation in search sessions?",
+   "recall": 0.0
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in modeling user search behavior and query reformulation in search sessions?",
+   "recall": 0.0
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in modeling user search behavior and query reformulation in search sessions?",
+   "recall": 0.0
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in analyzing research collaboration and citation impact across different countries and disciplines?",
+   "recall": 0.0
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in analyzing research collaboration and citation impact across different countries and disciplines?",
+   "recall": 0.0
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in analyzing research collaboration and citation impact across different countries and disciplines?",
+   "recall": 0.5
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in analyzing research collaboration and citation impact across different countries and disciplines?",
+   "recall": 0.5
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in analyzing research collaboration and citation impact across different countries and disciplines?",
+   "recall": 0.5
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in improving the scalability and performance of Byzantine-Fault-Tolerant systems?",
+   "recall": 0.0
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in improving the scalability and performance of Byzantine-Fault-Tolerant systems?",
+   "recall": 0.0
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in improving the scalability and performance of Byzantine-Fault-Tolerant systems?",
+   "recall": 0.0
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in improving the scalability and performance of Byzantine-Fault-Tolerant systems?",
+   "recall": 0.0
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in improving the scalability and performance of Byzantine-Fault-Tolerant systems?",
+   "recall": 0.0
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in integrating machine learning and predictive analytics into database systems?",
+   "recall": 0.0
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in integrating machine learning and predictive analytics into database systems?",
+   "recall": 0.0
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in integrating machine learning and predictive analytics into database systems?",
+   "recall": 0.5
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in integrating machine learning and predictive analytics into database systems?",
+   "recall": 0.5
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in integrating machine learning and predictive analytics into database systems?",
+   "recall": 0.0
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in table-related information access tasks?",
+   "recall": 0.0
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in table-related information access tasks?",
+   "recall": 0.0
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in table-related information access tasks?",
+   "recall": 0.0
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in table-related information access tasks?",
+   "recall": 0.0
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in table-related information access tasks?",
+   "recall": 0.5
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in link prediction within social and multiplex networks?",
+   "recall": 0.25
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in link prediction within social and multiplex networks?",
+   "recall": 0.25
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in link prediction within social and multiplex networks?",
+   "recall": 0.0
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in link prediction within social and multiplex networks?",
+   "recall": 0.0
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in link prediction within social and multiplex networks?",
+   "recall": 0.0
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in detecting and mitigating fake news on social media?",
+   "recall": 0.0
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in detecting and mitigating fake news on social media?",
+   "recall": 0.0
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in detecting and mitigating fake news on social media?",
+   "recall": 0.0
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in detecting and mitigating fake news on social media?",
+   "recall": 0.25
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in detecting and mitigating fake news on social media?",
+   "recall": 0.0
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in modern recommendation systems?",
+   "recall": 0.0
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in modern recommendation systems?",
+   "recall": 0.0
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in modern recommendation systems?",
+   "recall": 0.25
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in modern recommendation systems?",
+   "recall": 0.0
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in modern recommendation systems?",
+   "recall": 0.5
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in session-based query suggestion and reformulation?",
+   "recall": 0.0
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in session-based query suggestion and reformulation?",
+   "recall": 0.0
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in session-based query suggestion and reformulation?",
+   "recall": 0.0
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in session-based query suggestion and reformulation?",
+   "recall": 0.0
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in session-based query suggestion and reformulation?",
+   "recall": 0.0
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in cross-modal hashing for efficient retrieval?",
+   "recall": 0.75
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in cross-modal hashing for efficient retrieval?",
+   "recall": 0.5
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in cross-modal hashing for efficient retrieval?",
+   "recall": 0.5
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in cross-modal hashing for efficient retrieval?",
+   "recall": 0.75
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in cross-modal hashing for efficient retrieval?",
+   "recall": 0.5
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in analyzing the peer review process for academic journals?",
+   "recall": 0.5
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in analyzing the peer review process for academic journals?",
+   "recall": 0.5
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in analyzing the peer review process for academic journals?",
+   "recall": 0.5
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in analyzing the peer review process for academic journals?",
+   "recall": 0.5
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in analyzing the peer review process for academic journals?",
+   "recall": 0.5
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in text and preference modeling for classification and search tasks?",
+   "recall": 0.5
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in text and preference modeling for classification and search tasks?",
+   "recall": 0.5
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in text and preference modeling for classification and search tasks?",
+   "recall": 0.0
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in text and preference modeling for classification and search tasks?",
+   "recall": 0.0
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in text and preference modeling for classification and search tasks?",
+   "recall": 0.0
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in handling complex and diverse agricultural big data for decision support?",
+   "recall": 0.0
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in handling complex and diverse agricultural big data for decision support?",
+   "recall": 0.0
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in handling complex and diverse agricultural big data for decision support?",
+   "recall": 0.0
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in handling complex and diverse agricultural big data for decision support?",
+   "recall": 0.0
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in handling complex and diverse agricultural big data for decision support?",
+   "recall": 0.5
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in understanding and predicting video engagement and popularity on online platforms?",
+   "recall": 0.0
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in understanding and predicting video engagement and popularity on online platforms?",
+   "recall": 0.0
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in understanding and predicting video engagement and popularity on online platforms?",
+   "recall": 0.75
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in understanding and predicting video engagement and popularity on online platforms?",
+   "recall": 0.5
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in understanding and predicting video engagement and popularity on online platforms?",
+   "recall": 0.5
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in blocking methods for entity resolution?",
+   "recall": 0.75
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in blocking methods for entity resolution?",
+   "recall": 0.5
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in blocking methods for entity resolution?",
+   "recall": 0.25
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in blocking methods for entity resolution?",
+   "recall": 0.5
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in blocking methods for entity resolution?",
+   "recall": 0.5
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in estimating and improving centrality measures in network analysis?",
+   "recall": 0.0
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in estimating and improving centrality measures in network analysis?",
+   "recall": 0.0
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in estimating and improving centrality measures in network analysis?",
+   "recall": 0.0
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in estimating and improving centrality measures in network analysis?",
+   "recall": 0.0
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in estimating and improving centrality measures in network analysis?",
+   "recall": 0.0
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in event detection using social media data?",
+   "recall": 1.0
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in event detection using social media data?",
+   "recall": 1.0
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in event detection using social media data?",
+   "recall": 0.75
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in event detection using social media data?",
+   "recall": 0.25
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in event detection using social media data?",
+   "recall": 1.0
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in approximate query processing for large-scale data analytics?",
+   "recall": 0.5
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in approximate query processing for large-scale data analytics?",
+   "recall": 0.25
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in approximate query processing for large-scale data analytics?",
+   "recall": 0.25
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in approximate query processing for large-scale data analytics?",
+   "recall": 0.25
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in approximate query processing for large-scale data analytics?",
+   "recall": 0.25
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in fake news detection on social media?",
+   "recall": 0.0
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in fake news detection on social media?",
+   "recall": 0.0
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in fake news detection on social media?",
+   "recall": 0.0
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in fake news detection on social media?",
+   "recall": 0.5
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in fake news detection on social media?",
+   "recall": 0.5
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in influence maximization in social networks?",
+   "recall": 0.0
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in influence maximization in social networks?",
+   "recall": 0.0
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in influence maximization in social networks?",
+   "recall": 0.0
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in influence maximization in social networks?",
+   "recall": 0.0
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in influence maximization in social networks?",
+   "recall": 0.0
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in sentiment analysis using social media data?",
+   "recall": 0.0
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in sentiment analysis using social media data?",
+   "recall": 0.0
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in sentiment analysis using social media data?",
+   "recall": 0.0
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in sentiment analysis using social media data?",
+   "recall": 0.25
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in sentiment analysis using social media data?",
+   "recall": 0.25
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in the evaluation and normalization of journal impact indicators?",
+   "recall": 0.25
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in the evaluation and normalization of journal impact indicators?",
+   "recall": 0.25
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in the evaluation and normalization of journal impact indicators?",
+   "recall": 0.25
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in the evaluation and normalization of journal impact indicators?",
+   "recall": 0.25
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in the evaluation and normalization of journal impact indicators?",
+   "recall": 0.25
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in modern recommender systems research?",
+   "recall": 0.25
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in modern recommender systems research?",
+   "recall": 0.25
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in modern recommender systems research?",
+   "recall": 0.25
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in modern recommender systems research?",
+   "recall": 0.5
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in modern recommender systems research?",
+   "recall": 0.5
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in community detection across different types of networks?",
+   "recall": 0.25
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in community detection across different types of networks?",
+   "recall": 0.5
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in community detection across different types of networks?",
+   "recall": 0.75
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in community detection across different types of networks?",
+   "recall": 0.75
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in community detection across different types of networks?",
+   "recall": 0.75
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in web archive research and usage?",
+   "recall": 0.0
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in web archive research and usage?",
+   "recall": 0.0
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in web archive research and usage?",
+   "recall": 0.0
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in web archive research and usage?",
+   "recall": 0.0
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in web archive research and usage?",
+   "recall": 0.0
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in improving fairness and diversity in music recommendation systems?",
+   "recall": 0.25
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in improving fairness and diversity in music recommendation systems?",
+   "recall": 0.25
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in improving fairness and diversity in music recommendation systems?",
+   "recall": 0.5
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in improving fairness and diversity in music recommendation systems?",
+   "recall": 0.75
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in improving fairness and diversity in music recommendation systems?",
+   "recall": 0.5
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in optimizing query processing and resource management in cloud-based analytics systems?",
+   "recall": 0.25
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in optimizing query processing and resource management in cloud-based analytics systems?",
+   "recall": 0.25
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in optimizing query processing and resource management in cloud-based analytics systems?",
+   "recall": 0.25
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in optimizing query processing and resource management in cloud-based analytics systems?",
+   "recall": 0.25
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in optimizing query processing and resource management in cloud-based analytics systems?",
+   "recall": 0.5
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in recommender systems research?",
+   "recall": 0.5
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in recommender systems research?",
+   "recall": 0.5
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in recommender systems research?",
+   "recall": 0.0
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in recommender systems research?",
+   "recall": 0.75
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in recommender systems research?",
+   "recall": 0.5
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in utilizing natural language processing for clinical data analysis?",
+   "recall": 0.0
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in utilizing natural language processing for clinical data analysis?",
+   "recall": 0.0
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in utilizing natural language processing for clinical data analysis?",
+   "recall": 0.0
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in utilizing natural language processing for clinical data analysis?",
+   "recall": 0.0
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in utilizing natural language processing for clinical data analysis?",
+   "recall": 0.0
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in using web tables for information retrieval and question answering?",
+   "recall": 0.0
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in using web tables for information retrieval and question answering?",
+   "recall": 0.25
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in using web tables for information retrieval and question answering?",
+   "recall": 0.0
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in using web tables for information retrieval and question answering?",
+   "recall": 0.0
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in using web tables for information retrieval and question answering?",
+   "recall": 0.25
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in modern personalized recommendation systems?",
+   "recall": 0.5
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in modern personalized recommendation systems?",
+   "recall": 0.5
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in modern personalized recommendation systems?",
+   "recall": 0.5
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in modern personalized recommendation systems?",
+   "recall": 0.25
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in modern personalized recommendation systems?",
+   "recall": 0.5
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in fake news detection on social media?",
+   "recall": 0.0
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in fake news detection on social media?",
+   "recall": 0.0
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in fake news detection on social media?",
+   "recall": 0.0
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in fake news detection on social media?",
+   "recall": 0.5
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in fake news detection on social media?",
+   "recall": 0.5
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in privacy-preserving recommendation systems?",
+   "recall": 0.25
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in privacy-preserving recommendation systems?",
+   "recall": 0.25
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in privacy-preserving recommendation systems?",
+   "recall": 0.25
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in privacy-preserving recommendation systems?",
+   "recall": 0.25
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in privacy-preserving recommendation systems?",
+   "recall": 0.25
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in data cleaning research?",
+   "recall": 0.5
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in data cleaning research?",
+   "recall": 0.25
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in data cleaning research?",
+   "recall": 0.5
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in data cleaning research?",
+   "recall": 0.25
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in data cleaning research?",
+   "recall": 0.0
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in deep learning for text classification and related NLP tasks?",
+   "recall": 0.25
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in deep learning for text classification and related NLP tasks?",
+   "recall": 0.25
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in deep learning for text classification and related NLP tasks?",
+   "recall": 0.25
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in deep learning for text classification and related NLP tasks?",
+   "recall": 0.25
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in deep learning for text classification and related NLP tasks?",
+   "recall": 0.25
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in news recommendation systems?",
+   "recall": 0.0
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in news recommendation systems?",
+   "recall": 0.0
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in news recommendation systems?",
+   "recall": 0.0
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in news recommendation systems?",
+   "recall": 0.5
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in news recommendation systems?",
+   "recall": 1.0
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in modern topic modeling techniques?",
+   "recall": 0.0
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in modern topic modeling techniques?",
+   "recall": 0.0
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in modern topic modeling techniques?",
+   "recall": 0.0
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in modern topic modeling techniques?",
+   "recall": 0.0
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in modern topic modeling techniques?",
+   "recall": 0.0
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in generative models for synthetic graph creation?",
+   "recall": 0.0
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in generative models for synthetic graph creation?",
+   "recall": 0.0
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in generative models for synthetic graph creation?",
+   "recall": 0.0
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in generative models for synthetic graph creation?",
+   "recall": 0.0
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in generative models for synthetic graph creation?",
+   "recall": 0.0
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in unsupervised knowledge extraction and representation learning from biomedical text?",
+   "recall": 0.0
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in unsupervised knowledge extraction and representation learning from biomedical text?",
+   "recall": 0.0
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in unsupervised knowledge extraction and representation learning from biomedical text?",
+   "recall": 0.0
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in unsupervised knowledge extraction and representation learning from biomedical text?",
+   "recall": 0.25
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in unsupervised knowledge extraction and representation learning from biomedical text?",
+   "recall": 0.75
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in modeling dynamic user preferences for sequential recommendation systems?",
+   "recall": 0.75
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in modeling dynamic user preferences for sequential recommendation systems?",
+   "recall": 0.75
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in modeling dynamic user preferences for sequential recommendation systems?",
+   "recall": 0.25
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in modeling dynamic user preferences for sequential recommendation systems?",
+   "recall": 0.0
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in modeling dynamic user preferences for sequential recommendation systems?",
+   "recall": 0.25
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in improving the efficiency and performance of large-scale data analytics?",
+   "recall": 0.25
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in improving the efficiency and performance of large-scale data analytics?",
+   "recall": 0.0
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in improving the efficiency and performance of large-scale data analytics?",
+   "recall": 0.5
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in improving the efficiency and performance of large-scale data analytics?",
+   "recall": 0.75
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in improving the efficiency and performance of large-scale data analytics?",
+   "recall": 0.5
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in session-based recommendation systems?",
+   "recall": 0.0
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in session-based recommendation systems?",
+   "recall": 0.0
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in session-based recommendation systems?",
+   "recall": 0.25
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in session-based recommendation systems?",
+   "recall": 0.0
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in session-based recommendation systems?",
+   "recall": 0.25
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in graph neural networks and their applications?",
+   "recall": 0.0
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in graph neural networks and their applications?",
+   "recall": 0.0
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in graph neural networks and their applications?",
+   "recall": 0.0
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in graph neural networks and their applications?",
+   "recall": 0.0
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in graph neural networks and their applications?",
+   "recall": 0.0
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in improving string similarity and matching techniques?",
+   "recall": 0.25
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in improving string similarity and matching techniques?",
+   "recall": 0.0
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in improving string similarity and matching techniques?",
+   "recall": 0.25
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in improving string similarity and matching techniques?",
+   "recall": 0.5
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in improving string similarity and matching techniques?",
+   "recall": 0.25
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in field-normalized bibliometric indicators for impact measurement?",
+   "recall": 0.25
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in field-normalized bibliometric indicators for impact measurement?",
+   "recall": 0.25
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in field-normalized bibliometric indicators for impact measurement?",
+   "recall": 0.25
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in field-normalized bibliometric indicators for impact measurement?",
+   "recall": 0.5
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in field-normalized bibliometric indicators for impact measurement?",
+   "recall": 0.25
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in the use of citation data for academic evaluation and research assessment?",
+   "recall": 0.25
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in the use of citation data for academic evaluation and research assessment?",
+   "recall": 0.25
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in the use of citation data for academic evaluation and research assessment?",
+   "recall": 0.0
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in the use of citation data for academic evaluation and research assessment?",
+   "recall": 0.5
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in the use of citation data for academic evaluation and research assessment?",
+   "recall": 0.5
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in modern recommender systems?",
+   "recall": 0.25
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in modern recommender systems?",
+   "recall": 0.5
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in modern recommender systems?",
+   "recall": 0.25
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in modern recommender systems?",
+   "recall": 0.5
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in modern recommender systems?",
+   "recall": 0.25
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in the analysis of complex networks and data in scientific research?",
+   "recall": 0.0
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in the analysis of complex networks and data in scientific research?",
+   "recall": 0.0
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in the analysis of complex networks and data in scientific research?",
+   "recall": 0.0
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in the analysis of complex networks and data in scientific research?",
+   "recall": 0.0
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in the analysis of complex networks and data in scientific research?",
+   "recall": 0.0
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in improving the efficiency and accuracy of large-scale recommender systems?",
+   "recall": 0.25
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in improving the efficiency and accuracy of large-scale recommender systems?",
+   "recall": 0.0
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in improving the efficiency and accuracy of large-scale recommender systems?",
+   "recall": 0.0
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in improving the efficiency and accuracy of large-scale recommender systems?",
+   "recall": 0.0
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in improving the efficiency and accuracy of large-scale recommender systems?",
+   "recall": 0.5
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in improving user-item representation learning for recommendation systems?",
+   "recall": 0.0
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in improving user-item representation learning for recommendation systems?",
+   "recall": 0.0
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in improving user-item representation learning for recommendation systems?",
+   "recall": 0.25
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in improving user-item representation learning for recommendation systems?",
+   "recall": 0.5
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in improving user-item representation learning for recommendation systems?",
+   "recall": 0.0
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in link-based similarity measures for graph analysis?",
+   "recall": 0.0
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in link-based similarity measures for graph analysis?",
+   "recall": 0.0
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in link-based similarity measures for graph analysis?",
+   "recall": 0.0
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in link-based similarity measures for graph analysis?",
+   "recall": 0.25
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in link-based similarity measures for graph analysis?",
+   "recall": 0.0
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in disaster detection and response using social media and other data sources?",
+   "recall": 0.5
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in disaster detection and response using social media and other data sources?",
+   "recall": 0.5
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in disaster detection and response using social media and other data sources?",
+   "recall": 0.75
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in disaster detection and response using social media and other data sources?",
+   "recall": 0.75
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in disaster detection and response using social media and other data sources?",
+   "recall": 0.5
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in the analysis of multilayer networks?",
+   "recall": 0.25
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in the analysis of multilayer networks?",
+   "recall": 0.25
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in the analysis of multilayer networks?",
+   "recall": 0.0
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in the analysis of multilayer networks?",
+   "recall": 0.25
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in the analysis of multilayer networks?",
+   "recall": 0.25
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in applying BERT to document retrieval and ranking tasks?",
+   "recall": 0.5
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in applying BERT to document retrieval and ranking tasks?",
+   "recall": 0.5
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in applying BERT to document retrieval and ranking tasks?",
+   "recall": 0.25
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in applying BERT to document retrieval and ranking tasks?",
+   "recall": 0.5
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in applying BERT to document retrieval and ranking tasks?",
+   "recall": 0.25
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in fragmentation and echo chamber mitigation in social and data systems?",
+   "recall": 0.0
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in fragmentation and echo chamber mitigation in social and data systems?",
+   "recall": 0.0
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in fragmentation and echo chamber mitigation in social and data systems?",
+   "recall": 0.0
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in fragmentation and echo chamber mitigation in social and data systems?",
+   "recall": 0.0
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in fragmentation and echo chamber mitigation in social and data systems?",
+   "recall": 0.0
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in modeling and exploring complex information spaces using facets and networks?",
+   "recall": 0.0
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in modeling and exploring complex information spaces using facets and networks?",
+   "recall": 0.0
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in modeling and exploring complex information spaces using facets and networks?",
+   "recall": 0.25
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in modeling and exploring complex information spaces using facets and networks?",
+   "recall": 0.25
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in modeling and exploring complex information spaces using facets and networks?",
+   "recall": 0.0
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in the analysis of signals on graphs and networks?",
+   "recall": 0.0
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in the analysis of signals on graphs and networks?",
+   "recall": 0.0
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in the analysis of signals on graphs and networks?",
+   "recall": 0.0
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in the analysis of signals on graphs and networks?",
+   "recall": 0.0
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in the analysis of signals on graphs and networks?",
+   "recall": 0.0
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in handling failures, optimizing query performance, and improving data management in distributed systems?",
+   "recall": 0.75
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in handling failures, optimizing query performance, and improving data management in distributed systems?",
+   "recall": 0.75
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in handling failures, optimizing query performance, and improving data management in distributed systems?",
+   "recall": 0.5
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in handling failures, optimizing query performance, and improving data management in distributed systems?",
+   "recall": 0.25
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in handling failures, optimizing query performance, and improving data management in distributed systems?",
+   "recall": 0.25
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in music recommendation and representation learning?",
+   "recall": 0.25
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in music recommendation and representation learning?",
+   "recall": 0.25
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in music recommendation and representation learning?",
+   "recall": 0.0
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in music recommendation and representation learning?",
+   "recall": 0.25
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in music recommendation and representation learning?",
+   "recall": 0.0
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in truth discovery and rumor detection in social networks?",
+   "recall": 0.0
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in truth discovery and rumor detection in social networks?",
+   "recall": 0.0
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in truth discovery and rumor detection in social networks?",
+   "recall": 0.0
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in truth discovery and rumor detection in social networks?",
+   "recall": 0.0
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in truth discovery and rumor detection in social networks?",
+   "recall": 0.0
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in collaborative filtering with unstructured and structured data integration?",
+   "recall": 0.0
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in collaborative filtering with unstructured and structured data integration?",
+   "recall": 0.0
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in collaborative filtering with unstructured and structured data integration?",
+   "recall": 0.0
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in collaborative filtering with unstructured and structured data integration?",
+   "recall": 0.0
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in collaborative filtering with unstructured and structured data integration?",
+   "recall": 0.0
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in text classification for legal document review?",
+   "recall": 0.75
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in text classification for legal document review?",
+   "recall": 0.75
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in text classification for legal document review?",
+   "recall": 0.75
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in text classification for legal document review?",
+   "recall": 0.75
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in text classification for legal document review?",
+   "recall": 0.5
+  },
+  {
+   "store": "FRESH|recompute all",
+   "q": "What are the main approaches and trends in clustering and community detection for large and complex networks?",
+   "recall": 0.25
+  },
+  {
+   "store": "recompute_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in clustering and community detection for large and complex networks?",
+   "recall": 0.25
+  },
+  {
+   "store": "warmstart_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in clustering and community detection for large and complex networks?",
+   "recall": 0.25
+  },
+  {
+   "store": "frontier_leiden|tau=0.9",
+   "q": "What are the main approaches and trends in clustering and community detection for large and complex networks?",
+   "recall": 0.0
+  },
+  {
+   "store": "hybrid|tau=0.9",
+   "q": "What are the main approaches and trends in clustering and community detection for large and complex networks?",
+   "recall": 0.0
+  }
+ ],
+ "usage_tokens": {
+  "qwen3:14b": [
+   1566815,
+   127087
+  ]
+ }
+}

@@ -1,0 +1,4264 @@
+{
+ "settings": {
+  "runtime": "ollama",
+  "model": "qwen3:14b",
+  "digest": "bdbd181c33f2",
+  "parameters": "14.8B",
+  "quantization": "Q4_K_M",
+  "temperature": 0,
+  "seed": 0,
+  "think": false,
+  "num_ctx": 16384,
+  "ollama": "ollama version is 0.40.15"
+ },
+ "levels": [
+  0,
+  1,
+  2
+ ],
+ "communities_levels_0_2": {
+  "fresh": 8422,
+  "warm": 8463
+ },
+ "reports_written": 862,
+ "n_questions": 150,
+ "summary": [
+  {
+   "store": "fresh",
+   "recall": 0.28547297297297297,
+   "ci_lo": 0.23817567567567569,
+   "ci_hi": 0.3311233108108106,
+   "n_q": 148,
+   "stale_retrieved_share": 0.0,
+   "level_share": {
+    "0": 0.02,
+    "1": 0.3933333333333333,
+    "2": 1.0
+   }
+  },
+  {
+   "store": "warm",
+   "recall": 0.25506756756756754,
+   "ci_lo": 0.21283783783783783,
+   "ci_hi": 0.30236486486486486,
+   "n_q": 148,
+   "stale_retrieved_share": 0.00563063063063063,
+   "level_share": {
+    "0": 0.013333333333333334,
+    "1": 0.2733333333333333,
+    "2": 1.0
+   },
+   "diff": -0.030405405405405407,
+   "wilcoxon_p": 0.35658320649360586,
+   "tost_p": 0.16140993743673338,
+   "ci90": [
+    -0.06310109854438209,
+    0.002290287733571268
+   ],
+   "equivalent": false,
+   "noninferior": false
+  }
+ ],
+ "per_question": [
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in the use of thematic analysis and ontologies for information retrieval and recommendation systems?",
+   "recall": 0.0,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in the use of thematic analysis and ontologies for information retrieval and recommendation systems?",
+   "recall": 0.0,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in modeling user navigation and importance in semantic and knowledge networks?",
+   "recall": 0.0,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in modeling user navigation and importance in semantic and knowledge networks?",
+   "recall": 0.25,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in analyzing the citation impact and novelty of scientific publications?",
+   "recall": 0.25,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in analyzing the citation impact and novelty of scientific publications?",
+   "recall": 0.25,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    1
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in ontology development and application across different domains?",
+   "recall": 0.75,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    1,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in ontology development and application across different domains?",
+   "recall": 0.75,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in analyzing user behavior and community dynamics on online platforms?",
+   "recall": 0.25,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    1,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in analyzing user behavior and community dynamics on online platforms?",
+   "recall": 0.0,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in automatic text processing and information extraction from documents?",
+   "recall": 0.0,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in automatic text processing and information extraction from documents?",
+   "recall": 0.0,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in tie strength prediction and its applications in network analysis?",
+   "recall": 0.75,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in tie strength prediction and its applications in network analysis?",
+   "recall": 0.25,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    1
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in the formation and analysis of stable network structures?",
+   "recall": 0.25,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in the formation and analysis of stable network structures?",
+   "recall": 0.75,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in analyzing state-sponsored troll behavior on social media?",
+   "recall": 0.75,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in analyzing state-sponsored troll behavior on social media?",
+   "recall": 0.75,
+   "stale_retrieved": 2,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in modeling user preferences and behaviors in recommender systems?",
+   "recall": 0.75,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in modeling user preferences and behaviors in recommender systems?",
+   "recall": 1.0,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in influence maximization and related problems in social networks?",
+   "recall": 0.0,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in influence maximization and related problems in social networks?",
+   "recall": 0.0,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in modeling complex interactions and meaning in information retrieval and semantic analysis?",
+   "recall": 0.0,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in modeling complex interactions and meaning in information retrieval and semantic analysis?",
+   "recall": 0.0,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in network representation learning?",
+   "recall": 0.0,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in network representation learning?",
+   "recall": 0.25,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in the application of deep learning to natural language processing tasks?",
+   "recall": 0.0,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in the application of deep learning to natural language processing tasks?",
+   "recall": 0.0,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in multimodal representation learning for user and item modeling?",
+   "recall": 0.75,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in multimodal representation learning for user and item modeling?",
+   "recall": 0.75,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in understanding and addressing echo chambers and polarization in social networks?",
+   "recall": 0.75,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    1,
+    0,
+    2,
+    1
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in understanding and addressing echo chambers and polarization in social networks?",
+   "recall": 0.75,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    1,
+    0,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in the study of document spanners and information extraction?",
+   "recall": 0.25,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    1,
+    2,
+    0,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in the study of document spanners and information extraction?",
+   "recall": 0.75,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    1,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in evaluating and improving community structure in complex networks?",
+   "recall": 0.0,
+   "stale_retrieved": 0,
+   "levels": [
+    1,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in evaluating and improving community structure in complex networks?",
+   "recall": 0.0,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in network analysis and optimization under uncertainty?",
+   "recall": 0.0,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    1,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in network analysis and optimization under uncertainty?",
+   "recall": 0.0,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in graph and network analysis for solving complex problems?",
+   "recall": 0.0,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in graph and network analysis for solving complex problems?",
+   "recall": 0.0,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in network and data embedding techniques?",
+   "recall": 0.0,
+   "stale_retrieved": 0,
+   "levels": [
+    1,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in network and data embedding techniques?",
+   "recall": 0.0,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in analyzing and predicting user behavior and content impact on Twitter?",
+   "recall": 0.0,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in analyzing and predicting user behavior and content impact on Twitter?",
+   "recall": 0.0,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    1,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in explainable recommendation systems?",
+   "recall": 0.0,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    1,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in explainable recommendation systems?",
+   "recall": 0.0,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in the analysis of signed networks?",
+   "recall": 0.25,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in the analysis of signed networks?",
+   "recall": 0.0,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in analyzing social media data for understanding human behavior and societal issues?",
+   "recall": 0.25,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in analyzing social media data for understanding human behavior and societal issues?",
+   "recall": 0.0,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in approximate computation for big data analytics?",
+   "recall": 0.0,
+   "stale_retrieved": 0,
+   "levels": [
+    1,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in approximate computation for big data analytics?",
+   "recall": 0.0,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    1,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in managing and analyzing complex data across different domains?",
+   "recall": 0.5,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    1,
+    2,
+    2,
+    2,
+    1
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in managing and analyzing complex data across different domains?",
+   "recall": 0.5,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in network inference and community detection from dynamic and static graph signals?",
+   "recall": 0.25,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in network inference and community detection from dynamic and static graph signals?",
+   "recall": 0.25,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in document understanding and information extraction from complex and visually rich documents?",
+   "recall": 0.25,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in document understanding and information extraction from complex and visually rich documents?",
+   "recall": 0.25,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in improving recommendation systems and sentiment analysis in financial contexts?",
+   "recall": 0.25,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    1,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in improving recommendation systems and sentiment analysis in financial contexts?",
+   "recall": 0.25,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    1,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in software tools for network and text analysis?",
+   "recall": 0.0,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in software tools for network and text analysis?",
+   "recall": 0.0,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in the analysis of academic publishing and citation impact?",
+   "recall": 0.0,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in the analysis of academic publishing and citation impact?",
+   "recall": 0.25,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in handling implicit feedback for recommendation systems?",
+   "recall": 0.25,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in handling implicit feedback for recommendation systems?",
+   "recall": 0.25,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in privacy-preserving techniques for location and recommendation systems?",
+   "recall": 0.5,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    1,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in privacy-preserving techniques for location and recommendation systems?",
+   "recall": 0.5,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in detecting and analyzing disinformation on social media?",
+   "recall": 0.0,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    1,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in detecting and analyzing disinformation on social media?",
+   "recall": 0.0,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    1,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in personalization and recommendation systems?",
+   "recall": 0.0,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in personalization and recommendation systems?",
+   "recall": 0.0,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in network analysis and visualization for complex systems?",
+   "recall": 0.5,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in network analysis and visualization for complex systems?",
+   "recall": 0.75,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in analyzing and representing word lists in natural language processing and computational linguistics?",
+   "recall": 0.25,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in analyzing and representing word lists in natural language processing and computational linguistics?",
+   "recall": 0.25,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in cross-modal hashing for efficient multimedia retrieval?",
+   "recall": 0.75,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in cross-modal hashing for efficient multimedia retrieval?",
+   "recall": 0.75,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    1
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in the use of bibliometrics for research evaluation?",
+   "recall": 0.0,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in the use of bibliometrics for research evaluation?",
+   "recall": 0.5,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in image retrieval and analysis using multimodal and interactive methods?",
+   "recall": 0.75,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in image retrieval and analysis using multimodal and interactive methods?",
+   "recall": 0.5,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in improving text and video analysis through semantic and clustering methods?",
+   "recall": 0.5,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in improving text and video analysis through semantic and clustering methods?",
+   "recall": 0.5,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in managing data and transactions across distributed and untrusted systems?",
+   "recall": 0.5,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    1,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in managing data and transactions across distributed and untrusted systems?",
+   "recall": 0.5,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in the analysis of multilayer networks?",
+   "recall": 0.0,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in the analysis of multilayer networks?",
+   "recall": 0.0,
+   "stale_retrieved": 1,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in detecting and analyzing controversy and polarization in social media?",
+   "recall": 0.25,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in detecting and analyzing controversy and polarization in social media?",
+   "recall": 0.5,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    1,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in modeling opinion dynamics in social networks?",
+   "recall": 0.25,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in modeling opinion dynamics in social networks?",
+   "recall": 0.0,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in concept and taxonomy construction for improving search and recommendation systems?",
+   "recall": 0.0,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    1,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in concept and taxonomy construction for improving search and recommendation systems?",
+   "recall": 0.25,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in frequent pattern mining across different data types and application domains?",
+   "recall": 0.5,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    1,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in frequent pattern mining across different data types and application domains?",
+   "recall": 0.75,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in modern recommendation and information retrieval systems?",
+   "recall": 0.0,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in modern recommendation and information retrieval systems?",
+   "recall": 0.0,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in understanding citation behavior and its relationship to scientific impact?",
+   "recall": 0.25,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in understanding citation behavior and its relationship to scientific impact?",
+   "recall": 0.25,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in addressing fairness in ranking and recommendation systems?",
+   "recall": 0.5,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in addressing fairness in ranking and recommendation systems?",
+   "recall": 0.25,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in query optimization and execution time prediction?",
+   "recall": 0.0,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in query optimization and execution time prediction?",
+   "recall": 0.25,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in network representation learning and link prediction?",
+   "recall": 0.0,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in network representation learning and link prediction?",
+   "recall": 0.0,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    1,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in analyzing spatiotemporal patterns in large-scale data?",
+   "recall": 0.5,
+   "stale_retrieved": 0,
+   "levels": [
+    1,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in analyzing spatiotemporal patterns in large-scale data?",
+   "recall": 0.5,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    1,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in network representation learning?",
+   "recall": 0.0,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in network representation learning?",
+   "recall": 0.25,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in unsupervised knowledge extraction from biomedical text?",
+   "recall": 0.0,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    1
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in unsupervised knowledge extraction from biomedical text?",
+   "recall": 0.75,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    1,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in modern grocery and online shopping recommendation systems?",
+   "recall": 0.5,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in modern grocery and online shopping recommendation systems?",
+   "recall": 0.25,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in knowledge graph-enhanced recommendation systems?",
+   "recall": 0.0,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in knowledge graph-enhanced recommendation systems?",
+   "recall": 0.0,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in improving recommender systems through user modeling and feedback mechanisms?",
+   "recall": 0.25,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in improving recommender systems through user modeling and feedback mechanisms?",
+   "recall": 0.0,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in detecting anomalous and manipulative behavior on social media?",
+   "recall": 0.5,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    1,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in detecting anomalous and manipulative behavior on social media?",
+   "recall": 0.5,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    1,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in anonymizing social network data to protect user privacy?",
+   "recall": 0.25,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    1
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in anonymizing social network data to protect user privacy?",
+   "recall": 0.0,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in understanding the factors that influence the citation impact of scholarly papers?",
+   "recall": 0.5,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in understanding the factors that influence the citation impact of scholarly papers?",
+   "recall": 0.25,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in cross-modal hashing for efficient and effective retrieval?",
+   "recall": 0.0,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in cross-modal hashing for efficient and effective retrieval?",
+   "recall": 0.0,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in optimizing linear and relational algebra for large-scale data processing?",
+   "recall": 0.25,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in optimizing linear and relational algebra for large-scale data processing?",
+   "recall": 0.25,
+   "stale_retrieved": 1,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in network and graph feature learning for classification and prediction tasks?",
+   "recall": 0.0,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in network and graph feature learning for classification and prediction tasks?",
+   "recall": 0.25,
+   "stale_retrieved": 1,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in improving response generation and retrieval for conversational systems?",
+   "recall": 0.25,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    1,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in improving response generation and retrieval for conversational systems?",
+   "recall": 0.25,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    1
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in detecting and analyzing high-impact events using social media data?",
+   "recall": 1.0,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    1,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in detecting and analyzing high-impact events using social media data?",
+   "recall": 0.25,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    1,
+    2,
+    1
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in analyzing scholarly communication and citation data?",
+   "recall": 0.0,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    1
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in analyzing scholarly communication and citation data?",
+   "recall": 0.0,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in understanding attention dynamics and information access in social media?",
+   "recall": 0.0,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in understanding attention dynamics and information access in social media?",
+   "recall": 0.0,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    1,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in dynamic graph analysis and visualization?",
+   "recall": 0.5,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in dynamic graph analysis and visualization?",
+   "recall": 0.25,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in the development and management of NoSQL systems for big data applications?",
+   "recall": 0.75,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    1,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in the development and management of NoSQL systems for big data applications?",
+   "recall": 0.5,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in link prediction research?",
+   "recall": 0.75,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in link prediction research?",
+   "recall": 0.0,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    1,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in improving job candidate matching and recommendation systems?",
+   "recall": 0.0,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    1,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in improving job candidate matching and recommendation systems?",
+   "recall": 0.25,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    1,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in improving search and recommendation systems using multimodal and contextual information?",
+   "recall": 0.5,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    1,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in improving search and recommendation systems using multimodal and contextual information?",
+   "recall": 0.0,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in fake news detection research?",
+   "recall": 0.75,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in fake news detection research?",
+   "recall": 0.75,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in sampling techniques for complex data processing tasks?",
+   "recall": 0.0,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    1,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in sampling techniques for complex data processing tasks?",
+   "recall": 0.0,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in the application of deep learning to recommender systems?",
+   "recall": 0.75,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in the application of deep learning to recommender systems?",
+   "recall": 0.25,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in influence maximization and geo-social data analysis?",
+   "recall": 0.25,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in influence maximization and geo-social data analysis?",
+   "recall": 0.25,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in data cleaning and integrity constraint enforcement?",
+   "recall": 0.0,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    1
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in data cleaning and integrity constraint enforcement?",
+   "recall": 0.0,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    1,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in semantic processing and integration of clinical data for research and decision support?",
+   "recall": 0.5,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in semantic processing and integration of clinical data for research and decision support?",
+   "recall": 0.75,
+   "stale_retrieved": 0,
+   "levels": [
+    1,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in analyzing user behavior and improving prediction models in digital environments?",
+   "recall": 0.0,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in analyzing user behavior and improving prediction models in digital environments?",
+   "recall": 0.0,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in improving collaborative filtering for recommendation systems?",
+   "recall": 0.25,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in improving collaborative filtering for recommendation systems?",
+   "recall": 0.25,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in network embedding techniques?",
+   "recall": 0.0,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    1,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in network embedding techniques?",
+   "recall": 0.0,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in modelling and predicting the dynamics of online discussion threads?",
+   "recall": 0.25,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    1,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in modelling and predicting the dynamics of online discussion threads?",
+   "recall": 0.5,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    1,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in explainable recommendation and product search systems?",
+   "recall": 0.75,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    1,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in explainable recommendation and product search systems?",
+   "recall": 0.0,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    1
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in spam detection on social networks?",
+   "recall": 0.0,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    1,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in spam detection on social networks?",
+   "recall": 0.0,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in entity resolution techniques?",
+   "recall": 0.0,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in entity resolution techniques?",
+   "recall": 0.25,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in preserving structural properties of large-scale graphs?",
+   "recall": 0.25,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    1,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in preserving structural properties of large-scale graphs?",
+   "recall": 0.0,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in analyzing network vulnerability and community structure in complex systems?",
+   "recall": 0.75,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    1,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in analyzing network vulnerability and community structure in complex systems?",
+   "recall": 0.25,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in video analysis and processing?",
+   "recall": 0.25,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in video analysis and processing?",
+   "recall": 0.5,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in incentive optimization and user engagement strategies in digital marketing and social networks?",
+   "recall": 0.0,
+   "stale_retrieved": 0,
+   "levels": [
+    1,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in incentive optimization and user engagement strategies in digital marketing and social networks?",
+   "recall": 0.0,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    1,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in unbiased learning to rank from implicit feedback?",
+   "recall": 0.75,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    1,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in unbiased learning to rank from implicit feedback?",
+   "recall": 0.75,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    1,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in analyzing international scientific collaboration and research impact?",
+   "recall": 0.5,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    1,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in analyzing international scientific collaboration and research impact?",
+   "recall": 0.5,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in improving estimation and ranking methods in machine learning and network analysis?",
+   "recall": 0.0,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    1
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in improving estimation and ranking methods in machine learning and network analysis?",
+   "recall": 0.0,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    1
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in analyzing news and social media interactions?",
+   "recall": 0.25,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in analyzing news and social media interactions?",
+   "recall": 0.0,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    1
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in social sensing and network-based data collection?",
+   "recall": 0.0,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in social sensing and network-based data collection?",
+   "recall": 0.0,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in detecting and managing misinformation on social media?",
+   "recall": 0.0,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in detecting and managing misinformation on social media?",
+   "recall": 0.0,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in data cleaning and repairing?",
+   "recall": 0.5,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    1,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in data cleaning and repairing?",
+   "recall": 0.25,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in identifying influential nodes in complex networks?",
+   "recall": 0.5,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in identifying influential nodes in complex networks?",
+   "recall": 0.5,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in embedding compression and optimization for large-scale systems?",
+   "recall": 0.5,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in embedding compression and optimization for large-scale systems?",
+   "recall": 0.5,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    1,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in network representation learning?",
+   "recall": 0.0,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in network representation learning?",
+   "recall": 0.25,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in integrating machine learning with relational databases?",
+   "recall": 0.0,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in integrating machine learning with relational databases?",
+   "recall": 0.0,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in community detection in networks?",
+   "recall": 0.0,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    1,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in community detection in networks?",
+   "recall": 0.0,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in improving the efficiency and accuracy of collaborative filtering methods?",
+   "recall": 0.5,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in improving the efficiency and accuracy of collaborative filtering methods?",
+   "recall": 0.5,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in extractive summarization and ranking for e-commerce applications?",
+   "recall": 0.75,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    1
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in extractive summarization and ranking for e-commerce applications?",
+   "recall": 0.5,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    1,
+    2,
+    2,
+    1
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in subgraph and motif counting in network analysis?",
+   "recall": 0.5,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    1
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in subgraph and motif counting in network analysis?",
+   "recall": 0.25,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    1,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in visualizing and analyzing the evolution of research topics and trends?",
+   "recall": 0.0,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    1,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in visualizing and analyzing the evolution of research topics and trends?",
+   "recall": 0.0,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in leveraging graph-based methods for recommendation and knowledge graph construction?",
+   "recall": 0.0,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in leveraging graph-based methods for recommendation and knowledge graph construction?",
+   "recall": 0.0,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in session-based recommendation systems?",
+   "recall": 0.75,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in session-based recommendation systems?",
+   "recall": 0.25,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in modeling dynamic and structured data using graph and text-based methods?",
+   "recall": 0.0,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in modeling dynamic and structured data using graph and text-based methods?",
+   "recall": 0.25,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in modern recommender system research?",
+   "recall": 0.0,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    1,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in modern recommender system research?",
+   "recall": 0.0,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in concurrency control and transaction execution optimization in modern database and blockchain systems?",
+   "recall": 0.0,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    1,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in concurrency control and transaction execution optimization in modern database and blockchain systems?",
+   "recall": 0.25,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    1,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in understanding and addressing echo chambers and polarization in online social networks?",
+   "recall": 0.75,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    1,
+    0,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in understanding and addressing echo chambers and polarization in online social networks?",
+   "recall": 1.0,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    1,
+    0,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in managing and analyzing causal relationships in complex systems?",
+   "recall": 0.5,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in managing and analyzing causal relationships in complex systems?",
+   "recall": 0.0,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in modern query optimization research?",
+   "recall": 0.25,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in modern query optimization research?",
+   "recall": 0.25,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in mobile information retrieval and user interaction research?",
+   "recall": 0.0,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in mobile information retrieval and user interaction research?",
+   "recall": 0.0,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in learning network structures from epidemic or information cascades?",
+   "recall": 0.25,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in learning network structures from epidemic or information cascades?",
+   "recall": 0.25,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in managing consistency and scalability in distributed database systems?",
+   "recall": 0.75,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    1
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in managing consistency and scalability in distributed database systems?",
+   "recall": 0.25,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in anomaly detection on dynamic and networked time series data?",
+   "recall": 0.5,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in anomaly detection on dynamic and networked time series data?",
+   "recall": 0.75,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    1
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in utility mining and sequential pattern mining?",
+   "recall": 0.75,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in utility mining and sequential pattern mining?",
+   "recall": 0.75,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    1,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in estimating network properties and node attributes using machine learning and statistical methods?",
+   "recall": 0.0,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    1,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in estimating network properties and node attributes using machine learning and statistical methods?",
+   "recall": 0.0,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in analyzing political polarization and misinformation on social media?",
+   "recall": 0.5,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in analyzing political polarization and misinformation on social media?",
+   "recall": 0.25,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in the detection and analysis of social bots in online platforms?",
+   "recall": 0.75,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    1,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in the detection and analysis of social bots in online platforms?",
+   "recall": 0.75,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in improving explainability and handling data sparsity in recommendation systems?",
+   "recall": 0.25,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    1
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in improving explainability and handling data sparsity in recommendation systems?",
+   "recall": 0.0,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in candidate generation and recommendation systems?",
+   "recall": 0.25,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in candidate generation and recommendation systems?",
+   "recall": 0.25,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in modeling and influencing opinion dynamics in social networks?",
+   "recall": 0.5,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in modeling and influencing opinion dynamics in social networks?",
+   "recall": 0.5,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in improving query performance and reliability in distributed and large-scale data systems?",
+   "recall": 0.0,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in improving query performance and reliability in distributed and large-scale data systems?",
+   "recall": 0.0,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in adaptive influence maximization?",
+   "recall": 1.0,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    1,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in adaptive influence maximization?",
+   "recall": 1.0,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    1,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in analyzing peer review processes and their impact on scientific publishing?",
+   "recall": 0.0,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    1,
+    2,
+    2,
+    1,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in analyzing peer review processes and their impact on scientific publishing?",
+   "recall": 0.0,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    1,
+    2,
+    1,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in analyzing and simplifying bipartite networks?",
+   "recall": 0.0,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in analyzing and simplifying bipartite networks?",
+   "recall": 0.0,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in multi-layered network analysis and ranking systems?",
+   "recall": 0.5,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in multi-layered network analysis and ranking systems?",
+   "recall": 0.25,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    1
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in multiplex network embedding and representation learning?",
+   "recall": 0.75,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in multiplex network embedding and representation learning?",
+   "recall": 0.75,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in improving community detection in networks?",
+   "recall": 0.0,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    1,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in improving community detection in networks?",
+   "recall": 0.0,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in centrality measures for social and complex networks?",
+   "recall": 0.75,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in centrality measures for social and complex networks?",
+   "recall": 0.0,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in machine learning for text and data classification tasks?",
+   "recall": 0.0,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    1
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in machine learning for text and data classification tasks?",
+   "recall": 0.0,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in influence maximization and resource allocation in social networks?",
+   "recall": 0.25,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in influence maximization and resource allocation in social networks?",
+   "recall": 0.5,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in improving search and information retrieval in digital libraries for the social sciences?",
+   "recall": 0.5,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in improving search and information retrieval in digital libraries for the social sciences?",
+   "recall": 0.0,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in improving query interfaces for bibliographic and database systems?",
+   "recall": 0.25,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in improving query interfaces for bibliographic and database systems?",
+   "recall": 0.25,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in e-commerce recommendation systems?",
+   "recall": 0.0,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in e-commerce recommendation systems?",
+   "recall": 0.25,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in collaborative filtering and network embedding techniques?",
+   "recall": 0.0,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in collaborative filtering and network embedding techniques?",
+   "recall": 0.25,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in evaluating recommender systems?",
+   "recall": 0.0,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in evaluating recommender systems?",
+   "recall": 0.25,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in analyzing gender disparities in academic and scientific careers?",
+   "recall": 0.75,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    1,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in analyzing gender disparities in academic and scientific careers?",
+   "recall": 0.25,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    1,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in distributed stream processing systems?",
+   "recall": 0.25,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    1
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in distributed stream processing systems?",
+   "recall": 0.25,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    1,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in evaluating and optimizing SPARQL queries over RDF data?",
+   "recall": 0.25,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in evaluating and optimizing SPARQL queries over RDF data?",
+   "recall": 0.5,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in estimating and analyzing power-law degree distributions in network data?",
+   "recall": 0.25,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in estimating and analyzing power-law degree distributions in network data?",
+   "recall": 0.25,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    1,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in learning from limited or biased feedback in recommender systems and related fields?",
+   "recall": 0.0,
+   "stale_retrieved": 0,
+   "levels": [
+    1,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in learning from limited or biased feedback in recommender systems and related fields?",
+   "recall": 0.0,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in metadata management and improvement across different domains?",
+   "recall": 0.0,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in metadata management and improvement across different domains?",
+   "recall": 0.0,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in understanding social search and navigation in networks?",
+   "recall": 0.0,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    1,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in understanding social search and navigation in networks?",
+   "recall": 0.0,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in context and sequence aware recommendation systems?",
+   "recall": 0.75,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    1,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in context and sequence aware recommendation systems?",
+   "recall": 0.75,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    1,
+    2
+   ]
+  },
+  {
+   "store": "fresh",
+   "q": "What are the main approaches and trends in human mobility prediction and modeling?",
+   "recall": 0.25,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "store": "warm",
+   "q": "What are the main approaches and trends in human mobility prediction and modeling?",
+   "recall": 0.0,
+   "stale_retrieved": 0,
+   "levels": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  }
+ ]
+}

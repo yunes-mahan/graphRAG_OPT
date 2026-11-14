@@ -1,0 +1,14 @@
+\begin{tabular}{l rrr rrr rrr}
+\toprule
+ & \multicolumn{3}{c}{25\% (0.7M nodes, 1.9M edges)} & \multicolumn{3}{c}{50\% (1.5M nodes, 7.6M edges)} & \multicolumn{3}{c}{100\% (2.9M nodes, 30.4M edges)}\\
+\cmidrule(lr){2-4}\cmidrule(lr){5-7}\cmidrule(lr){8-10}
+ Maintainer & score & s/upd. & GB & score & s/upd. & GB & score & s/upd. & GB\\
+\midrule
+Frontier-restr.\ + rollback & 0.839 & 38 & 1.9 & \textbf{0.823} & 90 & 5.4 & \textbf{0.819} & 328 & 8.4 \\
+Warm-start + rollback & 0.839 & 45 & 1.6 & 0.820 & 97 & 4.1 & 0.817 & 368 & 6.4 \\
+Frontier-restr.\ Leiden & 0.837 & 37 & 2.0 & 0.822 & 89 & 5.0 & 0.817 & 348 & 6.9 \\
+Warm-start Leiden & 0.835 & 42 & 1.6 & 0.815 & 94 & 4.2 & 0.813 & 321 & 6.4 \\
+Lazy attach & \textbf{0.840} & 0.1 & 1.6 & 0.822 & 0.2 & 3.7 & 0.816 & 0.6 & 6.0 \\
+Recompute Leiden & 0.765 & 54 & 1.5 & 0.728 & 135 & 3.6 & 0.707 & 468 & 5.7 \\
+\bottomrule
+\end{tabular}

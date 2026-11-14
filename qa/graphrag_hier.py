@@ -74,6 +74,18 @@ def tok(n):
     return 1500 + min(8000, 250 * n)
 
 
+# VLDB revision (B3/B6): HIER_TOKVARIANTS=1 also records the cost of the SAME rewrite decisions under the cost-model
+# variants below (each constant -50%/+50%); HIER_OUT redirects the output file and disables the store dump.
+# Without these variables the behaviour and outputs are unchanged.
+TOKVARIANTS = {"a-50": (750, 250, 8000), "a+50": (2250, 250, 8000), "b-50": (1500, 125, 8000),
+               "b+50": (1500, 375, 8000), "c-50": (1500, 250, 4000), "c+50": (1500, 250, 12000)} \
+    if os.environ.get("HIER_TOKVARIANTS") else {}
+
+
+def tokv(n, v):
+    return v[0] + min(v[2], v[1] * n)
+
+
 def lcc_edges(edges, nodes):
     g = ig.Graph(n=len(nodes), edges=edges)
     comp = g.connected_components()
@@ -156,7 +168,7 @@ def modularity(g_all, nodes_idx, part):
 
 def run(seed):
     if GRAPH == "wikidata":
-                import stream_eval as se
+        import stream_eval as se
         import wd_eval as wd
         d = wd.build()[0]
         node_t, edge_t, T = se.schedule(d, seed)
@@ -176,13 +188,25 @@ def run(seed):
         fresh_lv = complete_levels(hier(lcc, list(range(len(node_t))))[0])
         fresh = communities(fresh_lv)
         full_tok = {ms: sum(tok(len(m)) for m in fresh.values() if len(m) >= ms) for ms in MINS}
+        full_tokv = {(vn, ms): sum(tokv(len(m), v) for m in fresh.values() if len(m) >= ms)
+                     for vn, v in TOKVARIANTS.items() for ms in MINS}
         new_nodes = set(np.where(node_t == t)[0].tolist())
         new_el = [(int(a), int(b)) for a, b in E[:, edge_t == t].T]
         delta_el = sorted({(int(E[0, j]), int(E[1, j])) for j in batch_rels[t]}) if GRAPH == "entity" else new_el
         for name in (ONLY or ("reindex", "reindex+match", "graphrag_update", "warm", "zep_attach")):
             st = state.setdefault(name, dict(comms=None, store={tau: {} for tau in TAUS}, nextid=0, cost=defaultdict(list),
                                              Qleaf=[], Qtop=[], nrep=[]))
-            if name == "consensus":                                   # consensus clustering + id matching
+            if name == "kcore_authors":                             # VLDB revision B2: authors' k-core code + id matching
+                sys.path.insert(0, str(HERE / "v2"))
+                import b2_kcore_authors as ka
+                cc = ka.authors_kcore(el, len(node_t), os.environ.get("KCORE_TYPE", "RkH"))
+                if st["comms"] is None:
+                    comms = {(k[0], ("s", k[1])): m for k, m in cc.items()}
+                else:
+                    mp = match_ids(st["comms"], cc)
+                    comms = {(mp.get(k, (k[0], ("s", t, k[1])))): m for k, m in cc.items()}
+                lv = None
+            elif name == "consensus":                                 # consensus clustering + id matching
                 import consensus_lib as cl
                 cc = cl.consensus(el, len(node_t), CONS_RUNS, CONS_REATTACH, CONS_MODE)
                 if st["comms"] is None:
@@ -277,13 +301,18 @@ def run(seed):
                     store = st["store"][tau]
                     for ms in MINS:
                         cost = 0
+                        costv = dict.fromkeys(TOKVARIANTS, 0)
                         for k, m in comms.items():
                             if len(m) < ms:
                                 continue
                             old = store.get((ms, k))
                             if old is None or (tau > 0 and len(m & old) / len(m | old) < tau):
                                 cost += tok(len(m))
+                                for vn, v in TOKVARIANTS.items():
+                                    costv[vn] += tokv(len(m), v)
                                 store[(ms, k)] = m
+                        for vn in TOKVARIANTS:
+                            st.setdefault("costv", defaultdict(list))[(vn, tau, ms)].append(costv[vn] / max(full_tokv[(vn, ms)], 1))
                         st["cost"][(tau, ms)].append(cost / max(full_tok[ms], 1))
                         own = sum(tok(len(m)) for m in comms.values() if len(m) >= ms)
                         st.setdefault("cost_own", defaultdict(list))[(tau, ms)].append(cost / max(own, 1))
@@ -296,7 +325,7 @@ def run(seed):
                             if len(m) >= ms:
                                 st["store"][tau][(ms, k)] = m
         print(f"seed {seed} version {t}/{T - 1}: fresh communities {len(fresh)}", flush=True)
-    if seed == 0 and not ONLY:
+    if seed == 0 and not ONLY and not os.environ.get("HIER_OUT"):
         dump = {}
         for name, st in state.items():
             store = st["store"][0.9]
@@ -312,6 +341,8 @@ def run(seed):
                          cost_series={f"{tau}|{ms}": [float(x) for x in v] for (tau, ms), v in st["cost"].items()},
                          cost={f"{tau}|{ms}": float(np.mean(v)) for (tau, ms), v in st["cost"].items()},
                          cost_own={f"{tau}|{ms}": float(np.mean(v)) for (tau, ms), v in st.get("cost_own", {}).items()})
+        if TOKVARIANTS:
+            res[name]["cost_variants"] = {f"{vn}|{tau}|{ms}": float(np.mean(v)) for (vn, tau, ms), v in st["costv"].items()}
     return res
 
 
@@ -320,8 +351,8 @@ def main():
     seeds = [int(x) for x in os.environ.get("HIER_SEEDS", "0,1,2").split(",")]
     for seed in seeds:
         out[str(seed)] = run(seed)
-        (HERE / (f"graphrag_hier_{GRAPH}_{'_'.join(ONLY)}{os.environ.get('HIER_SUFFIX', '')}.json" if ONLY else (("graphrag_hier.json" if GRAPH == "entity" else f"graphrag_hier_{GRAPH}.json") if MAXC == 10 else f"graphrag_hier_{GRAPH}_max{MAXC}.json"))).write_text(json.dumps(out, indent=1))
-    print(json.dumps(out["0"], indent=1)[:3000])
+        (Path(os.environ["HIER_OUT"]) if os.environ.get("HIER_OUT") else HERE / (f"graphrag_hier_{GRAPH}_{'_'.join(ONLY)}{os.environ.get('HIER_SUFFIX', '')}.json" if ONLY else (("graphrag_hier.json" if GRAPH == "entity" else f"graphrag_hier_{GRAPH}.json") if MAXC == 10 else f"graphrag_hier_{GRAPH}_max{MAXC}.json"))).write_text(json.dumps(out, indent=1))
+    print(json.dumps(out[str(seeds[0])], indent=1)[:3000])
 
 
 if __name__ == "__main__":

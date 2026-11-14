@@ -1,0 +1,41 @@
+{
+ "arxiv-15": {
+  "nodes": 169343,
+  "edges_array": 1157799,
+  "edges_undirected_unique": 1157799,
+  "versions": 16,
+  "batch_new_nodes_min": 2964,
+  "batch_new_nodes_max": 13237
+ },
+ "arxiv-17": {
+  "nodes": 169343,
+  "edges_array": 1157799,
+  "edges_undirected_unique": 1157799,
+  "versions": 10,
+  "batch_new_nodes_min": 2964,
+  "batch_new_nodes_max": 13237
+ },
+ "collab-12": {
+  "nodes": 235868,
+  "edges_array": 967632,
+  "edges_undirected_unique": 967632,
+  "versions": 16,
+  "batch_new_nodes_min": 4200,
+  "batch_new_nodes_max": 5710
+ },
+ "collab-10": {
+  "nodes": 235868,
+  "edges_array": 967632,
+  "edges_undirected_unique": 967632,
+  "versions": 22,
+  "batch_new_nodes_min": 3786,
+  "batch_new_nodes_max": 5710
+ },
+ "entity": {
+  "nodes": 42161,
+  "edges": 62729,
+  "versions": 13,
+  "batch_new_entities_min": 489,
+  "batch_new_entities_max": 2586
+ }
+}

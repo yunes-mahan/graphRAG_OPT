@@ -1,0 +1,355 @@
+{
+ "base_check": {
+  "wikidata": 0.0,
+  "entity": 0.0
+ },
+ "variants": {
+  "a-50": {
+   "wikidata": {
+    "lambda_": 0.2642748790980859,
+    "scores": {
+     "recompute_leiden": 0.38012019647294637,
+     "lazy": 0.5673488686147806,
+     "warmstart_leiden": 0.5644075341926126,
+     "frontier_leiden": 0.5782519775612902,
+     "hybrid": 0.5757402764765603,
+     "priced_warm": 0.576725650329878,
+     "priced_frontier": 0.5805998723829676,
+     "graphrag_delta": 0.4571777653723178
+    },
+    "ranking": [
+     "priced_frontier",
+     "frontier_leiden",
+     "priced_warm",
+     "hybrid",
+     "lazy",
+     "warmstart_leiden",
+     "graphrag_delta",
+     "recompute_leiden"
+    ],
+    "spearman": 1.0,
+    "kendall": 0.9999999999999998,
+    "top1_same": true
+   },
+   "entity": {
+    "lambda_": 0.2642748790980859,
+    "scores": {
+     "recompute_leiden": 0.6359194785173872,
+     "lazy": 0.7586889256197298,
+     "warmstart_leiden": 0.6843077772369013,
+     "frontier_leiden": 0.7467542949171313,
+     "hybrid": 0.7532494090470789,
+     "priced_warm": 0.742261912054665,
+     "priced_frontier": 0.7599856433636382,
+     "graphrag_delta": 0.6146272727228743
+    },
+    "ranking": [
+     "priced_frontier",
+     "lazy",
+     "hybrid",
+     "frontier_leiden",
+     "priced_warm",
+     "warmstart_leiden",
+     "recompute_leiden",
+     "graphrag_delta"
+    ],
+    "spearman": 0.9761904761904763,
+    "kendall": 0.9285714285714285,
+    "top1_same": false
+   }
+  },
+  "a+50": {
+   "wikidata": {
+    "lambda_": 0.34950496336973025,
+    "scores": {
+     "recompute_leiden": 0.31876188155298324,
+     "lazy": 0.5660834313311437,
+     "warmstart_leiden": 0.5553218377785796,
+     "frontier_leiden": 0.5741496391585712,
+     "hybrid": 0.5695817593691912,
+     "priced_warm": 0.5727984124610036,
+     "priced_frontier": 0.5774327299613062,
+     "graphrag_delta": 0.4266256219435965
+    },
+    "ranking": [
+     "priced_frontier",
+     "frontier_leiden",
+     "priced_warm",
+     "hybrid",
+     "lazy",
+     "warmstart_leiden",
+     "graphrag_delta",
+     "recompute_leiden"
+    ],
+    "spearman": 1.0,
+    "kendall": 0.9999999999999998,
+    "top1_same": true
+   },
+   "entity": {
+    "lambda_": 0.34950496336973025,
+    "scores": {
+     "recompute_leiden": 0.5941283215393452,
+     "lazy": 0.7533394296900162,
+     "warmstart_leiden": 0.6556009254854134,
+     "frontier_leiden": 0.7319139845505502,
+     "hybrid": 0.7419385118124893,
+     "priced_warm": 0.7327679355744514,
+     "priced_frontier": 0.7485924741829455,
+     "graphrag_delta": 0.5795053823785337
+    },
+    "ranking": [
+     "lazy",
+     "priced_frontier",
+     "hybrid",
+     "priced_warm",
+     "frontier_leiden",
+     "warmstart_leiden",
+     "recompute_leiden",
+     "graphrag_delta"
+    ],
+    "spearman": 0.9761904761904763,
+    "kendall": 0.9285714285714285,
+    "top1_same": true
+   }
+  },
+  "b-50": {
+   "wikidata": {
+    "lambda_": 0.23883139553026048,
+    "scores": {
+     "recompute_leiden": 0.39345279222430196,
+     "lazy": 0.5676386833392715,
+     "warmstart_leiden": 0.5668340678635093,
+     "frontier_leiden": 0.5801771449611188,
+     "hybrid": 0.5776729594538255,
+     "priced_warm": 0.5788246978583138,
+     "priced_frontier": 0.5822456855590985,
+     "graphrag_delta": 0.47070301269760256
+    },
+    "ranking": [
+     "priced_frontier",
+     "frontier_leiden",
+     "priced_warm",
+     "hybrid",
+     "lazy",
+     "warmstart_leiden",
+     "graphrag_delta",
+     "recompute_leiden"
+    ],
+    "spearman": 1.0,
+    "kendall": 0.9999999999999998,
+    "top1_same": true
+   },
+   "entity": {
+    "lambda_": 0.23883139553026048,
+    "scores": {
+     "recompute_leiden": 0.6438871829070804,
+     "lazy": 0.7607225062408387,
+     "warmstart_leiden": 0.6884125882435435,
+     "frontier_leiden": 0.7532091485390705,
+     "hybrid": 0.7591697003158927,
+     "priced_warm": 0.7452218710017566,
+     "priced_frontier": 0.7657448458097765,
+     "graphrag_delta": 0.6396718974986862
+    },
+    "ranking": [
+     "priced_frontier",
+     "lazy",
+     "hybrid",
+     "frontier_leiden",
+     "priced_warm",
+     "warmstart_leiden",
+     "recompute_leiden",
+     "graphrag_delta"
+    ],
+    "spearman": 0.9761904761904763,
+    "kendall": 0.9285714285714285,
+    "top1_same": false
+   }
+  },
+  "b+50": {
+   "wikidata": {
+    "lambda_": 0.3891402542033647,
+    "scores": {
+     "recompute_leiden": 0.2931373359963716,
+     "lazy": 0.5654760280104325,
+     "warmstart_leiden": 0.5513054505863482,
+     "frontier_leiden": 0.5715958062712772,
+     "hybrid": 0.5664127036387117,
+     "priced_warm": 0.5701140200716267,
+     "priced_frontier": 0.5753684870396304,
+     "graphrag_delta": 0.40563100231481386
+    },
+    "ranking": [
+     "priced_frontier",
+     "frontier_leiden",
+     "priced_warm",
+     "hybrid",
+     "lazy",
+     "warmstart_leiden",
+     "graphrag_delta",
+     "recompute_leiden"
+    ],
+    "spearman": 1.0,
+    "kendall": 0.9999999999999998,
+    "top1_same": true
+   },
+   "entity": {
+    "lambda_": 0.3891402542033647,
+    "scores": {
+     "recompute_leiden": 0.5807826269856404,
+     "lazy": 0.7511177340021458,
+     "warmstart_leiden": 0.6479211751918653,
+     "frontier_leiden": 0.72494519924717,
+     "hybrid": 0.7358521323773212,
+     "priced_warm": 0.7290462834755639,
+     "priced_frontier": 0.7424723236224631,
+     "graphrag_delta": 0.5602193921087361
+    },
+    "ranking": [
+     "lazy",
+     "priced_frontier",
+     "hybrid",
+     "priced_warm",
+     "frontier_leiden",
+     "warmstart_leiden",
+     "recompute_leiden",
+     "graphrag_delta"
+    ],
+    "spearman": 0.9761904761904763,
+    "kendall": 0.9285714285714285,
+    "top1_same": true
+   }
+  },
+  "c-50": {
+   "wikidata": {
+    "lambda_": 0.6010627028057921,
+    "scores": {
+     "recompute_leiden": 0.1451494752284001,
+     "lazy": 0.5620214613050496,
+     "warmstart_leiden": 0.529113029203779,
+     "frontier_leiden": 0.5606923943696873,
+     "hybrid": 0.549799850422132,
+     "priced_warm": 0.5593393566660085,
+     "priced_frontier": 0.5667658756115724,
+     "graphrag_delta": 0.3178908375704237
+    },
+    "ranking": [
+     "priced_frontier",
+     "lazy",
+     "frontier_leiden",
+     "priced_warm",
+     "hybrid",
+     "warmstart_leiden",
+     "graphrag_delta",
+     "recompute_leiden"
+    ],
+    "spearman": 0.8571428571428572,
+    "kendall": 0.7857142857142856,
+    "top1_same": true
+   },
+   "entity": {
+    "lambda_": 0.6010627028057921,
+    "scores": {
+     "recompute_leiden": 0.48527214950194725,
+     "lazy": 0.7384759246154131,
+     "warmstart_leiden": 0.5841625941621507,
+     "frontier_leiden": 0.6896570720344259,
+     "hybrid": 0.7083850696981828,
+     "priced_warm": 0.7065932714695545,
+     "priced_frontier": 0.7146553932082869,
+     "graphrag_delta": 0.4728517128089238
+    },
+    "ranking": [
+     "lazy",
+     "priced_frontier",
+     "hybrid",
+     "priced_warm",
+     "frontier_leiden",
+     "warmstart_leiden",
+     "recompute_leiden",
+     "graphrag_delta"
+    ],
+    "spearman": 0.9761904761904763,
+    "kendall": 0.9285714285714285,
+    "top1_same": true
+   }
+  },
+  "c+50": {
+   "wikidata": {
+    "lambda_": 0.23254048490341805,
+    "scores": {
+     "recompute_leiden": 0.4001892714359407,
+     "lazy": 0.5677540587417444,
+     "warmstart_leiden": 0.5675964008963317,
+     "frontier_leiden": 0.5801865633314953,
+     "hybrid": 0.5780652919793351,
+     "priced_warm": 0.5787177389810689,
+     "priced_frontier": 0.5821904082237211,
+     "graphrag_delta": 0.4713341818868786
+    },
+    "ranking": [
+     "priced_frontier",
+     "frontier_leiden",
+     "priced_warm",
+     "hybrid",
+     "lazy",
+     "warmstart_leiden",
+     "graphrag_delta",
+     "recompute_leiden"
+    ],
+    "spearman": 1.0,
+    "kendall": 0.9999999999999998,
+    "top1_same": true
+   },
+   "entity": {
+    "lambda_": 0.23254048490341805,
+    "scores": {
+     "recompute_leiden": 0.6486380742027811,
+     "lazy": 0.7609307434718462,
+     "warmstart_leiden": 0.6922053186379371,
+     "frontier_leiden": 0.7534483949805966,
+     "hybrid": 0.7589347726877981,
+     "priced_warm": 0.7457844916178059,
+     "priced_frontier": 0.7656275133673189,
+     "graphrag_delta": 0.6351300770962783
+    },
+    "ranking": [
+     "priced_frontier",
+     "lazy",
+     "hybrid",
+     "frontier_leiden",
+     "priced_warm",
+     "warmstart_leiden",
+     "recompute_leiden",
+     "graphrag_delta"
+    ],
+    "spearman": 0.9761904761904763,
+    "kendall": 0.9285714285714285,
+    "top1_same": false
+   }
+  }
+ },
+ "base_scores": {
+  "wikidata": {
+   "recompute_leiden": 0.34695972587147456,
+   "lazy": 0.5666984358184362,
+   "warmstart_leiden": 0.5594972888417435,
+   "frontier_leiden": 0.5760709708677447,
+   "hybrid": 0.5725515818339704,
+   "priced_warm": 0.5746494731482107,
+   "priced_frontier": 0.5789208845044341,
+   "graphrag_delta": 0.4413441482083881
+  },
+  "entity": {
+   "recompute_leiden": 0.6129180665280458,
+   "lazy": 0.7557633270000224,
+   "warmstart_leiden": 0.6683972879036648,
+   "frontier_leiden": 0.7386370975482733,
+   "hybrid": 0.7471040820040888,
+   "priced_warm": 0.7370897025742071,
+   "priced_frontier": 0.7537873596774345,
+   "graphrag_delta": 0.5959029888873923
+  }
+ },
+ "rollback_pricing": "base cost model (not re-run per variant); re-scored under each variant"
+}

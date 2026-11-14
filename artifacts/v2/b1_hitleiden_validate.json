@@ -1,0 +1,82 @@
+{
+ "implementation": "github.com/randomvariable/hit-leiden @ 9247424 (unofficial, third party)",
+ "test": "arXiv-15 order 0: initial = version 0, update = batch 1",
+ "n_nodes_v0": 53160,
+ "n_edges_v0": 148458,
+ "n_nodes_v1": 58607,
+ "n_edges_delta": 25271,
+ "seconds_initial": 0.090513755,
+ "seconds_update": 4.203938979,
+ "modularity_lib_reported": {
+  "initial": 0.8748133760447115,
+  "update": -8.391117825595483e-05
+ },
+ "modularity_igraph_recomputed": {
+  "initial": 0.8748133760447196,
+  "update": -8.391117825602437e-05
+ },
+ "modularity_static_leiden_seed0": {
+  "initial": 0.8734607329818349,
+  "update": 0.8617682303854722
+ },
+ "communities": {
+  "initial": 4186,
+  "update": 58607,
+  "static_initial": 4174,
+  "static_update": 4326
+ },
+ "hierarchy_levels": {
+  "initial": 7,
+  "update": 7,
+  "sizes_initial": [
+   12316,
+   5493,
+   4346,
+   4194,
+   4186,
+   4186,
+   4186
+  ],
+  "sizes_update": [
+   58607,
+   10940,
+   9793,
+   9641,
+   9633,
+   9633,
+   9633
+  ]
+ },
+ "nesting_share_initial": [
+  1.0,
+  1.0,
+  0.999769903359411,
+  1.0,
+  1.0,
+  0.9894887720974678
+ ],
+ "nesting_share_update": [
+  1.0,
+  1.0,
+  0.9998978862452772,
+  1.0,
+  1.0,
+  0.9954323679020035
+ ],
+ "coarse_levels_unchanged_on_old_nodes": [
+  true,
+  true,
+  true,
+  true,
+  true,
+  true
+ ],
+ "new_nodes_singletons_in_coarse_levels": [
+  1.0,
+  1.0,
+  1.0,
+  1.0,
+  1.0,
+  1.0
+ ]
+}

@@ -1,0 +1,9 @@
+[package]
+name = "hitcheck"
+version = "0.1.0"
+edition = "2021"
+
+# Validation harness for the UNOFFICIAL third-party HIT-Leiden implementation
+# (github.com/randomvariable/hit-leiden @ 9247424). The source is mounted read-only at /hit.
+[dependencies]
+hit_leiden = { path = "/hit" }

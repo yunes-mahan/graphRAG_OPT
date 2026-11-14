@@ -20,8 +20,15 @@ PRICE = LAMBDA * 16 / 15
 MIN_SIZE, JAC = 5, 0.9
 
 
+# B3 (VLDB revision): cost-model constants can be overridden for the sensitivity study; defaults unchanged.
+_TOK = (float(os.environ.get("TOK_OVERHEAD", 1500)), float(os.environ.get("TOK_PER", 250)),
+        float(os.environ.get("TOK_CAP", 8000)))
+
+
 def tokens(size):
-    return 1500 + min(8000, 250 * size)
+    if "TOK_OVERHEAD" not in os.environ and "TOK_PER" not in os.environ and "TOK_CAP" not in os.environ:
+        return 1500 + min(8000, 250 * size)
+    return _TOK[0] + min(_TOK[2], _TOK[1] * size)
 
 
 def _Q(y, u, w, deg, two_m):

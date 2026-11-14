@@ -1,0 +1,614 @@
+{
+ "stores": {
+  "recompute_leiden|id|full": {
+   "mean_words": 362.93333333333334,
+   "fresh_mean_words": 368.23333333333335,
+   "mean_word_diff": -5.3,
+   "share_longer": 0.4,
+   "comp_win": 0.525,
+   "comp_win_when_longer": 0.6041666666666666,
+   "comp_win_when_not_longer": 0.4722222222222222
+  },
+  "recompute_leiden|cover:0.5|full": {
+   "mean_words": 376.3666666666667,
+   "fresh_mean_words": 368.23333333333335,
+   "mean_word_diff": 8.133333333333333,
+   "share_longer": 0.6,
+   "comp_win": 0.525,
+   "comp_win_when_longer": 0.5694444444444444,
+   "comp_win_when_not_longer": 0.4583333333333333
+  },
+  "recompute_leiden|topic:0.95|full": {
+   "mean_words": 368.4,
+   "fresh_mean_words": 368.23333333333335,
+   "mean_word_diff": 0.16666666666666666,
+   "share_longer": 0.4666666666666667,
+   "comp_win": 0.7333333333333333,
+   "comp_win_when_longer": 0.8035714285714286,
+   "comp_win_when_not_longer": 0.671875
+  },
+  "warmstart_leiden|id|full": {
+   "mean_words": 372.6333333333333,
+   "fresh_mean_words": 368.23333333333335,
+   "mean_word_diff": 4.4,
+   "share_longer": 0.4666666666666667,
+   "comp_win": 0.5416666666666666,
+   "comp_win_when_longer": 0.5,
+   "comp_win_when_not_longer": 0.578125
+  },
+  "warmstart_leiden|cover:0.5|full": {
+   "mean_words": 369.5,
+   "fresh_mean_words": 368.23333333333335,
+   "mean_word_diff": 1.2666666666666666,
+   "share_longer": 0.5,
+   "comp_win": 0.49166666666666664,
+   "comp_win_when_longer": 0.6,
+   "comp_win_when_not_longer": 0.38333333333333336
+  },
+  "warmstart_leiden|topic:0.95|full": {
+   "mean_words": 365.26666666666665,
+   "fresh_mean_words": 368.23333333333335,
+   "mean_word_diff": -2.966666666666667,
+   "share_longer": 0.4666666666666667,
+   "comp_win": 0.5916666666666667,
+   "comp_win_when_longer": 0.7142857142857143,
+   "comp_win_when_not_longer": 0.484375
+  },
+  "frontier_leiden|id|full": {
+   "mean_words": 375.1666666666667,
+   "fresh_mean_words": 368.23333333333335,
+   "mean_word_diff": 6.933333333333334,
+   "share_longer": 0.6,
+   "comp_win": 0.575,
+   "comp_win_when_longer": 0.5833333333333334,
+   "comp_win_when_not_longer": 0.5625
+  },
+  "frontier_leiden|cover:0.5|full": {
+   "mean_words": 374.1333333333333,
+   "fresh_mean_words": 368.23333333333335,
+   "mean_word_diff": 5.9,
+   "share_longer": 0.5666666666666667,
+   "comp_win": 0.5833333333333334,
+   "comp_win_when_longer": 0.5882352941176471,
+   "comp_win_when_not_longer": 0.5769230769230769
+  },
+  "frontier_leiden|topic:0.95|full": {
+   "mean_words": 366.6666666666667,
+   "fresh_mean_words": 368.23333333333335,
+   "mean_word_diff": -1.5666666666666667,
+   "share_longer": 0.36666666666666664,
+   "comp_win": 0.6416666666666667,
+   "comp_win_when_longer": 0.6818181818181818,
+   "comp_win_when_not_longer": 0.618421052631579
+  },
+  "hybrid|id|full": {
+   "mean_words": 372.53333333333336,
+   "fresh_mean_words": 368.23333333333335,
+   "mean_word_diff": 4.3,
+   "share_longer": 0.5,
+   "comp_win": 0.575,
+   "comp_win_when_longer": 0.6833333333333333,
+   "comp_win_when_not_longer": 0.4666666666666667
+  },
+  "hybrid|cover:0.5|full": {
+   "mean_words": 374.1333333333333,
+   "fresh_mean_words": 368.23333333333335,
+   "mean_word_diff": 5.9,
+   "share_longer": 0.6,
+   "comp_win": 0.5916666666666667,
+   "comp_win_when_longer": 0.5277777777777778,
+   "comp_win_when_not_longer": 0.6875
+  },
+  "hybrid|topic:0.95|full": {
+   "mean_words": 378.73333333333335,
+   "fresh_mean_words": 368.23333333333335,
+   "mean_word_diff": 10.5,
+   "share_longer": 0.6,
+   "comp_win": 0.5083333333333333,
+   "comp_win_when_longer": 0.5138888888888888,
+   "comp_win_when_not_longer": 0.5
+  },
+  "recompute_leiden|topic:0.95|titles": {
+   "mean_words": 365.8666666666667,
+   "fresh_mean_words": 368.23333333333335,
+   "mean_word_diff": -2.3666666666666667,
+   "share_longer": 0.4666666666666667,
+   "comp_win": 0.5583333333333333,
+   "comp_win_when_longer": 0.6785714285714286,
+   "comp_win_when_not_longer": 0.453125
+  },
+  "warmstart_leiden|topic:0.95|titles": {
+   "mean_words": 363.2,
+   "fresh_mean_words": 368.23333333333335,
+   "mean_word_diff": -5.033333333333333,
+   "share_longer": 0.5333333333333333,
+   "comp_win": 0.5583333333333333,
+   "comp_win_when_longer": 0.546875,
+   "comp_win_when_not_longer": 0.5714285714285714
+  },
+  "frontier_leiden|topic:0.95|titles": {
+   "mean_words": 374.53333333333336,
+   "fresh_mean_words": 368.23333333333335,
+   "mean_word_diff": 6.3,
+   "share_longer": 0.6666666666666666,
+   "comp_win": 0.6416666666666667,
+   "comp_win_when_longer": 0.6875,
+   "comp_win_when_not_longer": 0.55
+  },
+  "hybrid|topic:0.95|titles": {
+   "mean_words": 370.1666666666667,
+   "fresh_mean_words": 368.23333333333335,
+   "mean_word_diff": 1.9333333333333333,
+   "share_longer": 0.6333333333333333,
+   "comp_win": 0.6416666666666667,
+   "comp_win_when_longer": 0.6052631578947368,
+   "comp_win_when_not_longer": 0.7045454545454546
+  }
+ },
+ "n_questions": 30,
+ "spearman_store_level": {
+  "rho": -0.10288813165023684,
+  "p": 0.7045563144352585,
+  "n": 16
+ },
+ "spearman_question_level": {
+  "rho": 0.1575201410278707,
+  "p": 0.0005327154965370814,
+  "n": 480
+ },
+ "holm": [
+  {
+   "store": "recompute_leiden|id|full",
+   "criterion": "comprehensiveness",
+   "win": 0.525,
+   "p": 0.4846543764643,
+   "p_holm": 1.0
+  },
+  {
+   "store": "recompute_leiden|id|full",
+   "criterion": "diversity",
+   "win": 0.5166666666666667,
+   "p": 0.9190567496057709,
+   "p_holm": 1.0
+  },
+  {
+   "store": "recompute_leiden|id|full",
+   "criterion": "empowerment",
+   "win": 0.5083333333333333,
+   "p": 0.7388826803635273,
+   "p_holm": 1.0
+  },
+  {
+   "store": "recompute_leiden|id|full",
+   "criterion": "directness",
+   "win": 0.475,
+   "p": 0.5773373592456303,
+   "p_holm": 1.0
+  },
+  {
+   "store": "recompute_leiden|cover:0.5|full",
+   "criterion": "comprehensiveness",
+   "win": 0.525,
+   "p": 0.5902584513147718,
+   "p_holm": 1.0
+  },
+  {
+   "store": "recompute_leiden|cover:0.5|full",
+   "criterion": "diversity",
+   "win": 0.48333333333333334,
+   "p": 0.7819648868048116,
+   "p_holm": 1.0
+  },
+  {
+   "store": "recompute_leiden|cover:0.5|full",
+   "criterion": "empowerment",
+   "win": 0.55,
+   "p": 0.31731050786291415,
+   "p_holm": 1.0
+  },
+  {
+   "store": "recompute_leiden|cover:0.5|full",
+   "criterion": "directness",
+   "win": 0.475,
+   "p": 0.6720105956808475,
+   "p_holm": 1.0
+  },
+  {
+   "store": "recompute_leiden|topic:0.95|full",
+   "criterion": "comprehensiveness",
+   "win": 0.7333333333333333,
+   "p": 0.0023873804655833394,
+   "p_holm": 0.15279234979733372
+  },
+  {
+   "store": "recompute_leiden|topic:0.95|full",
+   "criterion": "diversity",
+   "win": 0.6916666666666667,
+   "p": 0.004006673322594885,
+   "p_holm": 0.2484137460008829
+  },
+  {
+   "store": "recompute_leiden|topic:0.95|full",
+   "criterion": "empowerment",
+   "win": 0.6416666666666667,
+   "p": 0.0038924171227786276,
+   "p_holm": 0.24522227873505353
+  },
+  {
+   "store": "recompute_leiden|topic:0.95|full",
+   "criterion": "directness",
+   "win": 0.4166666666666667,
+   "p": 0.11278516509171255,
+   "p_holm": 1.0
+  },
+  {
+   "store": "warmstart_leiden|id|full",
+   "criterion": "comprehensiveness",
+   "win": 0.5416666666666666,
+   "p": 0.4255075032112442,
+   "p_holm": 1.0
+  },
+  {
+   "store": "warmstart_leiden|id|full",
+   "criterion": "diversity",
+   "win": 0.525,
+   "p": 0.5902584513147718,
+   "p_holm": 1.0
+  },
+  {
+   "store": "warmstart_leiden|id|full",
+   "criterion": "empowerment",
+   "win": 0.5166666666666667,
+   "p": 0.7815112949987133,
+   "p_holm": 1.0
+  },
+  {
+   "store": "warmstart_leiden|id|full",
+   "criterion": "directness",
+   "win": 0.375,
+   "p": 0.03614514204656225,
+   "p_holm": 1.0
+  },
+  {
+   "store": "warmstart_leiden|cover:0.5|full",
+   "criterion": "comprehensiveness",
+   "win": 0.49166666666666664,
+   "p": 0.9790127252213633,
+   "p_holm": 1.0
+  },
+  {
+   "store": "warmstart_leiden|cover:0.5|full",
+   "criterion": "diversity",
+   "win": 0.49166666666666664,
+   "p": 0.9488507657426928,
+   "p_holm": 1.0
+  },
+  {
+   "store": "warmstart_leiden|cover:0.5|full",
+   "criterion": "empowerment",
+   "win": 0.4583333333333333,
+   "p": 0.5716076449533316,
+   "p_holm": 1.0
+  },
+  {
+   "store": "warmstart_leiden|cover:0.5|full",
+   "criterion": "directness",
+   "win": 0.5,
+   "p": 0.6553647804541406,
+   "p_holm": 1.0
+  },
+  {
+   "store": "warmstart_leiden|topic:0.95|full",
+   "criterion": "comprehensiveness",
+   "win": 0.5916666666666667,
+   "p": 0.14070407079252664,
+   "p_holm": 1.0
+  },
+  {
+   "store": "warmstart_leiden|topic:0.95|full",
+   "criterion": "diversity",
+   "win": 0.6,
+   "p": 0.13361440253771611,
+   "p_holm": 1.0
+  },
+  {
+   "store": "warmstart_leiden|topic:0.95|full",
+   "criterion": "empowerment",
+   "win": 0.5583333333333333,
+   "p": 0.06599205505934755,
+   "p_holm": 1.0
+  },
+  {
+   "store": "warmstart_leiden|topic:0.95|full",
+   "criterion": "directness",
+   "win": 0.375,
+   "p": 0.05271610943330309,
+   "p_holm": 1.0
+  },
+  {
+   "store": "frontier_leiden|id|full",
+   "criterion": "comprehensiveness",
+   "win": 0.575,
+   "p": 0.23314061942836228,
+   "p_holm": 1.0
+  },
+  {
+   "store": "frontier_leiden|id|full",
+   "criterion": "diversity",
+   "win": 0.5666666666666667,
+   "p": 0.2482130789899235,
+   "p_holm": 1.0
+  },
+  {
+   "store": "frontier_leiden|id|full",
+   "criterion": "empowerment",
+   "win": 0.5166666666666667,
+   "p": 0.7054569861112734,
+   "p_holm": 1.0
+  },
+  {
+   "store": "frontier_leiden|id|full",
+   "criterion": "directness",
+   "win": 0.4083333333333333,
+   "p": 0.12974017811624333,
+   "p_holm": 1.0
+  },
+  {
+   "store": "frontier_leiden|cover:0.5|full",
+   "criterion": "comprehensiveness",
+   "win": 0.5833333333333334,
+   "p": 0.23906632539099926,
+   "p_holm": 1.0
+  },
+  {
+   "store": "frontier_leiden|cover:0.5|full",
+   "criterion": "diversity",
+   "win": 0.5833333333333334,
+   "p": 0.19670560245894686,
+   "p_holm": 1.0
+  },
+  {
+   "store": "frontier_leiden|cover:0.5|full",
+   "criterion": "empowerment",
+   "win": 0.475,
+   "p": 0.7306468631842209,
+   "p_holm": 1.0
+  },
+  {
+   "store": "frontier_leiden|cover:0.5|full",
+   "criterion": "directness",
+   "win": 0.5,
+   "p": 0.8318842272270308,
+   "p_holm": 1.0
+  },
+  {
+   "store": "frontier_leiden|topic:0.95|full",
+   "criterion": "comprehensiveness",
+   "win": 0.6416666666666667,
+   "p": 0.01001165454095339,
+   "p_holm": 0.6107109269981568
+  },
+  {
+   "store": "frontier_leiden|topic:0.95|full",
+   "criterion": "diversity",
+   "win": 0.5583333333333333,
+   "p": 0.19268475194899937,
+   "p_holm": 1.0
+  },
+  {
+   "store": "frontier_leiden|topic:0.95|full",
+   "criterion": "empowerment",
+   "win": 0.5333333333333333,
+   "p": 0.31731050786291415,
+   "p_holm": 1.0
+  },
+  {
+   "store": "frontier_leiden|topic:0.95|full",
+   "criterion": "directness",
+   "win": 0.5416666666666666,
+   "p": 0.33179983649777,
+   "p_holm": 1.0
+  },
+  {
+   "store": "hybrid|id|full",
+   "criterion": "comprehensiveness",
+   "win": 0.575,
+   "p": 0.26458331224391063,
+   "p_holm": 1.0
+  },
+  {
+   "store": "hybrid|id|full",
+   "criterion": "diversity",
+   "win": 0.6,
+   "p": 0.13410976820131773,
+   "p_holm": 1.0
+  },
+  {
+   "store": "hybrid|id|full",
+   "criterion": "empowerment",
+   "win": 0.6333333333333333,
+   "p": 0.032509444645719525,
+   "p_holm": 1.0
+  },
+  {
+   "store": "hybrid|id|full",
+   "criterion": "directness",
+   "win": 0.4666666666666667,
+   "p": 0.6328513110419363,
+   "p_holm": 1.0
+  },
+  {
+   "store": "hybrid|cover:0.5|full",
+   "criterion": "comprehensiveness",
+   "win": 0.5916666666666667,
+   "p": 0.077244237148578,
+   "p_holm": 1.0
+  },
+  {
+   "store": "hybrid|cover:0.5|full",
+   "criterion": "diversity",
+   "win": 0.5166666666666667,
+   "p": 0.7819648868048116,
+   "p_holm": 1.0
+  },
+  {
+   "store": "hybrid|cover:0.5|full",
+   "criterion": "empowerment",
+   "win": 0.6,
+   "p": 0.05777957112359726,
+   "p_holm": 1.0
+  },
+  {
+   "store": "hybrid|cover:0.5|full",
+   "criterion": "directness",
+   "win": 0.5666666666666667,
+   "p": 0.18464595312408716,
+   "p_holm": 1.0
+  },
+  {
+   "store": "hybrid|topic:0.95|full",
+   "criterion": "comprehensiveness",
+   "win": 0.5083333333333333,
+   "p": 0.9595564798962434,
+   "p_holm": 1.0
+  },
+  {
+   "store": "hybrid|topic:0.95|full",
+   "criterion": "diversity",
+   "win": 0.5,
+   "p": 1.0,
+   "p_holm": 1.0
+  },
+  {
+   "store": "hybrid|topic:0.95|full",
+   "criterion": "empowerment",
+   "win": 0.5333333333333333,
+   "p": 0.4142161782425253,
+   "p_holm": 1.0
+  },
+  {
+   "store": "hybrid|topic:0.95|full",
+   "criterion": "directness",
+   "win": 0.49166666666666664,
+   "p": 0.8580276569875211,
+   "p_holm": 1.0
+  },
+  {
+   "store": "recompute_leiden|topic:0.95|titles",
+   "criterion": "comprehensiveness",
+   "win": 0.5583333333333333,
+   "p": 0.2646856393713507,
+   "p_holm": 1.0
+  },
+  {
+   "store": "recompute_leiden|topic:0.95|titles",
+   "criterion": "diversity",
+   "win": 0.5333333333333333,
+   "p": 0.5270892568655381,
+   "p_holm": 1.0
+  },
+  {
+   "store": "recompute_leiden|topic:0.95|titles",
+   "criterion": "empowerment",
+   "win": 0.5083333333333333,
+   "p": 0.9488507657426928,
+   "p_holm": 1.0
+  },
+  {
+   "store": "recompute_leiden|topic:0.95|titles",
+   "criterion": "directness",
+   "win": 0.44166666666666665,
+   "p": 0.2440915348305308,
+   "p_holm": 1.0
+  },
+  {
+   "store": "warmstart_leiden|topic:0.95|titles",
+   "criterion": "comprehensiveness",
+   "win": 0.5583333333333333,
+   "p": 0.2996939404663821,
+   "p_holm": 1.0
+  },
+  {
+   "store": "warmstart_leiden|topic:0.95|titles",
+   "criterion": "diversity",
+   "win": 0.5333333333333333,
+   "p": 0.5270892568655381,
+   "p_holm": 1.0
+  },
+  {
+   "store": "warmstart_leiden|topic:0.95|titles",
+   "criterion": "empowerment",
+   "win": 0.43333333333333335,
+   "p": 0.2059032107320683,
+   "p_holm": 1.0
+  },
+  {
+   "store": "warmstart_leiden|topic:0.95|titles",
+   "criterion": "directness",
+   "win": 0.4666666666666667,
+   "p": 0.523749258426621,
+   "p_holm": 1.0
+  },
+  {
+   "store": "frontier_leiden|topic:0.95|titles",
+   "criterion": "comprehensiveness",
+   "win": 0.6416666666666667,
+   "p": 0.0428043023327099,
+   "p_holm": 1.0
+  },
+  {
+   "store": "frontier_leiden|topic:0.95|titles",
+   "criterion": "diversity",
+   "win": 0.5916666666666667,
+   "p": 0.11610174398054864,
+   "p_holm": 1.0
+  },
+  {
+   "store": "frontier_leiden|topic:0.95|titles",
+   "criterion": "empowerment",
+   "win": 0.5333333333333333,
+   "p": 0.4142161782425253,
+   "p_holm": 1.0
+  },
+  {
+   "store": "frontier_leiden|topic:0.95|titles",
+   "criterion": "directness",
+   "win": 0.4,
+   "p": 0.09315474759443443,
+   "p_holm": 1.0
+  },
+  {
+   "store": "hybrid|topic:0.95|titles",
+   "criterion": "comprehensiveness",
+   "win": 0.6416666666666667,
+   "p": 0.05215897664746479,
+   "p_holm": 1.0
+  },
+  {
+   "store": "hybrid|topic:0.95|titles",
+   "criterion": "diversity",
+   "win": 0.6083333333333333,
+   "p": 0.1535452433854497,
+   "p_holm": 1.0
+  },
+  {
+   "store": "hybrid|topic:0.95|titles",
+   "criterion": "empowerment",
+   "win": 0.5333333333333333,
+   "p": 0.4142161782425253,
+   "p_holm": 1.0
+  },
+  {
+   "store": "hybrid|topic:0.95|titles",
+   "criterion": "directness",
+   "win": 0.5666666666666667,
+   "p": 0.29072913684361024,
+   "p_holm": 1.0
+  }
+ ],
+ "n_tests": 64,
+ "n_sig_uncorrected": 7,
+ "n_sig_holm": 0,
+ "mean_comp_win_all_stores": 0.5802083333333334,
+ "n_stores_comp_above_half": 15
+}

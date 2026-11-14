@@ -28,8 +28,12 @@ def eta(sub):
 
 
 res = {}
+# VLDB revision (B6): HIER_ANOVA_SUFFIX="_5orders" reads v2/graphrag_hier_*_5orders.json and writes v2/hier_anova_5orders.json;
+# without it the inputs and output are unchanged.
+import os  # noqa: E402
+SFX = os.environ.get("HIER_ANOVA_SUFFIX", "")
 for graph, fn in (("entity", "graphrag_hier.json"), ("wikidata", "graphrag_hier_wikidata.json")):
-    d = json.loads((HERE / fn).read_text())
+    d = json.loads(((HERE / "v2" / f"graphrag_hier_{graph}{SFX}.json") if SFX else (HERE / fn)).read_text())
     rows = []
     for s, r in d.items():
         for m, v in r.items():
@@ -46,4 +50,4 @@ for graph, fn in (("entity", "graphrag_hier.json"), ("wikidata", "graphrag_hier_
     res[graph] = dict(all=eta(df), recluster_split=split,
                       reclustering=eta(df[df.maintainer.isin(["reindex+match", "warm"])]))
     print(graph, json.dumps(res[graph], indent=1))
-(HERE / "hier_anova.json").write_text(json.dumps(res, indent=1))
+((HERE / "v2" / f"hier_anova{SFX}.json") if SFX else (HERE / "hier_anova.json")).write_text(json.dumps(res, indent=1))

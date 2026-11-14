@@ -1,0 +1,9 @@
+{
+ "n_stores": 16,
+ "max_store": "recompute_leiden|tau=0.9",
+ "max_tokens": 743567,
+ "min_store": "frontier_leiden|tau=0.0",
+ "min_tokens": 21526,
+ "ratio_exact": 34.54273901328626,
+ "ratio_of_rounded_display": 33.81818181818182
+}

@@ -5,7 +5,8 @@ Evolving Knowledge Graphs [Experiment, Analysis & Benchmark]"* (Yunes Mahan, Mac
 
 GraphRAG indexes a knowledge graph by clustering it into communities and storing one LLM-written report per
 community. When the graph changes, a system must decide whether to re-cluster and which reports to rewrite. This
-repository benchmarks these maintenance choices on seven evolving graphs, including an LLM-extracted entity graph
+repository benchmarks these maintenance choices on eight update streams over five graph sources (plus ogbl-citation2
+for scalability), including an LLM-extracted entity graph
 clustered with Microsoft GraphRAG's hierarchical Leiden settings. It measures **report-rewrite cost** (LLM tokens),
 **coverage** (entities in a reported community), clustering quality, and the effect on **answers** to local and global
 questions.
@@ -98,15 +99,25 @@ Apache-2.0.
 
 ## Reproducing the paper
 
-**Every table, figure and number** in the paper is generated from the files in `artifacts/`
-(benchmark results and cached LLM outputs). `./quick_reproduce.sh` checks all of them automatically:
+**Every table, figure and number** in the paper is generated from the files in `artifacts/` (benchmark results and
+cached LLM outputs); no LLM call or API key is needed. Install (Python 3.12) and use one command per item:
 
 ```bash
 pip install -r requirements.txt
-cd paper_assets
-PAPER_RESULTS=../artifacts python make_assets.py   # writes tables/*.tex, figures/*.pdf, numbers.tex
-python make_overview.py                             # Fig. 1
+make all          # every table (paper_assets/tables), figure (paper_assets/figures) and quoted number (numbers.tex)
+make check        # regenerate and compare EVERY number with the paper (artifacts/expected_*); exit 1 on any mismatch
+make table4       # one table:  table1 ... table9
+make fig3         # one figure: fig1 ... fig5
+make reproduce    # quick_reproduce.sh: the check above + re-running two maintainers from the raw OGB data
 ```
+
+Expected runtime on the hardware below: `make all` / `make check` 2-5 minutes; `make reproduce` 10-15 minutes
+(downloads about 1 GB of OGB data). Table/figure numbers follow the VLDB 2027 submission. Table 1 is typed in the
+paper; its numbers are recomputed from the data by `revision/a12_handtyped.py` (`make table1`).
+
+The experiments added for the VLDB 2027 revision (k-core and dynamic-frontier Leiden with the authors' code, HIT-Leiden
+validation, cost-model sensitivity, Pareto view, 5 document orders, open-model replication with a local Qwen3-14B) are
+in `revision/`; see `revision/README.md` for how to re-run them, including the Qwen experiments.
 
 To **re-run the experiments** from scratch (no LLM calls needed for the structural benchmark; LLM outputs are
 cached in `artifacts/qa/cache_*.json`, so the QA experiments re-run offline unless the cache is removed):
@@ -144,6 +155,21 @@ cached in `artifacts/qa/cache_*.json`, so the QA experiments re-run offline unle
 
 Hardware used: one Apple M5 Pro (18 cores, 24 GB RAM); single-process Python 3.12, python-igraph 1.0,
 leidenalg 0.12; Neo4j 5 Community + GDS 2.13.
+
+### Pinned versions
+
+- Python packages: `requirements.txt` (all pinned; e.g. leidenalg 0.12.0, python-igraph 1.0.0, graspologic-native 1.3.1,
+  numpy 2.5.4, scipy 1.18.1). Third-party code of the revision that needs `graspologic` (numpy < 2) runs in a separate
+  environment: `revision/requirements-ext.txt` (graspologic 3.4.4).
+- Microsoft GraphRAG is **not** imported. Its clustering is reproduced with graspologic-native 1.3.1 exactly as in
+  GraphRAG's `cluster_graph` (hierarchical Leiden, `max_cluster_size=10`, largest connected component, seed
+  `0xDEADBEEF`), and its incremental update is re-implemented from its source code, versions 3.2.0 and 3.3.0 (identical
+  in this respect). Flat Leiden uses leidenalg 0.12.0 with seed 0.
+- LLMs: gpt-5.6-luna / gpt-5.6-terra (OpenAI Chat Completions, accessed 6-10 Nov 2026, API default sampling; all
+  outputs cached in `artifacts/`). Local model: Ollama 0.40.15, `qwen3:14b` (digest bdbd181c33f2, Q4_K_M), temperature
+  0, seed 0, thinking off, context 16,384 (`revision/qwen_backend.py`).
+- Third-party code is fetched at pinned commits by `revision/fetch_external.sh` (Kcore-GraphRAG ae7b2ef,
+  leiden-communities-openmp-dynamic 28c304f, unofficial hit-leiden 9247424); containers: `docker.io/library/rust:1.83`.
 
 ## Licence
 Code: Apache-2.0 (see `LICENSE`). Derived data: ogbn-arxiv / ogbl-collab / ogbl-citation2 follow the OGB licences

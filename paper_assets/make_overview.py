@@ -41,5 +41,6 @@ xs = [box(0, "Graph update", [("version $G_t$:", GREY, 0), ("new entities,", GRE
 for x in xs[:-1]:
     ax.add_patch(FancyArrowPatch((x + W - 0.2, Y + H / 2), (x + W + GAP + 0.2, Y + H / 2), arrowstyle="-|>",
                                  mutation_scale=7, lw=0.8, color=GREY))
+(HERE / "figures").mkdir(exist_ok=True)
 fig.savefig(HERE / "figures" / "overview.pdf", bbox_inches="tight", pad_inches=0.02)
 print("ok")

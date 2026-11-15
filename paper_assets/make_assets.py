@@ -482,6 +482,10 @@ Maintainer & $\tau$ & recall [95\% CI] & $\Delta$ fresh & $p$ & regen. & input t
               handletextpad=0.3, columnspacing=0.7, handlelength=1.6)
     G = {r["store"]: r for r in json.loads((A / "qa_global.json").read_text())["summary"]}
     vm = [k for k in G if k.startswith("vector|") and "budget" in k][0]
+    M["VecMatchN"] = vm.split("|")[1].split()[0]                          # V17g: Fig. 4 caption
+    QS = [r for r in json.loads((A / "qa" / "results.json").read_text())["summary"] if r["store"] != "papers|vector"]
+    hw = [(r["ci_hi"] - r["ci_lo"]) / 2 for r in QS]
+    M["QaCiHwMin"], M["QaCiHwMax"] = f"{min(hw):.2f}", f"{max(hw):.2f}"
     rows_g = [("Hybrid, $\\tau$=0.9", "summaries|hybrid tau=0.9", "#2a78d6"),
               ("Hybrid, never refreshed", "summaries|hybrid never", "#2a78d6"),
               ("Recompute, $\\tau$=0.9", "summaries|recompute tau=0.9", "#2a78d6"),
@@ -994,7 +998,7 @@ def extra_graphs_table(M):
     E = json.loads((A / "entity_graph" / "eval.json").read_text())
     S = json.loads((A / "scale.json").read_text()) if (A / "scale.json").exists() else {}
     meth = [("priced_warm", "Warm-start + rollback"), ("priced_frontier", "Frontier-restr.\\ + rollback"),
-            ("warmstart_leiden", "Warm-start Leiden"), ("frontier_leiden", "Frontier-restr.\\ Leiden"), ("local_repair", "Local repair (= Hybrid)"),
+            ("warmstart_leiden", "Warm-start Leiden"), ("frontier_leiden", "Frontier-restr.\\ Leiden (ours)"), ("local_repair", "Local repair (= Hybrid)"),
             ("df_leiden_sahu", "DF Leiden (Sahu's code)"), ("lazy", "Lazy attach (Zep)"), ("recompute_leiden", "Recompute Leiden"),
             ("graphrag_delta", "GraphRAG update (delta)")]
     xf = A / "v12" / "t4" / "extra_rows.json"           # T4 (V13): DF Leiden and local repair on Wikidata / entity graph

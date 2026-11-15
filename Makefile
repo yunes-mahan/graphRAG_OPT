@@ -22,7 +22,7 @@ check:
 	PAPER_RESULTS=$(RES) $(PY) $(A)/check_numbers.py
 
 reproduce:
-	./quick_reproduce.sh
+	PYTHON=$(PY) ./quick_reproduce.sh
 
 numbers: assets
 	@cat $(A)/numbers.tex
@@ -77,7 +77,7 @@ v15_checks:   ; @for f in v15_hybrid_qa v15_fid_stale v15_delta_lcc v15_bfs_toke
 V16 = $(RES)/v16
 tech_report: assets           # artifact technical report, every number filled in from paper_assets/numbers.json
 	cd $(A) && $(PY) make_tech_report.py ../docs/TECH_REPORT.md
-w5_instability: ; @cat $(V16)/w5_instability.json; for g in entity wikidata; do $(PY) -c "import json;d=json.load(open('$(V16)/w5_stream_$$g\_iter50.json'));print('$$g', [round(d[s]['reindex+match']['cost']['0.9|1'],3) for s in d])"; done
+w5_instability: ; @cat $(V16)/w5_instability.json; for g in entity wikidata; do $(PY) -c "import json;d=json.load(open('$(V16)/w5_stream_$${g}_iter50.json'));print('$$g', [round(d[s]['reindex+match']['cost']['0.9|1'],3) for s in d])"; done
 hier_frontier:  ; @cat $(V16)/w1_summary.json; ls $(V16)/w1
 cascade exact_tokens: ; @cat $(V16)/w3_summary.json $(V16)/w3_rowsum_check.json
 w4_metrics:     ; @ls $(V16)/w4      # Table 2 runs with Q on the LCC and content coverage (make table2 shows the table)

@@ -1,21 +1,23 @@
-\begin{tabular}{l c c c c c c c r}
+\begin{tabular}{l c c c c c c c c r}
 \toprule
- & \multicolumn{4}{c}{report tokens per update (rel.\ to re-index)} & & & & \\
+ & \multicolumn{4}{c}{report tokens per update (rel.\ to re-index)} & & & & & \\
 \cmidrule(lr){2-5}
-Maintainer & $\tau{=}0.9$ & $0.7$ & $0.5$ & never & $Q_\mathrm{leaf}$ & $Q_\mathrm{top}$ & coverage & reports\\
+Maintainer & $\tau{=}0.9$ & $0.7$ & $0.5$ & never & $Q_\mathrm{leaf}$ & $Q_\mathrm{top}$ & cov. & content cov.\ (never) & reports\\
 \midrule
-\multicolumn{9}{l}{\emph{LLM entity graph} (5 update orders)}\\
-Full re-index (fresh ids) & 1.00 & 1.00 & 1.00 & 1.00 & 0.583 & 0.804 & 96\% & 24{,}700 \\
-Re-index + id matching & 0.57 & 0.46 & 0.30 & 0.16 & 0.583 & 0.804 & 96\% & 24{,}700 \\
-Warm-start hierarchical Leiden & 0.59 & 0.46 & 0.30 & 0.17 & 0.584 & 0.805 & 96\% & 24{,}888 \\
-GraphRAG incremental update & 0.04 & 0.04 & 0.04 & 0.04 & 0.534 & 0.609 & 81\% & 16{,}653 \\
-Zep-style attach & 0.07 & 0.02 & 0.01 & 0.00 & 0.585 & 0.766 & 68\% & 9{,}365 \\
+\multicolumn{10}{l}{\emph{LLM entity graph} (5 update orders)}\\
+Full re-index (fresh ids) & 1.00 & 1.00 & 1.00 & 1.00 & 0.583 & 0.804 & 96\% & 96\% & 24{,}700 \\
+Re-index + id matching & 0.57 & 0.46 & 0.30 & 0.16 & 0.583 & 0.804 & 96\% & 89\% & 24{,}700 \\
+Warm-start hierarchical Leiden & 0.59 & 0.46 & 0.30 & 0.17 & 0.584 & 0.805 & 96\% & 89\% & 24{,}888 \\
+GraphRAG incremental update & 0.04 & 0.04 & 0.04 & 0.04 & 0.491 & 0.562 & 81\% & 81\% & 16{,}653 \\
+Zep-style attach & 0.07 & 0.02 & 0.01 & 0.00 & 0.491 & 0.647 & 68\% & 48\% & 9{,}365 \\
+Hier.\ frontier-restr.\ (ours) & 0.25 & 0.17 & 0.13 & 0.11 & 0.586 & 0.794 & 96\% & 91\% & 31{,}077 \\
 \midrule
-\multicolumn{9}{l}{\emph{Wikidata films} (5 update orders)}\\
-Full re-index (fresh ids) & 1.00 & 1.00 & 1.00 & 1.00 & 0.313 & 0.572 & 100\% & 34{,}815 \\
-Re-index + id matching & 0.74 & 0.52 & 0.34 & 0.10 & 0.313 & 0.572 & 100\% & 34{,}815 \\
-Warm-start hierarchical Leiden & 0.73 & 0.52 & 0.35 & 0.11 & 0.314 & 0.573 & 100\% & 32{,}739 \\
-GraphRAG incremental update & 0.02 & 0.02 & 0.02 & 0.02 & 0.302 & 0.395 & 95\% & 33{,}214 \\
-Zep-style attach & 0.03 & 0.01 & 0.00 & 0.00 & 0.308 & 0.547 & 87\% & 25{,}611 \\
+\multicolumn{10}{l}{\emph{Wikidata films} (5 update orders)}\\
+Full re-index (fresh ids) & 1.00 & 1.00 & 1.00 & 1.00 & 0.313 & 0.572 & 100\% & 100\% & 34{,}815 \\
+Re-index + id matching & 0.74 & 0.52 & 0.34 & 0.10 & 0.313 & 0.572 & 100\% & 95\% & 34{,}815 \\
+Warm-start hierarchical Leiden & 0.73 & 0.52 & 0.35 & 0.11 & 0.314 & 0.573 & 100\% & 92\% & 32{,}739 \\
+GraphRAG incremental update & 0.02 & 0.02 & 0.02 & 0.02 & 0.298 & 0.391 & 95\% & 95\% & 33{,}214 \\
+Zep-style attach & 0.03 & 0.01 & 0.00 & 0.00 & 0.299 & 0.531 & 87\% & 76\% & 25{,}611 \\
+Hier.\ frontier-restr.\ (ours) & 0.10 & 0.04 & 0.02 & 0.02 & 0.314 & 0.578 & 100\% & 94\% & 36{,}728 \\
 \bottomrule
 \end{tabular}

@@ -11,6 +11,7 @@ A    = paper_assets
 .PHONY: all assets check reproduce numbers table1 table2 table3 table4 table5 table6 table7 table8 table9 \
         fig1 fig2 fig3 fig4 fig_lambda batch_sweep matching eta_variants tco coverage_t6 gu_lcc rollback_factor margin margin035 \
         lcc kcore_levels batch_newcov wiki_all extra_rows reuse_checks v15_checks \
+        tech_report w5_instability hier_frontier cascade exact_tokens w4_metrics deletions seeds virtual_view kcore10 use_lcc_top \
         coarse_answers never300 costsens
 
 all assets:
@@ -70,3 +71,18 @@ wiki_all:     ; @cat $(V12)/t4_wiki.json                # Table 7: all maintaine
 extra_rows:   ; @cat $(V12)/t4/extra_rows.json; cat $(V12)/t4/scale_*.json   # Table 7: DF Leiden, local repair, citation2 cells
 reuse_checks: ; @cat $(V12)/t5_reuse_checks.json        # Table 8: fresh cells, self-comparison in the fidelity check
 v15_checks:   ; @for f in v15_hybrid_qa v15_fid_stale v15_delta_lcc v15_bfs_tokens; do echo "== $$f"; cat $(V12)/$$f.json; echo; done   # V15 checks (D2-D4, F2)
+
+# ---- V16 (scripts revision/v16/, cached results artifacts/v16/; rerun: copy revision/v16 into $GCM_RESULTS/v16,
+#      run the named script there; graphrag_hier.py hooks: HIER_W4, HIER_EXACT, HIER_ITER, HIER_ONLY=hier_frontier)
+V16 = $(RES)/v16
+tech_report: assets           # artifact technical report, every number filled in from paper_assets/numbers.json
+	cd $(A) && $(PY) make_tech_report.py ../docs/TECH_REPORT.md
+w5_instability: ; @cat $(V16)/w5_instability.json; for g in entity wikidata; do $(PY) -c "import json;d=json.load(open('$(V16)/w5_stream_$$g\_iter50.json'));print('$$g', [round(d[s]['reindex+match']['cost']['0.9|1'],3) for s in d])"; done
+hier_frontier:  ; @cat $(V16)/w1_summary.json; ls $(V16)/w1
+cascade exact_tokens: ; @cat $(V16)/w3_summary.json $(V16)/w3_rowsum_check.json
+w4_metrics:     ; @ls $(V16)/w4      # Table 2 runs with Q on the LCC and content coverage (make table2 shows the table)
+deletions:      ; @ls $(V16)/w8
+seeds:          ; @cat $(V16)/w6_summary.json
+virtual_view:   ; @cat $(V16)/w9_virtual_view.json
+kcore10:        ; @cat $(V16)/w10_kcore10.json
+use_lcc_top:    ; @ls $(V16)/p3_*.json

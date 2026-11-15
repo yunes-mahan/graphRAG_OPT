@@ -100,6 +100,8 @@ def hier(edge_list, node_ids, start=None):
         return {}, {}
     e = [(str(node_ids[a]), str(node_ids[b]), 1.0) for a, b in edge_list]
     kw = dict(max_cluster_size=MAXC, seed=SEED, use_modularity=True)
+    if os.environ.get("HIER_ITER"):                     # V16/W5: Leiden iterations (GraphRAG default 1)
+        kw["iterations"] = int(os.environ["HIER_ITER"])
     if start is not None:
         present = {x for a, b, _ in e for x in (a, b)}
         kw["starting_communities"] = {k: v for k, v in start.items() if k in present}
@@ -242,6 +244,24 @@ def run(seed):
         full_tokv = {(vn, ms): sum(tokv(len(m), v) for m in fresh.values() if len(m) >= ms)
                      for vn, v in TOKVARIANTS.items() for ms in MINS}
         new_nodes = set(np.where(node_t == t)[0].tolist())
+        if os.environ.get("HIER_EXACT"):                  # V16/W2+W3: GraphRAG-format context tokens (v16/exact_ctx.py)
+            XR = np.load(HERE / "v16" / "w3_rows.npz")
+            xadj = defaultdict(list)
+            for j in np.where(emask)[0]:
+                a_, b_ = int(E[0, j]), int(E[1, j])
+                xadj[a_].append((b_, int(j)))
+                xadj[b_].append((a_, int(j)))
+            _xc = {}
+
+            def xctx(m, _xc=_xc, xadj=xadj, XR=XR):
+                if m not in _xc:
+                    _xc[m] = int(XR["hdr"]) + int(XR["erow"][list(m)].sum()) + sum(
+                        int(XR["edrow"][j]) for v in m for u, j in xadj.get(v, ()) if v < u and u in m)
+                return _xc[m]
+
+            def xtok(m, XR=XR):
+                return float(XR["prompt"]) + min(xctx(m), int(XR["limit"])) + float(XR["out"])
+            xfull = sum(xtok(m) for m in fresh.values())
         new_el = [(int(a), int(b)) for a, b in E[:, edge_t == t].T]
         delta_el = sorted({(int(E[0, j]), int(E[1, j])) for j in batch_rels[t]}) if GRAPH == "entity" else new_el
         for name in (ONLY or ("reindex", "reindex+match", "graphrag_update", "warm", "zep_attach")):
@@ -278,6 +298,27 @@ def run(seed):
             elif t == 0 or st["comms"] is None:
                 comms = {(k[0], ("c", k[1])): m for k, m in fresh.items()}
                 lv = fresh_lv
+            elif name == "hier_frontier":                             # V16/W1: hierarchical frontier maintainer (ours)
+                sys.path.insert(0, str(HERE / "v16"))                   # revision/v16 copied into $GCM_RESULTS/v16
+                import hier_frontier as hf
+                ladj = defaultdict(set)
+                for a_, b_ in lcc:
+                    ladj[a_].add(b_)
+                    ladj[b_].add(a_)
+                fr = set(new_nodes) | {v for e_ in new_el for v in e_}
+                fr |= {u for v in list(fr) for u in ladj.get(v, ())}
+
+                def _hfn(sub_edges, members):
+                    sub = complete_levels(hier(sub_edges, list(range(len(node_t))))[0]) if sub_edges else {0: {v: 0 for v in members}}
+                    return communities(sub)
+                raw, hstats = hf.update(st["comms"], lcc, keep, fr, MAXC, SEED % (2 ** 31), _hfn)
+                cc = hf.complete(raw)
+                val = hf.validate(cc, keep, MAXC)
+                for kk_, vv_ in {**val, **hstats}.items():
+                    st.setdefault("hf_val", defaultdict(list))[kk_].append(vv_)
+                mp = match_ids(st["comms"], cc)
+                comms = {(mp.get(k, (k[0], ("hf", t, k[1])))): m for k, m in cc.items()}
+                lv = None
             elif name == "reindex":
                 comms = {(k[0], ("r", t, k[1])): m for k, m in fresh.items()}
                 lv = fresh_lv
@@ -340,6 +381,7 @@ def run(seed):
                             comms[k].add(v)
                         leaf[v] = target
                 comms = {k: frozenset(m) for k, m in comms.items()}
+            st["_prev_comms"] = st["comms"] or comms
             st["comms"] = comms
             # quality: leaf partition and top level (level 0)
             leafp, topp = {}, {}
@@ -352,6 +394,10 @@ def run(seed):
             cl = sorted(leafp)
             st["Qleaf"].append(modularity(g_all, cl, {v: str(leafp[v]) for v in cl}))
             st["Qtop"].append(modularity(g_all, sorted(topp), {v: str(topp[v]) for v in topp}))
+            if os.environ.get("HIER_W4"):                 # V16/W4: Q on the LCC of G_t, unclustered nodes as singletons
+                kl = sorted(keep)
+                st.setdefault("Qleaf_lcc", []).append(modularity(g_all, kl, {v: str(leafp.get(v, ("s", v))) for v in kl}))
+                st.setdefault("Qtop_lcc", []).append(modularity(g_all, kl, {v: str(topp[v]) if v in topp else "s" + str(v) for v in kl}))
             st["nrep"].append({ms: sum(1 for m in comms.values() if len(m) >= ms) for ms in MINS})
             # coverage: share of current entities (and of current LCC entities) inside some reported community
             for ms in MINS:
@@ -384,6 +430,8 @@ def run(seed):
                                 if rewrite:
                                     rec[0] += tok(len(m))
                                     rec[2] += 1
+                            if rewrite and ms == 1 and os.environ.get("HIER_EXACT"):
+                                st.setdefault("_rew", set()).add(k)
                             if rewrite:
                                 cost += tok(len(m))
                                 for vn, v in TOKVARIANTS.items():
@@ -392,6 +440,46 @@ def run(seed):
                         for vn in TOKVARIANTS:
                             st.setdefault("costv", defaultdict(list))[(vn, tau, ms)].append(costv[vn] / max(full_tokv[(vn, ms)], 1))
                         st["cost"][(tau, ms)].append(cost / max(full_tok[ms], 1))
+                        if os.environ.get("HIER_EXACT") and ms == 1:
+                            rew = st.pop("_rew", set())
+                            xc = sum(xtok(comms[k]) for k in rew)
+                            st.setdefault("xcost", defaultdict(list))[tau].append(xc / xfull)
+                            st.setdefault("xabs", defaultdict(list))[tau].append(xc)
+                            # cascade: a kept community whose context exceeds the limit reads its children's reports
+                            # (build_mixed_context); it must be rewritten if a child report was rewritten. Deepest level first.
+                            stc = st.setdefault("store_c", {}).setdefault(tau, {})
+                            if not stc:
+                                stc.update({kk: mm for kk, mm in st["_prev_comms"].items()})
+                            lv_of = defaultdict(dict)
+                            for kk, mm in comms.items():
+                                for v in mm:
+                                    lv_of[kk[0]][v] = kk
+                            rewc, ncasc, nexceed = set(), 0, 0
+                            for kk in sorted(comms, key=lambda x: -x[0]):
+                                mm = comms[kk]
+                                old = stc.get(kk)
+                                base_r = old is None or (tau > 0 and len(mm & old) / len(mm | old) < tau)
+                                casc = False
+                                if not base_r and xctx(mm) > int(XR["limit"]):
+                                    nexceed += 1
+                                    kids = {lv_of[kk[0] + 1].get(v) for v in mm} - {None, kk}
+                                    casc = any(c in rewc for c in kids)
+                                if base_r or casc:
+                                    rewc.add(kk)
+                                    stc[kk] = mm
+                                    ncasc += int(casc)
+                            for kk in [kk for kk in stc if kk not in comms]:
+                                del stc[kk]
+                            st.setdefault("xcost_c", defaultdict(list))[tau].append(sum(xtok(comms[kk]) for kk in rewc) / xfull)
+                            st.setdefault("ncasc", defaultdict(list))[tau].append(ncasc)
+                            st.setdefault("nexceed", defaultdict(list))[tau].append(nexceed)
+                        if os.environ.get("HIER_W4") and ms == 1:     # V16/W4: content coverage
+                            pres, cc = set(nodes.tolist()), set()
+                            for k, m in comms.items():
+                                w = store.get((1, k))
+                                if w:
+                                    cc |= (m & w)
+                            st.setdefault("ccov", defaultdict(list))[tau].append(len(cc & pres) / len(pres))
                         own = sum(tok(len(m)) for m in comms.values() if len(m) >= ms)
                         st.setdefault("cost_own", defaultdict(list))[(tau, ms)].append(cost / max(own, 1))
                     for k in [k for k in store if k[1] not in comms]:
@@ -419,6 +507,21 @@ def run(seed):
                          cost_series={f"{tau}|{ms}": [float(x) for x in v] for (tau, ms), v in st["cost"].items()},
                          cost={f"{tau}|{ms}": float(np.mean(v)) for (tau, ms), v in st["cost"].items()},
                          cost_own={f"{tau}|{ms}": float(np.mean(v)) for (tau, ms), v in st.get("cost_own", {}).items()})
+        top_ = [m for k, m in st["comms"].items() if k[0] == 0]     # V16/P3: final top level (count, modelled tokens)
+        res[name]["top_final"], res[name]["top_tok_final"] = len(top_), float(sum(tok(len(m)) for m in top_))
+        if "Qleaf_lcc" in st:
+            res[name]["Qleaf_lcc"], res[name]["Qtop_lcc"] = float(np.nanmean(st["Qleaf_lcc"])), float(np.nanmean(st["Qtop_lcc"]))
+        if "ccov" in st:
+            res[name]["content_coverage"] = {str(tau): float(np.mean(v)) for tau, v in st["ccov"].items()}
+            res[name]["content_coverage_final"] = {str(tau): float(v[-1]) for tau, v in st["ccov"].items()}
+        if "xcost" in st:
+            res[name]["exact_cost"] = {str(t_): float(np.mean(v)) for t_, v in st["xcost"].items()}
+            res[name]["exact_abs_per_update"] = {str(t_): float(np.mean(v)) for t_, v in st["xabs"].items()}
+            res[name]["exact_cost_cascade"] = {str(t_): float(np.mean(v)) for t_, v in st["xcost_c"].items()}
+            res[name]["cascade_rewrites_per_update"] = {str(t_): float(np.mean(v)) for t_, v in st["ncasc"].items()}
+            res[name]["kept_exceeding_per_update"] = {str(t_): float(np.mean(v)) for t_, v in st["nexceed"].items()}
+        if "hf_val" in st:
+            res[name]["validation"] = {k: [int(x) for x in v] for k, v in st["hf_val"].items()}
         if "cov_new" in st:
             res[name]["coverage_new"] = {str(ms): float(np.mean(st["cov_new"][ms])) for ms in MINS}
         if "bd" in st:

@@ -197,6 +197,15 @@ cells and self-comparison check (`make reuse_checks`). `qa/graphrag_hier.py` gai
 V15 checks (`make v15_checks`; scripts `revision/v12/v15_*.py`): the hybrid's refresh never fires on the QA stream,
 never-refreshed report fidelity without self-comparisons, components of GraphRAG's delta graph in the small-batch
 sweep, and the BFS stand-in's report tokens relative to GraphRAG's.
+V16 (CPU only, no LLM calls; scripts `revision/v16/`, results `artifacts/v16/`, rendered technical report
+`docs/TECH_REPORT.md` via `make tech_report`): instability vs. Leiden configuration (`make w5_instability`, ~20 min),
+hierarchical frontier-restricted maintainer, ours (`make hier_frontier`, ~1 h for both graphs), GraphRAG-format report
+tokens and the report cascade (`make exact_tokens`; needs `tiktoken`, which downloads the o200k_base vocabulary on first
+use; the community-report prompt of graphrag 3.3.0, MIT licence, is in `artifacts/v16/`), Q on the LCC and content
+coverage (`make w4_metrics`), synthetic deletion streams (`make deletions`, ~3 h), Leiden seeds for Table 5
+(`make seeds`, ~15 h), materialised vs. virtual view (`make virtual_view`), k-core with size bound 10 (`make kcore10`),
+use_lcc top level (`make use_lcc_top`). The Qwen judge outputs were checked (no parsing bug; position bias is model
+behaviour); nothing was re-run with Qwen in V16.
 The A/A test of the pairwise judge was stopped (the local judge prefers the second answer almost always); its partial
 caches are in `artifacts/v12_qwen/`. To re-run: copy `revision/v12` and `revision/v12_qwen` into `$GCM_RESULTS/` next
 to `v2/` (see `revision/README.md`), then run the script named in the target.

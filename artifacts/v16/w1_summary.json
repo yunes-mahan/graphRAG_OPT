@@ -1,0 +1,15 @@
+{
+ "batch": {
+  "1": 0.0313048808522502,
+  "10": 0.04170861516847255,
+  "100": 0.10004565748222459
+ },
+ "entity": {
+  "oversize_ours": 164.4,
+  "oversize_graphrag": 81
+ },
+ "wikidata": {
+  "oversize_ours": 4434.6,
+  "oversize_graphrag": 3612
+ }
+}

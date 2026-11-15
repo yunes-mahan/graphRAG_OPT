@@ -1,0 +1,26 @@
+{
+ "per_report_tokens": 4027.097251585624,
+ "n_reports": 946,
+ "per_question_virtual": 24162.583509513745,
+ "updates": 6,
+ "break_even": {
+  "hybrid|tau=0.9": 2.9183413536430125,
+  "hybrid|tau=0.0": 0.2612165484780019,
+  "recompute_leiden|tau=0.9": 5.625088335986547,
+  "hybrid|tau=0.7": 0.9026559594263736,
+  "recompute_leiden|tau=0.0": 1.1510565494393072,
+  "frontier_leiden|tau=0.9": 3.686643578417827,
+  "recompute_leiden|tau=0.7": 4.40609617033494,
+  "recompute_leiden|tau=0.5": 2.802245876288028,
+  "warmstart_leiden|tau=0.5": 1.1252314964289656,
+  "warmstart_leiden|tau=0.7": 2.039517006970573,
+  "frontier_leiden|tau=0.7": 1.3384330358244387,
+  "frontier_leiden|tau=0.5": 0.5047818387686469,
+  "warmstart_leiden|tau=0.0": 0.4107176699913955,
+  "hybrid|tau=0.5": 0.444164700452706,
+  "frontier_leiden|tau=0.0": 0.19795758449353518,
+  "warmstart_leiden|tau=0.9": 4.066894031756798
+ },
+ "break_even_min": 0.19795758449353518,
+ "break_even_max": 5.625088335986547
+}

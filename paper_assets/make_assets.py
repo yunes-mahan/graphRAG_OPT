@@ -1092,7 +1092,8 @@ def revision_assets(M):
     names = [("reindex", "Full re-index (fresh ids)"), ("reindex+match", "Re-index + id matching"),
              ("warm", "Warm-start hierarchical Leiden"), ("graphrag_update", "GraphRAG incremental update"),
              ("zep_attach", "Zep-style attach")]
-    tags = {"reindex": "Re", "reindex+match": "Match", "warm": "Warm", "graphrag_update": "Gu", "zep_attach": "Zep"}
+    tags = {"reindex": "Re", "reindex+match": "Match", "warm": "Warm", "graphrag_update": "Gu", "zep_attach": "Zep",
+            "hier_frontier": "Hf"}
     blocks = []
     for gname, fn, pre in (("LLM entity graph", "graphrag_hier.json", "Hier"),
                            ("Wikidata films", "graphrag_hier_wikidata.json", "HierWd")):
@@ -1104,12 +1105,31 @@ def revision_assets(M):
         if not f.exists():
             continue
         d = json.loads(f.read_text())
+        w4 = [A / "v16" / "w4" / f"{'entity' if pre == 'Hier' else 'wikidata'}_s{x}.json" for x in range(5)]
+        if all(x.exists() for x in w4):          # V16/W4: same runs (costs identical) + Q on the LCC and content coverage
+            d = {}
+            for x in w4:
+                d.update(json.loads(x.read_text()))
+        w1 = [A / "v16" / "w1" / f"{'entity' if pre == 'Hier' else 'wikidata'}_s{x}.json" for x in range(5)]
+        names_g = list(names)
+        if all(x.exists() for x in w1) and all(x.exists() for x in w4):   # V16/W1: hierarchical frontier maintainer (ours)
+            for x in w1:
+                for s_, r_ in json.loads(x.read_text()).items():
+                    d[s_]["hier_frontier"] = r_["hier_frontier"]
+            names_g = names + [("hier_frontier", "Hier.\\ frontier-restr.\\ (ours)")]
         seeds = list(d)
         mean = lambda m, g: float(np.mean([g(d[s][m]) for s in seeds]))  # noqa: E731
+        lccq = all("Qleaf_lcc" in d[s][m] for s in seeds for m, _ in names_g)
         rows = []
-        for m, lab in names:
+        for m, lab in names_g:
             c = {t: mean(m, lambda r, t=t: r["cost"][f"{t}|1"]) for t in ("0.9", "0.7", "0.5", "0.0")}
             ql, qt = mean(m, lambda r: r["Qleaf"]), mean(m, lambda r: r["Qtop"])
+            if lccq:                              # V16/W4: modularity on the LCC of G_t, unclustered nodes as singletons
+                M[f"{pre}QleafClu{tags[m]}"], M[f"{pre}QtopClu{tags[m]}"] = f"{ql:.3f}", f"{qt:.3f}"
+                ql, qt = mean(m, lambda r: r["Qleaf_lcc"]), mean(m, lambda r: r["Qtop_lcc"])
+            ccn = mean(m, lambda r: r["content_coverage_final"]["0.0"]) if lccq else None
+            if ccn is not None:
+                M[f"{pre}CcovNever{tags[m]}"] = pct(ccn)
             cov = mean(m, lambda r: r["coverage_final"]["1"])
             rep = mean(m, lambda r: r["reports_final"]["1"])
             t = tags[m]
@@ -1119,8 +1139,8 @@ def revision_assets(M):
             M[f"{pre}Rep{t}"] = f"{rep:,.0f}".replace(",", "{,}")
             never = f"{c['0.0']:.2f}"            # T1 (V13): re-index rewrites everything also under "never"
             rows.append(f"{lab} & {c['0.9']:.2f} & {c['0.7']:.2f} & {c['0.5']:.2f} & {never} & {ql:.3f} & {qt:.3f} & "
-                        f"{100 * cov:.0f}\\% & {rep:,.0f} \\\\".replace(",", "{,}"))
-        blocks.append(f"\\midrule\n\\multicolumn{{9}}{{l}}{{\\emph{{{gname}}} ({len(seeds)} update orders)}}\\\\\n" + "\n".join(rows))
+                        f"{100 * cov:.0f}\\%" + (f" & {100 * ccn:.0f}\\%" if ccn is not None else "") + f" & {rep:,.0f} \\\\".replace(",", "{,}"))
+        blocks.append(f"\\midrule\n\\multicolumn{{{10 if lccq else 9}}}{{l}}{{\\emph{{{gname}}} ({len(seeds)} update orders)}}\\\\\n" + "\n".join(rows))
         M[f"{pre}Seeds"] = str(len(seeds))
         M[f"{pre}ZepNeverMax"] = f"{max(d[s_]['zep_attach']['cost']['0.0|1'] for s_ in seeds):.2f}"
     lf = A / "v12" / "t1_lcc.json"
@@ -1129,10 +1149,11 @@ def revision_assets(M):
         for g, t in (("entity", "Eg"), ("wikidata", "Wd")):
             M[f"Lcc{t}N"], M[f"Lcc{t}All"] = f"{L[g]['lcc']:,}".replace(",", "{,}"), f"{L[g]['entities']:,}".replace(",", "{,}")
     if blocks:
-        tex = ("\\begin{tabular}{l c c c c c c c r}\n\\toprule\n"
-               " & \\multicolumn{4}{c}{report tokens per update (rel.\\ to re-index)} & & & & \\\\\n"
+        cc_ = all("& " in b for b in blocks) and "CcovNeverRe" in "".join(M)
+        tex = ("\\begin{tabular}{l c c c c c c c " + ("c " if cc_ else "") + "r}\n\\toprule\n"
+               " & \\multicolumn{4}{c}{report tokens per update (rel.\\ to re-index)} & & & & " + ("& " if cc_ else "") + "\\\\\n"
                "\\cmidrule(lr){2-5}\nMaintainer & $\\tau{=}0.9$ & $0.7$ & $0.5$ & never & $Q_\\mathrm{leaf}$ & "
-               "$Q_\\mathrm{top}$ & coverage & reports\\\\\n" + "\n".join(blocks) + "\n\\bottomrule\n\\end{tabular}\n")
+               "$Q_\\mathrm{top}$ & cov. & " + ("content cov.\\ (never) & " if cc_ else "") + "reports\\\\\n" + "\n".join(blocks) + "\n\\bottomrule\n\\end{tabular}\n")
         (TAB / "hier.tex").write_text(tex)
     f = A / "hier_anova.json"
     if f.exists() and "identifier_maintainers" in json.loads(f.read_text()):
@@ -1648,6 +1669,88 @@ def v15_assets(M):
         M["BsEgReCovMin"], M["BsEgReCovMax"] = f"{100 * min(cov):.0f}", pc(max(cov))
 
 
+def v16_assets(M):
+    """V16: macros from analysis/v16/ (CPU) and analysis/v16_qwen/."""
+    V16 = A / "v16"
+    pct = lambda x: f"{100 * x:.0f}\\%"  # noqa: E731
+    tops = {}
+    for g, t in (("entity", ""), ("wikidata", "Wd")):   # P3: final top level with use_lcc on (1) and off (0), orders 0-2
+        fs = {l: V16 / f"p3_{g}_lcc{l}.json" for l in (0, 1)}
+        if all(f.exists() for f in fs.values()):
+            D = {l: json.loads(f.read_text()) for l, f in fs.items()}
+            if all(len(D[l]) == 3 for l in D):
+                mean = lambda l, k: float(np.mean([D[l][x]["graphrag_update"][k] for x in D[l]]))  # noqa: E731
+                M[f"Bs{t}GuNoLccTop"] = f"{mean(0, 'top_final'):,.0f}".replace(",", "{,}")
+                M[f"Bs{t}GuLccTop"] = f"{mean(1, 'top_final'):,.0f}".replace(",", "{,}")
+                M[f"Bs{t}GuNoLccTopX"] = f"{mean(0, 'top_tok_final') / mean(1, 'top_tok_final'):.1f}"
+
+    f = V16 / "w5_instability.json"
+    if f.exists():                          # W5: instability vs Leiden configuration (final graph, tau 0.9)
+        W5 = json.loads(f.read_text())
+        for g, t in (("entity", "Eg"), ("wikidata", "Wd")):
+            r = W5[g]
+            M[f"WfPerm{t}"] = pct(float(np.mean(r["perm"]["same_graph"])))
+            M[f"WfXl{t}"] = pct(float(np.mean(r["xlevel"]["drop"])))
+            M[f"WfConv{t}"] = pct(float(np.mean(r["conv"]["drop"])))
+            M[f"WfConvTwice{t}"] = pct(r["conv"]["converged_vs_2x"])
+        M["WfIter"] = str(W5["entity"]["conv"]["iterations"])
+    for g, t, fo in (("entity", "Eg", "graphrag_hier.json"), ("wikidata", "Wd", "graphrag_hier_wikidata.json")):
+        f = V16 / f"w5_stream_{g}_iter50.json"
+        if f.exists():                      # W5b over the real stream (re-index + matching, orders 0-2)
+            S = json.loads(f.read_text())
+            M[f"WfConvStream{t}"] = f"{np.mean([S[x]['reindex+match']['cost']['0.9|1'] for x in S]):.2f}"
+    f = V16 / "w3_summary.json"
+    if f.exists():                          # W2+W3: GraphRAG-format report tokens, cascade, break-evens (entity graph)
+        W3 = json.loads(f.read_text())
+        M["XtRho"] = f"{W3['spearman']:.2f}"
+        M["XtCells"] = str(W3["cells"])
+        M["XtMatchNine"], M["XtMatchNineModel"] = f"{W3['exact']['reindex+match']['0.9']:.2f}", f"{W3['model']['reindex+match']['0.9']:.2f}"
+        M["XtCascMax"] = f"{W3['cascade_max_increase']:.2f}"
+        M["XtReindexAbs"] = f"{W3['full_reindex_exact_per_update'] / 1e6:.1f}M"
+        M["XtGuAbs"] = f"{W3['exact_abs']['graphrag_update']['0.9'] / 1e6:.2f}M"
+        M["XtBeGuMatch"] = f"{W3['break_even_exact']['graphrag_update|reindex+match']:.0f}"
+        M["XtBeGuZep"] = f"{W3['break_even_exact']['graphrag_update|zep_attach']:.1f}"
+    rf = A / "v16" / "w3_rowsum_check.json"
+    if rf.exists():
+        M["XtRowErr"] = f"{100 * json.loads(rf.read_text())['max_abs_rel_err']:.1f}\\%"
+    f = V16 / "w10_kcore10.json"
+    if f.exists():                          # W10: authors' k-core code with GraphRAG's size bound 10 (ours)
+        K10 = json.loads(f.read_text())
+        M["KtenDropEg"], M["KtenDropWd"] = pct(float(np.mean(K10["entity"]["drop"]))), pct(float(np.mean(K10["wikidata"]["drop"])))
+    f = V16 / "w1_summary.json"
+    if f.exists():                          # W1: hierarchical frontier maintainer (ours): small batches, size bound
+        W1 = json.loads(f.read_text())
+        bb = list(W1["batch"].values())
+        M["BsEgHfMin"], M["BsEgHfMax"] = f"{100 * min(bb):.1f}", f"{100 * max(bb):.0f}\\%"
+        M["HfOversizeWd"], M["GrOversizeWd"] = f"{W1['wikidata']['oversize_ours']:,.0f}".replace(",", "{,}"), f"{W1['wikidata']['oversize_graphrag']:,}".replace(",", "{,}")
+        M["HfOversizeEg"], M["GrOversizeEg"] = f"{W1['entity']['oversize_ours']:,.0f}", f"{W1['entity']['oversize_graphrag']:,}"
+    W8 = {}
+    for g in ("entity", "collab12", "arxiv15"):          # W8: synthetic deletion streams (1 % of present nodes per update)
+        for m in ("warmstart_leiden", "priced_warm", "frontier_leiden", "priced_frontier"):
+            f = V16 / "w8" / f"{g}_{m}.json"
+            if f.exists():
+                d = json.loads(f.read_text())
+                if len(d) == 3:
+                    W8[(g, m)] = float(np.mean([d[k]["score"] for k in d]))
+    if len(W8) == 12:
+        gw = [W8[(g, "priced_warm")] - W8[(g, "warmstart_leiden")] for g in ("entity", "collab12", "arxiv15")]
+        gf = [W8[(g, "priced_frontier")] - W8[(g, "frontier_leiden")] for g in ("entity", "collab12", "arxiv15")]
+        M["DelRbWarmMin"], M["DelRbWarmMax"] = f"{min(gw):+.3f}", f"{max(gw):+.3f}"
+        M["DelRbFrontMin"], M["DelRbFrontMax"] = f"{min(gf):+.3f}", f"{max(gf):+.3f}"
+        M["DelRbAllPos"] = "all" if min(gw + gf) > 0 else "not all"
+    f = V16 / "w6_summary.json"
+    if f.exists():                          # W6: Leiden seeds 1-2 added to Table 5
+        W6 = json.loads(f.read_text())
+        same = W6["rank_all"] == W6["rank_seed0"] and W6["best_all"] == W6["best_seed0"]
+        M["SeedRankText"] = "changes no ranking and no best cell" if same else "changes the ranking (see the technical report)"
+    f = V16 / "w9_virtual_view.json"
+    if f.exists():                          # W9: materialised vs virtual view (QA stream, measured tokens)
+        W9 = json.loads(f.read_text())
+        M["VvPerReport"] = f"{W9['per_report_tokens']:,.0f}".replace(",", "{,}")
+        M["VvPerQuestion"] = f"{W9['per_question_virtual'] / 1e3:.0f}k"
+        M["VvBeMin"], M["VvBeMax"] = f"{W9['break_even_min']:.1f}", f"{W9['break_even_max']:.1f}"
+
+
 def v2_assets(M):
     """VLDB 2027 revision checks (analysis/v2/*.py; see CHANGES.md)."""
     V = A / "v2"
@@ -1800,8 +1903,11 @@ def v2_assets(M):
         pc0 = lambda x: "--" if x is None else f"{100 * x:.0f}"  # noqa: E731
         rows = []
         for B, r in sorted(BS["entity"].items(), key=lambda kv: int(kv[0])):
+            hfb = [A / "v16" / "w1" / f"batch_b{B}_s{x}.json" for x in range(3)]
+            hfv = (pc1(float(np.mean([json.loads(f_.read_text())[str(x)]["hier_frontier"]["cost"]["0.9|1"] for x, f_ in enumerate(hfb)])))
+                   + "$^{*}$") if all(f_.exists() for f_ in hfb) else "n/a"
             rows.append(" & ".join([f"entity, {B}", f"{r['new_nodes']:.0f}", pc1(r["reindex+match"]["C09"]), pc1(r["warm"]["C09"]),
-                                    "n/a", "n/a", pc1(r['graphrag_update']['C09']), pc0(t3e(B, "coverage")), pc0(t3e(B, "coverage_new"))]) + " \\\\")
+                                    hfv, "n/a", pc1(r['graphrag_update']['C09']), pc0(t3e(B, "coverage")), pc0(t3e(B, "coverage_new"))]) + " \\\\")
         rows.append("\\midrule")
         for B, r in sorted(BS["arxiv"].items(), key=lambda kv: int(kv[0])):
             if "recompute_leiden" not in r:
@@ -2000,6 +2106,7 @@ def main():
     fig_noise(M)
     v2_assets(M)
     v15_assets(M)
+    v16_assets(M)
     fig_pareto_heldout(M)
     lines = ["% AUTO-GENERATED by make_assets.py from measured result files. Do not edit."]
     lines += [f"\\newcommand{{\\{k}}}{{{v}}}" for k, v in sorted(M.items())]

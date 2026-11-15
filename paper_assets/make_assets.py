@@ -235,7 +235,8 @@ def fig_pareto_heldout(M):
         return
     P = json.loads(f.read_text())
     groups = list(P["groups"])
-    fig, axes = plt.subplots(2, 4, figsize=(7.0, 3.1), sharex="col")
+    fig, axes = plt.subplots(2, 4, figsize=(7.0, 2.73), sharex="col")
+    offscale = {}                                   # V17f: off-scale GraphRAG values go below the legend, not into panels
     for j, gname in enumerate(groups):
         G = P["groups"][gname]
         for i, (key, par) in enumerate((("Q", "pareto_Q_C"), ("cov", "pareto_cov_C"))):
@@ -250,13 +251,12 @@ def fig_pareto_heldout(M):
             # GraphRAG's delta update is far below all others in Q/coverage: fit the axis to the rest, note it as text
             ys = [G["maintainers"][m][key][0] for m in B5_STYLE if m != "graphrag_delta"]
             yr = max(ys) - min(ys)
-            lo, hi = min(ys) - 0.45 * yr, max(ys) + 0.10 * yr
+            lo, hi = min(ys) - 0.15 * yr, max(ys) + 0.10 * yr
             gd = G["maintainers"]["graphrag_delta"]
             if gd[key][0] < lo:
                 ax.set_ylim(lo, hi)
                 v = f"{gd[key][0]:.2f}" if key == "Q" else f"{100 * gd[key][0]:.0f}%"
-                ax.text(0.98, 0.03, f"GraphRAG update (delta) off scale:\n{'Q' if key == 'Q' else 'coverage'} {v}, C {gd['C'][0]:.2f}",
-                        transform=ax.transAxes, ha="right", va="bottom", fontsize=5.2, color="#52514e")
+                offscale.setdefault(gname, {"C": f"{gd['C'][0]:.2f}"})[key] = v
             pts = sorted((G["maintainers"][m]["C"][0], G["maintainers"][m][key][0]) for m in G[par])
             ax.plot([p[0] for p in pts], [p[1] for p in pts], color="#0b0b0b", lw=0.5, ls=":", zorder=1)
             ax.grid(color="#e8e7e3", lw=0.5)
@@ -272,6 +272,13 @@ def fig_pareto_heldout(M):
     h, l = axes[0, 0].get_legend_handles_labels()
     fig.legend(h, l, loc="lower center", ncol=5, frameon=False, bbox_to_anchor=(0.5, -0.06), handletextpad=0.2,
                columnspacing=0.9, fontsize=6.3)
+    if offscale:
+        parts = [f"{g}: " + ", ".join(x for x in ((f"Q {o['Q']}" if "Q" in o else ""),
+                                                  (f"coverage {o['cov']}" if "cov" in o else ""), f"C {o['C']}") if x)
+                 for g, o in offscale.items()]
+        half = (len(parts) + 1) // 2
+        note = "GraphRAG update (delta), off scale:  " + ";  ".join(parts[:half]) + "\n" + ";  ".join(parts[half:])
+        fig.text(0.5, -0.095, note, ha="center", va="top", fontsize=6.3, color="#52514e", linespacing=1.4)
     fig.tight_layout(rect=(0, 0.08, 1, 1), w_pad=0.8, h_pad=0.6)
     fig.savefig(FIG / "pareto_heldout.pdf", bbox_inches="tight")
     plt.close(fig)

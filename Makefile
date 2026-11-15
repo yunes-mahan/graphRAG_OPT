@@ -10,7 +10,7 @@ A    = paper_assets
 
 .PHONY: all assets check reproduce numbers table1 table2 table3 table4 table5 table6 table7 table8 table9 \
         fig1 fig2 fig3 fig4 fig_lambda batch_sweep matching eta_variants tco coverage_t6 gu_lcc rollback_factor margin margin035 \
-        lcc kcore_levels batch_newcov wiki_all extra_rows reuse_checks \
+        lcc kcore_levels batch_newcov wiki_all extra_rows reuse_checks v15_checks \
         coarse_answers never300 costsens
 
 all assets:
@@ -69,3 +69,4 @@ batch_newcov: assets ; @cat $(A)/tables/batch.tex; cat $(V12)/t3_arxiv.json   # 
 wiki_all:     ; @cat $(V12)/t4_wiki.json                # Table 7: all maintainers on Wikipedia (snapshot adapter)
 extra_rows:   ; @cat $(V12)/t4/extra_rows.json; cat $(V12)/t4/scale_*.json   # Table 7: DF Leiden, local repair, citation2 cells
 reuse_checks: ; @cat $(V12)/t5_reuse_checks.json        # Table 8: fresh cells, self-comparison in the fidelity check
+v15_checks:   ; @for f in v15_hybrid_qa v15_fid_stale v15_delta_lcc v15_bfs_tokens; do echo "== $$f"; cat $(V12)/$$f.json; echo; done   # V15 checks (D2-D4, F2)

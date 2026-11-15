@@ -1,0 +1,12 @@
+{
+ "entity": {
+  "bfs_tokens": 27382250,
+  "graphrag_tokens": 75850000,
+  "ratio": 0.3610052735662492
+ },
+ "wikidata": {
+  "bfs_tokens": 78568000,
+  "graphrag_tokens": 123908750,
+  "ratio": 0.6340795141586046
+ }
+}

@@ -987,9 +987,9 @@ def extra_graphs_table(M):
     E = json.loads((A / "entity_graph" / "eval.json").read_text())
     S = json.loads((A / "scale.json").read_text()) if (A / "scale.json").exists() else {}
     meth = [("priced_warm", "Warm-start + rollback"), ("priced_frontier", "Frontier-restr.\\ + rollback"),
-            ("warmstart_leiden", "Warm-start Leiden"), ("frontier_leiden", "Frontier-restr.\\ Leiden"), ("hybrid", "Hybrid"),
+            ("warmstart_leiden", "Warm-start Leiden"), ("frontier_leiden", "Frontier-restr.\\ Leiden"), ("local_repair", "Local repair (= Hybrid)"),
             ("df_leiden_sahu", "DF Leiden (Sahu's code)"), ("lazy", "Lazy attach (Zep)"), ("recompute_leiden", "Recompute Leiden"),
-            ("local_repair", "Local repair"), ("graphrag_delta", "GraphRAG update (delta)")]
+            ("graphrag_delta", "GraphRAG update (delta)")]
     xf = A / "v12" / "t4" / "extra_rows.json"           # T4 (V13): DF Leiden and local repair on Wikidata / entity graph
     X = json.loads(xf.read_text()) if xf.exists() else {}
     for sf in sorted((A / "v12" / "t4").glob("scale_*.json")):   # T4 (V13): more citation2 cells
@@ -1010,6 +1010,12 @@ def extra_graphs_table(M):
                 cols[name][m] = [X[f"{g}|{m}|{k}"]["score"] for k in range(5)]
                 xcov[(name, m)] = float(np.mean([X[f"{g}|{m}|{k}"]["coverage"] for k in range(5)]))
     cols["cit"] = {m: [S[f"1.0|{m}"]["score"]] for m, _ in meth if f"1.0|{m}" in S}
+    # V15/D2: the "Local repair (= Hybrid)" row is valid only if both give identical results on every graph
+    if X:
+        for name, R, g in (("wd", W, "wikidata"), ("eg", E, "entity")):
+            assert all(abs(R[f"hybrid|{k}"]["score"] - X[f"{g}|local_repair|{k}"]["score"]) < 1e-12 for k in range(5)), name
+        if "1.0|hybrid" in S and "1.0|local_repair" in S:
+            assert abs(S["1.0|hybrid"]["score"] - S["1.0|local_repair"]["score"]) < 1e-12
     # B6 (V12): Wikipedia stream (one real order with deletions; 5 Leiden seeds), wiki/wiki_priced.py, lambda = 0.31
     WP = json.loads((A / "wiki" / "priced_results.json").read_text())
     wmap = {"recompute_leiden": "recompute", "warmstart_leiden": "warm", "priced_warm": "priced"}
@@ -1022,6 +1028,7 @@ def extra_graphs_table(M):
             if m in cols["wiki"]:
                 assert np.allclose(v, cols["wiki"][m]), m        # the adapter reproduces wiki_priced.py exactly
             cols["wiki"][m] = v
+        assert np.allclose([q - 0.31 * c for q, c in TW["hybrid"]["runs"]], [q - 0.31 * c for q, c in TW["local_repair"]["runs"]])
     best = {c: max(np.mean(v) for v in cols[c].values()) for c in cols}
     rows = []
     for m, lab in meth:
@@ -1595,6 +1602,52 @@ def revision2_assets(M):
         M["TokModelEgPearson"] = f"{tm['entity']['pearson']:.2f}"
 
 
+def v15_assets(M):
+    """V15: macros for the decisions on the V14 flags (all from result files in analysis/v12/)."""
+    V12 = A / "v12"
+    pc = lambda x: f"{100 * x:.0f}\\%"  # noqa: E731
+    f = V12 / "t4_wiki.json"
+    if f.exists():                          # D1: Wikipedia stream (deletions), lambda = 0.31, seeds 0-4
+        TW = json.loads(f.read_text())
+        sc = {m: float(np.mean([q - 0.31 * c for q, c in TW[m]["runs"]])) for m in TW}
+        for m, t in (("warmstart_leiden", "Warm"), ("frontier_leiden", "Front"), ("priced_warm", "PrWarm"),
+                     ("priced_frontier", "PrFront"), ("local_repair", "Lrep"), ("lazy", "Lazy")):
+            M[f"WikiS{t}"] = f"{sc[m]:.3f}"
+        M["WikiCWarm"] = f"{TW['warmstart_leiden']['C']:.2f}"
+        M["WikiRbGain"] = f"{sc['priced_warm'] - sc['warmstart_leiden']:+.3f}"
+    f = V12 / "v15_hybrid_qa.json"
+    if f.exists():                          # D2: hybrid refreshes on the QA stream
+        M["HybQaRefresh"] = str(json.loads(f.read_text())["refreshes"])
+    f = V12 / "t5_reuse_checks.json"
+    if f.exists():                          # D3: subst. over reports reused for another member set (Table 8 topic rows)
+        T5R = json.loads(f.read_text())["table8"]
+        v = [r["subst_nonidentical"] for k, r in T5R.items() if "topic" in k]
+        M["TopicSubOtherMin"], M["TopicSubOtherMax"] = f"{100 * min(v):.0f}", pc(max(v))
+    f = V12 / "v15_fid_stale.json"
+    if f.exists():                          # D3: never-refreshed reports without self-comparisons
+        FS = json.loads(f.read_text())
+        M["FidStaleOther"], M["FidStaleN"], M["FidStaleSelf"] = pc(FS["subst_other"]), str(FS["n"]), str(FS["self_compared"])
+        M["FidStaleNOther"] = str(FS["n_other"])
+    f = V12 / "v15_delta_lcc.json"
+    if f.exists():                          # D4: components of GraphRAG's delta graph (entity graph, small batches)
+        DL = json.loads(f.read_text())
+        for B, t in (("1", "One"), ("10", "Ten"), ("100", "Hundred")):
+            M[f"DlComp{t}"] = f"{DL[B]['components']:.1f}"
+            M[f"DlLcc{t}"] = f"{DL[B]['lcc_size']:.0f}"
+    f = V12 / "v15_bfs_tokens.json"
+    if f.exists():                          # F2: BFS stand-in report tokens relative to GraphRAG's
+        BT = json.loads(f.read_text())
+        M["BfsTokRatio"], M["BfsTokRatioWd"] = f"{BT['entity']['ratio']:.2f}", f"{BT['wikidata']['ratio']:.2f}"
+    cov = []                                # F6: re-clustering coverage in the batch sweep (mean over versions)
+    for B in (1, 10, 100):
+        f = V12 / "b1" / f"entity_b{B}.json"
+        if f.exists():
+            R = json.loads(f.read_text())
+            cov.append(float(np.mean([R[x]["reindex+match"]["coverage"]["1"] for x in R])))
+    if len(cov) == 3:
+        M["BsEgReCovMin"], M["BsEgReCovMax"] = f"{100 * min(cov):.0f}", pc(max(cov))
+
+
 def v2_assets(M):
     """VLDB 2027 revision checks (analysis/v2/*.py; see CHANGES.md)."""
     V = A / "v2"
@@ -1946,6 +1999,7 @@ def main():
     revision2_assets(M)
     fig_noise(M)
     v2_assets(M)
+    v15_assets(M)
     fig_pareto_heldout(M)
     lines = ["% AUTO-GENERATED by make_assets.py from measured result files. Do not edit."]
     lines += [f"\\newcommand{{\\{k}}}{{{v}}}" for k, v in sorted(M.items())]

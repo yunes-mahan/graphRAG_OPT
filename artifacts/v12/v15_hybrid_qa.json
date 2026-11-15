@@ -1,0 +1,21 @@
+{
+ "versions": 7,
+ "hybrid_equals_local_repair": [
+  true,
+  true,
+  true,
+  true,
+  true,
+  true,
+  true
+ ],
+ "refreshes": 0,
+ "replay_reproduces_stored_hybrid": [
+  true,
+  true,
+  true,
+  true,
+  true,
+  true
+ ]
+}

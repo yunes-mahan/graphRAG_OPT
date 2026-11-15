@@ -194,6 +194,9 @@ nodes and the 2020 pool for Table 4 (`make batch_newcov`), all maintainers on Wi
 rows and the remaining ogbl-citation2 cells of Table 7 (`make wiki_all`, `make extra_rows`), and the Table 8 fresh
 cells and self-comparison check (`make reuse_checks`). `qa/graphrag_hier.py` gained the BFS k-core mode
 (`HIER_ONLY=kcore`) and records `coverage_new`; defaults are unchanged.
+V15 checks (`make v15_checks`; scripts `revision/v12/v15_*.py`): the hybrid's refresh never fires on the QA stream,
+never-refreshed report fidelity without self-comparisons, components of GraphRAG's delta graph in the small-batch
+sweep, and the BFS stand-in's report tokens relative to GraphRAG's.
 The A/A test of the pairwise judge was stopped (the local judge prefers the second answer almost always); its partial
 caches are in `artifacts/v12_qwen/`. To re-run: copy `revision/v12` and `revision/v12_qwen` into `$GCM_RESULTS/` next
 to `v2/` (see `revision/README.md`), then run the script named in the target.

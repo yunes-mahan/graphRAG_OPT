@@ -1,0 +1,48 @@
+{
+ "entity": {
+  "all": {
+   "n": 300,
+   "split3": 0.6130338815345311,
+   "split2_hf_as_recluster": 0.4243152399425619,
+   "maintainer_all": 0.6132672699258055,
+   "tau_within_recluster": 0.47246612775803093
+  },
+  "no_never": {
+   "n": 225,
+   "split3": 0.7936530584318549,
+   "split2_hf_as_recluster": 0.535388873521234,
+   "maintainer_all": 0.79459842316854,
+   "tau_within_recluster": 0.2478079569134086
+  },
+  "no_zep": {
+   "n": 240,
+   "split3": 0.5541251851435914,
+   "split2_hf_as_recluster": 0.3275601831078174,
+   "maintainer_all": 0.5542314344215495,
+   "tau_within_recluster": 0.47246612775803093
+  }
+ },
+ "wikidata": {
+  "all": {
+   "n": 300,
+   "split3": 0.6569652858333397,
+   "split2_hf_as_recluster": 0.3273111533685381,
+   "maintainer_all": 0.6571029662617831,
+   "tau_within_recluster": 0.3713973174091431
+  },
+  "no_never": {
+   "n": 225,
+   "split3": 0.8697621490341846,
+   "split2_hf_as_recluster": 0.43358304278940474,
+   "maintainer_all": 0.8698129233943549,
+   "tau_within_recluster": 0.170286218060559
+  },
+  "no_zep": {
+   "n": 240,
+   "split3": 0.6065950393479462,
+   "split2_hf_as_recluster": 0.22781625072570227,
+   "maintainer_all": 0.6066023216935957,
+   "tau_within_recluster": 0.3713973174091431
+  }
+ }
+}

@@ -1,0 +1,18 @@
+{
+ "report_tokens_per_update": {
+  "reindex+match": 24699993.784351297,
+  "graphrag_update": 1546928.9022155688,
+  "zep_attach": 2005308.8846706585
+ },
+ "query_tokens": {
+  "reindex+match": 30935.866666666665,
+  "graphrag_update": 156145.06666666668,
+  "zep_attach": 26171.3
+ },
+ "break_even_gu_vs_match": 184.91504523737652,
+ "break_even_gu_vs_zep": 3.5267115373416864,
+ "global_reports": 55,
+ "per_global_question_virtual": 221490.3488372093,
+ "global_break_even_min": 0.0215953728538402,
+ "global_break_even_max": 0.6136460002894416
+}

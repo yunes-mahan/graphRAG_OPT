@@ -205,7 +205,9 @@ use; the community-report prompt of graphrag 3.3.0, MIT licence, is in `artifact
 coverage (`make w4_metrics`), synthetic deletion streams (`make deletions`, ~3 h), Leiden seeds for Table 5
 (`make seeds`, ~15 h), materialised vs. virtual view (`make virtual_view`), k-core with size bound 10 (`make kcore10`),
 use_lcc top level (`make use_lcc_top`). The Qwen judge outputs were checked (no parsing bug; position bias is model
-behaviour); nothing was re-run with Qwen in V16.
+behaviour); nothing was re-run with Qwen in V16. V17 (`make v17_checks`; scripts `revision/v17/`): variance shares with the
+hierarchical frontier maintainer, its deletion leaks (needs its report store: `HIER_DUMP=path` in `qa/graphrag_hier.py`,
+stored as `artifacts/v17/hf_stores_entity.json`), break-evens re-derived, virtual view for global questions.
 The A/A test of the pairwise judge was stopped (the local judge prefers the second answer almost always); its partial
 caches are in `artifacts/v12_qwen/`. To re-run: copy `revision/v12` and `revision/v12_qwen` into `$GCM_RESULTS/` next
 to `v2/` (see `revision/README.md`), then run the script named in the target.

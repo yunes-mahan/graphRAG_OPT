@@ -491,13 +491,13 @@ def run(seed):
                             if len(m) >= ms:
                                 st["store"][tau][(ms, k)] = m
         print(f"seed {seed} version {t}/{T - 1}: fresh communities {len(fresh)}", flush=True)
-    if seed == 0 and not ONLY and not os.environ.get("HIER_OUT"):
+    if (seed == 0 and not ONLY and not os.environ.get("HIER_OUT")) or os.environ.get("HIER_DUMP"):   # V17/M3: HIER_DUMP=path
         dump = {}
         for name, st in state.items():
             store = st["store"][0.9]
             dump[name] = [dict(level=int(k[1][0]), cur=sorted(int(x) for x in st["comms"][k[1]]),
                                written=sorted(int(x) for x in m)) for k, m in store.items() if k[0] == 1]
-        (HERE / (f"graphrag_hier_stores_{GRAPH}.json" if MAXC == 10 else f"graphrag_hier_stores_{GRAPH}_max{MAXC}.json")).write_text(json.dumps(dump))
+        (Path(os.environ["HIER_DUMP"]) if os.environ.get("HIER_DUMP") else HERE / (f"graphrag_hier_stores_{GRAPH}.json" if MAXC == 10 else f"graphrag_hier_stores_{GRAPH}_max{MAXC}.json")).write_text(json.dumps(dump))
     for name, st in state.items():
         res[name] = dict(Qleaf=float(np.nanmean(st["Qleaf"])), Qtop=float(np.nanmean(st["Qtop"])),
                          reports_final={str(ms): st["nrep"][-1][ms] for ms in MINS},

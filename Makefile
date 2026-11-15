@@ -11,7 +11,7 @@ A    = paper_assets
 .PHONY: all assets check reproduce numbers table1 table2 table3 table4 table5 table6 table7 table8 table9 \
         fig1 fig2 fig3 fig4 fig_lambda batch_sweep matching eta_variants tco coverage_t6 gu_lcc rollback_factor margin margin035 \
         lcc kcore_levels batch_newcov wiki_all extra_rows reuse_checks v15_checks \
-        tech_report w5_instability hier_frontier cascade exact_tokens w4_metrics deletions seeds virtual_view kcore10 use_lcc_top v17_checks \
+        tech_report w5_instability hier_frontier cascade exact_tokens w4_metrics deletions seeds virtual_view kcore10 use_lcc_top v17_checks hybrid_p \
         coarse_answers never300 costsens
 
 all assets:
@@ -87,3 +87,4 @@ virtual_view:   ; @cat $(V16)/w9_virtual_view.json
 kcore10:        ; @cat $(V16)/w10_kcore10.json
 use_lcc_top:    ; @ls $(V16)/p3_*.json
 v17_checks:     ; @for f in m2_eta_hf m3_deletion_hf m8_checks; do echo "== $$f"; cat $(RES)/v17/$$f.json; echo; done   # V17 (M2, M3b, M8)
+hybrid_p: assets ; @grep -E "MoreHyb" $(A)/numbers.tex   # V17c: hybrid stores vs fresh, 300 questions (Wilcoxon, uncorrected)

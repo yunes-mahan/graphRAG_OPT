@@ -1263,6 +1263,12 @@ def judge_assets(M):
         M["MoreNEq"] = str(sum(r[0] < 0.05 for r in res))
         M["MoreNStores"] = str(len(res))
         M["MoreCiLo"], M["MoreCiHi"] = f"{min(r[1] for r in res):.3f}", f"{max(r[2] for r in res):.3f}"
+        from scipy import stats as _st2                # V17c: are the two hybrid stores significantly above fresh?
+        for st_, tg in (("hybrid|tau=0.9", "Nine"), ("hybrid|tau=0.0", "Never")):
+            dd = (piv[st_] - piv["FRESH|recompute all"]).dropna()
+            M[f"MoreHyb{tg}Diff"] = f"{dd.mean():+.3f}"
+            pv_ = _st2.wilcoxon(dd, zero_method='zsplit').pvalue
+            M[f"MoreHyb{tg}P"] = "{<}0.001" if pv_ < 0.001 else f"={pv_:.2f}"
         if "papers|vector" in piv:
             M["MoreVec"] = f"{piv['papers|vector'].dropna().mean():.2f}"
 

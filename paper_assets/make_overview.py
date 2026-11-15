@@ -11,17 +11,17 @@ BLUE, GREEN, INK, GREY, LIGHT = "#2a78d6", "#1baf7a", "#0b0b0b", "#52514e", "#f6
 
 fig, ax = plt.subplots(figsize=(5.6, 1.75))
 ax.set_xlim(-0.6, 101.0)
-ax.set_ylim(0, 30)
+ax.set_ylim(0, 31)
 ax.axis("off")
-W, GAP, Y, H = 21.0, 5.6, 1.0, 27.0
+W, GAP, Y, H = 22.8, 3.2, 0.6, 29.6
 
 
 def box(i, title, lines, edge=GREY, step=4.6, fs=6.8):
     x = i * (W + GAP)
     ax.add_patch(FancyBboxPatch((x + 0.4, Y), W - 0.8, H, boxstyle="round,pad=0.3,rounding_size=1.5",
                                 fc=LIGHT, ec=edge, lw=0.9))
-    ax.text(x + W / 2, Y + H - 2.4, title, ha="center", va="top", fontsize=8.2, weight="bold", color=INK)
-    y = Y + H - 9.0
+    ax.text(x + W / 2, Y + H - 3.0, title, ha="center", va="top", fontsize=7.8, weight="bold", color=INK)
+    y = Y + H - 9.4
     for txt, col, it in lines:
         ax.text(x + W / 2, y, txt, ha="center", va="top", fontsize=fs, color=col,
                 style="italic" if it else "normal")
@@ -33,7 +33,7 @@ xs = [box(0, "Graph update", [("version $G_t$:", GREY, 0), ("new entities,", GRE
                                ("(removals)", GREY, 0)]),
       box(1, "1. Re-cluster?", [("global: re-index", BLUE, 0), ("+ id matching", BLUE, 0),
                                  ("partial: changed", BLUE, 0), ("parts only (ours)", BLUE, 0),
-                                 ("no: append, attach", GREY, 0)], edge=BLUE, step=3.9, fs=6.2),
+                                 ("no: append, attach", GREY, 0)], edge=BLUE, step=3.9, fs=6.0),
       box(2, "2. Staleness", [("rewrite report", GREEN, 0), ("if Jaccard $<\\tau$;", GREEN, 0),
                                ("report only if", GREEN, 0), ("$\\geq s$ members", GREEN, 0)], edge=GREEN),
       box(3, "Answers", [("global: reports", GREY, 0), ("of levels 0-2", GREY, 0), ("local: document", GREY, 0),

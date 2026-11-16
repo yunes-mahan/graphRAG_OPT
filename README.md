@@ -84,9 +84,6 @@ beyond the Jaccard tolerance τ.
 - Data: ogbn-arxiv and ogbl-collab from the Open Graph Benchmark (Hu et al., 2020) under their
   respective licences; paper texts from the OGB arXiv title/abstract dump.
 
-## Licence
-
-Apache-2.0.
 
 ## Evolving-text stream (Wikipedia)
 `wiki/wiki_crawl.py` downloads AI/ML articles (links + lead sections at 1 January 2017-2025) politely from the MediaWiki API (cap with `MAX_PAGES`); `wiki/wiki_analysis.py` builds communities, yearly summaries and staleness labels; `wiki/wiki_extra.py` reports deletions, splits and cold-start placement; `neo4j/versioned_demo.py` loads everything into Neo4j as one time-versioned graph (`valid_from`/`valid_to`). Wikipedia text is CC BY-SA and is not redistributed here.
@@ -176,8 +173,10 @@ leidenalg 0.12; Neo4j 5 Community + GDS 2.13.
   leiden-communities-openmp-dynamic 28c304f, unofficial hit-leiden 9247424); containers: `docker.io/library/rust:1.83`.
 
 ## Licence
-Code: Apache-2.0 (see `LICENSE`). Derived data: ogbn-arxiv / ogbl-collab / ogbl-citation2 follow the OGB licences
-(ODC-BY); Wikidata content is CC0; Wikipedia text is CC BY-SA and is re-crawled by `wiki/wiki_crawl.py`.
+Code: Apache-2.0 (see `LICENSE`), except third-party files listed with their licences in
+[`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md) (GraphRAG prompt: MIT; `token_task/`: Apache-2.0, Sakana AI;
+`artifacts/wiki/communities.json`: CC BY-SA 4.0). Derived data: ogbn-arxiv / ogbl-collab / ogbl-citation2 follow the OGB
+licences (ODC-BY); Wikidata content is CC0; Wikipedia text is CC BY-SA and is re-crawled by `wiki/wiki_crawl.py`.
 
 ## VLDB 2027 revision, round 2 (V12)
 

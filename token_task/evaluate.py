@@ -1,3 +1,4 @@
+# Modified by Yunes Mahan, 2026, from SakanaAI/AI-Scientist-v3 (examples/circpack/evaluate.py), Copyright 2026 Sakana AI, Apache License 2.0 (see token_task/LICENSE).
 """
 Evaluator for kgversion2: summary-aware community maintenance for GraphRAG on TWO growing graphs.
 

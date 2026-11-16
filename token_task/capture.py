@@ -1,3 +1,4 @@
+# Source: SakanaAI/AI-Scientist-v3 (examples/*/capture.py), Copyright 2026 Sakana AI, Apache License 2.0 (see token_task/LICENSE).
 """
 Output capture utilities for stdout/stderr with real-time file streaming.
 """

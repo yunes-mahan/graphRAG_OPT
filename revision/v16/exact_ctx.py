@@ -47,6 +47,8 @@ class Ctx:
         self.hdr = (len(n("-----Entities-----\n" + _csv_row(["human_readable_id", "title", "description", "degree"])))
                     + len(n("\n\n-----Relationships-----\n" + _csv_row(["human_readable_id", "source", "target", "description", "degree"]))))
         tpl = PROMPT_FILE.read_text()
+        if tpl.startswith("# Source:"):   # V17j: licence header line, not part of the GraphRAG prompt
+            tpl = tpl.split("\n", 1)[1]
         self.prompt = len(n(tpl.replace("{input_text}", "")))
         hr = json.loads((A / "entity_graph" / "cache_hreports.json").read_text())
         self.out = float(np.mean([v["usage"]["out"] for v in hr.values() if isinstance(v, dict) and "usage" in v]))

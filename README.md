@@ -1,7 +1,7 @@
 # Maintaining GraphRAG Community Summaries on Evolving Knowledge Graphs
 
 Code, benchmark and reproducibility artifacts for the paper *"Maintaining GraphRAG Community Summaries on
-Evolving Knowledge Graphs [Experiment, Analysis & Benchmark]"* (Yunes Mahan, Machine Learning Reply).
+Evolving Knowledge Graphs [Experiment, Analysis & Benchmark]"* (Yunes Mahan, Machine Learning Reply GmbH).
 
 GraphRAG indexes a knowledge graph by clustering it into communities and storing one LLM-written report per
 community. When the graph changes, a system must decide whether to re-cluster and which reports to rewrite. This

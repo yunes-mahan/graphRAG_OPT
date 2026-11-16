@@ -473,7 +473,7 @@ Maintainer & $\tau$ & recall [95\% CI] & $\Delta$ fresh & $p$ & regen. & input t
     ax.xaxis.set_major_locator(FixedLocator([20, 100, 500]))
     ax.xaxis.set_minor_locator(NullLocator())
     ax.xaxis.set_major_formatter(FuncFormatter(lambda v, _: f"{v:.0f}k"))
-    ax.set_xlabel("summary input tokens, all updates")
+    ax.set_xlabel("report input tokens, all updates")
     ax.set_ylabel("key-point recall")
     ax.set_title("(a) local questions", loc="left")
     ax.grid(color="#e8e7e3", lw=0.5)
@@ -504,13 +504,29 @@ Maintainer & $\tau$ & recall [95\% CI] & $\Delta$ fresh & $p$ & regen. & input t
     bx.set_yticks(range(len(rows_g)))
     bx.set_yticklabels([r[0] for r in rows_g][::-1], fontsize=6.4)
     bx.set_xlim(0, 1)
-    bx.set_xlabel("win rate vs. fresh summaries")
+    bx.set_xlabel("win rate vs. fresh reports")
     bx.set_title("(b) global questions", loc="left")
     bx.grid(axis="x", color="#e8e7e3", lw=0.5)
     bx.set_axisbelow(True)
-    bx.legend(frameon=False, fontsize=6.0, loc="upper center", bbox_to_anchor=(0.5, -0.27), ncol=2,
-              handletextpad=0.2, columnspacing=0.8)
+    # V17i: legend = criterion (marker shape, neutral grey) + row type (colour); data points unchanged.
+    # The pre-V17i legend is laid out first so that tight_layout gives the same panel positions as before, then it is
+    # replaced by the new legend, right-aligned with the old one (same figure width).
+    leg0 = bx.legend(frameon=False, fontsize=6.0, loc="upper center", bbox_to_anchor=(0.5, -0.27), ncol=2,
+                     handletextpad=0.2, columnspacing=0.8)
     fig.tight_layout(w_pad=0.8)
+    fig.canvas.draw()
+    right0 = leg0.get_window_extent().transformed(fig.transFigure.inverted()).x1
+    top0 = leg0.get_window_extent().transformed(fig.transFigure.inverted()).y1
+    leg0.remove()
+    from matplotlib.lines import Line2D
+    gry = "#4a4a4a"
+    hd = [Line2D([], [], ls="", marker="o", ms=4.6, color=gry, mec="white", mew=0.6, label="comprehensiveness"),
+          Line2D([], [], ls="", marker="D", ms=3.8, mfc="white", mec=gry, mew=0.9, label="diversity"),
+          Line2D([], [], ls="", marker="s", ms=4.6, color="#2a78d6", mec="white", mew=0.6, label="report stores"),
+          Line2D([], [], ls="", marker="s", ms=4.6, color="#eb6834", mec="white", mew=0.6,
+                 label="vector retrieval (Vector RAG)")]
+    fig.legend(handles=hd, frameon=False, fontsize=6.0, loc="upper right", bbox_to_anchor=(right0, top0), ncol=2,
+               handletextpad=0.2, columnspacing=0.8, borderaxespad=0.0)
     fig.savefig(FIG / "qa.pdf", bbox_inches="tight")
     plt.close(fig)
 
@@ -743,7 +759,7 @@ def token_metric_assets(M):
                 continue
             mu = np.mean(v)
             ci = _st.t.ppf(0.975, len(v) - 1) * np.std(v, ddof=1) / np.sqrt(len(v)) if len(v) > 1 else 0
-            txt = f"{mu:.3f}$\\pm${ci:.3f}" if ci >= 5e-4 else f"{mu:.3f}$\\pm${{<}}0.001$"   # T7 (V13): 3 decimals
+            txt = f"{mu:.3f}$\\pm${ci:.3f}" if ci >= 5e-4 else f"{mu:.3f}$\\pm{{<}}0.001$"  # V17i: stray "$" removed (LaTeX error; same rendering)   # T7 (V13): 3 decimals
             row.append(f"\\textbf{{{txt}}}" if best[g] is not None and mu >= best[g] - 5e-4 else txt)
         gm = [np.mean(cell[(m, g)]) for g, _ in groups if cell[(m, g)]]
         row.append(f"{np.mean(gm):.3f}" if len(gm) == len(groups) else "--")
